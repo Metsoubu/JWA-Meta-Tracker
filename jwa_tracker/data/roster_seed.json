@@ -1,0 +1,4159 @@
+{
+ "_about": "Bundled fallback copy of the Jurassic World Alive creature roster (names, rarity, class, hybrid type, version added). Taken from the public Paleo.gg Dinodex page on 2026-10-08. The tracker refreshes it automatically once a day; this copy is only used if that fails on the very first run.",
+ "source_url": "https://www.paleo.gg/games/jurassic-world-alive/dinodex",
+ "fetched_at": "2026-10-08T21:25:00Z",
+ "creatures": [
+  {
+   "key": "93_classic_t_rex",
+   "name": "'93 Classic T. Rex",
+   "rarity": "omega",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "acrocanthops",
+   "name": "Acrocanthops",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "acrocanthosaurus",
+   "name": "Acrocanthosaurus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "aenocyonyx",
+   "name": "Aenocyonyx",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "aerospinosaurus",
+   "name": "Aerospinosaurus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "aerotitan",
+   "name": "Aerotitan",
+   "rarity": "epic",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "ailurarctos",
+   "name": "Ailurarctos",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "alacranix",
+   "name": "Alacranix",
+   "rarity": "apex",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "alankydactylus",
+   "name": "Alankydactylus",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "alankyloceratops",
+   "name": "Alankyloceratops",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "alankylosaurus",
+   "name": "Alankylosaurus",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "alanqa",
+   "name": "Alanqa",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "albertocevia",
+   "name": "Albertocevia",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "albertosaurus",
+   "name": "Albertosaurus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "albertospinos",
+   "name": "Albertospinos",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.13"
+  },
+  {
+   "key": "alioramus",
+   "name": "Alioramus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.21"
+  },
+  {
+   "key": "aliorasuchus",
+   "name": "Aliorasuchus",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "allodrigues",
+   "name": "Allodrigues",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "alloraptor",
+   "name": "Alloraptor",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "allosaurus",
+   "name": "Allosaurus",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "allosaurus_gen_2",
+   "name": "Allosaurus Gen2",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "allosinosaurus",
+   "name": "Allosinosaurus",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "amargasaurus",
+   "name": "Amargasaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "amargocephalus",
+   "name": "Amargocephalus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "ampelorex",
+   "name": "Ampelorex",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "ampelosaurus",
+   "name": "Ampelosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "amphicyon",
+   "name": "Amphicyon",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "andrewsarchus",
+   "name": "Andrewsarchus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "andrewtherium",
+   "name": "Andrewtherium",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "andrewtodon",
+   "name": "Andrewtodon",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.6"
+  },
+  {
+   "key": "andrewtops",
+   "name": "Andrewtops",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "angel",
+   "name": "Angel",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "animantarx",
+   "name": "Animantarx",
+   "rarity": "epic",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "ankylocodon",
+   "name": "Ankylocodon",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "ankylodactylus",
+   "name": "Ankylodactylus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "ankylodicurus",
+   "name": "Ankylodicurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.4"
+  },
+  {
+   "key": "ankylomoloch",
+   "name": "Ankylomoloch",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.12"
+  },
+  {
+   "key": "ankylos_lux",
+   "name": "Ankylos Lux",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.13"
+  },
+  {
+   "key": "ankylosaurus",
+   "name": "Ankylosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "ankylosaurus_gen_2",
+   "name": "Ankylosaurus Gen 2",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "ankyntrosaurus",
+   "name": "Ankyntrosaurus",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "antarctopelta",
+   "name": "Antarctopelta",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "antarctovenator",
+   "name": "Antarctovenator",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "anurognathus",
+   "name": "Anurognathus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "apatoceratops",
+   "name": "Apatoceratops",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "apatosaurus",
+   "name": "Apatosaurus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "aquicomilus",
+   "name": "Aquicomilus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "aquignathus",
+   "name": "Aquignathus",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "aquilamimus",
+   "name": "Aquilamimus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "aquilops",
+   "name": "Aquilops",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "aquilosaurus",
+   "name": "Aquilosaurus",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "aquilotae",
+   "name": "Aquilotae",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "aquiraptor",
+   "name": "Aquiraptor",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "aquisaurus",
+   "name": "Aquisaurus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "arambourgiania",
+   "name": "Arambourgiania",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "archaeopteryx",
+   "name": "Archaeopteryx",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.9"
+  },
+  {
+   "key": "archaeotherium",
+   "name": "Archaeotherium",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "arctalces",
+   "name": "Arctalces",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.12"
+  },
+  {
+   "key": "arctocanis",
+   "name": "Arctocanis",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "arctodus",
+   "name": "Arctodus",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.12"
+  },
+  {
+   "key": "arctops",
+   "name": "Arctops",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "arctovasilas",
+   "name": "Arctovasilas",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.12"
+  },
+  {
+   "key": "ardentismaxima",
+   "name": "Ardentismaxima",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "ardontognathus",
+   "name": "Ardontognathus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "ardontosaurus",
+   "name": "Ardontosaurus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "argentavis",
+   "name": "Argentavis",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "argenteryx",
+   "name": "Argenteryx",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "argentinosaurus",
+   "name": "Argentinosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "armbrusters_wolf",
+   "name": "Armbruster's Wolf",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "arsinoitherium",
+   "name": "Arsinoitherium",
+   "rarity": "rare",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "arsionosaurus",
+   "name": "Arsionosaurus",
+   "rarity": "epic",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "atrocimoloch",
+   "name": "Atrocimoloch",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "atrocodistis",
+   "name": "Atrocodistis",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "atrocomaxima",
+   "name": "Atrocomaxima",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "atromolistis",
+   "name": "Atromolistis",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "australotitan",
+   "name": "Australotitan",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "bajadasaurus",
+   "name": "Bajadasaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "bajatonodon",
+   "name": "Bajatonodon",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "baryonyx",
+   "name": "Baryonyx",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "baryonyx_gen_2",
+   "name": "Baryonyx Gen 2",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "baryosaurus",
+   "name": "Baryosaurus",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "baryothus",
+   "name": "Baryothus",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "baryotor",
+   "name": "Baryotor",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "becklejara",
+   "name": "Becklejara",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "becklerizaurus",
+   "name": "Becklerizaurus",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "becklolyth",
+   "name": "Becklolyth",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "becklophosaurus",
+   "name": "Becklophosaurus",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "beelzebufo",
+   "name": "Beelzebufo",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.22"
+  },
+  {
+   "key": "beta",
+   "name": "Beta",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "big_eatie",
+   "name": "Big Eatie",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "blonde",
+   "name": "Blonde",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "blue",
+   "name": "Blue",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "borealopelta",
+   "name": "Borealopelta",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "brachiosaurus",
+   "name": "Brachiosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "brontolasmus",
+   "name": "Brontolasmus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "brontotherium",
+   "name": "Brontotherium",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "brunette",
+   "name": "Brunette",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "bumpy",
+   "name": "Bumpy",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "carbonemys",
+   "name": "Carbonemys",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "carbotoceratops",
+   "name": "Carbotoceratops",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "carcharodontosaurus",
+   "name": "Carcharodontosaurus",
+   "rarity": "omega",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "carnotarkus",
+   "name": "Carnotarkus",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "carnotaurus",
+   "name": "Carnotaurus",
+   "rarity": "rare",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "centroceratops",
+   "name": "Centroceratops",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "centrolophus_lux",
+   "name": "Centrolophus Lux",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "centrosaurus",
+   "name": "Centrosaurus",
+   "rarity": "common",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "ceramagnus",
+   "name": "Ceramagnus",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "ceranosaurus",
+   "name": "Ceranosaurus",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "cerastegotops",
+   "name": "Cerastegotops",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "ceratosaurus",
+   "name": "Ceratosaurus",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.23"
+  },
+  {
+   "key": "ceratosaurus_gen_2",
+   "name": "Ceratosaurus Gen 2",
+   "rarity": "omega",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "cervalces",
+   "name": "Cervalces",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.12"
+  },
+  {
+   "key": "charlie",
+   "name": "Charlie",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "clever_girl",
+   "name": "Clever Girl",
+   "rarity": "omega",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "coelhaast",
+   "name": "Coelhaast",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.9"
+  },
+  {
+   "key": "coelocephalus",
+   "name": "Coelocephalus",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "coelophysis",
+   "name": "Coelophysis",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "coelotator",
+   "name": "Coelotator",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "coelurosauravus",
+   "name": "Coelurosauravus",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.9"
+  },
+  {
+   "key": "compsocaulus",
+   "name": "Compsocaulus",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "compsognathus",
+   "name": "Compsognathus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "compsognathus_gen_2",
+   "name": "Compsognathus Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "compsoraptor",
+   "name": "Compsoraptor",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "compsovenator",
+   "name": "Compsovenator",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "concakuisaurus",
+   "name": "Concakuisaurus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "concatoloch",
+   "name": "Concatoloch",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "concatosaurus",
+   "name": "Concatosaurus",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "concavenator",
+   "name": "Concavenator",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "constrictoraptor",
+   "name": "Constrictoraptor",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "crichtomoloch",
+   "name": "Crichtomoloch",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "crichtonsaurus",
+   "name": "Crichtonsaurus",
+   "rarity": "rare",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "cryolophosaurus",
+   "name": "Cryolophosaurus",
+   "rarity": "omega",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "cryolophosaurus_mattel",
+   "name": "Cryolophosaurus Mattel",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "dakotacurus",
+   "name": "Dakotacurus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "dakotanops",
+   "name": "Dakotanops",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.4"
+  },
+  {
+   "key": "dakotaraptor",
+   "name": "Dakotaraptor",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.4"
+  },
+  {
+   "key": "darwezopteryx",
+   "name": "Darwezopteryx",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "darwinopterus",
+   "name": "Darwinopterus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "deinocheirus",
+   "name": "Deinocheirus",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "deinomimus",
+   "name": "Deinomimus",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "deinonychus",
+   "name": "Deinonychus",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "deinosuchus",
+   "name": "Deinosuchus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "deinotherium",
+   "name": "Deinotherium",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "deinotops",
+   "name": "Deinotops",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "delta",
+   "name": "Delta",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "diabloceratops",
+   "name": "Diabloceratops",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "dilophoboa",
+   "name": "Dilophoboa",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "dilophosaurus",
+   "name": "Dilophosaurus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "dilophosaurus_gen_2",
+   "name": "Dilophosaurus Gen 2",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "diloracheirus",
+   "name": "Diloracheirus",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "diloranosaurus",
+   "name": "Diloranosaurus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "dilozorion",
+   "name": "Dilozorion",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "dimetrodon",
+   "name": "Dimetrodon",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "dimetrodon_gen_2",
+   "name": "Dimetrodon Gen 2",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "dimodactylus",
+   "name": "Dimodactylus",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "dimorphodon",
+   "name": "Dimorphodon",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "diorajasaur",
+   "name": "Diorajasaur",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "diplocaulus",
+   "name": "Diplocaulus",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "diplocaulus_gen_2",
+   "name": "Diplocaulus Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "diplodocus",
+   "name": "Diplodocus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "diplotator",
+   "name": "Diplotator",
+   "rarity": "rare",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "diplovenator",
+   "name": "Diplovenator",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "dire_wolf",
+   "name": "Dire Wolf",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "distortus_rex",
+   "name": "Distortus Rex",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "dodo",
+   "name": "Dodo",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "dodocevia",
+   "name": "Dodocevia",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "doedicurus",
+   "name": "Doedicurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "draco_intrepidus",
+   "name": "Draco Intrepidus",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "draco_lux",
+   "name": "Draco Lux",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "dracoceratops",
+   "name": "Dracoceratops",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "dracoceratosaurus",
+   "name": "Dracoceratosaurus",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "dracorex",
+   "name": "Dracorex",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "dracorex_gen_2",
+   "name": "Dracorex Gen 2",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "dracovenator",
+   "name": "Dracovenator",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.23"
+  },
+  {
+   "key": "dreadactylus",
+   "name": "Dreadactylus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "dreadnoughtus",
+   "name": "Dreadnoughtus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "dsungaia",
+   "name": "Dsungaia",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "dsungaripterus",
+   "name": "Dsungaripterus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "dsungascorpios",
+   "name": "Dsungascorpios",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "echo",
+   "name": "Echo",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "edaphocevia",
+   "name": "Edaphocevia",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "edaphosaurus",
+   "name": "Edaphosaurus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "edmontoguanodon",
+   "name": "Edmontoguanodon",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "edmontosaurus",
+   "name": "Edmontosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "einiasuchus",
+   "name": "Einiasuchus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "einiosaurus",
+   "name": "Einiosaurus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "elasmotherium",
+   "name": "Elasmotherium",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "enteloceros",
+   "name": "Enteloceros",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.11"
+  },
+  {
+   "key": "entelochops",
+   "name": "Entelochops",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "entelodon",
+   "name": "Entelodon",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "entelolania",
+   "name": "Entelolania",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "entelomoth",
+   "name": "Entelomoth",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "eremocanis",
+   "name": "Eremocanis",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "eremoceros",
+   "name": "Eremoceros",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "eremotherium",
+   "name": "Eremotherium",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "erlidominus",
+   "name": "Erlidominus",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "erlikogamma",
+   "name": "Erlikogamma",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "erlikosaurus",
+   "name": "Erlikosaurus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "erlikosaurus_gen_2",
+   "name": "Erlikosaurus Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "erlikospyx",
+   "name": "Erlikospyx",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "erythrosuchus",
+   "name": "Erythrosuchus",
+   "rarity": "omega",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "estemmenosuchus",
+   "name": "Estemmenosuchus",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "eucladoceros",
+   "name": "Eucladoceros",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "euoplocephalus",
+   "name": "Euoplocephalus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "fukuimimus",
+   "name": "Fukuimimus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.13"
+  },
+  {
+   "key": "fukuiraptor",
+   "name": "Fukuiraptor",
+   "rarity": "omega",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "fukuisaurus",
+   "name": "Fukuisaurus",
+   "rarity": "rare",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.13"
+  },
+  {
+   "key": "fukuitops",
+   "name": "Fukuitops",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "gallimimus",
+   "name": "Gallimimus",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "geminideus",
+   "name": "Geminideus",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "geminititan",
+   "name": "Geminititan",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "geosternbergia",
+   "name": "Geosternbergia",
+   "rarity": "omega",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "ghost",
+   "name": "Ghost",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "giganotosaurus",
+   "name": "Giganotosaurus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "giganspinoceratops",
+   "name": "Giganspinoceratops",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "gigantspinosaurus",
+   "name": "Gigantspinosaurus",
+   "rarity": "epic",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "giganyx",
+   "name": "Giganyx",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "gigaspikasaur",
+   "name": "Gigaspikasaur",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "giraffatitan",
+   "name": "Giraffatitan",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "glyptoceras",
+   "name": "Glyptoceras",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "glyptodon",
+   "name": "Glyptodon",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "glyptosavis",
+   "name": "Glyptosavis",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "gorgonops",
+   "name": "Gorgonops",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "gorgosaurus",
+   "name": "Gorgosaurus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "gorgosuchus",
+   "name": "Gorgosuchus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "gorgotrebax",
+   "name": "Gorgotrebax",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "graciliraptor",
+   "name": "Graciliraptor",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "gryganyth",
+   "name": "Gryganyth",
+   "rarity": "apex",
+   "class": "fierce",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "grylenken",
+   "name": "Grylenken",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "grypolyth",
+   "name": "Grypolyth",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "gryposuchus",
+   "name": "Gryposuchus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "haast_eagle",
+   "name": "Haast Eagle",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "haast_eagle_gen_2",
+   "name": "Haast Eagle Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "haast_maximus",
+   "name": "Haast Maximus",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "hadros_lux",
+   "name": "Hadros Lux",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "hatzegopteryx",
+   "name": "Hatzegopteryx",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "herranotor",
+   "name": "Herranotor",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "herrerasaurus",
+   "name": "Herrerasaurus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "homalocephale",
+   "name": "Homalocephale",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "hydra_boa",
+   "name": "Hydra Boa",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "ichthyovenator",
+   "name": "Ichthyovenator",
+   "rarity": "omega",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "iguanodon",
+   "name": "Iguanodon",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "imperatosuchus",
+   "name": "Imperatosuchus",
+   "rarity": "apex",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "indochicyon",
+   "name": "Indochicyon",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "indolycan",
+   "name": "Indolycan",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "indominus_rex",
+   "name": "Indominus Rex",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "indominus_rex_gen_2",
+   "name": "Indominus Rex Gen 2",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "indonemys",
+   "name": "Indonemys",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "indoraptor",
+   "name": "Indoraptor",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "indoraptor_gen_2",
+   "name": "Indoraptor Gen 2",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "indoraptor_mattel",
+   "name": "Indoraptor Mattel",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "indotaurus",
+   "name": "Indotaurus",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "inostherium",
+   "name": "Inostherium",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "inostrancevia",
+   "name": "Inostrancevia",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "irritator",
+   "name": "Irritator",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "irritator_gen_2",
+   "name": "Irritator Gen 2",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "junior",
+   "name": "Junior",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "kaprosuchus",
+   "name": "Kaprosuchus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "kelenken",
+   "name": "Kelenken",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "kentrorex",
+   "name": "Kentrorex",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "kentrosaurus",
+   "name": "Kentrosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "keratoporcus",
+   "name": "Keratoporcus",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "koolabourgiana",
+   "name": "Koolabourgiana",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "koolasuchus",
+   "name": "Koolasuchus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "koolasuchus_gen_2",
+   "name": "Koolasuchus Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "koolatrax",
+   "name": "Koolatrax",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "koolatrodon",
+   "name": "Koolatrodon",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "koreanosaurus",
+   "name": "Koreanosaurus",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "lambeosaurus",
+   "name": "Lambeosaurus",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "leaellynasaura",
+   "name": "Leaellynasaura",
+   "rarity": "omega",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "leucistic_baryonyx",
+   "name": "Leucistic Baryonyx",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "little_eatie",
+   "name": "Little Eatie",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "lystrosaurus",
+   "name": "Lystrosaurus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "lystrosavis",
+   "name": "Lystrosavis",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "lystrosuchus",
+   "name": "Lystrosuchus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "lythronax",
+   "name": "Lythronax",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "magnapyritor",
+   "name": "Magnapyritor",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "magnaraptor",
+   "name": "Magnaraptor",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "maiasaura",
+   "name": "Maiasaura",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "majundaboa",
+   "name": "Majundaboa",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "majundasuchus",
+   "name": "Majundasuchus",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "majungasaurus",
+   "name": "Majungasaurus",
+   "rarity": "common",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "mammolania",
+   "name": "Mammolania",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "mammotherium",
+   "name": "Mammotherium",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "marsupial_lion",
+   "name": "Marsupial Lion",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "masiakasaurus",
+   "name": "Masiakasaurus",
+   "rarity": "omega",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "mastodonsaurus",
+   "name": "Mastodonsaurus",
+   "rarity": "omega",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "megalania",
+   "name": "Megalania",
+   "rarity": "omega",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "megaloceros",
+   "name": "Megaloceros",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "megalocevia",
+   "name": "Megalocevia",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "megalogaia",
+   "name": "Megalogaia",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "megalonyx",
+   "name": "Megalonyx",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.9"
+  },
+  {
+   "key": "megalosaurus",
+   "name": "Megalosaurus",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "megalosuchus",
+   "name": "Megalosuchus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "megalotops",
+   "name": "Megalotops",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "megamimus",
+   "name": "Megamimus",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "megaraptor",
+   "name": "Megaraptor",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "megatyrannus",
+   "name": "Megatyrannus",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "megistocurus",
+   "name": "Megistocurus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "megistotherium",
+   "name": "Megistotherium",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "meiolania",
+   "name": "Meiolania",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "microraptor",
+   "name": "Microraptor",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "miragaia",
+   "name": "Miragaia",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "monkeydactyl",
+   "name": "Monkeydactyl",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "monkeyondactylus",
+   "name": "Monkeyondactylus",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "monolometrodon",
+   "name": "Monolometrodon",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "monolomoth",
+   "name": "Monolomoth",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "monolophosaurus",
+   "name": "Monolophosaurus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "monolophosaurus_gen_2",
+   "name": "Monolophosaurus Gen 2",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "monolorhino",
+   "name": "Monolorhino",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "monomimus",
+   "name": "Monomimus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "monostegotops",
+   "name": "Monostegotops",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "moros_intrepidus",
+   "name": "Moros Intrepidus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "mortem_rex",
+   "name": "Mortem Rex",
+   "rarity": "apex",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.0"
+  },
+  {
+   "key": "moschops",
+   "name": "Moschops",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "mutadon",
+   "name": "Mutadon",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.16"
+  },
+  {
+   "key": "nanophosaurus",
+   "name": "Nanophosaurus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "nanotyrannus",
+   "name": "Nanotyrannus",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "nasutoceratops",
+   "name": "Nasutoceratops",
+   "rarity": "rare",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "nodopatosaurus",
+   "name": "Nodopatosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "nodopatotitan",
+   "name": "Nodopatotitan",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "nodosaurus",
+   "name": "Nodosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "nomingia",
+   "name": "Nomingia",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "nominrex",
+   "name": "Nominrex",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "nundasuchus",
+   "name": "Nundasuchus",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "nyctopteryx",
+   "name": "Nyctopteryx",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.17"
+  },
+  {
+   "key": "nyctosaurus",
+   "name": "Nyctosaurus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.11"
+  },
+  {
+   "key": "olorotitan",
+   "name": "Olorotitan",
+   "rarity": "omega",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "ophiacodon",
+   "name": "Ophiacodon",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "ornithomimus",
+   "name": "Ornithomimus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "ouranosaurus",
+   "name": "Ouranosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "ovilophomoloch",
+   "name": "Ovilophomoloch",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.11"
+  },
+  {
+   "key": "ovilophosaurus",
+   "name": "Ovilophosaurus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.4"
+  },
+  {
+   "key": "ovinnolophosaurus",
+   "name": "Ovinnolophosaurus",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "oviraptor",
+   "name": "Oviraptor",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.4"
+  },
+  {
+   "key": "oviraptor_gen_2",
+   "name": "Oviraptor Gen 2",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "ovylenken",
+   "name": "Ovylenken",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "pachycephalosaurus",
+   "name": "Pachycephalosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "panthera",
+   "name": "Panthera",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "panthera_blytheae",
+   "name": "Panthera Blytheae",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "pantherator",
+   "name": "Pantherator",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "paralidactylus",
+   "name": "Paralidactylus",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "paralititan",
+   "name": "Paralititan",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "paralitrosaurus",
+   "name": "Paralitrosaurus",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "paramoloch",
+   "name": "Paramoloch",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "parasaurolophus",
+   "name": "Parasaurolophus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "parasaurolophus_lux",
+   "name": "Parasaurolophus Lux",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "parasauthops",
+   "name": "Parasauthops",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.11"
+  },
+  {
+   "key": "peloroplites",
+   "name": "Peloroplites",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.23"
+  },
+  {
+   "key": "phorurex",
+   "name": "Phorurex",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "phorusaura",
+   "name": "Phorusaura",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "phorusrhacos",
+   "name": "Phorusrhacos",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "pierce",
+   "name": "Pierce",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "plateopikasaurus",
+   "name": "Plateopikasaurus",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "plateorex",
+   "name": "Plateorex",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "plateosaurus",
+   "name": "Plateosaurus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "postimetrodon",
+   "name": "Postimetrodon",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "postosuchus",
+   "name": "Postosuchus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "poukaidei",
+   "name": "Poukaidei",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "poukandactylus",
+   "name": "Poukandactylus",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.3"
+  },
+  {
+   "key": "preondactylus",
+   "name": "Preondactylus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.14"
+  },
+  {
+   "key": "procerathomimus",
+   "name": "Procerathomimus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "proceratosaurus",
+   "name": "Proceratosaurus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "proto_lux",
+   "name": "Proto Lux",
+   "rarity": "apex",
+   "class": "resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "protoceratops",
+   "name": "Protoceratops",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "protonodon",
+   "name": "Protonodon",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "pteranodon",
+   "name": "Pteranodon",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "pteranokyrie",
+   "name": "Pteranokyrie",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "pteraquetzal",
+   "name": "Pteraquetzal",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "pterovexus",
+   "name": "Pterovexus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "pulmonoscorpius",
+   "name": "Pulmonoscorpius",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "purrolyth",
+   "name": "Purrolyth",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "purussaurus",
+   "name": "Purussaurus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "purussaurus_gen_2",
+   "name": "Purussaurus Gen 2",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "purutaurus",
+   "name": "Purutaurus",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "pyroraptor",
+   "name": "Pyroraptor",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "pyroraptor_gen_2",
+   "name": "Pyroraptor Gen 2",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "pyrorixis",
+   "name": "Pyrorixis",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "pyrosuchus",
+   "name": "Pyrosuchus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "pyrritator",
+   "name": "Pyrritator",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "quetzalcoatlus",
+   "name": "Quetzalcoatlus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "quetzalcoatlus_gen_2",
+   "name": "Quetzalcoatlus Gen 2",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "quetzaljara",
+   "name": "Quetzaljara",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "quetzorion",
+   "name": "Quetzorion",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "rajadorixis",
+   "name": "Rajadorixis",
+   "rarity": "apex",
+   "class": "cunning_resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "rajadotholus",
+   "name": "Rajadotholus",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "rajakylosaurus",
+   "name": "Rajakylosaurus",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "rajasaurus",
+   "name": "Rajasaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "rajatholus",
+   "name": "Rajatholus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "raptoceras",
+   "name": "Raptoceras",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "rativates",
+   "name": "Rativates",
+   "rarity": "omega",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "rebel",
+   "name": "Rebel",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "rebirth_quetzalcoatlus",
+   "name": "Rebirth Quetzalcoatlus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.21"
+  },
+  {
+   "key": "rebirth_raptor",
+   "name": "Rebirth Raptor",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "rebirth_spinosaurus",
+   "name": "Rebirth Spinosaurus",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "rebirth_spinosaurus_gen_2",
+   "name": "Rebirth Spinosaurus Gen 2",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "rebirth_t_rex",
+   "name": "Rebirth T. Rex",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.18"
+  },
+  {
+   "key": "red",
+   "name": "Red",
+   "rarity": "epic",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "refrenantem",
+   "name": "Refrenantem",
+   "rarity": "apex",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.7"
+  },
+  {
+   "key": "rexy",
+   "name": "Rexy",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "rinchenia",
+   "name": "Rinchenia",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.6"
+  },
+  {
+   "key": "rinchicyon",
+   "name": "Rinchicyon",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.10"
+  },
+  {
+   "key": "rodrigues_solitaire",
+   "name": "Rodrigues Solitaire",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "sah_panthera",
+   "name": "Sah Panthera",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "sarcomantarx",
+   "name": "Sarcomantarx",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "sarcorixis",
+   "name": "Sarcorixis",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "sarcosaurus",
+   "name": "Sarcosaurus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "sarcosuchus",
+   "name": "Sarcosuchus",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "saurolyth",
+   "name": "Saurolyth",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "saurophaganax",
+   "name": "Saurophaganax",
+   "rarity": "omega",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.9"
+  },
+  {
+   "key": "saurornitholestes",
+   "name": "Saurornitholestes",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.13"
+  },
+  {
+   "key": "scaphognathus",
+   "name": "Scaphognathus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "scaphotator",
+   "name": "Scaphotator",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "scelidosaurus",
+   "name": "Scelidosaurus",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.5"
+  },
+  {
+   "key": "scolosaurus",
+   "name": "Scolosaurus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "scorpius_rex",
+   "name": "Scorpios Rex",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "scorpius_rex_gen_2",
+   "name": "Scorpios Rex Gen 2",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "scorpius_rex_gen_3",
+   "name": "Scorpios Rex Gen 3",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "scutophicyon",
+   "name": "Scutophicyon",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "scutosaurus",
+   "name": "Scutosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.14"
+  },
+  {
+   "key": "secodontosaurus",
+   "name": "Secodontosaurus",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "segnoraptor",
+   "name": "Segnoraptor",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.17"
+  },
+  {
+   "key": "segnosaurus",
+   "name": "Segnosaurus",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "segnotherisaurus",
+   "name": "Segnotherisaurus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.1"
+  },
+  {
+   "key": "shantrospinos",
+   "name": "Shantrospinos",
+   "rarity": "apex",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.20"
+  },
+  {
+   "key": "shantungosaurus",
+   "name": "Shantungosaurus",
+   "rarity": "common",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "shantunrax",
+   "name": "Shantunrax",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.19"
+  },
+  {
+   "key": "sinoceratops",
+   "name": "Sinoceratops",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "sinokotaraptor",
+   "name": "Sinokotaraptor",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.11"
+  },
+  {
+   "key": "sinosauropteryx",
+   "name": "Sinosauropteryx",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.11"
+  },
+  {
+   "key": "sinraptor",
+   "name": "Sinraptor",
+   "rarity": "omega",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.4"
+  },
+  {
+   "key": "skoolasaurus",
+   "name": "Skoolasaurus",
+   "rarity": "legendary",
+   "class": "cunning_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "skoonametrodon",
+   "name": "Skoonametrodon",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "skoonasaurus",
+   "name": "Skoonasaurus",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "skorpiodactylus",
+   "name": "Skorpiodactylus",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "skorpiostegotops",
+   "name": "Skorpiostegotops",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "skorpiovenator",
+   "name": "Skorpiovenator",
+   "rarity": "rare",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "smilocephalosaurus",
+   "name": "Smilocephalosaurus",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.8"
+  },
+  {
+   "key": "smilodon",
+   "name": "Smilodon",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "smilonemys",
+   "name": "Smilonemys",
+   "rarity": "unique",
+   "class": "cunning_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "sonorasaurus",
+   "name": "Sonorasaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.1"
+  },
+  {
+   "key": "sphaerotholus",
+   "name": "Sphaerotholus",
+   "rarity": "rare",
+   "class": "cunning_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.7"
+  },
+  {
+   "key": "spinoceratops",
+   "name": "Spinoceratops",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.20"
+  },
+  {
+   "key": "spinoconstrictor",
+   "name": "Spinoconstrictor",
+   "rarity": "unique",
+   "class": "cunning_fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "spinonyx",
+   "name": "Spinonyx",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.7"
+  },
+  {
+   "key": "spinosaurus",
+   "name": "Spinosaurus",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "spinosaurus_aegyptiacus",
+   "name": "Spinosaurus Aegyptiacus",
+   "rarity": "omega",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "spinosaurus_gen_2",
+   "name": "Spinosaurus Gen 2",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "spinotahraptor",
+   "name": "Spinotahraptor",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "spinotasuchus",
+   "name": "Spinotasuchus",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "spinotops",
+   "name": "Spinotops",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "stegoceras",
+   "name": "Stegoceras",
+   "rarity": "epic",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.6"
+  },
+  {
+   "key": "stegoceratops",
+   "name": "Stegoceratops",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "stegodeus",
+   "name": "Stegodeus",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "stegosaurus",
+   "name": "Stegosaurus",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "stegosaurus_ungulatus",
+   "name": "Stegosaurus Ungulatus",
+   "rarity": "omega",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "stegouros",
+   "name": "Stegouros",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "stomatosuchus_mattel",
+   "name": "Stomatosuchus Mattel",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.22"
+  },
+  {
+   "key": "struthiomimus",
+   "name": "Struthiomimus",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.6"
+  },
+  {
+   "key": "stygidaryx",
+   "name": "Stygidaryx",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.6"
+  },
+  {
+   "key": "stygimoloch",
+   "name": "Stygimoloch",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "stygimoloch_gen_2",
+   "name": "Stygimoloch Gen 2",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "styracosaurus_lux",
+   "name": "Styracosaurus Lux",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.23"
+  },
+  {
+   "key": "suchomimus",
+   "name": "Suchomimus",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "suchotator",
+   "name": "Suchotator",
+   "rarity": "rare",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "tanycolagreus",
+   "name": "Tanycolagreus",
+   "rarity": "common",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "tapejara",
+   "name": "Tapejara",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "tarbognathus",
+   "name": "Tarbognathus",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "tarbosaurus",
+   "name": "Tarbosaurus",
+   "rarity": "common",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "tenontorex",
+   "name": "Tenontorex",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "tenontosaurus",
+   "name": "Tenontosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "testacornibus",
+   "name": "Testacornibus",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.13"
+  },
+  {
+   "key": "therizinosaurus",
+   "name": "Therizinosaurus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.16"
+  },
+  {
+   "key": "thoradolosaur",
+   "name": "Thoradolosaur",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "thylaconyx",
+   "name": "Thylaconyx",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.15"
+  },
+  {
+   "key": "thylacosmilus",
+   "name": "Thylacosmilus",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.12"
+  },
+  {
+   "key": "thylacotator",
+   "name": "Thylacotator",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.9"
+  },
+  {
+   "key": "thylos_intrepidus",
+   "name": "Thylos Intrepidus",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.18"
+  },
+  {
+   "key": "tiger",
+   "name": "Tiger",
+   "rarity": "epic",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "titanoboa",
+   "name": "Titanoboa",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "titanoboa_gen_2",
+   "name": "Titanoboa Gen 2",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.12"
+  },
+  {
+   "key": "titanosaurus",
+   "name": "Titanosaurus",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "titanotarkus",
+   "name": "Titanotarkus",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "titanotholus",
+   "name": "Titanotholus",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.15"
+  },
+  {
+   "key": "titanotor",
+   "name": "Titanotor",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
+   "added_version": "v3.14"
+  },
+  {
+   "key": "toro",
+   "name": "Toro",
+   "rarity": "omega",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  },
+  {
+   "key": "tragodistis",
+   "name": "Tragodistis",
+   "rarity": "legendary",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "triceratops",
+   "name": "Triceratops",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "triceratops_gen_2",
+   "name": "Triceratops Gen 2",
+   "rarity": "common",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "troodoboa",
+   "name": "Troodoboa",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v2.13"
+  },
+  {
+   "key": "troodon",
+   "name": "Troodon",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "trykosaurus",
+   "name": "Trykosaurus",
+   "rarity": "unique",
+   "class": "fierce_resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "trykovenator",
+   "name": "Trykovenator",
+   "rarity": "apex",
+   "class": "fierce_resilient",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.8"
+  },
+  {
+   "key": "tryostronix",
+   "name": "Tryostronix",
+   "rarity": "legendary",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "tsintamoloch",
+   "name": "Tsintamoloch",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v3.21"
+  },
+  {
+   "key": "tsintamoth",
+   "name": "Tsintamoth",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.8"
+  },
+  {
+   "key": "tsintaosaurus",
+   "name": "Tsintaosaurus",
+   "rarity": "epic",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v2.6"
+  },
+  {
+   "key": "tuojiangosaurus",
+   "name": "Tuojiangosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "tuoramoloch",
+   "name": "Tuoramoloch",
+   "rarity": "unique",
+   "class": "resilient",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.3"
+  },
+  {
+   "key": "tupandactylus",
+   "name": "Tupandactylus",
+   "rarity": "rare",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.4"
+  },
+  {
+   "key": "tyrannodactylus",
+   "name": "Tyrannodactylus",
+   "rarity": "unique",
+   "class": "wild_card",
+   "hybrid_type": "giga_hybrid",
+   "added_version": "v3.10"
+  },
+  {
+   "key": "tyrannolophosaur",
+   "name": "Tyrannolophosaur",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.5"
+  },
+  {
+   "key": "tyrannometrodon",
+   "name": "Tyrannometrodon",
+   "rarity": "unique",
+   "class": "fierce",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v2.19"
+  },
+  {
+   "key": "tyrannosaur_buck",
+   "name": "Tyrannosaur Buck",
+   "rarity": "legendary",
+   "class": "wild_card",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "tyrannosaur_doe",
+   "name": "Tyrannosaur Doe",
+   "rarity": "legendary",
+   "class": "cunning_fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.6"
+  },
+  {
+   "key": "tyrannosaurus_rex",
+   "name": "Tyrannosaurus Rex",
+   "rarity": "epic",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "tyrannosaurus_rex_gen_2",
+   "name": "Tyrannosaurus Rex Gen 2",
+   "rarity": "rare",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "tyrannotor",
+   "name": "Tyrannotor",
+   "rarity": "apex",
+   "class": "cunning_fierce",
+   "hybrid_type": "mega_hybrid",
+   "added_version": "v3.21"
+  },
+  {
+   "key": "utahraptor",
+   "name": "Utahraptor",
+   "rarity": "rare",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "utarinex",
+   "name": "Utarinex",
+   "rarity": "unique",
+   "class": "cunning",
+   "hybrid_type": "super_hybrid",
+   "added_version": "v1.2"
+  },
+  {
+   "key": "utasinoraptor",
+   "name": "Utasinoraptor",
+   "rarity": "legendary",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "vectispinus",
+   "name": "Vectispinus",
+   "rarity": "omega",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.3"
+  },
+  {
+   "key": "velociraptor",
+   "name": "Velociraptor",
+   "rarity": "common",
+   "class": "cunning",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "velosrhacos",
+   "name": "Velosrhacos",
+   "rarity": "epic",
+   "class": "cunning",
+   "hybrid_type": "hybrid",
+   "added_version": "v2.2"
+  },
+  {
+   "key": "woolly_mammoth",
+   "name": "Woolly Mammoth",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "woolly_rhino",
+   "name": "Woolly Rhino",
+   "rarity": "epic",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.11"
+  },
+  {
+   "key": "wuerhosaurus",
+   "name": "Wuerhosaurus",
+   "rarity": "rare",
+   "class": "resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v1.1"
+  },
+  {
+   "key": "yutyrannus",
+   "name": "Yutyrannus",
+   "rarity": "omega",
+   "class": "fierce",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.2"
+  },
+  {
+   "key": "yuxisaurus",
+   "name": "Yuxisaurus",
+   "rarity": "omega",
+   "class": "fierce_resilient",
+   "hybrid_type": "non_hybrid",
+   "added_version": "v3.0"
+  }
+ ]
+}

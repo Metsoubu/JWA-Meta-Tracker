@@ -1,0 +1,64 @@
+# Updates the public website twice a day, for free, on GitHub's servers.
+# 1. Downloads any new leaderboard snapshots from the community feed.
+# 2. Saves them in archive/ (committed back to this repository, so history is never lost).
+# 3. Builds the website and publishes it on GitHub Pages.
+name: Update website
+
+on:
+  schedule:
+    - cron: "20 1,13 * * *"   # 01:20 and 13:20 UTC, shortly after the feed's usual updates
+  workflow_dispatch: {}        # adds a "Run workflow" button for an update right now
+  push:                        # republish when you upload changes (the bot's own data saves do not trigger this)
+    branches: [main]
+    paths-ignore: ["archive/**"]
+
+permissions:
+  contents: write   # to save archive/ back to the repository
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-website
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect new data and build the website
+        run: python tracker.py build-site --out _site --archive archive
+
+      - name: Save the snapshot history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive web/img/silhouettes
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Data update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

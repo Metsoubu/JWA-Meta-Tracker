@@ -1,0 +1,11 @@
+{
+  "_about": "Hand-checked name fixes for creature names that data sources spell differently from the roster. Keys are matched after removing accents, spaces and punctuation (case-insensitive). Values are roster keys from roster_seed.json.",
+  "by_name": {
+    "Kluges Mädchen": "clever_girl",
+    "Wollnashorn": "woolly_rhino",
+    "Cryolopho2": "cryolophosaurus_mattel",
+    "Blondie": "blonde",
+    "Brünette": "brunette"
+  },
+  "by_source_id": {}
+}
