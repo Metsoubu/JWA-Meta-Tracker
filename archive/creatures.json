@@ -1,0 +1,1906 @@
+{
+ "acrocanthosaurus": {
+  "added": "v2.2",
+  "aka": [
+   "Acrocanthosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Acrocanthosaurus silhouette by Jagged Fang Designs, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/acrocanthosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Acrocanthosaurus",
+  "rarity": "epic"
+ },
+ "aerotitan": {
+  "added": "v3.16",
+  "aka": [
+   "Aerotitan"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aerotitan",
+  "rarity": "epic"
+ },
+ "ailurarctos": {
+  "added": "v2.14",
+  "aka": [
+   "Ailurarctos"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Arctodus silhouette by Tracy A. Heath, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/arctodus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ailurarctos",
+  "rarity": "epic"
+ },
+ "alioramus": {
+  "added": "v3.21",
+  "aka": [
+   "Alioramu"
+  ],
+  "class": "cunning",
+  "credit": "Alioramus silhouette by Will Toosey, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/alioramus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Alioramus",
+  "rarity": "epic"
+ },
+ "aliorasuchus": {
+  "added": "v3.22",
+  "aka": [
+   "Aliorasuc"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Alioramus silhouette by Will Toosey, CC BY 4.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/alioramus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aliorasuchus",
+  "rarity": "unique"
+ },
+ "allosaurus_gen_2": {
+  "added": "v1.9",
+  "aka": [
+   "Allosaurus Gen2"
+  ],
+  "class": "fierce",
+  "credit": "Allosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/allosaurus_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Allosaurus Gen2",
+  "rarity": "epic"
+ },
+ "ampelorex": {
+  "added": "v3.11",
+  "aka": [
+   "Ampelorex"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ampelorex",
+  "rarity": "unique"
+ },
+ "ampelosaurus": {
+  "added": "v3.10",
+  "aka": [
+   "Ampelosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ampelosaurus",
+  "rarity": "epic"
+ },
+ "animantarx": {
+  "added": "v3.9",
+  "aka": [
+   "Animantarx"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Animantarx ramaljonesi silhouette by Matt Dempsey, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/animantarx.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Animantarx",
+  "rarity": "epic"
+ },
+ "ankylosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Ankylosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Ankylosaurus",
+  "rarity": "epic"
+ },
+ "antarctopelta": {
+  "added": "v2.3",
+  "aka": [
+   "Antarctopelta"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Antarctopelta",
+  "rarity": "epic"
+ },
+ "anurognathus": {
+  "added": "v2.14",
+  "aka": [
+   "Anurognathus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Anurognathus",
+  "rarity": "epic"
+ },
+ "apatoceratops": {
+  "added": "v3.14",
+  "aka": [
+   "Apatoceratops"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Apatosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/apatosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Apatoceratops",
+  "rarity": "unique"
+ },
+ "aquignathus": {
+  "added": "v3.17",
+  "aka": [
+   "Aquignathus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Coelophysis silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/coelophysis.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aquignathus",
+  "rarity": "apex"
+ },
+ "aquilotae": {
+  "added": "v3.13",
+  "aka": [
+   "Aquilotae"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Ornithomimus silhouette by Christiana Garros, CC BY 4.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/ornithomimus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aquilotae",
+  "rarity": "apex"
+ },
+ "aquiraptor": {
+  "added": "v3.16",
+  "aka": [
+   "Aquiraptor"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aquiraptor",
+  "rarity": "unique"
+ },
+ "atrocomaxima": {
+  "added": "v3.17",
+  "aka": [
+   "Atrocomaxima"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/ghost.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Atrocomaxima",
+  "rarity": "apex"
+ },
+ "atromolistis": {
+  "added": "v3.13",
+  "aka": [
+   "Atromolistis"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/red.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Atromolistis",
+  "rarity": "apex"
+ },
+ "baryonyx": {
+  "added": "v1.2",
+  "aka": [
+   "Baryonyx"
+  ],
+  "class": "fierce",
+  "credit": "Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Baryonyx",
+  "rarity": "epic"
+ },
+ "baryosaurus": {
+  "added": "v3.18",
+  "aka": [
+   "Baryosaurus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Baryosaurus",
+  "rarity": "unique"
+ },
+ "baryotor": {
+  "added": "v3.18",
+  "aka": [
+   "Baryotor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Baryotor",
+  "rarity": "apex"
+ },
+ "becklejara": {
+  "added": "v3.14",
+  "aka": [
+   "Becklejara"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Saurornitholestes silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/saurornitholestes.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Becklejara",
+  "rarity": "apex"
+ },
+ "becklerizaurus": {
+  "added": "v3.15",
+  "aka": [
+   "Becklerizaurus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Becklerizaurus",
+  "rarity": "apex"
+ },
+ "beelzebufo": {
+  "added": "v2.22",
+  "aka": [
+   "Beelzebufo"
+  ],
+  "class": "cunning",
+  "credit": "Beelzebufo ampinga silhouette by Nobu Tamura (modified by T. Michael Keesey), CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/beelzebufo.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Beelzebufo",
+  "rarity": "epic"
+ },
+ "big_eatie": {
+  "added": "v3.17",
+  "aka": [
+   "Big Eatie"
+  ],
+  "class": "wild_card",
+  "credit": "Tyrannosaurus silhouette by Conty (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/big_eatie.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Big Eatie",
+  "rarity": "omega"
+ },
+ "blonde": {
+  "added": "v3.11",
+  "aka": [
+   "Blondie"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Blonde",
+  "rarity": "epic"
+ },
+ "blue": {
+  "added": "v1.2",
+  "aka": [
+   "Blue"
+  ],
+  "class": "cunning",
+  "credit": "Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/blue.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Blue",
+  "rarity": "epic"
+ },
+ "borealopelta": {
+  "added": "v3.3",
+  "aka": [
+   "Borealopelta"
+  ],
+  "class": "resilient",
+  "credit": "Borealopelta markmitchelli silhouette by Marie Aimée ALLARD, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/borealopelta.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Borealopelta",
+  "rarity": "omega"
+ },
+ "brachiosaurus": {
+  "added": "v1.3",
+  "aka": [
+   "Brachiosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Brachiosaurus altithorax silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/brachiosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Brachiosaurus",
+  "rarity": "epic"
+ },
+ "brunette": {
+  "added": "v3.11",
+  "aka": [
+   "Brünette"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Brunette",
+  "rarity": "epic"
+ },
+ "bumpy": {
+  "added": "v2.7",
+  "aka": [
+   "Bumpy"
+  ],
+  "class": "resilient",
+  "credit": "Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/bumpy.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Bumpy",
+  "rarity": "epic"
+ },
+ "carbonemys": {
+  "added": "v1.9",
+  "aka": [
+   "Carbonemys"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Meiolania silhouette by T. Michael Keesey, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/meiolania.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Carbonemys",
+  "rarity": "epic"
+ },
+ "carcharodontosaurus": {
+  "added": "v3.3",
+  "aka": [
+   "Carcharodontosaurus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Carcharodontosaurus silhouette by Martin Kevil, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/carcharodontosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Carcharodontosaurus",
+  "rarity": "omega"
+ },
+ "centrolophus_lux": {
+  "added": "v3.18",
+  "aka": [
+   "Centrolophus Lux"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Centrosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/centrosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Centrolophus Lux",
+  "rarity": "apex"
+ },
+ "ceranosaurus": {
+  "added": "v3.13",
+  "aka": [
+   "Ceranosaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Triceratops silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/triceratops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ceranosaurus",
+  "rarity": "apex"
+ },
+ "cerastegotops": {
+  "added": "v3.8",
+  "aka": [
+   "Cerastegotops"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/stegosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Cerastegotops",
+  "rarity": "apex"
+ },
+ "clever_girl": {
+  "added": "v3.0",
+  "aka": [
+   "Kluges Mädchen"
+  ],
+  "class": "cunning",
+  "credit": "Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/clever_girl.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Clever Girl",
+  "rarity": "omega"
+ },
+ "coelocephalus": {
+  "added": "v3.20",
+  "aka": [
+   "Coelocephalus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Coelophysis silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/coelophysis.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Coelocephalus",
+  "rarity": "apex"
+ },
+ "compsognathus": {
+  "added": "v2.7",
+  "aka": [
+   "Compsognathus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Coelophysis silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/coelophysis.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Compsognathus",
+  "rarity": "epic"
+ },
+ "compsovenator": {
+  "added": "v3.7",
+  "aka": [
+   "Compsovenator"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Coelophysis silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/coelophysis.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Compsovenator",
+  "rarity": "apex"
+ },
+ "concatoloch": {
+  "added": "v3.4",
+  "aka": [
+   "Concatoloch"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Concavenator corcovatus silhouette by Jagged Fang Designs, CC0 1.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/concavenator.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Concatoloch",
+  "rarity": "apex"
+ },
+ "concatosaurus": {
+  "added": "v3.3",
+  "aka": [
+   "Concatosaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Concavenator corcovatus silhouette by Jagged Fang Designs, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/concavenator.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Concatosaurus",
+  "rarity": "unique"
+ },
+ "concavenator": {
+  "added": "v1.2",
+  "aka": [
+   "Concavenator"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Concavenator corcovatus silhouette by Jagged Fang Designs, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/concavenator.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Concavenator",
+  "rarity": "epic"
+ },
+ "cryolophosaurus_mattel": {
+  "added": "v3.22",
+  "aka": [
+   "Cryolopho2"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Cryolophosaurus ellioti silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/cryolophosaurus_mattel.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Cryolophosaurus Mattel",
+  "rarity": "unique"
+ },
+ "dakotaraptor": {
+  "added": "v2.4",
+  "aka": [
+   "Dakotaraptor"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Deinonychus antirrhopus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/deinonychus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dakotaraptor",
+  "rarity": "epic"
+ },
+ "darwinopterus": {
+  "added": "v1.5",
+  "aka": [
+   "Darwinopterus"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Darwinopterus",
+  "rarity": "epic"
+ },
+ "dilozorion": {
+  "added": "v3.10",
+  "aka": [
+   "Dilozorion"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dilozorion",
+  "rarity": "apex"
+ },
+ "diplodocus": {
+  "added": "v1.5",
+  "aka": [
+   "Diplodocus"
+  ],
+  "class": "resilient",
+  "credit": "Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Diplodocus",
+  "rarity": "epic"
+ },
+ "distortus_rex": {
+  "added": "v3.14",
+  "aka": [
+   "Distortus Rex"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Distortus Rex",
+  "rarity": "unique"
+ },
+ "draco_intrepidus": {
+  "added": "v3.12",
+  "aka": [
+   "Draco Intrepidus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Moros intrepidus silhouette by Cy Marchant, CC BY 4.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/moros_intrepidus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Draco Intrepidus",
+  "rarity": "apex"
+ },
+ "draco_lux": {
+  "added": "v3.4",
+  "aka": [
+   "Draco Lux"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/pachycephalosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Draco Lux",
+  "rarity": "apex"
+ },
+ "einiosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Einiosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Einiosaurus procurvicornis silhouette by Nobu Tamura (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/einiosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Einiosaurus",
+  "rarity": "common"
+ },
+ "eremocanis": {
+  "added": "v3.11",
+  "aka": [
+   "Eremocanis"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Aenocyon dirus silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dire_wolf.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Eremocanis",
+  "rarity": "apex"
+ },
+ "erlikosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Erlikosaurus"
+  ],
+  "class": "cunning",
+  "credit": "Erlikosaurus andrewsi silhouette by Walter Vladimir, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/erlikosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Erlikosaurus",
+  "rarity": "epic"
+ },
+ "erythrosuchus": {
+  "added": "v3.9",
+  "aka": [
+   "Erythrosuchus"
+  ],
+  "class": "cunning",
+  "credit": "Erythrosuchus africanus silhouette by Miguel Hernández, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/erythrosuchus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Erythrosuchus",
+  "rarity": "omega"
+ },
+ "eucladoceros": {
+  "added": "v1.13",
+  "aka": [
+   "Eucladoceros"
+  ],
+  "class": "resilient",
+  "credit": "Eucladoceros silhouette by Nobu Tamura, vectorized by Zimices, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/eucladoceros.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Eucladoceros",
+  "rarity": "epic"
+ },
+ "fukuitops": {
+  "added": "v3.16",
+  "aka": [
+   "Fukuitops"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Fukuitops",
+  "rarity": "apex"
+ },
+ "geminideus": {
+  "added": "v2.20",
+  "aka": [
+   "Geminideus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Geminideus",
+  "rarity": "apex"
+ },
+ "ghost": {
+  "added": "v2.17",
+  "aka": [
+   "Ghost"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ghost.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Ghost",
+  "rarity": "epic"
+ },
+ "giganotosaurus": {
+  "added": "v2.16",
+  "aka": [
+   "Giganotosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Giganotosaurus carolinii silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/giganotosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Giganotosaurus",
+  "rarity": "epic"
+ },
+ "gigantspinosaurus": {
+  "added": "v3.4",
+  "aka": [
+   "Gigantspinosaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/stegosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Gigantspinosaurus",
+  "rarity": "epic"
+ },
+ "glyptosavis": {
+  "added": "v3.8",
+  "aka": [
+   "Glyptosavis"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/pachycephalosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Glyptosavis",
+  "rarity": "apex"
+ },
+ "gryganyth": {
+  "added": "v3.6",
+  "aka": [
+   "Gryganyth"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Gryposuchus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/gryposuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Gryganyth",
+  "rarity": "apex"
+ },
+ "gryposuchus": {
+  "added": "v1.3",
+  "aka": [
+   "Gryposuchus"
+  ],
+  "class": "fierce",
+  "credit": "Gryposuchus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/gryposuchus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Gryposuchus",
+  "rarity": "epic"
+ },
+ "herranotor": {
+  "added": "v3.19",
+  "aka": [
+   "Herranotor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Herrerasaurus ischigualastensis silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/herrerasaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Herranotor",
+  "rarity": "unique"
+ },
+ "homalocephale": {
+  "added": "v3.2",
+  "aka": [
+   "Homalocephale"
+  ],
+  "class": "resilient",
+  "credit": "Homalocephale silhouette by Michael B. H. (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/homalocephale.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Homalocephale",
+  "rarity": "omega"
+ },
+ "ichthyovenator": {
+  "added": "v3.1",
+  "aka": [
+   "Ichthyovenator"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/spinosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ichthyovenator",
+  "rarity": "omega"
+ },
+ "indochicyon": {
+  "added": "v3.9",
+  "aka": [
+   "Indochicyon"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Indochicyon",
+  "rarity": "apex"
+ },
+ "indolycan": {
+  "added": "v2.20",
+  "aka": [
+   "Indolycan"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Indolycan",
+  "rarity": "apex"
+ },
+ "indonemys": {
+  "added": "v2.18",
+  "aka": [
+   "Indonemys"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Indonemys",
+  "rarity": "apex"
+ },
+ "junior": {
+  "added": "v3.13",
+  "aka": [
+   "Junior"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Junior",
+  "rarity": "unique"
+ },
+ "kentrorex": {
+  "added": "v3.19",
+  "aka": [
+   "Kentrorex"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Kentrorex",
+  "rarity": "apex"
+ },
+ "kentrosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Kentrosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Kentrosaurus aethiopicus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/kentrosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Kentrosaurus",
+  "rarity": "epic"
+ },
+ "koreanosaurus": {
+  "added": "v3.1",
+  "aka": [
+   "Koreanosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Koreanosaurus boseongensis silhouette by Pete Buchholz, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/koreanosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Koreanosaurus",
+  "rarity": "omega"
+ },
+ "lambeosaurus": {
+  "added": "v3.7",
+  "aka": [
+   "Lambeosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Lambeosaurus silhouette by Matt Martyniuk, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/lambeosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Lambeosaurus",
+  "rarity": "omega"
+ },
+ "leaellynasaura": {
+  "added": "v3.12",
+  "aka": [
+   "Leaellynasaura"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Leaellynasaura amicagraphica silhouette by Dann Pigdon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/leaellynasaura.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Leaellynasaura",
+  "rarity": "omega"
+ },
+ "magnaraptor": {
+  "added": "v3.5",
+  "aka": [
+   "Magnaraptor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Magnaraptor",
+  "rarity": "apex"
+ },
+ "masiakasaurus": {
+  "added": "v3.2",
+  "aka": [
+   "Masiakasaurus"
+  ],
+  "class": "cunning",
+  "credit": "Masiakasaurus knopfleri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/masiakasaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Masiakasaurus",
+  "rarity": "omega"
+ },
+ "mastodonsaurus": {
+  "added": "v3.11",
+  "aka": [
+   "Mastodonsaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Diplocaulus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/diplocaulus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Mastodonsaurus",
+  "rarity": "omega"
+ },
+ "megalania": {
+  "added": "v3.0",
+  "aka": [
+   "Megalania"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Varanus silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/megalania.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Megalania",
+  "rarity": "omega"
+ },
+ "megalocevia": {
+  "added": "v3.6",
+  "aka": [
+   "Megalocevia"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Megalosaurus bucklandii silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/megalosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Megalocevia",
+  "rarity": "apex"
+ },
+ "megatyrannus": {
+  "added": "v3.19",
+  "aka": [
+   "Megatyrannus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Megatyrannus",
+  "rarity": "apex"
+ },
+ "megistotherium": {
+  "added": "v2.3",
+  "aka": [
+   "Megistotherium"
+  ],
+  "class": "fierce",
+  "credit": "Megistotherium silhouette by Michael Tripoli, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/megistotherium.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Megistotherium",
+  "rarity": "epic"
+ },
+ "microraptor": {
+  "added": "v2.17",
+  "aka": [
+   "Microraptor"
+  ],
+  "class": "cunning",
+  "credit": "Microraptor zhaoianus silhouette by Matt Martyniuk, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/microraptor.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Microraptor",
+  "rarity": "epic"
+ },
+ "monkeyondactylus": {
+  "added": "v3.16",
+  "aka": [
+   "Monkeyondactylus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Monkeyondactylus",
+  "rarity": "unique"
+ },
+ "monolomoth": {
+  "added": "v3.10",
+  "aka": [
+   "Monolomoth"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Mammuthus primigenius silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/woolly_mammoth.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Monolomoth",
+  "rarity": "apex"
+ },
+ "moros_intrepidus": {
+  "added": "v2.18",
+  "aka": [
+   "Moros Intrepidus"
+  ],
+  "class": "fierce",
+  "credit": "Moros intrepidus silhouette by Cy Marchant, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/moros_intrepidus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Moros Intrepidus",
+  "rarity": "epic"
+ },
+ "mutadon": {
+  "added": "v3.16",
+  "aka": [
+   "Mutadon"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Mutadon",
+  "rarity": "unique"
+ },
+ "nominrex": {
+  "added": "v3.9",
+  "aka": [
+   "Nominrex"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Phorusrhacos silhouette by Thomas W. LaBarge, CC BY 4.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/phorusrhacos.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Nominrex",
+  "rarity": "apex"
+ },
+ "nyctopteryx": {
+  "added": "v3.17",
+  "aka": [
+   "Nyctopteryx"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Nyctopteryx",
+  "rarity": "unique"
+ },
+ "ovinnolophosaurus": {
+  "added": "v3.14",
+  "aka": [
+   "Ovinnolophosaurus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ovinnolophosaurus",
+  "rarity": "unique"
+ },
+ "oviraptor_gen_2": {
+  "added": "v2.18",
+  "aka": [
+   "Oviraptor Gen 2"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Oviraptor Gen 2",
+  "rarity": "epic"
+ },
+ "panthera": {
+  "added": "v2.20",
+  "aka": [
+   "Panthera"
+  ],
+  "class": "wild_card",
+  "credit": "Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/panthera.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Panthera",
+  "rarity": "epic"
+ },
+ "paralidactylus": {
+  "added": "v3.22",
+  "aka": [
+   "Paralidac"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Paralidactylus",
+  "rarity": "apex"
+ },
+ "paralitrosaurus": {
+  "added": "v3.20",
+  "aka": [
+   "Paralitrosaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Paralititan stromeri silhouette by Dmitry Bogdanov (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/paralititan.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Paralitrosaurus",
+  "rarity": "unique"
+ },
+ "plateorex": {
+  "added": "v3.5",
+  "aka": [
+   "Plateorex"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Plateosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/plateosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Plateorex",
+  "rarity": "apex"
+ },
+ "proto_lux": {
+  "added": "v3.10",
+  "aka": [
+   "Proto Lux"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Protoceratops silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/protoceratops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Proto Lux",
+  "rarity": "apex"
+ },
+ "protoceratops": {
+  "added": "v3.8",
+  "aka": [
+   "Protoceratops"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Protoceratops silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/protoceratops.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Protoceratops",
+  "rarity": "epic"
+ },
+ "protonodon": {
+  "added": "v3.8",
+  "aka": [
+   "Protonodon"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Protoceratops silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/protoceratops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Protonodon",
+  "rarity": "unique"
+ },
+ "pteranodon": {
+  "added": "v1.4",
+  "aka": [
+   "Pteranodon"
+  ],
+  "class": "fierce",
+  "credit": "Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Pteranodon",
+  "rarity": "epic"
+ },
+ "pterovexus": {
+  "added": "v1.6",
+  "aka": [
+   "Pterovexus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pterovexus",
+  "rarity": "unique"
+ },
+ "pulmonoscorpius": {
+  "added": "v2.19",
+  "aka": [
+   "Pulmonoscorpius"
+  ],
+  "class": "fierce",
+  "credit": "Pulmonoscorpius silhouette by Junnn11, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pulmonoscorpius.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Pulmonoscorpius",
+  "rarity": "epic"
+ },
+ "pyroraptor": {
+  "added": "v1.1",
+  "aka": [
+   "Pyroraptor"
+  ],
+  "class": "cunning",
+  "credit": "Pyroraptor olympius silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pyroraptor.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Pyroraptor",
+  "rarity": "epic"
+ },
+ "quetzalcoatlus_gen_2": {
+  "added": "v2.18",
+  "aka": [
+   "Quetzalcoatlus Gen 2"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Quetzalcoatlus Gen 2",
+  "rarity": "epic"
+ },
+ "rajadorixis": {
+  "added": "v3.7",
+  "aka": [
+   "Rajadorixis"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Rajadorixis",
+  "rarity": "apex"
+ },
+ "rajasaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Rajasaurus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Rajasaurus",
+  "rarity": "epic"
+ },
+ "red": {
+  "added": "v2.18",
+  "aka": [
+   "Red"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/red.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Red",
+  "rarity": "epic"
+ },
+ "sah_panthera": {
+  "added": "v3.4",
+  "aka": [
+   "Sah Panthera"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Smilodon silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/smilodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Sah Panthera",
+  "rarity": "apex"
+ },
+ "saurophaganax": {
+  "added": "v3.9",
+  "aka": [
+   "Saurophaganax"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Allosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/allosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Saurophaganax",
+  "rarity": "omega"
+ },
+ "secodontosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Secodontosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Secodontosaurus silhouette by Nobu Tamura (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/secodontosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Secodontosaurus",
+  "rarity": "epic"
+ },
+ "segnosaurus": {
+  "added": "v3.1",
+  "aka": [
+   "Segnosaurus"
+  ],
+  "class": "wild_card",
+  "credit": "Segnosaurus galbinensis silhouette by FunkMonk, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/segnosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Segnosaurus",
+  "rarity": "omega"
+ },
+ "segnotherisaurus": {
+  "added": "v3.1",
+  "aka": [
+   "Segnotherisaurus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Therizinosaurus cheloniformis silhouette by Martin Kevil, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/therizinosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Segnotherisaurus",
+  "rarity": "unique"
+ },
+ "shantrospinos": {
+  "added": "v3.20",
+  "aka": [
+   "Shantrospinos"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Edmontosaurus silhouette by Pete Buchholz, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/edmontosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Shantrospinos",
+  "rarity": "apex"
+ },
+ "sinoceratops": {
+  "added": "v1.1",
+  "aka": [
+   "Sinoceratops"
+  ],
+  "class": "resilient",
+  "credit": "Sinoceratops zhuchengensis silhouette by Tasman Dixon, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/sinoceratops.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Sinoceratops",
+  "rarity": "epic"
+ },
+ "sinraptor": {
+  "added": "v3.4",
+  "aka": [
+   "Sinraptor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Allosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/allosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Sinraptor",
+  "rarity": "omega"
+ },
+ "skoonametrodon": {
+  "added": "v3.3",
+  "aka": [
+   "Skoonametrodon"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Skoonametrodon",
+  "rarity": "apex"
+ },
+ "smilodon": {
+  "added": "v1.7",
+  "aka": [
+   "Smilodon"
+  ],
+  "class": "cunning",
+  "credit": "Smilodon silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/smilodon.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Smilodon",
+  "rarity": "epic"
+ },
+ "sonorasaurus": {
+  "added": "v2.1",
+  "aka": [
+   "Sonorasaurus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Brachiosaurus altithorax silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/brachiosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Sonorasaurus",
+  "rarity": "epic"
+ },
+ "spinosaurus_gen_2": {
+  "added": "v1.2",
+  "aka": [
+   "Spinosaurus Gen 2"
+  ],
+  "class": "fierce",
+  "credit": "Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/spinosaurus_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Spinosaurus Gen 2",
+  "rarity": "epic"
+ },
+ "spinotops": {
+  "added": "v3.12",
+  "aka": [
+   "Spinotops"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Triceratops silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/triceratops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Spinotops",
+  "rarity": "apex"
+ },
+ "stomatosuchus_mattel": {
+  "added": "v3.22",
+  "aka": [
+   "Stomatosu"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Sarcosuchus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/sarcosuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Stomatosuchus Mattel",
+  "rarity": "unique"
+ },
+ "stygimoloch": {
+  "added": "v1.2",
+  "aka": [
+   "Stygimoloch"
+  ],
+  "class": "resilient",
+  "credit": "Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/stygimoloch.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Stygimoloch",
+  "rarity": "epic"
+ },
+ "tiger": {
+  "added": "v2.19",
+  "aka": [
+   "Tiger"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tiger.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Tiger",
+  "rarity": "epic"
+ },
+ "titanoboa": {
+  "added": "v1.12",
+  "aka": [
+   "Titanoboa"
+  ],
+  "class": "resilient",
+  "credit": "Titanoboa cerrejonensis silhouette by Nobu Tamura (modified by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/titanoboa.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Titanoboa",
+  "rarity": "epic"
+ },
+ "titanosaurus": {
+  "added": "v3.14",
+  "aka": [
+   "Titanosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Titanosaurus",
+  "rarity": "epic"
+ },
+ "titanotarkus": {
+  "added": "v3.15",
+  "aka": [
+   "Titanotarkus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Titanotarkus",
+  "rarity": "unique"
+ },
+ "titanotholus": {
+  "added": "v3.15",
+  "aka": [
+   "Titanotholus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Titanotholus",
+  "rarity": "apex"
+ },
+ "trykovenator": {
+  "added": "v3.8",
+  "aka": [
+   "Trykovenator"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Trykovenator",
+  "rarity": "apex"
+ },
+ "tyrannodactylus": {
+  "added": "v3.10",
+  "aka": [
+   "Tyrannodactylus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tyrannodactylus",
+  "rarity": "unique"
+ },
+ "tyrannosaurus_rex": {
+  "added": "v1.1",
+  "aka": [
+   "Tyrannosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Tyrannosaurus Rex",
+  "rarity": "epic"
+ },
+ "tyrannotor": {
+  "added": "v3.21",
+  "aka": [
+   "Tyrannoto"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tyrannotor",
+  "rarity": "apex"
+ },
+ "unmatched-jwadashboard-05865dc28682e494": {
+  "added": null,
+  "aka": [
+   "05865dc2"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (05865dc2)",
+  "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-433c19487521c564": {
+  "added": null,
+  "aka": [
+   "433c1948"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (433c1948)",
+  "rarity": "unknown"
+ },
+ "woolly_rhino": {
+  "added": "v1.11",
+  "aka": [
+   "Wollnashorn"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Elasmotherium silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/elasmotherium.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Woolly Rhino",
+  "rarity": "epic"
+ },
+ "yutyrannus": {
+  "added": "v3.2",
+  "aka": [
+   "Yutyrannus"
+  ],
+  "class": "fierce",
+  "credit": "Yutyrannus huali silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/yutyrannus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Yutyrannus",
+  "rarity": "omega"
+ },
+ "yuxisaurus": {
+  "added": "v3.0",
+  "aka": [
+   "Yuxisaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Yuxisaurus",
+  "rarity": "omega"
+ }
+}
