@@ -1,0 +1,3 @@
+# Windows batch files must keep Windows (CRLF) line endings, also in GitHub's "Download ZIP".
+*.bat -text
+*.cmd -text

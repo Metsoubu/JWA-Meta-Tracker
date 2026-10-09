@@ -48,7 +48,9 @@ class ServerTests(TempDataDir):
     def test_dashboard_page_served(self):
         status, headers, body = self.request("GET", "/")
         self.assertEqual(status, 200)
-        self.assertIn(b"Popularity tier list", body)
+        self.assertIn(b"Meta tier list", body)
+        for removed in (b"About the data", b"Updates</a>", b"Popularity is not proof"):
+            self.assertNotIn(removed, body)
         self.assertIn("default-src 'self'", dict(headers)["Content-Security-Policy"])
 
     def test_site_data(self):

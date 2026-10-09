@@ -1,8 +1,9 @@
 @echo off
 rem ============================================================
 rem  JWA Meta Tracker - upload this folder to your GitHub
-rem  repository so it becomes a free public website.
-rem  See "Put it online" in README.md first (3 short steps).
+rem  repository so it becomes (or updates) your free website.
+rem  First time: see "Put it online" in README.md (3 short steps).
+rem  After that: just double-click this file whenever files change.
 rem ============================================================
 setlocal
 cd /d "%~dp0"
@@ -16,11 +17,22 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo.
-echo Paste the address of your GitHub repository and press Enter.
-echo Example: https://github.com/yourname/jwa-meta-tracker
-set /p REPO=Repository address:
-if "%REPO%"=="" exit /b 1
+set "REPO="
+if exist ".git" for /f "delims=" %%R in ('git remote get-url origin 2^>nul') do set "REPO=%%R"
+
+if defined REPO (
+  echo Publishing to: %REPO%
+  echo ^(To use a different repository, type its address now; otherwise just press Enter.^)
+  set "NEWREPO="
+  set /p NEWREPO=Repository address:
+) else (
+  echo Paste the address of your GitHub repository and press Enter.
+  echo Example: https://github.com/yourname/jwa-meta-tracker
+  set "NEWREPO="
+  set /p NEWREPO=Repository address:
+)
+if defined NEWREPO set "REPO=%NEWREPO%"
+if not defined REPO exit /b 1
 
 if not exist ".git" git init -b main >nul
 rem A neutral author name keeps your personal e-mail address out of the public history.
@@ -41,7 +53,7 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Done! In a minute or two the website will be live. Open your repository on GitHub
-echo and click "Actions" to watch it; the address is shown under Settings - Pages.
+echo Done! In a minute or two the website shows the new version.
+echo Open your repository on GitHub and click "Actions" to watch it.
 pause
 endlocal

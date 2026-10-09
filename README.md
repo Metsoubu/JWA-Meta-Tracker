@@ -1,12 +1,9 @@
 # JWA Meta Tracker
 
-A Jurassic World Alive **popularity tier list** built from the teams of the top 100
-arena players. It shows which creatures top players put on their teams, sorts them
-into S / A / B / C / D popularity tiers, and keeps a history so you can see what is
-rising or falling. New data arrives automatically twice a day.
-
-> **Popularity is not strength.** S tier means most top players *choose* a creature;
-> it is not proof that it wins more.
+A Jurassic World Alive **meta tier list** built from the teams of the top 100 arena
+players. It shows which creatures top players put on their teams, sorts them into
+S / A / B / C / D tiers by how often they are used, and keeps a history so you can see
+what is rising or falling. New data arrives automatically twice a day.
 
 You can use it in two ways (they share the same code):
 
@@ -96,7 +93,7 @@ daily); the game version from Apple's App Store listing.
 
 **Pictures.** Official game art belongs to Ludia/Universal and is not used. Every
 creature gets a white silhouette of a real animal from [PhyloPic](https://www.phylopic.org)
-(credited on the *About the data* page): its own species where one exists, otherwise
+(each creature's details show its credit): its own species where one exists, otherwise
 the animal whose body shape it shares - a raptor-like hybrid gets a raptor, a flying
 one a pterosaur, a snake a snake. These body types were checked by hand; new creatures
 are matched automatically through their fusion ingredients.
@@ -117,7 +114,8 @@ are matched automatically through their fusion ingredients.
   details: usage in each player range, usage over time, and how the source names it.
 * **History:** compare two snapshots or game versions, see risers, fallers and tier
   changes, and chart usage over time (up to 6 creatures; *Show as table* for numbers).
-* **Updates:** the newest data, the last update and every update with its result.
+* The coloured dot at the top shows whether the data is up to date; if an update fails,
+  a red note appears above the tier list (details on a PC: `VIEW_UPDATE_LOG.bat`).
 
 **Usage % = teams that include the creature ÷ valid teams × 100.** A team is valid only
 with exactly eight different, identified creatures and a known rank.
@@ -130,7 +128,7 @@ exact counts (79.99% is never rounded up into S).
 
 | Problem | What to do |
 |---|---|
-| "No data yet" | Wait a minute after the first start, or press *Check for new data now* on the Updates tab. |
+| "No data yet" | Wait a minute after the first start, or double-click `UPDATE_NOW.bat`. |
 | "The last update failed" | Usually no internet or the data source is down. It retries every hour by itself. |
 | "This data may be out of date" | The data source has not published anything for over 30 hours; the tracker keeps checking. |
 | Moved this folder or upgraded Python | Double-click `START.bat` once; it repairs the automatic update. |

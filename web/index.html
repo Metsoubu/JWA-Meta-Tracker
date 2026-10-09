@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JWA Meta Tracker</title>
-  <meta name="description" content="Private Jurassic World Alive popularity tier list from top-ranked arena teams.">
+  <meta name="description" content="Jurassic World Alive meta tier list from the teams of the top 100 arena players.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="theme.js"></script>
@@ -27,13 +27,11 @@
       <nav class="tabs" aria-label="Sections">
         <a href="#/tiers" data-tab="tiers">Tier list</a>
         <a href="#/history" data-tab="history">History</a>
-        <a href="#/log" data-tab="log">Updates</a>
-        <a href="#/about" data-tab="about">About the data</a>
       </nav>
       <div class="topbar-right">
-        <button class="status-pill" id="statusPill" type="button" title="Data status">
+        <div class="status-pill" id="statusPill" role="status" title="Data status">
           <span class="dot"></span><span class="status-text">Loading…</span>
-        </button>
+        </div>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch light/dark theme" title="Switch light/dark theme">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-moon" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/><g class="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
         </button>
@@ -51,8 +49,7 @@
     <section class="view" id="view-tiers" aria-labelledby="h-tiers">
       <div class="page-head">
         <div>
-          <h1 id="h-tiers">Popularity tier list</h1>
-          <p class="lede">How often each creature appears on top-ranked arena teams. <strong>Popularity is not proof of strength</strong> — it shows what top players choose.</p>
+          <h1 id="h-tiers">Meta tier list</h1>
         </div>
       </div>
 
@@ -163,33 +160,6 @@
       </div>
     </section>
 
-    <!-- ===================== UPDATE LOG ===================== -->
-    <section class="view" id="view-log" aria-labelledby="h-log" hidden>
-      <div class="page-head">
-        <div>
-          <h1 id="h-log">Updates</h1>
-          <p class="lede">Every update is listed here, including errors. A failed update never changes or deletes data that was already saved.</p>
-        </div>
-        <button type="button" class="btn btn-primary" id="btnCollect">Check for new data now</button>
-      </div>
-      <div class="info-grid" id="logCards"></div>
-      <div class="card">
-        <div class="card-head"><h2>Recent updates</h2></div>
-        <div id="runsTable"></div>
-      </div>
-      <div id="logExtras"></div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="view" id="view-about" aria-labelledby="h-about" hidden>
-      <div class="page-head">
-        <div>
-          <h1 id="h-about">About the data</h1>
-          <p class="lede">Where the numbers come from, how they are calculated, and what this tracker can and cannot see.</p>
-        </div>
-      </div>
-      <div class="prose" id="aboutContent"></div>
-    </section>
   </main>
 
   <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
@@ -207,7 +177,8 @@
 
   <footer class="footer">
     Unofficial fan tool. Not affiliated with or endorsed by Ludia, Jam City, Universal or Jurassic World Alive.
-    Creature names are used for identification only. Pictures: PhyloPic contributors (see About the data).
+    Creature names are used for identification only. Data: jwa-dashboard community feed.
+    Silhouettes: PhyloPic contributors, Creative Commons licences (each creature's details show its credit).
   </footer>
 
   <script src="app.js"></script>

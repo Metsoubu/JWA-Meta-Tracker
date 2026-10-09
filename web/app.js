@@ -442,7 +442,7 @@
   }
 
   // ------------------------------------------------------------------ routing
-  const VIEWS = ["tiers", "history", "log", "about"];
+  const VIEWS = ["tiers", "history"];
   function currentView() {
     const v = (location.hash || "").replace(/^#\/?/, "");
     return VIEWS.includes(v) ? v : "tiers";
@@ -457,10 +457,8 @@
     hideTip();
     ensureRange(state.kind);
     const v = currentView();
-    if (v === "tiers") renderTiers();
-    else if (v === "history") renderHistory();
-    else if (v === "log") renderLog();
-    else renderAbout();
+    if (v === "history") renderHistory();
+    else renderTiers();
   }
 
   // ================================================================== TIER LIST
@@ -506,14 +504,13 @@
     if (sel.snaps && sel.snaps.some(s => s.ex)) box.appendChild(banner("example", "Example data.", "These numbers are randomly generated for testing and are not real Jurassic World Alive results."));
     if (sel.mode === "none") {
       if (LOCAL && LOCAL.collection_running) box.appendChild(banner("info", "Collecting data for the first time…", "This usually takes about a minute. The page updates by itself."));
-      else box.appendChild(banner("warn", "No data yet.", isWebsite() ? "The first update has not finished yet." : "Open the Updates tab and press “Check for new data now”."));
+      else box.appendChild(banner("warn", "No data yet.", isWebsite() ? "The first update has not finished yet." : "Updates run automatically; to fetch data right away, double-click UPDATE_NOW.bat."));
       return;
     }
     const fails = consecutiveFailures();
     if (fails) {
       const r = SITE.runs[0];
-      box.appendChild(banner("error", "The last update failed.", `${(r.error || r.message || "").split("\n")[0]} The data shown is from the last successful update.`,
-        el("a", { href: "#/log", text: " Details" })));
+      box.appendChild(banner("error", "The last update failed.", `${(r.error || r.message || "").split("\n")[0]} The data shown is from the last successful update.`));
     }
     if (sel.mode === "snapshot" && !sel.latest) {
       box.appendChild(banner("info", "You are viewing a past snapshot.", `Captured ${fmtDateLong(sel.snaps[0].t)}.`,
@@ -975,131 +972,6 @@
     });
   }
 
-  // ================================================================== UPDATES
-  const RUN_STATUS = {
-    success: ["good", "check", "New data saved"],
-    no_new_data: ["good", "check", "Checked — nothing new yet"],
-    partial: ["warning", "warn", "Partly successful"],
-    failed: ["critical", "x", "Failed"],
-    interrupted: ["warning", "warn", "Interrupted"],
-  };
-  function badge(cls, ic, label) { return el("span", { class: `status-badge ${cls}` }, icon(ic), label); }
-  function statusBadge(status) { const [cls, ic, label] = RUN_STATUS[status] || ["neutral", "dash", status]; return badge(cls, ic, label); }
-
-  function renderLog() {
-    const cards = clear($("#logCards"));
-    const card = (title, ...kids) => el("div", { class: "info-card" }, el("h3", { text: title }), ...kids);
-    const latest = snapsOf("arena")[0];
-    cards.appendChild(card("Newest data",
-      el("div", { class: "big", text: latest ? fmtDateLong(latest.t) : "None yet" }),
-      latest ? el("p", { text: `${relTime(latest.t)} · top ${latest.cov} players` }) : null,
-      latest ? el("p", null, "Source: ", el("a", { href: SITE.sources[latest.src] && SITE.sources[latest.src].url || "#", target: "_blank", rel: "noopener noreferrer",
-        text: (SITE.sources[latest.src] || { label: latest.src }).label })) : null));
-    const lr = (SITE.runs || [])[0];
-    cards.appendChild(card("Last update",
-      el("div", { class: "big" }, lr ? statusBadge(lr.status) : "—", lr ? ` ${relTime(lr.finished_at || lr.started_at)}` : ""),
-      el("p", { text: lr ? lr.message : "No update has run yet." })));
-    cards.appendChild(card("How updates work",
-      el("p", { text: isWebsite()
-        ? "This website updates itself twice a day from the community data feed. Nothing to install."
-        : "Your computer checks for new data twice a day in the background, and catches up after it was switched off." })));
-
-    const btn = $("#btnCollect");
-    btn.hidden = isWebsite() || !!SITE.demo;
-    btn.disabled = !!(LOCAL && LOCAL.collection_running);
-    btn.textContent = LOCAL && LOCAL.collection_running ? "Update running…" : "Check for new data now";
-
-    const box = clear($("#runsTable"));
-    const runs = SITE.runs || [];
-    if (!runs.length) box.appendChild(el("div", { class: "empty-state", text: "No updates have run yet." }));
-    else {
-      const tbody = el("tbody");
-      runs.forEach(r => tbody.appendChild(el("tr", null,
-        el("td", { class: "tnum", text: fmtDateLong(r.started_at) }),
-        el("td", null, statusBadge(r.status)),
-        el("td", { class: "num", text: r.new_snapshots }),
-        el("td", null, el("div", { class: "run-msg", text: r.message || "" }), r.error ? el("div", { class: "run-err", text: r.error }) : null))));
-      box.appendChild(el("div", { class: "table-wrap" }, el("table", { class: "data" },
-        el("thead", null, el("tr", null, el("th", { text: "When" }), el("th", { text: "Result" }),
-          el("th", { class: "num", text: "New snapshots" }), el("th", { text: "Details" }))), tbody)));
-    }
-    const extras = clear($("#logExtras"));
-    if ((SITE.unmatched || []).length) {
-      extras.appendChild(el("div", { class: "card" }, el("div", { class: "card-head" }, el("h2", { text: "Creature names that could not be identified" })),
-        el("p", { class: "fine", text: "These appear in the source data but match nothing in the creature list. They are counted under their raw label, never guessed." }),
-        el("ul", null, SITE.unmatched.map(n => el("li", { text: n })))));
-    }
-  }
-  async function collectNow() {
-    const btn = $("#btnCollect");
-    btn.disabled = true;
-    btn.textContent = "Update running…";
-    try {
-      const resp = await fetch("api/collect", { method: "POST", headers: { "X-JWA-Tracker": "1" } });
-      const r = await resp.json();
-      toast(r.message || r.error || "Update started.");
-    } catch (e) {
-      toast(`Could not start the update: ${e.message}`);
-      btn.disabled = false;
-      btn.textContent = "Check for new data now";
-      return;
-    }
-    const started = Date.now();
-    const poll = async () => {
-      await refreshLocalStatus();
-      if ((LOCAL.collection_running || Date.now() - started < 4000) && Date.now() - started < 15 * 60e3) return setTimeout(poll, 2000);
-      await loadSite();
-      const lr = SITE.runs[0];
-      toast(lr ? `Update finished: ${(RUN_STATUS[lr.status] || [0, 0, lr.status])[2]}.` : "Update finished.");
-      reloadCurrentView();
-      renderStatusPill();
-    };
-    setTimeout(poll, 1500);
-  }
-
-  // ================================================================== ABOUT
-  function renderAbout() {
-    const box = clear($("#aboutContent"));
-    const card = (title, ...kids) => el("div", { class: "card" }, el("h2", { text: title }), ...kids);
-    const p = (...kids) => el("p", null, ...kids);
-    const link = (href, text) => el("a", { href, target: "_blank", rel: "noopener noreferrer", text });
-    box.appendChild(card("How usage is calculated",
-      el("div", { class: "formula", text: "Usage % = teams that include the creature ÷ valid teams in the sample × 100" }),
-      p("A team is ", el("strong", { text: "valid" }), " when it has exactly eight different, identified creatures and a known rank; anything else is left out. Only creatures that appear on at least one team are listed."),
-      p("Choosing a whole game version combines all of its snapshots: a team that appears in several snapshots counts each time."),
-      p("Changes are shown in ", el("strong", { text: "percentage points (pp)" }), ": going from 40% to 45% is +5 pp.")));
-    box.appendChild(card("Popularity tiers",
-      p("Tiers describe ", el("strong", { text: "popularity, not proven strength or win rate" }), ". They are recalculated for every sample."),
-      el("div", { class: "tier-def" }, TIERS.map(t => el("span", null, tierBadge(t), TIER_LABEL[t]))),
-      p("Boundaries use exact counts, so 79.99% is always A tier, never rounded up to S.")));
-    box.appendChild(card("Where the data comes from",
-      p("Teams come from the ", link("https://github.com/Lullatsch/jwa-dashboard", "jwa-dashboard"),
-        " community project, which publishes snapshots of the Jurassic World Alive leaderboards on GitHub, usually twice a day. This tracker reads those public files; it never connects to the game."),
-      el("ul", null,
-        el("li", null, el("strong", { text: "Top 100 players only. " }), "That is all the source publishes, and Ludia offers no public leaderboard API. You can look at the Top 50, the Top 100, or ranks 51–100."),
-        el("li", null, el("strong", { text: "Anonymous. " }), "Teams are published in rank groups of ten without player names or trophy counts."),
-        el("li", null, el("strong", { text: "Arena and tournaments. " }), "The arena ladder is the default; tournaments have their own rules and are kept separate.")),
-      p("Its numbers were cross-checked against Paleo.gg's independently published top-50 usage for the same day; every top creature agreed to within about 1–2 percentage points."),
-      p("Creature names: ", link("https://www.paleo.gg/games/jurassic-world-alive/dinodex", "Paleo.gg Dinodex"),
-        ". Game version: Apple's App Store listing.")));
-    const versionsTable = el("div", { class: "table-wrap" }, el("table", { class: "data" },
-      el("thead", null, el("tr", null, el("th", { text: "Game version" }), el("th", { text: "From" }), el("th", { text: "Evidence" }))),
-      el("tbody", null, SITE.versions.slice().reverse().map(v => el("tr", null, el("td", { text: v.version }), el("td", { class: "tnum", text: fmtDateLong(v.starts_at) }), el("td", { text: v.basis }))))));
-    box.appendChild(card("Game versions", versionsTable));
-    box.appendChild(card("Creature pictures",
-      p("Official game art belongs to Ludia and Universal and is not used. Each creature shows a white silhouette of a real animal from ",
-        link("https://www.phylopic.org", "PhyloPic"),
-        ": its own species where one exists, otherwise the animal whose body shape it shares (a raptor-shaped hybrid gets a raptor, a flying one a pterosaur, and so on)."),
-      el("div", { class: "credits" }, (SITE.credits || []).map(c => el("div", null, el("strong", { text: c.taxon }), ` — ${c.by}, `, link(c.url, c.license))))));
-    if (SITE.repo_url) {
-      box.appendChild(card("Run it on your own computer",
-        p("This tracker is free and open. To keep your own copy with its own history, ",
-          link(`${SITE.repo_url}/archive/refs/heads/main.zip`, "download it"), ", unzip it, and double-click START.bat (Windows, needs Python). ",
-          link(SITE.repo_url, "Source and instructions"), ".")));
-    }
-    box.appendChild(card("Disclaimer", p("Unofficial fan tool. Not affiliated with or endorsed by Ludia, Jam City, Universal or Jurassic World Alive. Creature names are used only to identify them.")));
-  }
-
   // ================================================================== wiring
   function wire() {
     window.addEventListener("hashchange", showView);
@@ -1133,8 +1005,6 @@
       $("#chartWrap").hidden = showing;
       $("#chartTableToggle").textContent = showing ? "Show as chart" : "Show as table";
     });
-    $("#btnCollect").addEventListener("click", collectNow);
-    $("#statusPill").addEventListener("click", () => { location.hash = "#/log"; });
     $("#themeToggle").addEventListener("click", () => {
       const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
