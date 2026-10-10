@@ -1373,6 +1373,20 @@
   "name": "Monolomoth",
   "rarity": "apex"
  },
+ "monomimus": {
+  "added": "v1.3",
+  "aka": [
+   "Monomimus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Monolophosaurus jiangi silhouette by Jordan Mallon (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/monolophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Monomimus",
+  "rarity": "legendary"
+ },
  "monostegotops": {
   "added": "v1.1",
   "aka": [
