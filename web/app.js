@@ -3,6 +3,9 @@
  * Everything shown comes from data/site.json: for every snapshot and rank range it
  * holds the number of valid teams and how many use each creature (counted in
  * Python). This file only adds those counts together, divides, and draws.
+ * The creature panel's teammates, rank groups and builds come from the teams in
+ * data/details/<month>.json, loaded when a creature is opened; `creatureProfile`
+ * mirrors the tested Python reference (stats.creature_profile).
  * The same page works on your own computer and as a static website.
  */
 "use strict";
@@ -35,6 +38,7 @@
   let TIER_DATA = null;
   let HISTORY = null;
   const colorSlots = {};    // creature key -> chart colour slot (colour follows the creature)
+  const DETAIL_FILES = {};  // month "YYYY-MM" -> promise of { snapshot id -> teams }
 
   function loadSaved() {
     try {
@@ -157,6 +161,7 @@
     const resp = await fetch("data/site.json", { cache: "no-store" });
     if (!resp.ok) throw new Error(`Could not load data (HTTP ${resp.status})`);
     const data = await resp.json();
+    if (!SITE || SITE.generated_at !== data.generated_at) for (const m in DETAIL_FILES) delete DETAIL_FILES[m];
     SITE = data;
     TIERS = data.tiers.map(t => t[0]);
     TIER_LABEL = data.tier_labels;
@@ -605,7 +610,10 @@
     const rankOf = {};
     counts.forEach((c, i) => { if (rankOf[c] === undefined) rankOf[c] = i + 1; });
     const tbody = el("tbody");
+    const buildCells = [];
     rows.forEach(c => {
+      const buildCell = el("td", { class: "build-cell" }, el("span", { class: "muted", text: "…" }));
+      buildCells.push([c.key, buildCell]);
       const tr = el("tr", { tabindex: "0" },
         el("td", { class: "num", text: rankOf[c.count] }),
         el("td", null, el("div", { class: "cell-creature" }, emblem(c, "sm"),
@@ -617,6 +625,7 @@
           el("span", { class: "v", text: fmtPct(c.pct) }))),
         el("td", { class: "num", text: `${c.count} / ${c.total}` }),
         el("td", { class: "num" }, deltaNode(c.delta_pp)),
+        buildCell,
         el("td", null, sparkline(c.trend || [])));
       const open = () => openDrawer(c.key);
       tr.addEventListener("click", open);
@@ -628,8 +637,27 @@
         el("thead", null, el("tr", null,
           el("th", { class: "num", text: "#" }), el("th", { text: "Creature" }), el("th", { text: "Tier" }),
           el("th", { text: "Usage" }), el("th", { class: "num", text: "Teams" }), el("th", { class: "num", text: "Change" }),
+          el("th", { text: "Best build (most used)", title: "The stat boosts most top players give it; click a creature for level, enhancement and more." }),
           el("th", { text: `Trend (last ${TIER_DATA.trendCount} snapshots)` }))),
         tbody)));
+    fillBuildCells(buildCells);
+  }
+
+  let buildToken = 0;
+  function fillBuildCells(cells) {
+    const token = ++buildToken;
+    const sel = TIER_DATA.sel, r = rangeInfo(state.range);
+    const none = td => clear(td).appendChild(el("span", { class: "muted", text: "—" }));
+    selectionTeams(sel.snaps).then(({ teams, found }) => {
+      if (token !== buildToken) return;
+      for (const [key, td] of cells) {
+        const B = found ? creatureProfile(teams, key, r.min, r.max).builds : null;
+        const best = B && B.topBuilds[0];
+        if (!best) { none(td); continue; }
+        clear(td).append(el("div", { class: "bc-main", text: buildShort(best[0], B) }),
+          el("div", { class: "bc-sub", text: `Level ${best[0][0]}${canEnhance(B) ? ` · Enh ${best[0][1]}` : ""} · ${pctText(best[1], B.complete)} of its teams` }));
+      }
+    }).catch(() => { if (token === buildToken) cells.forEach(([, td]) => none(td)); });
   }
 
   function renderTierChips() {
@@ -653,8 +681,234 @@
     });
   }
 
+  // ================================================================== CREATURE DETAILS (teams)
+  function decodeDetails(doc) {
+    const zip = (names, values) => { const o = {}; names.forEach((n, i) => { o[n] = values[i]; }); return o; };
+    const out = {};
+    for (const [id, teams] of Object.entries(doc.snaps || {})) {
+      out[id] = teams.map(t => ({
+        lo: t[0], hi: t[1],
+        members: t.slice(2).map(m => m.length === 1 ? { key: doc.keys[m[0]], level: null, enh: null, boosts: null, omega: null } : {
+          key: doc.keys[m[0]], level: m[1], enh: m[2],
+          boosts: m[3] === null ? null : zip(doc.boost_stats, m[3]),
+          omega: m.length > 4 ? zip(doc.omega_stats, m[4]) : null,
+        }),
+      }));
+    }
+    return out;
+  }
+  function loadDetailMonth(month) {
+    if (!/^\d{4}-\d{2}$/.test(month)) return Promise.reject(new Error("bad month"));
+    if (!DETAIL_FILES[month]) {
+      DETAIL_FILES[month] = fetch(`data/details/${month}.json`, { cache: "no-cache" })
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(decodeDetails)
+        .catch(e => { delete DETAIL_FILES[month]; throw e; });
+    }
+    return DETAIL_FILES[month];
+  }
+  // All teams of the selected snapshots that have published details.
+  async function selectionTeams(snaps) {
+    const withDetails = snaps.filter(s => s.d);
+    const months = [...new Set(withDetails.map(s => s.t.slice(0, 7)))];
+    const files = await Promise.all(months.map(loadDetailMonth));
+    const byId = Object.assign({}, ...files);
+    const teams = [];
+    let found = 0;
+    for (const s of withDetails) if (byId[s.id]) { found++; teams.push(...byId[s.id]); }
+    return { teams, found, missing: snaps.length - found };
+  }
+
+  const BOOST_ORDER = ["Attack", "Health", "Speed"];
+  const OMEGA_ORDER = ["Health", "Attack", "Speed", "Armor", "Crit", "Crit Dmg"];
+  function orderedStats(names, preferred) {
+    const set = new Set(names);
+    return preferred.filter(n => set.has(n)).concat([...set].filter(n => !preferred.includes(n)).sort());
+  }
+  function rankGroups(lo, hi) {
+    const span = hi - lo + 1;
+    const width = [10, 25, 50].find(w => span <= 10 * w) || 50;
+    const out = [];
+    for (let a = lo; a <= hi; a += width) out.push([a, Math.min(hi, a + width - 1)]);
+    return out;
+  }
+  const cmpKey = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+  const cmpTuple = (a, b) => { for (let i = 0; i < Math.min(a.length, b.length); i++) if (a[i] !== b[i]) return a[i] - b[i]; return a.length - b.length; };
+  // [[value, count], ...] most common first; ties by value (numbers, strings or number lists).
+  function ranked(map, cmp) {
+    return [...map.entries()].sort((a, b) => b[1] - a[1] || cmp(a[0], b[0]));
+  }
+
+  // Mirror of stats.creature_profile (Python): keep the two identical.
+  function creatureProfile(teams, key, lo, hi, topSplits) {
+    const groups = rankGroups(lo, hi);
+    const width = groups[0][1] - groups[0][0] + 1;
+    const gTeams = groups.map(() => 0), gUsed = groups.map(() => 0);
+    let total = 0, used = 0;
+    const mates = new Map(), builds = [];
+    for (const t of teams) {
+      if (t.lo < lo || t.hi > hi) continue;
+      const g = Math.floor((t.lo - lo) / width);
+      total++; gTeams[g]++;
+      const mine = t.members.find(m => m.key === key);
+      if (!mine) continue;
+      used++; gUsed[g]++;
+      for (const m of t.members) if (m.key !== key) mates.set(m.key, (mates.get(m.key) || 0) + 1);
+      if (mine.level !== null || mine.enh !== null || mine.boosts !== null || mine.omega !== null) builds.push(mine);
+    }
+    const levels = new Map(), enhs = new Map(), splits = new Map(), splitVals = new Map();
+    const full = new Map(), fullVals = new Map();  // (level, enhancement, ...boost split)
+    const boostSums = {}, omegaSums = {};
+    let boosted = 0, omegas = 0, complete = 0;
+    const boostStats = orderedStats(builds.flatMap(b => b.boosts ? Object.keys(b.boosts) : []), BOOST_ORDER);
+    const omegaStats = orderedStats(builds.flatMap(b => b.omega ? Object.keys(b.omega) : []), OMEGA_ORDER);
+    for (const b of builds) {
+      if (b.level !== null) levels.set(b.level, (levels.get(b.level) || 0) + 1);
+      if (b.enh !== null) enhs.set(b.enh, (enhs.get(b.enh) || 0) + 1);
+      if (b.boosts !== null) {
+        boosted++;
+        const split = boostStats.map(s => b.boosts[s] || 0);
+        const id = split.join("/");
+        splits.set(id, (splits.get(id) || 0) + 1);
+        splitVals.set(id, split);
+        boostStats.forEach(s => { boostSums[s] = (boostSums[s] || 0) + (b.boosts[s] || 0); });
+        if (b.level !== null && b.enh !== null) {
+          complete++;
+          const whole = [b.level, b.enh].concat(split);
+          const wid = whole.join("/");
+          full.set(wid, (full.get(wid) || 0) + 1);
+          fullVals.set(wid, whole);
+        }
+      }
+      if (b.omega && Object.keys(b.omega).length) {
+        omegas++;
+        omegaStats.forEach(s => { omegaSums[s] = (omegaSums[s] || 0) + (b.omega[s] || 0); });
+      }
+    }
+    const avg = (sums, n) => { const o = {}; if (n) Object.keys(sums).forEach(s => { o[s] = sums[s] / n; }); return o; };
+    return {
+      teams: total, used,
+      groups: groups.map(([a, b], i) => ({ lo: a, hi: b, teams: gTeams[i], used: gUsed[i] })),
+      teammates: ranked(mates, cmpKey),
+      builds: {
+        count: builds.length,
+        levels: ranked(levels, (a, b) => a - b),
+        enhancements: ranked(enhs, (a, b) => a - b),
+        boostStats, complete,
+        topBuilds: ranked(full, (a, b) => cmpTuple(fullVals.get(a), fullVals.get(b))).slice(0, topSplits || 3)
+          .map(([id, n]) => [fullVals.get(id), n]),
+        boosted,
+        splits: ranked(splits, (a, b) => cmpTuple(splitVals.get(a), splitVals.get(b))).slice(0, topSplits || 3)
+          .map(([id, n]) => [splitVals.get(id), n]),
+        boostAvg: avg(boostSums, boosted),
+        omegaStats, omegas,
+        omegaAvg: avg(omegaSums, omegas),
+      },
+    };
+  }
+
+  const pctText = (n, total) => (total ? Math.round((n * 100) / total) + "%" : "—");
+  const avgText = v => (Math.round(v * 10) / 10).toFixed(1).replace(/\.0$/, "");
+  function shareList(entries, total, label) {
+    return entries.slice(0, 3).map(([v, n]) => `${label ? label + " " : ""}${v} (${pctText(n, total)})`).join(" · ");
+  }
+
+  const STAT_SHORT = { Attack: "Atk", Health: "HP", Speed: "Spd", Armor: "Arm", Crit: "Crit", "Crit Dmg": "C.Dmg" };
+  const canEnhance = B => B.enhancements.some(([v]) => v > 0);
+  function chip(label, value, title) {
+    return el("span", { class: "chip", title }, el("span", { class: "cs", text: label }), el("strong", { text: String(value) }));
+  }
+  function boostChips(vals, B) {
+    return B.boostStats.map((s, i) => chip(STAT_SHORT[s] || s, vals[i], `${s} boosts`));
+  }
+  // A complete build [level, enhancement, ...boosts] as chips.
+  function buildChips(vals, B) {
+    return el("div", { class: "chips" }, chip("Lv", vals[0], "Level"), canEnhance(B) ? chip("Enh", vals[1], "Enhancement") : null,
+      boostChips(vals.slice(2), B));
+  }
+  function shareBlock(n, total, unit) {
+    return el("div", { class: "sv" }, el("strong", { text: pctText(n, total) }), el("span", { text: `${n} ${unit}` }));
+  }
+  function buildShort(vals, B) {
+    return B.boostStats.map((s, i) => `${STAT_SHORT[s] || s} ${vals[2 + i]}`).join(" · ");
+  }
+
+  function renderProfile(box, p, key, sel, info) {
+    clear(box);
+    const sec = (title, ...kids) => el("div", { class: "d-section" }, el("h3", { text: title }), ...kids);
+    const appearances = sel.mode === "version" ? "team appearances" : "teams";
+    if (!p.teams) {
+      box.appendChild(sec("Builds and teammates", el("p", { class: "fine", text: "No teams in this player range for the chosen data." })));
+      return;
+    }
+    const whereUsed = () => sec("Where it’s used",
+      el("div", { class: "d-brackets" }, p.groups.map(g => el("div", { class: `d-brk${g.teams ? "" : " none"}`, title: g.teams ? `${g.used} of ${g.teams} ${appearances} ranked ${g.lo}–${g.hi} (${exactPct(g.used, g.teams)})` : "" },
+        el("span", { class: "lbl", text: `#${g.lo}–${g.hi}` }),
+        el("div", { class: "bar" }, el("span", { style: { width: (g.teams ? (g.used * 100) / g.teams : 0).toFixed(2) + "%" } })),
+        el("span", { class: "v", text: g.teams ? `${g.used}/${g.teams}` : "—" })))),
+      el("p", { class: "fine", text: `How many ${appearances} in each rank group use it.` }));
+    if (!p.used) {
+      box.appendChild(whereUsed());
+      box.appendChild(sec("Builds and teammates", el("p", { class: "fine", text: "Not used by any team in this player range." })));
+      return;
+    }
+    // Best build
+    const B = p.builds;
+    const kids = [];
+    if (!B.count) {
+      kids.push(el("p", { class: "fine", text: "The data source has no build details for these teams yet." }));
+    } else {
+      const [best, ...others] = B.topBuilds;
+      if (best) {
+        kids.push(el("div", { class: "best-build" },
+          el("div", { class: "bb-main" }, el("div", { class: "bb-label", text: "Most used by top players" }), buildChips(best[0], B)),
+          el("div", { class: "sv bb-share" }, el("strong", { text: pctText(best[1], B.complete) }),
+            el("span", { text: `${best[1]} of ${B.complete} ${appearances}` }))));
+        if (others.length) {
+          kids.push(el("div", { class: "build-label", text: "Also popular" }),
+            el("div", { class: "splits" }, others.map(([vals, n]) => el("div", { class: "split" }, buildChips(vals, B),
+              shareBlock(n, B.complete, appearances)))));
+        }
+      }
+      if (B.boosted) {
+        kids.push(el("div", { class: "build-label", text: "Most common stat boosts (any level)" }),
+          el("div", { class: "splits" }, B.splits.map(([vals, n]) => el("div", { class: "split" },
+            el("div", { class: "chips" }, boostChips(vals, B)), shareBlock(n, B.boosted, appearances)))),
+          el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Average boosts" }),
+            el("span", { text: B.boostStats.map(s => `${s} ${avgText(B.boostAvg[s])}`).join(" · ") })));
+      }
+      if (B.levels.length) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Level" }), el("span", { text: shareList(B.levels, B.count) })));
+      if (canEnhance(B)) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Enhancement" }), el("span", { text: shareList(B.enhancements, B.count) })));
+      if (B.omegas) {
+        kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Omega training (average points)" }),
+          el("span", { text: B.omegaStats.filter(s => B.omegaAvg[s] > 0).map(s => `${s} ${avgText(B.omegaAvg[s])}`).join(" · ") || "No points spent" })));
+      }
+      const notes = [`Based on ${B.count} ${appearances}.`];
+      if (B.count < p.used) notes.push(`Build details are missing for ${p.used - B.count} older ${appearances}.`);
+      notes.push("“Best” means most used by the top players; no source publishes win/loss data.");
+      kids.push(el("p", { class: "fine", text: notes.join(" ") }));
+    }
+    box.appendChild(sec("Best build", ...kids));
+    // Best teammates
+    const mates = p.teammates.slice(0, 8);
+    box.appendChild(sec("Best teammates",
+      el("div", { class: "mates" }, mates.map(([k, n]) => {
+        const c = Object.assign({ key: k }, creature(k));
+        const b = el("button", { type: "button", class: "mate", title: `${c.name} is on ${n} of ${info.name}’s ${p.used} ${appearances}` },
+          emblem(c, "sm"),
+          el("div", { class: "mate-main" }, el("div", { class: "mn", text: c.name }),
+            el("div", { class: "bar" }, el("span", { style: { width: ((n * 100) / p.used).toFixed(2) + "%" } }))),
+          el("div", { class: "mv" }, el("strong", { text: pctText(n, p.used) }), el("span", { text: `${n}/${p.used}` })));
+        b.addEventListener("click", () => openDrawer(k));
+        return b;
+      })),
+      el("p", { class: "fine", text: `How often each creature is on the same team, out of ${info.name}’s ${p.used} ${appearances}.` })));
+    box.appendChild(whereUsed());
+  }
+
   // ================================================================== DRAWER
   let lastFocus = null;
+  let drawerToken = 0;
   function openDrawer(key) {
     hideTip();
     const drawer = $("#drawer");
@@ -662,6 +916,7 @@
     drawer.classList.add("open");
     drawer.setAttribute("aria-hidden", "false");
     $(".drawer-close", drawer).focus();
+    $(".drawer-panel", drawer).scrollTop = 0;
     renderDrawer(key);
   }
   function closeDrawer() {
@@ -692,11 +947,26 @@
           cur.total ? `${cur.count} of ${cur.total} teams · ${cur.r.label}` : "No teams")));
     }
     const sec = (title, ...kids) => el("div", { class: "d-section" }, el("h3", { text: title }), ...kids);
-    body.appendChild(sec("Usage by rank range",
+    const bracketSection = () => sec("Usage by rank range",
       el("div", { class: "d-brackets" }, brackets.map(b => el("div", { class: "d-brk" },
         el("span", { class: "lbl", text: b.r.label }),
         el("div", { class: "bar" }, el("span", { style: { width: (b.total ? Math.min(100, pct(b.count, b.total)) : 0).toFixed(2) + "%" } })),
-        el("span", { class: "v", text: b.total ? fmtPct(pct(b.count, b.total)) : "—" }))))));
+        el("span", { class: "v", text: b.total ? fmtPct(pct(b.count, b.total)) : "—" })))));
+    const profileBox = el("div", { class: "d-profile", "aria-live": "polite" },
+      el("div", { class: "d-section" }, el("p", { class: "fine", text: "Loading teammates and builds…" })));
+    body.appendChild(profileBox);
+    const token = ++drawerToken;
+    const r = rangeInfo(state.range);
+    selectionTeams(sel.snaps).then(({ teams, found, missing }) => {
+      if (token !== drawerToken) return;
+      if (!found) throw new Error("no team details");
+      renderProfile(profileBox, creatureProfile(teams, key, r.min, r.max), key, sel, c);
+      if (missing) profileBox.appendChild(el("p", { class: "fine", text: `${missing} of the chosen snapshots ${missing === 1 ? "has" : "have"} no team details (the data source no longer offers ${missing === 1 ? "it" : "them"}), so ${missing === 1 ? "it is" : "they are"} left out of these sections.` }));
+    }).catch(() => {
+      if (token !== drawerToken) return;
+      clear(profileBox).appendChild(bracketSection());
+      profileBox.appendChild(el("p", { class: "fine", text: "Teammates and builds are not available for the chosen data." }));
+    });
     const points = periodSnaps(state.kind);
     const chartBox = el("div", { class: "chart-wrap" });
     body.appendChild(sec(`Usage over time (${rangeInfo(state.range).label})`, chartBox));
@@ -1022,7 +1292,7 @@
 
   function applyMode() {
     $("#exampleBanner").hidden = !SITE.demo;
-    $(".brand-sub").textContent = isWebsite() ? "Top 100 arena usage · updated twice a day" : "Private · runs on this computer";
+    $(".brand-sub").textContent = "Top 100 arena usage · checked every 3 hours";
     document.title = "JWA Meta Tracker";
   }
 
@@ -1048,9 +1318,11 @@
     } else {
       setInterval(async () => {
         if (document.hidden) return;
-        const before = SITE.generated_at;
+        const stamp = () => SITE.snapshots.map(s => s.id).join(",");
+        const before = SITE.generated_at, beforeSnaps = stamp();
         try { await loadSite(); } catch (e) { return; }
-        if (SITE.generated_at !== before) { toast("New data has been published."); reloadCurrentView(); }
+        if (stamp() !== beforeSnaps) { toast("New data has been published."); reloadCurrentView(); }
+        else if (SITE.generated_at !== before && currentView() === "tiers") renderStats();  // just a newer check time
         renderStatusPill();
       }, 15 * 60e3);
       setInterval(renderStatusPill, 60e3);

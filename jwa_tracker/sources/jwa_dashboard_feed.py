@@ -15,12 +15,13 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 from datetime import datetime, timezone
 from typing import Any, Callable
 
 from .. import net
-from .base import SnapshotRef, SourceCreature, SourceFormatError, SourceSnapshot, SourceTeam
+from .base import Build, SnapshotRef, SourceCreature, SourceFormatError, SourceSnapshot, SourceTeam
 
 SOURCE_NAME = "jwa-dashboard-feed"
 REPOSITORY = "Lullatsch/jwa-dashboard"
@@ -58,6 +59,30 @@ def _parse_band(team: dict[str, Any]) -> tuple[int | None, int | None]:
     if isinstance(rank, int):
         return rank, rank
     return None, None
+
+
+def _number(value: Any) -> float | None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+        return None
+    return float(value)
+
+
+def _stat_points(value: Any) -> tuple[tuple[str, float], ...] | None:
+    if not isinstance(value, dict):
+        return None
+    points = [(k.strip(), _number(v)) for k, v in value.items() if isinstance(k, str) and k.strip()]
+    return tuple(sorted((k, v) for k, v in points if v is not None))
+
+
+def parse_build(creature: dict[str, Any]) -> Build | None:
+    """Level, enhancement, stat boosts and omega training of one creature on a team."""
+    level = _number(creature.get("level"))
+    enhancement = _number(creature.get("enhancement_level"))
+    boosts = _stat_points(creature.get("stat_boosts"))
+    omega = _stat_points(creature.get("omega_training_points"))
+    if level is None and enhancement is None and boosts is None and omega is None:
+        return None
+    return Build(level, int(enhancement) if enhancement is not None else None, boosts, omega or None)
 
 
 def _kind(event: dict[str, Any], name: str) -> str:
@@ -108,6 +133,7 @@ def parse_snapshot(raw: bytes, snapshot_id: str) -> SourceSnapshot:
                     source_id=str(creature.get("creature_id") or "").strip(),
                     display_name=str(creature.get("display_name") or ""),
                     rarity=(str(creature["rarity"]) if creature.get("rarity") else None),
+                    build=parse_build(creature),
                 )
             )
         fingerprint = hashlib.sha256(

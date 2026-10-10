@@ -6,6 +6,7 @@ overwrite history.
 """
 from __future__ import annotations
 
+import json
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -100,6 +101,25 @@ CREATE TABLE IF NOT EXISTS team_members (
     PRIMARY KEY (team_id, slot)
 );
 
+-- How each creature on a team was built. Older snapshots get these rows later
+-- (builds.py), so this table is separate from team_members; still append-only.
+CREATE TABLE IF NOT EXISTS member_builds (
+    team_id     INTEGER NOT NULL REFERENCES teams (id),
+    slot        INTEGER NOT NULL,
+    level       REAL,
+    enhancement INTEGER,
+    boosts      TEXT,   -- JSON {"Attack": 19, ...}; NULL when the source did not publish boosts
+    omega       TEXT,   -- JSON omega training points; NULL for creatures without omega training
+    PRIMARY KEY (team_id, slot)
+);
+-- Whether a snapshot's builds were looked at: 'recorded' when it was imported,
+-- 'filled' or 'unavailable' after builds.py looked at an older snapshot.
+CREATE TABLE IF NOT EXISTS snapshot_builds (
+    snapshot_id INTEGER PRIMARY KEY REFERENCES snapshots (id),
+    status      TEXT NOT NULL,
+    checked_at  TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS rejected_snapshots (
     source             TEXT NOT NULL,
     source_snapshot_id TEXT NOT NULL,
@@ -127,6 +147,10 @@ BEGIN SELECT RAISE(ABORT, 'historical teams are read-only'); END;
 CREATE TRIGGER IF NOT EXISTS team_members_no_update BEFORE UPDATE ON team_members
 BEGIN SELECT RAISE(ABORT, 'historical teams are read-only'); END;
 CREATE TRIGGER IF NOT EXISTS team_members_no_delete BEFORE DELETE ON team_members
+BEGIN SELECT RAISE(ABORT, 'historical teams are read-only'); END;
+CREATE TRIGGER IF NOT EXISTS member_builds_no_update BEFORE UPDATE ON member_builds
+BEGIN SELECT RAISE(ABORT, 'historical teams are read-only'); END;
+CREATE TRIGGER IF NOT EXISTS member_builds_no_delete BEFORE DELETE ON member_builds
 BEGIN SELECT RAISE(ABORT, 'historical teams are read-only'); END;
 """
 
@@ -341,6 +365,50 @@ def load_team_rows(conn: sqlite3.Connection, snapshot_ids: list[int]) -> list[sq
                 JOIN source_creatures sc
                   ON sc.source = s.source AND sc.source_creature_id = m.source_creature_id
                 WHERE t.snapshot_id IN ({marks}) AND t.is_valid = 1
+                """,
+                ids,
+            ).fetchall()
+        )
+    return out
+
+
+def insert_builds(conn: sqlite3.Connection, team_id: int, members: Iterable[Any]) -> int:
+    """Store the builds of a team's members (SourceCreature list, slot = list position)."""
+    def as_json(points):
+        return None if points is None else json.dumps(dict(points), sort_keys=True)
+
+    rows = [
+        (team_id, slot, m.build.level, m.build.enhancement, as_json(m.build.boosts), as_json(m.build.omega))
+        for slot, m in enumerate(members)
+        if m.source_id and m.build is not None
+    ]
+    conn.executemany(
+        "INSERT INTO member_builds (team_id, slot, level, enhancement, boosts, omega) VALUES (?, ?, ?, ?, ?, ?)",
+        rows,
+    )
+    return len(rows)
+
+
+def load_team_members(conn: sqlite3.Connection, snapshot_ids: list[int]) -> list[sqlite3.Row]:
+    """Valid teams of the given snapshots, one row per member with its build (if known), in slot order."""
+    out: list[sqlite3.Row] = []
+    chunk = 400
+    for start in range(0, len(snapshot_ids), chunk):
+        ids = snapshot_ids[start:start + chunk]
+        marks = ",".join("?" * len(ids))
+        out.extend(
+            conn.execute(
+                f"""
+                SELECT t.id AS team_id, t.snapshot_id, t.rank_min, t.rank_max, m.slot, sc.creature_key,
+                       b.level, b.enhancement, b.boosts, b.omega
+                FROM teams t
+                JOIN snapshots s ON s.id = t.snapshot_id
+                JOIN team_members m ON m.team_id = t.id
+                JOIN source_creatures sc
+                  ON sc.source = s.source AND sc.source_creature_id = m.source_creature_id
+                LEFT JOIN member_builds b ON b.team_id = m.team_id AND b.slot = m.slot
+                WHERE t.snapshot_id IN ({marks}) AND t.is_valid = 1
+                ORDER BY t.snapshot_id, t.id, m.slot
                 """,
                 ids,
             ).fetchall()

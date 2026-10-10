@@ -9,9 +9,11 @@ import json
 import logging
 import mimetypes
 import os
+import re
 import subprocess
 import sys
 import threading
+import time
 import urllib.parse
 import urllib.request
 from http import HTTPStatus
@@ -23,6 +25,7 @@ from . import collector, config, db, images, scheduler, site, standins
 
 log = logging.getLogger(__name__)
 
+_DETAILS_PATH = re.compile(r"^/data/details/(\d{4}-\d{2})\.json$")
 CSP = (
     "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; "
     "script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
@@ -39,6 +42,7 @@ class DashboardServer(ThreadingHTTPServer):
         self.allowed_hosts = {f"127.0.0.1:{port}", f"localhost:{port}"}
         self._cache_lock = threading.Lock()
         self._cache: tuple[Any, bytes] | None = None
+        self._details_cache: dict[str, tuple[Any, bytes]] = {}
         super().__init__((config.HOST, port), Handler)
 
     def site_json(self, conn) -> bytes:
@@ -50,6 +54,18 @@ class DashboardServer(ThreadingHTTPServer):
             payload = site.build_local(conn, db.utcnow(), demo=self.demo)
             body = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
             self._cache = (key, body)
+            return body
+
+    def details_json(self, conn, month: str) -> bytes:
+        """data/details/<month>.json: that month's teams with builds, for the creature panel."""
+        key = (_state_key(conn), conn.execute("SELECT COUNT(*) FROM member_builds").fetchone()[0])
+        with self._cache_lock:
+            cached = self._details_cache.get(month)
+            if cached and cached[0] == key:
+                return cached[1]
+            body = json.dumps(site.details_month_local(conn, month), ensure_ascii=False,
+                              separators=(",", ":")).encode("utf-8")
+            self._details_cache[month] = (key, body)
             return body
 
 
@@ -128,6 +144,14 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(HTTPStatus.OK, self.server.site_json(conn), "application/json; charset=utf-8")
                 finally:
                     conn.close()
+            month = _DETAILS_PATH.match(path)
+            if month:
+                conn = self._conn()
+                try:
+                    body = self.server.details_json(conn, month.group(1))
+                    return self._send(HTTPStatus.OK, body, "application/json; charset=utf-8")
+                finally:
+                    conn.close()
             if path.startswith("/api/"):
                 return self._error(HTTPStatus.NOT_FOUND, "unknown endpoint")
             return self._static(path)
@@ -145,6 +169,11 @@ class Handler(BaseHTTPRequestHandler):
             return self._error(HTTPStatus.FORBIDDEN, "missing request header")
         if urllib.parse.urlsplit(self.path).path == "/api/collect":
             return self._start_collection()
+        if urllib.parse.urlsplit(self.path).path == "/api/shutdown":
+            # START.bat uses this to replace a dashboard left open from an older version.
+            self._json({"stopping": True})
+            threading.Thread(target=self.server.shutdown, daemon=True).start()
+            return None
         return self._error(HTTPStatus.NOT_FOUND, "not found")
 
     def _status(self) -> None:
@@ -216,6 +245,22 @@ def probe(port: int) -> dict[str, Any] | None:
             return data if data.get("app") == config.APP_ID else None
     except (OSError, ValueError):
         return None
+
+
+def request_shutdown(port: int, wait_seconds: float = 6.0) -> bool:
+    """Ask our own dashboard on this port to stop; True once it no longer answers."""
+    req = urllib.request.Request(f"http://127.0.0.1:{port}/api/shutdown", data=b"", method="POST",
+                                 headers={"X-JWA-Tracker": "1"})
+    try:
+        urllib.request.urlopen(req, timeout=2).read()
+    except OSError:
+        pass
+    deadline = time.monotonic() + wait_seconds
+    while time.monotonic() < deadline:
+        if probe(port) is None:
+            return True
+        time.sleep(0.2)
+    return False
 
 
 def make_server(db_file: Path, demo: bool = False, preferred: int = config.DEFAULT_PORT) -> DashboardServer:

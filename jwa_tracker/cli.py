@@ -51,7 +51,12 @@ def cmd_start(args: argparse.Namespace) -> int:
         _say(f"[ok] Data is up to date ({reason}).")
 
     for port in range(config.DEFAULT_PORT, config.DEFAULT_PORT + config.PORT_SEARCH_RANGE):
-        if server.probe(port) and not server.probe(port).get("demo"):
+        running = server.probe(port)
+        if running and not running.get("demo") and running.get("version") != config.APP_VERSION:
+            _say("[..] An older version of the dashboard is still open; restarting it with the updated program.")
+            server.request_shutdown(port)
+            continue
+        if running and not running.get("demo"):
             url = f"http://127.0.0.1:{port}/"
             _say(f"[ok] The dashboard is already running at {url} - opening it.")
             if not args.no_browser:

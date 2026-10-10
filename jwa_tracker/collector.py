@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Callable
 
-from . import config, db, images, ingest, net, roster, standins, versions
+from . import builds, config, db, images, ingest, net, roster, standins, versions
 from .sources import default_sources
 from .sources.base import SourceFormatError
 
@@ -156,6 +156,15 @@ def run_collection(
         if conn.execute("SELECT COUNT(*) FROM game_versions").fetchone()[0] == 0:
             with db.transaction(conn):
                 versions.seed_known_versions(conn, now)
+        sources = sources or default_sources()
+        # Every check (even one with no update due) fills in builds of older snapshots;
+        # it reads the copies saved on this computer, so it is quick and usually offline.
+        try:
+            filled = builds.backfill(conn, sources, now=now)
+            if filled:
+                log.info("Added creature builds to %d older snapshot(s).", filled)
+        except Exception as exc:  # noqa: BLE001 - builds are extra detail, never block an update
+            log.warning("Filling in older builds failed: %s", exc)
         if not force:
             due, reason = is_due(conn, now)
             if not due:
@@ -164,8 +173,7 @@ def run_collection(
         db.mark_interrupted_runs(conn, now)
         run_id = db.start_run(conn, trigger, now)
         log.info("Update started (trigger: %s).", trigger)
-        result = _collect(conn, run_id, now_fn, sources or default_sources(), roster_fetch, version_fetch,
-                          fetch_images, skip_ids or {})
+        result = _collect(conn, run_id, now_fn, sources, roster_fetch, version_fetch, fetch_images, skip_ids or {})
         db.finish_run(
             conn, run_id, result.status, new_snapshots=result.new_snapshots,
             failed_snapshots=result.failed_snapshots, message=result.message, error=result.error,

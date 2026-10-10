@@ -193,6 +193,9 @@ def store(
                 "INSERT INTO team_members (team_id, slot, source_creature_id) VALUES (?, ?, ?)",
                 [(team_id, slot, m.source_id) for slot, m in enumerate(t.team.members) if m.source_id],
             )
+            db.insert_builds(conn, team_id, t.team.members)
+        conn.execute("INSERT INTO snapshot_builds (snapshot_id, status, checked_at) VALUES (?, 'recorded', ?)",
+                     (snapshot_id, db.iso(now)))
 
     if raw is not None:
         try:

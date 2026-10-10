@@ -20,10 +20,26 @@ class SnapshotRef:
 
 
 @dataclass(frozen=True)
+class Build:
+    """How a player built one creature on their team, as the source publishes it.
+
+    `boosts` and `omega` are (stat name, points) pairs. `boosts` is None when the
+    source did not publish them (an empty tuple means "no boosts"); `omega` is None
+    for creatures without omega training.
+    """
+
+    level: float | None = None
+    enhancement: int | None = None
+    boosts: tuple[tuple[str, float], ...] | None = None
+    omega: tuple[tuple[str, float], ...] | None = None
+
+
+@dataclass(frozen=True)
 class SourceCreature:
     source_id: str
     display_name: str
     rarity: str | None = None
+    build: Build | None = None
 
 
 @dataclass

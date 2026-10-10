@@ -162,6 +162,109 @@ def trend_series(
     return series
 
 
+# --- creature details (reference for the dashboard's creature panel) --------------------
+# A detailed team is (rank_min, rank_max, members); a member is
+# (creature_key, level, enhancement, boosts, omega) where boosts/omega are
+# {stat: points} dicts or None. The browser (web/app.js `creatureProfile`)
+# computes exactly the same from data/details/*.json; the tests check both.
+
+BOOST_ORDER = ("Attack", "Health", "Speed")
+OMEGA_ORDER = ("Health", "Attack", "Speed", "Armor", "Crit", "Crit Dmg")
+
+
+def ordered_stats(names: Iterable[str], preferred: tuple[str, ...]) -> list[str]:
+    names = set(names)
+    return [n for n in preferred if n in names] + sorted(names - set(preferred))
+
+
+def rank_groups(lo: int, hi: int) -> list[tuple[int, int]]:
+    """At most ten equal rank groups covering lo..hi (10, 25 or 50 ranks each)."""
+    span = hi - lo + 1
+    width = next((w for w in (10, 25, 50) if span <= 10 * w), 50)
+    return [(a, min(hi, a + width - 1)) for a in range(lo, hi + 1, width)]
+
+
+def _ranked(counter: dict[Any, int]) -> list[tuple[Any, int]]:
+    return sorted(counter.items(), key=lambda kv: (-kv[1], kv[0]))
+
+
+def creature_profile(teams: Iterable[tuple], key: str, lo: int, hi: int, top_splits: int = 3) -> dict[str, Any]:
+    """Who a creature is paired with, where in lo..hi it is used, and how it is built."""
+    groups = rank_groups(lo, hi)
+    width = groups[0][1] - groups[0][0] + 1
+    group_teams = [0] * len(groups)
+    group_used = [0] * len(groups)
+    total = used = 0
+    mates: dict[str, int] = {}
+    builds = []
+    for rank_min, rank_max, members in teams:
+        if rank_min < lo or rank_max > hi:
+            continue  # same rule as filter_by_rank: only teams wholly inside the range
+        g = (rank_min - lo) // width
+        total += 1
+        group_teams[g] += 1
+        mine = next((m for m in members if m[0] == key), None)
+        if mine is None:
+            continue
+        used += 1
+        group_used[g] += 1
+        for m in members:
+            if m[0] != key:
+                mates[m[0]] = mates.get(m[0], 0) + 1
+        if any(v is not None for v in mine[1:]):
+            builds.append(mine)
+
+    levels: dict[float, int] = {}
+    enhancements: dict[int, int] = {}
+    splits: dict[tuple, int] = {}
+    full: dict[tuple, int] = {}  # (level, enhancement, *boost split) for builds that publish all three
+    complete = 0
+    boost_sums: dict[str, float] = {}
+    omega_sums: dict[str, float] = {}
+    boosted = omegas = 0
+    boost_stats = ordered_stats({s for b in builds if b[3] for s in b[3]}, BOOST_ORDER)
+    omega_stats = ordered_stats({s for b in builds if b[4] for s in b[4]}, OMEGA_ORDER)
+    for _key, level, enhancement, boosts, omega in builds:
+        if level is not None:
+            levels[level] = levels.get(level, 0) + 1
+        if enhancement is not None:
+            enhancements[enhancement] = enhancements.get(enhancement, 0) + 1
+        if boosts is not None:
+            boosted += 1
+            split = tuple(boosts.get(s, 0) for s in boost_stats)  # a stat left out means no points
+            splits[split] = splits.get(split, 0) + 1
+            for s in boost_stats:
+                boost_sums[s] = boost_sums.get(s, 0) + boosts.get(s, 0)
+            if level is not None and enhancement is not None:
+                complete += 1
+                whole = (level, enhancement, *split)
+                full[whole] = full.get(whole, 0) + 1
+        if omega:
+            omegas += 1
+            for s in omega_stats:
+                omega_sums[s] = omega_sums.get(s, 0) + omega.get(s, 0)
+    return {
+        "teams": total,
+        "used": used,
+        "groups": [{"lo": a, "hi": b, "teams": group_teams[i], "used": group_used[i]} for i, (a, b) in enumerate(groups)],
+        "teammates": _ranked(mates),
+        "builds": {
+            "count": len(builds),
+            "levels": _ranked(levels),
+            "enhancements": _ranked(enhancements),
+            "boost_stats": boost_stats,
+            "complete": complete,
+            "top_builds": _ranked(full)[:top_splits],
+            "boosted": boosted,
+            "splits": _ranked(splits)[:top_splits],
+            "boost_avg": {s: boost_sums[s] / boosted for s in boost_stats} if boosted else {},
+            "omega_stats": omega_stats,
+            "omegas": omegas,
+            "omega_avg": {s: omega_sums[s] / omegas for s in omega_stats} if omegas else {},
+        },
+    }
+
+
 def compare(
     base_rows: list[dict[str, Any]], current_rows: list[dict[str, Any]]
 ) -> list[dict[str, Any]]:

@@ -3,7 +3,8 @@
 A Jurassic World Alive **meta tier list** built from the teams of the top 100 arena
 players. It shows which creatures top players put on their teams, sorts them into
 S / A / B / C / D tiers by how often they are used, and keeps a history so you can see
-what is rising or falling. New data arrives automatically twice a day.
+what is rising or falling, plus each creature's best teammates and the builds top players
+use. It checks for new data automatically every 3 hours.
 
 You can use it in two ways (they share the same code):
 
@@ -31,9 +32,9 @@ You can use it in two ways (they share the same code):
 | `PUBLISH_WEBSITE.bat` | Uploads this folder to your GitHub repository (see *Put it online*). |
 
 Needs Windows 10/11 and Python 3.10 or newer; if Python is missing, `START.bat` offers
-to install it. The PC must be on and signed in for an update to run; if it was off,
-the update happens shortly after you turn it back on, and missed snapshots are still
-downloaded.
+to install it. The PC version checks for new data every 3 hours. The PC must be on and
+signed in for that; if it was off, the check happens shortly after you turn it back on,
+and missed snapshots are still downloaded.
 
 ---
 
@@ -49,8 +50,8 @@ its own history in their own user folder - nothing of yours is included or share
 
 ## Put it online as a free website (GitHub Pages)
 
-Costs nothing: GitHub hosts the website and runs the twice-daily update on its own
-computers, so it keeps updating even when your PC is off.
+Costs nothing: GitHub hosts the website and checks for new data every 3 hours on its
+own computers, so it keeps updating even when your PC is off.
 
 1. Create a free account at <https://github.com> (choose a username you are happy to
    have in the website address, e.g. `https://yourname.github.io/jwa-meta-tracker/`).
@@ -64,8 +65,8 @@ computers, so it keeps updating even when your PC is off.
 
 Run `PUBLISH_WEBSITE.bat` again any time you change files; the website rebuilds itself.
 
-After that it updates itself at about 01:20 and 13:20 UTC every day and keeps a growing
-history in the `archive/` folder of the repository. If the data source is down, the
+After that it checks for new data every 3 hours (00:45, 03:45, 06:45 ... UTC) and keeps a
+growing history in the `archive/` folder of the repository. If the data source is down, the
 site keeps showing the last good data and says that the update failed.
 
 ---
@@ -76,7 +77,8 @@ site keeps showing the last good data and says that the update failed.
   [jwa-dashboard](https://github.com/Lullatsch/jwa-dashboard) project on GitHub, an
   unofficial community project that publishes snapshots of the Jurassic World Alive
   leaderboards (the monthly arena "Seasonal League" and weekly tournaments), usually
-  twice a day. This tracker reads those public files. It never logs into the game,
+  twice a day (around 11:30 and 21:20 UTC). A new weekly tournament only appears once the
+  feed has published its first snapshot. This tracker reads those public files. It never logs into the game,
   reads game traffic, or automates an account.
 * Checked against Paleo.gg's independently published top-50 usage for the same day:
   every top creature matched to within about 1-2 percentage points.
@@ -85,6 +87,10 @@ site keeps showing the last good data and says that the update failed.
   Top 50, the Top 100, or ranks 51-100.
 * **Anonymous rank groups.** Teams come in groups of ten ranks (1-10, 11-20, ...)
   without player names or trophy counts, which is exact enough for every view here.
+* **Builds.** For every creature on every team the feed also gives its level,
+  enhancement, stat boosts and omega training points. That is where the builds come from.
+* **No win rates.** No source publishes battle results, so the tracker cannot say which
+  creature or build *wins* most. "Best build" means the build most top players use.
 * The feed's maintainer does not document how the data is collected, and the feed could
   change or stop. If it does, the dashboard says so and keeps everything saved so far.
 
@@ -110,8 +116,14 @@ are matched automatically through their fusion ingredients.
 * **Search**, **tier filter**, **sort** (usage, name, biggest rise/fall), and
   **Tiers / Ranking** layout. Only creatures used on at least one team are listed.
 * Each card shows the exact percentage, how many teams use it (e.g. 82/100), a bar, and
-  the change since the previous snapshot in percentage points (pp). Click a creature for
-  details: usage in each player range, usage over time, and how the source names it.
+  the change since the previous snapshot in percentage points (pp). The **Ranking**
+  layout also shows every creature's best build (its most used stat boosts).
+* **Click a creature** for its details, all for the players and snapshot you chose:
+  * **Best build** - the exact build (level, enhancement, Attack/Health/Speed boosts) most
+    top players use, the next most popular ones, average boosts, and omega training.
+  * **Best teammates** - the creatures most often on the same team.
+  * **Where it's used** - how many teams in each rank group (1-10, 11-20, ...) use it.
+  * Usage over time, and how the data source names it.
 * **History:** compare two snapshots or game versions, see risers, fallers and tier
   changes, and chart usage over time (up to 6 creatures; *Show as table* for numbers).
 * The coloured dot at the top shows whether the data is up to date; if an update fails,
@@ -156,7 +168,10 @@ cloud sync can lock a database that is being written). **Uninstall:** run
 Python 3.10+ standard library only, SQLite, and a static HTML/CSS/JavaScript dashboard.
 `site.py` turns the database into `data/site.json` (per snapshot and rank range: the
 number of valid teams and how many use each creature); the page adds those counts up
-and divides. The local server (`server.py`, 127.0.0.1 only) builds that file on the fly;
+and divides. Builds and teams for the creature panel are in `data/details/YYYY-MM.json` (one file
+per month, loaded only when a creature is opened); `stats.creature_profile` is the
+tested reference that `web/app.js` mirrors exactly. The local server (`server.py`,
+127.0.0.1 only) builds these files on the fly;
 `tracker.py build-site` writes a complete static website for GitHub Pages
 (`.github/workflows/update-website.yml`). `analysis.py` is the reference implementation
 the tests compare against.

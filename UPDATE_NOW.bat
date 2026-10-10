@@ -1,7 +1,7 @@
 @echo off
 rem ============================================================
 rem  JWA Meta Tracker - check for new leaderboard data right now.
-rem  (Not needed normally: updates run automatically every 12 hours.)
+rem  (Not needed normally: updates run automatically every 3 hours.)
 rem ============================================================
 setlocal
 cd /d "%~dp0"

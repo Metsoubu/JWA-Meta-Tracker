@@ -167,15 +167,15 @@ class CollectorTests(TempDataDir):
 
     def test_scheduled_gate(self):
         src = FakeSource(self.two_snapshots())
-        local = datetime(2026, 10, 9, 9, 0).astimezone()  # 09:00 local: the 08:00 slot has passed
+        local = datetime(2026, 10, 9, 9, 0).astimezone()  # 09:00 local: the 09:00 slot has passed
         first = self.run_collection(src, trigger="scheduled", force=False, now=local.astimezone(timezone.utc))
         self.assertEqual(first.status, "success")
         again = self.run_collection(src, trigger="scheduled", force=False,
                                     now=datetime(2026, 10, 9, 10, 0).astimezone().astimezone(timezone.utc))
-        self.assertEqual(again.status, "skipped")  # already checked since 08:00
+        self.assertEqual(again.status, "skipped")  # already checked since 09:00
         evening = self.run_collection(src, trigger="scheduled", force=False,
                                       now=datetime(2026, 10, 9, 20, 30).astimezone().astimezone(timezone.utc))
-        self.assertEqual(evening.status, "no_new_data")  # 20:00 slot due -> runs
+        self.assertEqual(evening.status, "no_new_data")  # 18:00 slot due -> runs
         # a computer that was off for two days catches up on the next hourly check
         later = self.run_collection(src, trigger="scheduled", force=False,
                                     now=datetime(2026, 10, 11, 14, 0).astimezone().astimezone(timezone.utc))
@@ -190,8 +190,12 @@ class CollectorTests(TempDataDir):
 
     def test_slot_maths(self):
         now = datetime(2026, 10, 9, 7, 30).astimezone()
-        self.assertEqual(collector.most_recent_slot(now).astimezone().hour, 20)  # yesterday 20:00
-        self.assertEqual(collector.next_slot(now).astimezone().hour, 8)
+        self.assertEqual(collector.most_recent_slot(now).astimezone().hour, 6)
+        self.assertEqual(collector.next_slot(now).astimezone().hour, 9)
+        late = datetime(2026, 10, 9, 1, 30).astimezone()
+        self.assertEqual(collector.most_recent_slot(late).astimezone().hour, 0)  # midnight
+        early = datetime(2026, 10, 9, 23, 59).astimezone()
+        self.assertEqual(collector.next_slot(early).astimezone().hour, 0)  # tomorrow midnight
 
 
 class _FlakyHandler(BaseHTTPRequestHandler):

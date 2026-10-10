@@ -4,13 +4,19 @@ The dashboard (web/app.js) is a static page: it loads data/site.json and does
 the pooling, tiers and comparisons in the browser. The same files therefore work
 as your local dashboard (the local server builds site.json from your database)
 and as a free public website on GitHub Pages, where a scheduled GitHub Action
-runs `tracker.py build-site` twice a day.
+runs `tracker.py build-site` every 3 hours.
 
 For each snapshot the file holds, per rank range, the number of valid teams and
 how many of them use each creature. Counting is done here, in tested Python; the
 browser only adds counts together and divides.
 
+The creature panel (best teammates, where in the ranking a creature is used, how
+top players build it) needs the teams themselves. Those are published separately,
+one file per month (data/details/YYYY-MM.json), and only loaded when somebody
+opens a creature. The browser's counting there mirrors stats.creature_profile.
+
 Nothing personal is included: no file paths, user names or computer settings.
+The feed itself is anonymous (rank bands of ten, no player names).
 """
 from __future__ import annotations
 
@@ -33,6 +39,8 @@ from .sources import jwa_dashboard_feed
 log = logging.getLogger(__name__)
 
 SCHEMA = "jwa-meta-tracker.site.v1"
+DETAILS_SCHEMA = "jwa-meta-tracker.details.v1"
+_MONTH = re.compile(r"^\d{4}-\d{2}$")
 # "#1-50" is the same set of players as Top 50, so it is not offered separately.
 EXPORT_RANGES = ("top50", "top100", "r51-100", "top250", "r101-250", "top500", "r251-500")
 WEB_FILES = ("index.html", "app.js", "styles.css", "theme.js", "favicon.svg")
@@ -121,6 +129,99 @@ def creature_info(conn: sqlite3.Connection, keys: Iterable[str]) -> dict[str, di
     return out
 
 
+# --- team details (creature panel) --------------------------------------------------
+# In memory: {record id: [(rank_min, rank_max, [(key, level, enhancement, boosts, omega), ...]), ...]}
+# with boosts/omega as {stat: points} or None (see stats.creature_profile).
+
+def _num(value: Any) -> int | float | None:
+    if value is None:
+        return None
+    value = float(value)
+    return int(value) if value.is_integer() else round(value, 2)
+
+
+def _points(text: str | None) -> dict[str, Any] | None:
+    return None if text is None else {k: _num(v) for k, v in json.loads(text).items()}
+
+
+def team_details(conn: sqlite3.Connection, snaps: list[dict[str, Any]] | None = None) -> dict[str, list[tuple]]:
+    """Every valid team of the given snapshots (default: all) with each member's build, if known."""
+    snaps = db.list_snapshots(conn) if snaps is None else snaps
+    record_id = {s["id"]: f"{s['source']}:{s['source_snapshot_id']}" for s in snaps}
+    out: dict[str, list[tuple]] = {}
+    team_id = None
+    for r in db.load_team_members(conn, list(record_id)):
+        teams = out.setdefault(record_id[r["snapshot_id"]], [])
+        if r["team_id"] != team_id:
+            team_id = r["team_id"]
+            teams.append((r["rank_min"], r["rank_max"], []))
+        teams[-1][2].append((r["creature_key"], _num(r["level"]), _num(r["enhancement"]),
+                             _points(r["boosts"]), _points(r["omega"])))
+    return out
+
+
+def encode_details(details: dict[str, list[tuple]]) -> dict[str, Any]:
+    """Compact JSON form: creature keys and stat names are listed once and referred to by position.
+
+    A team is [rank_min, rank_max, member x 8]; a member is [key#] without a build, else
+    [key#, level, enhancement, boosts (one number per boost stat, or null), omega (optional)].
+    A stat missing from a published build counts as 0 points.
+    """
+    all_members = [m for teams in details.values() for t in teams for m in t[2]]
+    keys = sorted({m[0] for m in all_members})
+    boost_stats = stats.ordered_stats({s for m in all_members if m[3] for s in m[3]}, stats.BOOST_ORDER)
+    omega_stats = stats.ordered_stats({s for m in all_members if m[4] for s in m[4]}, stats.OMEGA_ORDER)
+    index = {k: i for i, k in enumerate(keys)}
+
+    def member(m):
+        key, level, enhancement, boosts, omega = m
+        if level is None and enhancement is None and boosts is None and not omega:
+            return [index[key]]
+        out = [index[key], level, enhancement, None if boosts is None else [boosts.get(s, 0) for s in boost_stats]]
+        if omega:
+            out.append([omega.get(s, 0) for s in omega_stats])
+        return out
+
+    return {
+        "schema": DETAILS_SCHEMA,
+        "keys": keys,
+        "boost_stats": boost_stats,
+        "omega_stats": omega_stats,
+        "snaps": {rid: [[lo, hi, *map(member, members)] for lo, hi, members in teams]
+                  for rid, teams in sorted(details.items())},
+    }
+
+
+def decode_details(doc: dict[str, Any]) -> dict[str, list[tuple]]:
+    keys, boost_stats, omega_stats = doc["keys"], doc["boost_stats"], doc["omega_stats"]
+
+    def member(m):
+        if len(m) == 1:
+            return (keys[m[0]], None, None, None, None)
+        boosts = None if m[3] is None else dict(zip(boost_stats, m[3]))
+        omega = dict(zip(omega_stats, m[4])) if len(m) > 4 else None
+        return (keys[m[0]], m[1], m[2], boosts, omega)
+
+    return {rid: [(t[0], t[1], [member(m) for m in t[2:]]) for t in teams] for rid, teams in doc["snaps"].items()}
+
+
+def details_by_month(records: Iterable[dict[str, Any]], details: dict[str, list[tuple]]) -> dict[str, dict[str, Any]]:
+    """Encoded detail files keyed by month ("2026-10"), from each snapshot's capture time (UTC)."""
+    month_of = {r["id"]: r["t"][:7] for r in records}
+    grouped: dict[str, dict[str, list[tuple]]] = defaultdict(dict)
+    for rid, teams in details.items():
+        if rid in month_of:
+            grouped[month_of[rid]][rid] = teams
+    return {month: encode_details(d) for month, d in sorted(grouped.items())}
+
+
+def details_month_local(conn: sqlite3.Connection, month: str) -> dict[str, Any]:
+    if not _MONTH.match(month):
+        raise ValueError(f"not a month: {month!r}")
+    snaps = [s for s in db.list_snapshots(conn) if s["captured_at"][:7] == month]
+    return encode_details(team_details(conn, snaps))
+
+
 def run_entries(conn: sqlite3.Connection, limit: int = RUN_HISTORY) -> list[dict[str, Any]]:
     return [
         {
@@ -160,10 +261,14 @@ def assemble(
     mode: str,
     now: datetime,
     extra: dict[str, Any] | None = None,
+    detail_ids: set[str] | None = None,
 ) -> dict[str, Any]:
     timeline = versions.VersionTimeline(version_rows)
     for r in records:
         r["v"] = timeline.version_at(db.parse_iso(r["t"]))
+        r.pop("d", None)
+        if detail_ids and r["id"] in detail_ids:
+            r["d"] = 1  # its teams are in data/details/<month>.json
     used = used_keys(records)
     return {
         "schema": SCHEMA,
@@ -196,7 +301,8 @@ def build_local(conn: sqlite3.Connection, now: datetime, demo: bool = False) -> 
         "app_store_build": db.get_meta(conn, "app_store_build"),
         "unmatched": sorted(c["name"] for c in creatures.values() if not c["listed"]),
     }
-    return assemble(records, creatures, run_entries(conn), db.game_versions(conn), mode="local", now=now, extra=extra)
+    return assemble(records, creatures, run_entries(conn), db.game_versions(conn), mode="local", now=now, extra=extra,
+                    detail_ids={r["id"] for r in records})
 
 
 # --- the public website ----------------------------------------------------------------
@@ -212,11 +318,16 @@ class Archive:
         self.runs: list[dict[str, Any]] = []
         self.versions: list[dict[str, Any]] = []
         self.meta: dict[str, Any] = {}
+        self.details: dict[str, list[tuple]] = {}  # record id -> teams with builds (see team_details)
         snaps = self.folder / "snapshots"
         if snaps.is_dir():
             for path in sorted(snaps.glob("*.json")):
                 for rec in json.loads(path.read_text(encoding="utf-8")):
                     self.records[rec["id"]] = rec
+        teams = self.folder / "teams"
+        if teams.is_dir():
+            for path in sorted(teams.glob("*.json")):
+                self.details.update(decode_details(json.loads(path.read_text(encoding="utf-8"))))
         self.creatures = self._read("creatures.json", {})
         self.runs = self._read("runs.json", [])
         self.versions = self._read("versions.json", [])
@@ -241,23 +352,46 @@ class Archive:
         added = []
         for rec in records:
             if rec["id"] not in self.records:
-                rec = {k: v for k, v in rec.items() if k != "v"}
+                rec = {k: v for k, v in rec.items() if k not in ("v", "d")}
                 self.records[rec["id"]] = rec
                 added.append(rec["id"])
         return added
 
+    def missing_details(self) -> set[str]:
+        return {rid for rid in self.records if rid not in self.details}
+
+    def add_details(self, details: dict[str, list[tuple]]) -> list[str]:
+        """Teams of archived snapshots that have none yet (existing entries are never replaced)."""
+        added = [rid for rid in details if rid in self.records and rid not in self.details]
+        for rid in added:
+            self.details[rid] = details[rid]
+        return added
+
+    @staticmethod
+    def _write_if_changed(path: Path, text: str) -> None:
+        if not path.exists() or path.read_text(encoding="utf-8") != text:
+            path.write_text(text, encoding="utf-8")
+
     def save(self) -> None:
         by_day: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for rec in self.records.values():
-            by_day[rec["t"][:10]].append({k: v for k, v in rec.items() if k != "v"})
+            by_day[rec["t"][:10]].append({k: v for k, v in rec.items() if k not in ("v", "d")})
         snaps = self.folder / "snapshots"
         snaps.mkdir(parents=True, exist_ok=True)
         for day, recs in by_day.items():
-            path = snaps / f"{day}.json"
             text = json.dumps(sorted(recs, key=lambda r: (r["t"], r["id"])), ensure_ascii=False, sort_keys=True,
                               separators=(",", ":"))
-            if not path.exists() or path.read_text(encoding="utf-8") != text:
-                path.write_text(text, encoding="utf-8")
+            self._write_if_changed(snaps / f"{day}.json", text)
+        details_by_day: dict[str, dict[str, list[tuple]]] = defaultdict(dict)
+        for rid, teams in self.details.items():
+            if rid in self.records:
+                details_by_day[self.records[rid]["t"][:10]][rid] = teams
+        if details_by_day:
+            folder = self.folder / "teams"
+            folder.mkdir(parents=True, exist_ok=True)
+            for day, details in details_by_day.items():
+                text = json.dumps(encode_details(details), ensure_ascii=False, separators=(",", ":"))
+                self._write_if_changed(folder / f"{day}.json", text)
         self._write("creatures.json", self.creatures)
         self._write("runs.json", self.runs[:RUN_HISTORY])
         self._write("versions.json", self.versions)
@@ -281,11 +415,17 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
                     "VALUES (?, ?, ?, ?, ?)",
                     (v["version"], v["starts_at"], v["basis"], v.get("first_build"), db.iso(now)),
                 )
+        # Archived snapshots saved before team details were kept are downloaded once more
+        # (if the feed still has them) so their teams and builds can be added.
+        missing = archive.missing_details()
+        skip = {src: {sid for sid in ids if f"{src}:{sid}" not in missing}
+                for src, ids in archive.ids_by_source().items()}
         result = collector.run_collection(
             "scheduled", force=True, conn=conn, now_fn=now_fn, sources=sources,
-            skip_ids=archive.ids_by_source(), **(collect_kwargs or {}),
+            skip_ids=skip, **(collect_kwargs or {}),
         )
         added = archive.add_records(snapshot_records(conn))
+        archive.add_details(team_details(conn))
         new_info = creature_info(conn, used_keys(archive.records.values()))
         for key, info in new_info.items():
             old_aka = set(archive.creatures.get(key, {}).get("aka", []))
@@ -305,8 +445,9 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
             records, archive.creatures, archive.runs, archive.versions, mode="website", now=now,
             extra={"repo_url": repo_url, "app_store_build": archive.meta.get("app_store_build"),
                    "unmatched": sorted(c["name"] for c in archive.creatures.values() if not c.get("listed", True))},
+            detail_ids=set(archive.details),
         )
-        write_static_site(out_dir, payload)
+        write_static_site(out_dir, payload, details_by_month(records, archive.details))
         log.info("Website built: %d snapshots (%d new), update status: %s.", len(records), len(added), result.status)
         return {"status": result.status, "added": len(added), "total": len(records), "message": result.message}
     finally:
@@ -325,7 +466,8 @@ def _remove_tree(path: Path) -> None:
         shutil.rmtree(path, onerror=make_writable)
 
 
-def write_static_site(out_dir: Path, payload: dict[str, Any]) -> None:
+def write_static_site(out_dir: Path, payload: dict[str, Any], details: dict[str, dict[str, Any]] | None = None) -> None:
+    """The complete website. `details` maps a month ("2026-10") to its encoded team-details file."""
     out_dir = Path(out_dir)
     if out_dir.exists():
         _remove_tree(out_dir)
@@ -341,6 +483,14 @@ def write_static_site(out_dir: Path, payload: dict[str, Any]) -> None:
     (out_dir / "data" / "site.json").write_text(
         json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
+    if details:
+        (out_dir / "data" / "details").mkdir()
+        for month, doc in details.items():
+            if not _MONTH.match(month):
+                raise ValueError(f"not a month: {month!r}")
+            (out_dir / "data" / "details" / f"{month}.json").write_text(
+                json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+            )
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
 

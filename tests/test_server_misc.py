@@ -3,6 +3,7 @@ import http.client
 import json
 import os
 import tempfile
+import time
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -98,6 +99,18 @@ class ServerTests(TempDataDir):
         status, _, body = self.request("POST", "/api/collect", headers={"X-JWA-Tracker": "1"})
         self.assertEqual(status, 409)  # demo server refuses to collect
         self.assertIn(b"example data", body)
+
+    def test_shutdown_needs_the_custom_header(self):
+        self.assertEqual(self.request("POST", "/api/shutdown")[0], 403)
+        self.assertEqual(self.request("POST", "/api/shutdown", headers={"X-JWA-Tracker": "1", "Origin": "https://evil.example"})[0], 403)
+        self.assertIsNotNone(server.probe(self.port))
+        status, _, _ = self.request("POST", "/api/shutdown", headers={"X-JWA-Tracker": "1"})
+        self.assertEqual(status, 200)
+        for _ in range(30):
+            if server.probe(self.port) is None:
+                break
+            time.sleep(0.2)
+        self.assertIsNone(server.probe(self.port))
 
     def test_no_path_traversal_or_private_files(self):
         for path in ("/../tracker.py", "/%2e%2e/tracker.py", "/..%5ctracker.py", "/img/../../jwa_tracker/db.py",

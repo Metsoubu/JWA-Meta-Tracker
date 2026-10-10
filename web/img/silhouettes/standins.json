@@ -1,1 +1,159 @@
-{}
+{
+ "angel": {
+  "checked_at": "2026-10-10T01:05:03+00:00",
+  "path": [
+   "angel"
+  ],
+  "status": "none"
+ },
+ "aquisaurus": {
+  "checked_at": "2026-10-10T01:05:03+00:00",
+  "path": [
+   "aquisaurus",
+   "aquilops"
+  ],
+  "status": "ok",
+  "via": "aquilops"
+ },
+ "becklolyth": {
+  "checked_at": "2026-10-10T01:05:05+00:00",
+  "path": [
+   "becklolyth",
+   "blonde"
+  ],
+  "status": "ok",
+  "via": "velociraptor"
+ },
+ "becklophosaurus": {
+  "checked_at": "2026-10-10T01:05:06+00:00",
+  "path": [
+   "becklophosaurus",
+   "brunette"
+  ],
+  "status": "ok",
+  "via": "velociraptor"
+ },
+ "centroceratops": {
+  "checked_at": "2026-10-10T01:05:08+00:00",
+  "path": [
+   "centroceratops",
+   "centrosaurus"
+  ],
+  "status": "ok",
+  "via": "centrosaurus"
+ },
+ "entelomoth": {
+  "checked_at": "2026-10-10T01:05:09+00:00",
+  "path": [
+   "entelomoth",
+   "woolly_mammoth"
+  ],
+  "status": "ok",
+  "via": "woolly_mammoth"
+ },
+ "megamimus": {
+  "checked_at": "2026-10-10T01:05:10+00:00",
+  "path": [
+   "megamimus",
+   "megaraptor"
+  ],
+  "status": "ok",
+  "via": "allosaurus"
+ },
+ "monkeydactyl": {
+  "checked_at": "2026-10-10T01:05:12+00:00",
+  "path": [
+   "monkeydactyl"
+  ],
+  "status": "none"
+ },
+ "monostegotops": {
+  "checked_at": "2026-10-10T01:05:12+00:00",
+  "path": [
+   "monostegotops",
+   "monolophosaurus"
+  ],
+  "status": "ok",
+  "via": "monolophosaurus"
+ },
+ "nanophosaurus": {
+  "checked_at": "2026-10-10T01:05:13+00:00",
+  "path": [
+   "nanophosaurus",
+   "nanotyrannus"
+  ],
+  "status": "ok",
+  "via": "nanotyrannus"
+ },
+ "panthera_blytheae": {
+  "checked_at": "2026-10-10T01:05:15+00:00",
+  "path": [
+   "panthera_blytheae"
+  ],
+  "status": "none"
+ },
+ "pierce": {
+  "checked_at": "2026-10-10T01:05:15+00:00",
+  "path": [
+   "pierce"
+  ],
+  "status": "none"
+ },
+ "pyrosuchus": {
+  "checked_at": "2026-10-10T01:05:15+00:00",
+  "path": [
+   "pyrosuchus",
+   "pyroraptor_gen_2"
+  ],
+  "status": "ok",
+  "via": "pyroraptor_gen_2"
+ },
+ "rativates": {
+  "checked_at": "2026-10-10T01:05:16+00:00",
+  "path": [
+   "rativates"
+  ],
+  "status": "none"
+ },
+ "rebel": {
+  "checked_at": "2026-10-10T01:05:16+00:00",
+  "path": [
+   "rebel"
+  ],
+  "status": "none"
+ },
+ "rexy": {
+  "checked_at": "2026-10-10T01:05:16+00:00",
+  "path": [
+   "rexy"
+  ],
+  "status": "none"
+ },
+ "shantunrax": {
+  "checked_at": "2026-10-10T01:05:16+00:00",
+  "path": [
+   "shantunrax",
+   "animantarx"
+  ],
+  "status": "ok",
+  "via": "animantarx"
+ },
+ "spinoceratops": {
+  "checked_at": "2026-10-10T01:21:46+00:00",
+  "path": [
+   "spinoceratops",
+   "spinosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "spinosaurus_gen_2"
+ },
+ "titanotor": {
+  "checked_at": "2026-10-10T01:21:47+00:00",
+  "path": [
+   "titanotor",
+   "titanosaurus"
+  ],
+  "status": "ok",
+  "via": "titanosaurus"
+ }
+}
