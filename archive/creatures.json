@@ -111,6 +111,20 @@
   "name": "Ampelosaurus",
   "rarity": "epic"
  },
+ "angel": {
+  "added": "v3.7",
+  "aka": [
+   "Angel"
+  ],
+  "class": "fierce_resilient",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Angel",
+  "rarity": "legendary"
+ },
  "animantarx": {
   "added": "v3.9",
   "aka": [
@@ -223,6 +237,20 @@
   "name": "Aquiraptor",
   "rarity": "unique"
  },
+ "aquisaurus": {
+  "added": "v3.16",
+  "aka": [
+   "Aquisaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Aquilops americanus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/aquilops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aquisaurus",
+  "rarity": "legendary"
+ },
  "atrocomaxima": {
   "added": "v3.17",
   "aka": [
@@ -320,6 +348,34 @@
   "listed": true,
   "name": "Becklerizaurus",
   "rarity": "apex"
+ },
+ "becklolyth": {
+  "added": "v3.13",
+  "aka": [
+   "Becklolyth"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Becklolyth",
+  "rarity": "legendary"
+ },
+ "becklophosaurus": {
+  "added": "v3.13",
+  "aka": [
+   "Becklophosaurus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Becklophosaurus",
+  "rarity": "legendary"
  },
  "beelzebufo": {
   "added": "v2.22",
@@ -460,6 +516,20 @@
   "listed": true,
   "name": "Carcharodontosaurus",
   "rarity": "omega"
+ },
+ "centroceratops": {
+  "added": "v3.17",
+  "aka": [
+   "Centroceratops"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Centrosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/centrosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Centroceratops",
+  "rarity": "legendary"
  },
  "centrolophus_lux": {
   "added": "v3.18",
@@ -727,6 +797,20 @@
   "name": "Einiosaurus",
   "rarity": "common"
  },
+ "entelomoth": {
+  "added": "v1.12",
+  "aka": [
+   "Entelomoth"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Mammuthus primigenius silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/woolly_mammoth.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Entelomoth",
+  "rarity": "legendary"
+ },
  "eremocanis": {
   "added": "v3.11",
   "aka": [
@@ -810,6 +894,20 @@
   "listed": true,
   "name": "Geminideus",
   "rarity": "apex"
+ },
+ "geosternbergia": {
+  "added": "v3.2",
+  "aka": [
+   "Geosternbergia"
+  ],
+  "class": "fierce",
+  "credit": "Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/geosternbergia.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Geosternbergia",
+  "rarity": "omega"
  },
  "ghost": {
   "added": "v2.17",
@@ -1133,6 +1231,20 @@
   "name": "Megalocevia",
   "rarity": "apex"
  },
+ "megamimus": {
+  "added": "v3.18",
+  "aka": [
+   "Megamimus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Allosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/allosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Megamimus",
+  "rarity": "legendary"
+ },
  "megatyrannus": {
   "added": "v3.19",
   "aka": [
@@ -1175,6 +1287,20 @@
   "name": "Microraptor",
   "rarity": "epic"
  },
+ "monkeydactyl": {
+  "added": "v3.11",
+  "aka": [
+   "Monkeydactyl"
+  ],
+  "class": "resilient",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Monkeydactyl",
+  "rarity": "legendary"
+ },
  "monkeyondactylus": {
   "added": "v3.16",
   "aka": [
@@ -1202,6 +1328,20 @@
   "listed": true,
   "name": "Monolomoth",
   "rarity": "apex"
+ },
+ "monostegotops": {
+  "added": "v1.1",
+  "aka": [
+   "Monostegotops"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Monolophosaurus jiangi silhouette by Jordan Mallon (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/monolophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Monostegotops",
+  "rarity": "legendary"
  },
  "moros_intrepidus": {
   "added": "v2.18",
@@ -1231,6 +1371,20 @@
   "name": "Mutadon",
   "rarity": "unique"
  },
+ "nanophosaurus": {
+  "added": "v3.19",
+  "aka": [
+   "Nanophosaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Nanotyrannus silhouette by KoprX, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/nanotyrannus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Nanophosaurus",
+  "rarity": "legendary"
+ },
  "nominrex": {
   "added": "v3.9",
   "aka": [
@@ -1258,6 +1412,20 @@
   "listed": true,
   "name": "Nyctopteryx",
   "rarity": "unique"
+ },
+ "nyctosaurus": {
+  "added": "v3.11",
+  "aka": [
+   "Nyctosaurus"
+  ],
+  "class": "cunning",
+  "credit": "Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Nyctosaurus",
+  "rarity": "legendary"
  },
  "ovinnolophosaurus": {
   "added": "v3.14",
@@ -1301,6 +1469,20 @@
   "name": "Panthera",
   "rarity": "epic"
  },
+ "panthera_blytheae": {
+  "added": "v2.20",
+  "aka": [
+   "Panthera Blytheae"
+  ],
+  "class": "cunning",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Panthera Blytheae",
+  "rarity": "legendary"
+ },
  "paralidactylus": {
   "added": "v3.22",
   "aka": [
@@ -1315,6 +1497,20 @@
   "name": "Paralidactylus",
   "rarity": "apex"
  },
+ "paralititan": {
+  "added": "v3.20",
+  "aka": [
+   "Paralititan"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Paralititan stromeri silhouette by Dmitry Bogdanov (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/paralititan.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Paralititan",
+  "rarity": "legendary"
+ },
  "paralitrosaurus": {
   "added": "v3.20",
   "aka": [
@@ -1328,6 +1524,20 @@
   "listed": true,
   "name": "Paralitrosaurus",
   "rarity": "unique"
+ },
+ "pierce": {
+  "added": "v3.19",
+  "aka": [
+   "Pierce"
+  ],
+  "class": "cunning_resilient",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Pierce",
+  "rarity": "legendary"
  },
  "plateorex": {
   "added": "v3.5",
@@ -1441,6 +1651,20 @@
   "name": "Pyroraptor",
   "rarity": "epic"
  },
+ "pyrosuchus": {
+  "added": "v2.19",
+  "aka": [
+   "Pyrosuchus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pyroraptor olympius silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/pyroraptor_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pyrosuchus",
+  "rarity": "legendary"
+ },
  "quetzalcoatlus_gen_2": {
   "added": "v2.18",
   "aka": [
@@ -1483,6 +1707,34 @@
   "name": "Rajasaurus",
   "rarity": "epic"
  },
+ "rativates": {
+  "added": "v3.2",
+  "aka": [
+   "Rativates"
+  ],
+  "class": "cunning_fierce",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Rativates",
+  "rarity": "omega"
+ },
+ "rebel": {
+  "added": "v3.7",
+  "aka": [
+   "Rebel"
+  ],
+  "class": "cunning_resilient",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Rebel",
+  "rarity": "legendary"
+ },
  "red": {
   "added": "v2.18",
   "aka": [
@@ -1496,6 +1748,20 @@
   "listed": true,
   "name": "Red",
   "rarity": "epic"
+ },
+ "rexy": {
+  "added": "v2.15",
+  "aka": [
+   "Rexy"
+  ],
+  "class": "fierce",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Rexy",
+  "rarity": "legendary"
  },
  "sah_panthera": {
   "added": "v3.4",
@@ -1581,6 +1847,20 @@
   "name": "Shantrospinos",
   "rarity": "apex"
  },
+ "shantunrax": {
+  "added": "v3.19",
+  "aka": [
+   "Shantunrax"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Animantarx ramaljonesi silhouette by Matt Dempsey, CC BY 4.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/animantarx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Shantunrax",
+  "rarity": "legendary"
+ },
  "sinoceratops": {
   "added": "v1.1",
   "aka": [
@@ -1650,6 +1930,34 @@
   "listed": true,
   "name": "Sonorasaurus",
   "rarity": "epic"
+ },
+ "spinoceratops": {
+  "added": "v2.20",
+  "aka": [
+   "Spinoceratops"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/spinosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Spinoceratops",
+  "rarity": "legendary"
+ },
+ "spinosaurus_aegyptiacus": {
+  "added": "v3.6",
+  "aka": [
+   "Spinosaurus Aegyptiacus"
+  ],
+  "class": "fierce",
+  "credit": "Spinosaurus aegyptiacus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/spinosaurus_aegyptiacus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Spinosaurus Aegyptiacus",
+  "rarity": "omega"
  },
  "spinosaurus_gen_2": {
   "added": "v1.2",
@@ -1777,6 +2085,20 @@
   "name": "Titanotholus",
   "rarity": "apex"
  },
+ "titanotor": {
+  "added": "v3.14",
+  "aka": [
+   "Titanotor"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Titanosaurus indicus silhouette by T. Tischler, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/titanosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Titanotor",
+  "rarity": "legendary"
+ },
  "trykovenator": {
   "added": "v3.8",
   "aka": [
@@ -1847,6 +2169,34 @@
   "name": "Unidentified creature (05865dc2)",
   "rarity": "unknown"
  },
+ "unmatched-jwadashboard-2b88a0f87fd53094": {
+  "added": null,
+  "aka": [
+   "2b88a0f8"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (2b88a0f8)",
+  "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-3b83967e961ef444": {
+  "added": null,
+  "aka": [
+   "Wiedergeburt-spinosaurus"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Wiedergeburt-spinosaurus",
+  "rarity": "legendary"
+ },
  "unmatched-jwadashboard-433c19487521c564": {
   "added": null,
   "aka": [
@@ -1860,6 +2210,76 @@
   "listed": false,
   "name": "Unidentified creature (433c1948)",
   "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-563cbf85b2ad7c14": {
+  "added": null,
+  "aka": [
+   "Wiedergeburt-spinosaurus Gen 2"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Wiedergeburt-spinosaurus Gen 2",
+  "rarity": "legendary"
+ },
+ "unmatched-jwadashboard-9d223decc1c9b6f4": {
+  "added": null,
+  "aka": [
+   "Wiedergeburt-raptor"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Wiedergeburt-raptor",
+  "rarity": "legendary"
+ },
+ "unmatched-jwadashboard-a27ab798c90a0274": {
+  "added": null,
+  "aka": [
+   "Tyrannosaurus-weibchen"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Tyrannosaurus-weibchen",
+  "rarity": "legendary"
+ },
+ "unmatched-jwadashboard-c7f5952be9fd1d04": {
+  "added": null,
+  "aka": [
+   "Wiedergeburt-t-rex"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Wiedergeburt-t-rex",
+  "rarity": "legendary"
+ },
+ "unmatched-jwadashboard-d1f79384089f36d4": {
+  "added": null,
+  "aka": [
+   "Quetzalco3"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Quetzalco3",
+  "rarity": "legendary"
  },
  "woolly_rhino": {
   "added": "v1.11",

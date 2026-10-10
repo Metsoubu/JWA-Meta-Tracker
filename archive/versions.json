@@ -2,14 +2,14 @@
  {
   "basis": "Approximate: earliest v3.22 data date published by Paleo.gg (the exact release time is not known)",
   "first_build": null,
-  "recorded_at": "2026-10-09T13:35:54Z",
+  "recorded_at": "2026-10-10T01:23:26Z",
   "starts_at": "2026-08-16T00:00:00Z",
   "version": "v3.22"
  },
  {
   "basis": "App Store release date of build 3.23.44; Paleo.gg dates its last v3.22 data 2026-09-27 and first v3.23 data 2026-10-04",
   "first_build": "3.23.44",
-  "recorded_at": "2026-10-09T13:35:54Z",
+  "recorded_at": "2026-10-10T01:23:26Z",
   "starts_at": "2026-09-29T15:08:22Z",
   "version": "v3.23"
  }
