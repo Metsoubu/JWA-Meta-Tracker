@@ -117,10 +117,10 @@
    "Angel"
   ],
   "class": "fierce_resilient",
-  "credit": null,
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/spinosaurus_gen_2.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Angel",
   "rarity": "legendary"
@@ -1293,10 +1293,10 @@
    "Monkeydactyl"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon: Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Monkeydactyl",
   "rarity": "legendary"
@@ -1475,10 +1475,10 @@
    "Panthera Blytheae"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon: Atrociraptor marshalli silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/panthera.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Panthera Blytheae",
   "rarity": "legendary"
@@ -1531,10 +1531,10 @@
    "Pierce"
   ],
   "class": "cunning_resilient",
-  "credit": null,
+  "credit": "Body-type icon: Kentrosaurus aethiopicus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/kentrosaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Pierce",
   "rarity": "legendary"
@@ -1713,10 +1713,10 @@
    "Rativates"
   ],
   "class": "cunning_fierce",
-  "credit": null,
+  "credit": "Body-type icon: Ornithomimus silhouette by Christiana Garros, CC BY 4.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/ornithomimus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Rativates",
   "rarity": "omega"
@@ -1727,12 +1727,82 @@
    "Rebel"
   ],
   "class": "cunning_resilient",
-  "credit": null,
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/spinosaurus_gen_2.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Rebel",
+  "rarity": "legendary"
+ },
+ "rebirth_quetzalcoatlus": {
+  "added": "v3.21",
+  "aka": [
+   "Quetzalco3"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Rebirth Quetzalcoatlus",
+  "rarity": "legendary"
+ },
+ "rebirth_raptor": {
+  "added": "v3.18",
+  "aka": [
+   "Wiedergeburt-raptor"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Rebirth Raptor",
+  "rarity": "legendary"
+ },
+ "rebirth_spinosaurus": {
+  "added": "v3.15",
+  "aka": [
+   "Wiedergeburt-spinosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/rebirth_spinosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Rebirth Spinosaurus",
+  "rarity": "legendary"
+ },
+ "rebirth_spinosaurus_gen_2": {
+  "added": "v3.18",
+  "aka": [
+   "Wiedergeburt-spinosaurus Gen 2"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/rebirth_spinosaurus_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Rebirth Spinosaurus Gen 2",
+  "rarity": "legendary"
+ },
+ "rebirth_t_rex": {
+  "added": "v3.18",
+  "aka": [
+   "Wiedergeburt-t-rex"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/rebirth_t_rex.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Rebirth T. Rex",
   "rarity": "legendary"
  },
  "red": {
@@ -1755,10 +1825,10 @@
    "Rexy"
   ],
   "class": "fierce",
-  "credit": null,
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Rexy",
   "rarity": "legendary"
@@ -2127,6 +2197,20 @@
   "name": "Tyrannodactylus",
   "rarity": "unique"
  },
+ "tyrannosaur_doe": {
+  "added": "v3.6",
+  "aka": [
+   "Tyrannosaurus-weibchen"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Tyrannosaurus silhouette by Conty (vectorized by T. Michael Keesey), CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tyrannosaur_doe.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Tyrannosaur Doe",
+  "rarity": "legendary"
+ },
  "tyrannosaurus_rex": {
   "added": "v1.1",
   "aka": [
@@ -2183,20 +2267,6 @@
   "name": "Unidentified creature (2b88a0f8)",
   "rarity": "unknown"
  },
- "unmatched-jwadashboard-3b83967e961ef444": {
-  "added": null,
-  "aka": [
-   "Wiedergeburt-spinosaurus"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Wiedergeburt-spinosaurus",
-  "rarity": "legendary"
- },
  "unmatched-jwadashboard-433c19487521c564": {
   "added": null,
   "aka": [
@@ -2210,76 +2280,6 @@
   "listed": false,
   "name": "Unidentified creature (433c1948)",
   "rarity": "unknown"
- },
- "unmatched-jwadashboard-563cbf85b2ad7c14": {
-  "added": null,
-  "aka": [
-   "Wiedergeburt-spinosaurus Gen 2"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Wiedergeburt-spinosaurus Gen 2",
-  "rarity": "legendary"
- },
- "unmatched-jwadashboard-9d223decc1c9b6f4": {
-  "added": null,
-  "aka": [
-   "Wiedergeburt-raptor"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Wiedergeburt-raptor",
-  "rarity": "legendary"
- },
- "unmatched-jwadashboard-a27ab798c90a0274": {
-  "added": null,
-  "aka": [
-   "Tyrannosaurus-weibchen"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Tyrannosaurus-weibchen",
-  "rarity": "legendary"
- },
- "unmatched-jwadashboard-c7f5952be9fd1d04": {
-  "added": null,
-  "aka": [
-   "Wiedergeburt-t-rex"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Wiedergeburt-t-rex",
-  "rarity": "legendary"
- },
- "unmatched-jwadashboard-d1f79384089f36d4": {
-  "added": null,
-  "aka": [
-   "Quetzalco3"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Quetzalco3",
-  "rarity": "legendary"
  },
  "woolly_rhino": {
   "added": "v1.11",
