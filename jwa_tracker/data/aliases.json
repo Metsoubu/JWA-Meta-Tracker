@@ -8,15 +8,31 @@
     "Brünette": "brunette",
     "Tyrannosaurus-Weibchen": "tyrannosaur_doe",
     "Tyrannosaurus-Männchen": "tyrannosaur_buck",
-    "Quetzalco3": "rebirth_quetzalcoatlus"
+    "Quetzalco3": "rebirth_quetzalcoatlus",
+    "Klassischer 93er-T-Rex": "93_classic_t_rex",
+    "Boa-Raptor": "constrictoraptor"
   },
   "_why": {
     "Tyrannosaurus-Weibchen": "German for 'female Tyrannosaurus' = Tyrannosaur Doe (legendary); the feed's picture for it is Img_Tyrannodo. Rexy appears separately under its own name.",
     "Tyrannosaurus-Männchen": "German for 'male Tyrannosaurus' = Tyrannosaur Buck, the Doe's counterpart.",
-    "Quetzalco3": "Internal name: the only legendary Quetzalcoatlus is Rebirth Quetzalcoatlus (plain is rare, Gen 2 epic); the feed numbers Rebirth Spinosaurus the same way (Spinosaur3)."
+    "Quetzalco3": "Internal name: the only legendary Quetzalcoatlus is Rebirth Quetzalcoatlus (plain is rare, Gen 2 epic); the feed numbers Rebirth Spinosaurus the same way (Spinosaur3).",
+    "Klassischer 93er-T-Rex": "German for '93 Classic T. Rex (both omega).",
+    "Boa-Raptor": "German name for Constrictoraptor (boa constrictor + raptor), the only boa/raptor hybrid in the game; seen in a tournament's eligible-creature list."
   },
   "translations": {
     "Wiedergeburt": "Rebirth"
   },
-  "by_source_id": {}
+  "by_source_id": {
+    "jwa-dashboard-feed": {
+      "2b88a0f87fd5309418417842511ab488": "pelorosuchus",
+      "433c19487521c5645b5f83c6c8dc7757": "indoraptor_mattel",
+      "05865dc28682e494dbef7f2ae5e211bb": "arsinoitherium"
+    }
+  },
+  "identified": {
+    "_about": "Creatures the feed sends with no name at all (only a code). Each was worked out from the feed's own data; the reason is shown on the creature's page.",
+    "pelorosuchus": "The data source gives no name for this creature (code 2b88a0f8). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer, and Pelorosuchus (3.23) is the only Legendary added since then.",
+    "indoraptor_mattel": "The data source gives no name for this creature (code 433c1948). It is Indoraptor Mattel: its levels (26-32) are Apex levels, and in the Coin Tournament's alphabetical list of eligible Apex creatures it sits between Indochicyon and Kentrorex. Of the three Apex creatures in that spot, Indolycan and Indonemys appear in the feed under their own names, leaving Indoraptor Mattel (game version 3.22, newer than the feed's name list).",
+    "arsinoitherium": "The data source gives no name for this creature (code 05865dc2), seen once, at level 6 (the Rare starting level). A creature with no name at all is newer than the feed's name list (game version 3.21 or later), and Arsinoitherium (3.22) is the only Rare or Common added since then."
+  }
 }

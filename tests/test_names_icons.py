@@ -11,6 +11,13 @@ from jwa_tracker.sources.base import SourceCreature
 from tests.helpers import T0, FakeSource, TempDataDir, full_team, hours, snapshot
 from tests.test_site import fake_version, no_roster
 
+# REAL feed codes for creatures published without any name (see aliases.json "identified").
+IDENTIFIED = {
+    "2b88a0f87fd5309418417842511ab488": "pelorosuchus",
+    "433c19487521c5645b5f83c6c8dc7757": "indoraptor_mattel",
+    "05865dc28682e494dbef7f2ae5e211bb": "arsinoitherium",
+}
+
 FEED_NAMES = {
     "WIEDERGEBURT-T-REX": "rebirth_t_rex",
     "WIEDERGEBURT-RAPTOR": "rebirth_raptor",
@@ -20,6 +27,8 @@ FEED_NAMES = {
     "Quetzalco3": "rebirth_quetzalcoatlus",
     "KLUGES MÄDCHEN": "clever_girl",
     "REXY": "rexy",
+    "KLASSISCHER 93ER-T-REX": "93_classic_t_rex",
+    "BOA-RAPTOR": "constrictoraptor",
 }
 
 
@@ -31,10 +40,21 @@ class GermanNameTests(TempDataDir):
                 self.assertEqual(resolver.resolve("jwa-dashboard-feed", "x", name, "Legendary").key, key)
         self.assertEqual(resolver.resolve("f", "x", "WIEDERGEBURT-T-REX", "Legendary").method, "translated")
 
-    def test_nameless_creatures_are_not_guessed(self):
+    def test_nameless_creatures_identified_from_the_evidence(self):
         resolver = roster.Resolver(roster.load_seed_roster())
-        for code in ("2b88a0f8", "433c1948", "05865dc2"):
-            self.assertIsNone(resolver.resolve("jwa-dashboard-feed", code + "7fd53094", code, "Unknown").key)
+        for source_id, key in IDENTIFIED.items():
+            self.assertEqual(resolver.resolve("jwa-dashboard-feed", source_id, source_id[:8], "Unknown").key, key)
+        notes = roster.identified_notes()
+        self.assertEqual(set(notes), set(IDENTIFIED.values()))  # every identification explains itself
+
+    def test_other_nameless_creatures_are_not_guessed(self):
+        resolver = roster.Resolver(roster.load_seed_roster())
+        self.assertIsNone(resolver.resolve("jwa-dashboard-feed", "5dca40ec" + "0" * 24, "5dca40ec", "Unknown").key)
+
+    def test_identification_note_is_published(self):
+        info = site.creature_info(self.conn, ["pelorosuchus", "baryotor"])
+        self.assertIn("2b88a0f8", info["pelorosuchus"]["note"])
+        self.assertNotIn("note", info["baryotor"])
 
     def test_old_unmatched_names_are_fixed_on_the_next_check(self):
         from jwa_tracker import collector
@@ -71,19 +91,25 @@ class ArchiveRelabelTests(TempDataDir):
                              nameless: {"name": "Unidentified creature (2b88a0f8)", "rarity": "unknown",
                                         "listed": False, "aka": ["2b88a0f8"]}}
         archive.details["feed:a"] = [(1, 10, [(old, 35, 0, {"Attack": 20}, None), ("pierce", 35, 0, None, None)])]
+        unknown = "unmatched-jwadashboard-5dca40ec00000000"
+        archive.records["feed:a"]["u"]["top100"]["c"][unknown] = 2
+        archive.creatures[unknown] = {"name": "Unidentified creature (5dca40ec)", "rarity": "unknown", "listed": False,
+                                      "aka": ["5dca40ec"]}
         mapping = archive.relabel(roster.Resolver(roster.load_seed_roster()))
-        self.assertEqual(mapping, {old: "rebirth_t_rex"})
-        self.assertEqual(archive.records["feed:a"]["u"]["top100"]["c"], {nameless: 70, "pierce": 61, "rebirth_t_rex": 60})
+        self.assertEqual(mapping, {old: "rebirth_t_rex", nameless: "pelorosuchus"})
+        self.assertEqual(archive.records["feed:a"]["u"]["top100"]["c"],
+                         {"pelorosuchus": 70, "pierce": 61, "rebirth_t_rex": 60, unknown: 2})
         self.assertEqual(archive.details["feed:a"][0][2][0][0], "rebirth_t_rex")
         self.assertEqual(archive.creatures["rebirth_t_rex"]["aka"], ["Wiedergeburt-T-Rex"])
-        self.assertIn(nameless, archive.creatures)  # no name: left as it is, never guessed
+        self.assertEqual(archive.creatures["pelorosuchus"]["aka"], ["2b88a0f8"])
+        self.assertIn(unknown, archive.creatures)  # no evidence: left as it is, never guessed
         self.assertEqual(archive.relabel(roster.Resolver(roster.load_seed_roster())), {})
 
 
 class IconTests(TempDataDir):
     def test_named_and_rebirth_creatures_have_icons(self):
         keys = ["rexy", "pierce", "angel", "rebel", "monkeydactyl", "panthera_blytheae", "rativates",
-                *FEED_NAMES.values(), "tyrannosaur_buck"]
+                *FEED_NAMES.values(), *IDENTIFIED.values(), "tyrannosaur_buck"]
         pictures = standins.picture_index(keys)
         self.assertEqual([k for k in keys if k not in pictures], [])
         self.assertIn("Kentrosaurus", pictures["pierce"]["credit"])

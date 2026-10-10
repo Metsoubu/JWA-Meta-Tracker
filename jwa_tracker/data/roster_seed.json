@@ -1,7 +1,7 @@
 {
- "_about": "Bundled fallback copy of the Jurassic World Alive creature roster (names, rarity, class, hybrid type, version added). Taken from the public Paleo.gg Dinodex page on 2026-10-08. The tracker refreshes it automatically once a day; this copy is only used if that fails on the very first run.",
+ "_about": "Bundled fallback copy of the Jurassic World Alive creature roster (names, rarity, class, hybrid type, version added). Taken from the public Paleo.gg Dinodex page on 2026-10-10. The tracker refreshes it automatically once a day; this copy is only used if that fails on the very first run.",
  "source_url": "https://www.paleo.gg/games/jurassic-world-alive/dinodex",
- "fetched_at": "2026-10-08T21:25:00Z",
+ "fetched_at": "2026-10-10T02:00:00Z",
  "creatures": [
   {
    "key": "93_classic_t_rex",
@@ -2793,6 +2793,14 @@
    "rarity": "epic",
    "class": "resilient",
    "hybrid_type": "non_hybrid",
+   "added_version": "v3.23"
+  },
+  {
+   "key": "pelorosuchus",
+   "name": "Pelorosuchus",
+   "rarity": "legendary",
+   "class": "fierce_resilient",
+   "hybrid_type": "hybrid",
    "added_version": "v3.23"
   },
   {

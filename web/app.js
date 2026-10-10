@@ -655,12 +655,26 @@
     const none = td => clear(td).appendChild(el("span", { class: "muted", text: "—" }));
     selectionTeams(sel.snaps).then(({ teams, found }) => {
       if (token !== buildToken) return;
+      const scope = buildScope(teams);
       for (const [key, td] of cells) {
-        const B = found ? creatureProfile(teams, key, r.min, r.max).builds : null;
+        if (found && !scope.teams.length) {
+          clear(td).append(el("div", { class: "bc-main muted", text: "No build to pick" }),
+            el("div", { class: "bc-sub", text: `${scope.fixedLevel ? `Level ${scope.fixedLevel} for all` : "Fixed levels"} · boosts off` }));
+          continue;
+        }
+        const B = found ? creatureProfile(scope.teams, key, r.min, r.max).builds : null;
+        if (B && !scope.levelsCount) {
+          const top = B.splits[0];
+          if (!top) { none(td); continue; }
+          clear(td).append(el("div", { class: "bc-main", text: buildShort([null, null, ...top[0]], B) }),
+            el("div", { class: "bc-sub", text: `${scope.fixedLevel ? `Level ${scope.fixedLevel} for all · ` : ""}${pctText(top[1], B.boosted)} of its teams` }));
+          continue;
+        }
         const best = B && B.topBuilds[0];
         if (!best) { none(td); continue; }
+        const enh = scope.enhancementsCount && canEnhance(B);
         clear(td).append(el("div", { class: "bc-main", text: buildShort(best[0], B) }),
-          el("div", { class: "bc-sub", text: `Level ${best[0][0]}${canEnhance(B) ? ` · Enh ${best[0][1]}` : ""} · ${pctText(best[1], B.complete)} of its teams` }));
+          el("div", { class: "bc-sub", text: `Level ${best[0][0]}${enh ? ` · Enh ${best[0][1]}` : ""} · ${pctText(best[1], B.complete)} of its teams` }));
       }
     }).catch(() => { if (token === buildToken) cells.forEach(([, td]) => none(td)); });
   }
@@ -720,8 +734,25 @@
     const byId = Object.assign({}, ...files);
     const teams = [];
     let found = 0;
-    for (const s of withDetails) if (byId[s.id]) { found++; teams.push(...byId[s.id]); }
+    for (const s of withDetails) {
+      if (!byId[s.id]) continue;
+      found++;
+      const br = s.br || {};
+      for (const t of byId[s.id]) teams.push(Object.assign({ br }, t));
+    }
     return { teams, found, missing: snaps.length - found };
+  }
+  // Which teams' builds mean something: tournaments may switch stat boosts off and set
+  // every creature to one level (the feed's own display rules say so per snapshot).
+  function buildScope(teams) {
+    const counted = teams.filter(t => t.br.bo !== 0);
+    const levels = [...new Set(teams.map(t => t.br.std).filter(Boolean))];
+    return {
+      teams: counted,
+      levelsCount: counted.length > 0 && counted.every(t => t.br.lv !== 0),
+      enhancementsCount: counted.every(t => t.br.en !== 0),
+      fixedLevel: levels.length === 1 ? levels[0] : null,
+    };
   }
 
   const BOOST_ORDER = ["Attack", "Health", "Speed"];
@@ -827,8 +858,8 @@
     return B.boostStats.map((s, i) => chip(STAT_SHORT[s] || s, vals[i], `${s} boosts`));
   }
   // A complete build [level, enhancement, ...boosts] as chips.
-  function buildChips(vals, B) {
-    return el("div", { class: "chips" }, chip("Lv", vals[0], "Level"), canEnhance(B) ? chip("Enh", vals[1], "Enhancement") : null,
+  function buildChips(vals, B, showEnhancement) {
+    return el("div", { class: "chips" }, chip("Lv", vals[0], "Level"), showEnhancement ? chip("Enh", vals[1], "Enhancement") : null,
       boostChips(vals.slice(2), B));
   }
   function shareBlock(n, total, unit) {
@@ -838,7 +869,7 @@
     return B.boostStats.map((s, i) => `${STAT_SHORT[s] || s} ${vals[2 + i]}`).join(" · ");
   }
 
-  function renderProfile(box, p, key, sel, info) {
+  function renderProfile(box, p, key, sel, info, buildP, scope) {
     clear(box);
     const sec = (title, ...kids) => el("div", { class: "d-section" }, el("h3", { text: title }), ...kids);
     const appearances = sel.mode === "version" ? "team appearances" : "teams";
@@ -858,38 +889,50 @@
       return;
     }
     // Best build
-    const B = p.builds;
+    const B = buildP.builds;
+    const showEnh = scope.enhancementsCount && canEnhance(B);
     const kids = [];
-    if (!B.count) {
-      kids.push(el("p", { class: "fine", text: "The data source has no build details for these teams yet." }));
+    if (!scope.teams.length) {
+      kids.push(el("p", { class: "build-none", text: `No build to pick here: this tournament sets every creature to ${scope.fixedLevel ? `level ${scope.fixedLevel}` : "the same level"} and switches stat boosts off, so only the team matters.` }));
+    } else if (!B.count) {
+      kids.push(el("p", { class: "fine", text: buildP.used ? "The data source has no build details for these teams yet." : "Not used in the snapshots where builds count." }));
     } else {
-      const [best, ...others] = B.topBuilds;
+      const fullBuilds = scope.levelsCount;
+      const [best, ...others] = fullBuilds ? B.topBuilds : B.splits;
+      const chipsFor = vals => fullBuilds ? buildChips(vals, B, showEnh) : el("div", { class: "chips" }, boostChips(vals, B));
+      const total = fullBuilds ? B.complete : B.boosted;
       if (best) {
         kids.push(el("div", { class: "best-build" },
-          el("div", { class: "bb-main" }, el("div", { class: "bb-label", text: "Most used by top players" }), buildChips(best[0], B)),
-          el("div", { class: "sv bb-share" }, el("strong", { text: pctText(best[1], B.complete) }),
-            el("span", { text: `${best[1]} of ${B.complete} ${appearances}` }))));
+          el("div", { class: "bb-main" }, el("div", { class: "bb-label", text: "Most used by top players" }), chipsFor(best[0])),
+          el("div", { class: "sv bb-share" }, el("strong", { text: pctText(best[1], total) }),
+            el("span", { text: `${best[1]} of ${total} ${appearances}` }))));
+        if (!fullBuilds && scope.fixedLevel) kids.push(el("p", { class: "fine", text: `The tournament sets every creature to level ${scope.fixedLevel}, so only the stat boosts are a choice.` }));
         if (others.length) {
           kids.push(el("div", { class: "build-label", text: "Also popular" }),
-            el("div", { class: "splits" }, others.map(([vals, n]) => el("div", { class: "split" }, buildChips(vals, B),
-              shareBlock(n, B.complete, appearances)))));
+            el("div", { class: "splits" }, others.map(([vals, n]) => el("div", { class: "split" }, chipsFor(vals),
+              shareBlock(n, total, appearances)))));
         }
       }
-      if (B.boosted) {
+      if (B.boosted && fullBuilds) {
         kids.push(el("div", { class: "build-label", text: "Most common stat boosts (any level)" }),
           el("div", { class: "splits" }, B.splits.map(([vals, n]) => el("div", { class: "split" },
             el("div", { class: "chips" }, boostChips(vals, B)), shareBlock(n, B.boosted, appearances)))),
           el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Average boosts" }),
             el("span", { text: B.boostStats.map(s => `${s} ${avgText(B.boostAvg[s])}`).join(" · ") })));
       }
-      if (B.levels.length) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Level" }), el("span", { text: shareList(B.levels, B.count) })));
-      if (canEnhance(B)) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Enhancement" }), el("span", { text: shareList(B.enhancements, B.count) })));
+      if (B.boosted && !fullBuilds) {
+        kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Average boosts" }),
+          el("span", { text: B.boostStats.map(s => `${s} ${avgText(B.boostAvg[s])}`).join(" · ") })));
+      }
+      if (B.levels.length && fullBuilds) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Level" }), el("span", { text: shareList(B.levels, B.count) })));
+      if (showEnh && fullBuilds) kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Enhancement" }), el("span", { text: shareList(B.enhancements, B.count) })));
       if (B.omegas) {
         kids.push(el("div", { class: "build-row" }, el("span", { class: "build-label", text: "Omega training (average points)" }),
           el("span", { text: B.omegaStats.filter(s => B.omegaAvg[s] > 0).map(s => `${s} ${avgText(B.omegaAvg[s])}`).join(" · ") || "No points spent" })));
       }
       const notes = [`Based on ${B.count} ${appearances}.`];
-      if (B.count < p.used) notes.push(`Build details are missing for ${p.used - B.count} older ${appearances}.`);
+      if (B.count < buildP.used) notes.push(`Build details are missing for ${buildP.used - B.count} older ${appearances}.`);
+      if (scope.teams.length < p.teams) notes.push("Snapshots from tournaments with stat boosts switched off are left out.");
       notes.push("“Best” means most used by the top players; no source publishes win/loss data.");
       kids.push(el("p", { class: "fine", text: notes.join(" ") }));
     }
@@ -967,7 +1010,10 @@
     selectionTeams(sel.snaps).then(({ teams, found, missing }) => {
       if (token !== drawerToken) return;
       if (!found) throw new Error("no team details");
-      renderProfile(profileBox, creatureProfile(teams, key, r.min, r.max), key, sel, c);
+      const scope = buildScope(teams);
+      const profile = creatureProfile(teams, key, r.min, r.max);
+      const buildProfile = scope.teams.length === teams.length ? profile : creatureProfile(scope.teams, key, r.min, r.max);
+      renderProfile(profileBox, profile, key, sel, c, buildProfile, scope);
       if (missing) profileBox.appendChild(el("p", { class: "fine", text: `${missing} of the chosen snapshots ${missing === 1 ? "has" : "have"} no team details (the data source no longer offers ${missing === 1 ? "it" : "them"}), so ${missing === 1 ? "it is" : "they are"} left out of these sections.` }));
     }).catch(() => {
       if (token !== drawerToken) return;
@@ -978,6 +1024,7 @@
     const chartBox = el("div", { class: "chart-wrap" });
     body.appendChild(sec(`Usage over time (${rangeInfo(state.range).label})`, chartBox));
     requestAnimationFrame(() => lineChart(chartBox, points, [{ key, name: c.name, values: seriesFor(points, state.range, key), slot: 0 }], { height: 180, endLabels: false }));
+    if (c.note) body.appendChild(sec("How it was identified", el("p", { class: "fine d-note", text: c.note })));
     if (c.aka && c.aka.length) {
       body.appendChild(sec("How the data source names it", el("p", { class: "fine" }, c.aka.map((n, i) => [i ? ", " : "", el("span", { class: "mono-text", text: n })]))));
     }

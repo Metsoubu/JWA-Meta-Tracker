@@ -162,6 +162,9 @@ class Resolver:
         aliases = aliases if aliases is not None else load_aliases()
         self.alias_by_name = {normalize(k): v for k, v in aliases.get("by_name", {}).items()}
         self.alias_by_id = aliases.get("by_source_id", {})
+        # The same id aliases, keyed the way unidentified creatures were stored (for old history).
+        self.unmatched_alias = {unresolved_key(src, sid): key
+                                for src, ids in self.alias_by_id.items() for sid, key in ids.items()}
         self.translations = [
             (re.compile(rf"\b{re.escape(german)}\b", re.IGNORECASE), english)
             for german, english in aliases.get("translations", {}).items()
@@ -233,6 +236,11 @@ def load_aliases() -> dict[str, Any]:
             return json.load(fh)
     except FileNotFoundError:
         return {}
+
+
+def identified_notes() -> dict[str, str]:
+    """Why a creature the feed sends without a name was identified (creature key -> explanation)."""
+    return {k: v for k, v in load_aliases().get("identified", {}).items() if not k.startswith("_")}
 
 
 def resolver_for(conn: sqlite3.Connection) -> Resolver:

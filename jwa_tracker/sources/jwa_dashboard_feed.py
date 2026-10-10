@@ -85,6 +85,20 @@ def parse_build(creature: dict[str, Any]) -> Build | None:
     return Build(level, int(enhancement) if enhancement is not None else None, boosts, omega or None)
 
 
+def parse_build_rules(doc: dict[str, Any], event: dict[str, Any]) -> dict[str, Any] | None:
+    """What counts in a build on this leaderboard, from the feed's own display rules."""
+    shown = doc.get("display_rules")
+    if not isinstance(shown, dict):
+        return None
+    level = shown.get("standardized_level", event.get("standardized_level"))
+    return {
+        "levels": shown.get("show_levels") is not False,
+        "boosts": shown.get("show_stat_boosts") is not False and event.get("stat_boosts_enabled") is not False,
+        "enhancements": shown.get("show_enhancements") is not False,
+        "standardized_level": level if isinstance(level, int) and not isinstance(level, bool) else None,
+    }
+
+
 def _kind(event: dict[str, Any], name: str) -> str:
     if event.get("is_arena") is True:
         return "arena"
@@ -157,6 +171,7 @@ def parse_snapshot(raw: bytes, snapshot_id: str) -> SourceSnapshot:
         declared_team_count=declared,
         fingerprint_identifies_player=True,
         notes=notes,
+        build_rules=parse_build_rules(doc, event),
     )
 
 

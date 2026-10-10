@@ -93,9 +93,14 @@ site keeps showing the last good data and says that the update failed.
 * **Builds.** For every creature on every team the feed also gives its level,
   enhancement, stat boosts and omega training points. That is where the builds come from.
 * **Names.** The feed sometimes gives German game names (e.g. *Wiedergeburt-T-Rex* =
-  Rebirth T. Rex); these are translated and matched automatically. A few creatures come
-  with no name at all; they are counted and shown as *Unidentified creature* with a ?
-  icon, never guessed.
+  Rebirth T. Rex); these are translated and matched automatically. Creatures newer than
+  the feed's own name list can arrive with no name at all, only a code. Those were
+  identified from the feed's own evidence (rarity rules, levels, release version), and
+  each one's page explains how, e.g. Pelorosuchus. A code with no such evidence is
+  shown as *Unidentified creature* with a ? icon, never guessed.
+* **Tournament rules.** Some tournaments set every creature to level 35 and switch
+  stat boosts off; there is no build to choose there, and the dashboard says so instead
+  of showing one.
 * **No win rates.** No source publishes battle results, so the tracker cannot say which
   creature or build *wins* most. "Best build" means the build most top players use.
 * The feed's maintainer does not document how the data is collected, and the feed could

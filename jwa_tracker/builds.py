@@ -23,12 +23,15 @@ log = logging.getLogger(__name__)
 
 
 def snapshots_to_check(conn: sqlite3.Connection, source: str) -> list[sqlite3.Row]:
-    """Snapshots of `source` saved by an older version that did not record builds."""
+    """Snapshots of `source` saved by an older version that did not record builds or build rules."""
     return conn.execute(
         """
-        SELECT s.id, s.source_snapshot_id, s.captured_at FROM snapshots s
+        SELECT s.id, s.source_snapshot_id, s.captured_at,
+               b.snapshot_id IS NOT NULL AS has_builds, r.snapshot_id IS NOT NULL AS has_rules
+        FROM snapshots s
         LEFT JOIN snapshot_builds b ON b.snapshot_id = s.id
-        WHERE s.source = ? AND s.is_example = 0 AND b.snapshot_id IS NULL
+        LEFT JOIN snapshot_rules r ON r.snapshot_id = s.id
+        WHERE s.source = ? AND s.is_example = 0 AND (b.snapshot_id IS NULL OR r.snapshot_id IS NULL)
         ORDER BY s.captured_at
         """,
         (source,),
@@ -70,11 +73,13 @@ def backfill(conn: sqlite3.Connection, sources, now: datetime | None = None, lim
                 if not exc.transient:
                     with db.transaction(conn):
                         _mark(conn, row["id"], "unavailable", now)
+                        db.set_build_rules(conn, row["id"], None)
                 continue  # a temporary problem: try again next update
             except (SourceFormatError, ValueError, KeyError) as exc:
                 log.warning("Could not get builds for %s: %s", row["source_snapshot_id"], exc)
                 with db.transaction(conn):
                     _mark(conn, row["id"], "unavailable", now)
+                    db.set_build_rules(conn, row["id"], None)
                 continue
             team_ids = {
                 r["fingerprint"]: r["id"]
@@ -82,10 +87,11 @@ def backfill(conn: sqlite3.Connection, sources, now: datetime | None = None, lim
                     "SELECT id, fingerprint FROM teams WHERE snapshot_id = ? AND fingerprint IS NOT NULL", (row["id"],)
                 )
             }
+            stored = 0
             with db.transaction(conn):
+                db.set_build_rules(conn, row["id"], snapshot.build_rules)  # ignored if already known
                 if conn.execute("SELECT 1 FROM snapshot_builds WHERE snapshot_id = ?", (row["id"],)).fetchone():
-                    continue  # another update got here first
-                stored = 0
+                    continue  # builds were already there (or another update got here first)
                 for prepared in ingest.prepare(snapshot).teams:
                     team_id = team_ids.get(prepared.team.fingerprint)
                     if team_id is not None:

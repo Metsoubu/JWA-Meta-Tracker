@@ -120,6 +120,13 @@ CREATE TABLE IF NOT EXISTS snapshot_builds (
     checked_at  TEXT NOT NULL
 );
 
+-- Which parts of a build count on a snapshot's leaderboard (JSON from SourceSnapshot.build_rules;
+-- '{}' when the source does not say). Older snapshots get theirs from builds.py.
+CREATE TABLE IF NOT EXISTS snapshot_rules (
+    snapshot_id INTEGER PRIMARY KEY REFERENCES snapshots (id),
+    rules       TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS rejected_snapshots (
     source             TEXT NOT NULL,
     source_snapshot_id TEXT NOT NULL,
@@ -414,6 +421,15 @@ def load_team_members(conn: sqlite3.Connection, snapshot_ids: list[int]) -> list
             ).fetchall()
         )
     return out
+
+
+def set_build_rules(conn: sqlite3.Connection, snapshot_id: int, rules: dict | None) -> None:
+    conn.execute("INSERT OR IGNORE INTO snapshot_rules (snapshot_id, rules) VALUES (?, ?)",
+                 (snapshot_id, json.dumps(rules or {}, sort_keys=True)))
+
+
+def build_rules(conn: sqlite3.Connection) -> dict[int, dict]:
+    return {r["snapshot_id"]: json.loads(r["rules"]) for r in conn.execute("SELECT * FROM snapshot_rules")}
 
 
 def invalid_team_count(conn: sqlite3.Connection, snapshot_ids: list[int]) -> int:

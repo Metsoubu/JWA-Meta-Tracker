@@ -196,6 +196,7 @@ def store(
             db.insert_builds(conn, team_id, t.team.members)
         conn.execute("INSERT INTO snapshot_builds (snapshot_id, status, checked_at) VALUES (?, 'recorded', ?)",
                      (snapshot_id, db.iso(now)))
+        db.set_build_rules(conn, snapshot_id, snap.build_rules)
 
     if raw is not None:
         try:

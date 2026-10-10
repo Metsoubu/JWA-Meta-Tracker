@@ -66,3 +66,7 @@ class SourceSnapshot:
     # different players would practically never share it (levels, boosts, ...).
     fingerprint_identifies_player: bool = False
     notes: list[str] = field(default_factory=list)
+    # Which parts of a build count on this leaderboard (tournaments may fix every level
+    # or switch stat boosts off): {"levels", "boosts", "enhancements": bool,
+    # "standardized_level": int | None}. None = the source does not say.
+    build_rules: dict | None = None

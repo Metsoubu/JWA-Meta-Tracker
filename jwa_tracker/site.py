@@ -60,7 +60,17 @@ def sanitize(text: str | None) -> str:
 
 # --- per-snapshot records ---------------------------------------------------------
 
-def snapshot_record(snap: dict[str, Any], teams: list[stats.Team]) -> dict[str, Any]:
+def compact_rules(rules: dict[str, Any] | None) -> dict[str, int]:
+    """Only what a leaderboard switches off: {"lv": 0, "bo": 0, "en": 0, "std": 35}; {} = builds count as usual."""
+    rules = rules or {}
+    out = {short: 0 for short, name in (("lv", "levels"), ("bo", "boosts"), ("en", "enhancements"))
+           if rules.get(name) is False}
+    if rules.get("standardized_level"):
+        out["std"] = int(rules["standardized_level"])
+    return out
+
+
+def snapshot_record(snap: dict[str, Any], teams: list[stats.Team], rules: dict[str, Any] | None = None) -> dict[str, Any]:
     usage: dict[str, Any] = {}
     for key in EXPORT_RANGES:
         lo, hi, _label = stats.rank_filter(key)
@@ -79,6 +89,7 @@ def snapshot_record(snap: dict[str, Any], teams: list[stats.Team]) -> dict[str, 
         "src": snap["source"],
         "ex": int(snap["is_example"]),
         "u": usage,
+        "br": compact_rules(rules),
     }
 
 
@@ -87,7 +98,8 @@ def snapshot_records(conn: sqlite3.Connection) -> list[dict[str, Any]]:
     teams_by_snapshot: dict[int, list[stats.Team]] = defaultdict(list)
     for team in stats.teams_from_rows(db.load_team_rows(conn, [s["id"] for s in snaps])):
         teams_by_snapshot[team.snapshot_id].append(team)
-    records = [snapshot_record(s, teams_by_snapshot[s["id"]]) for s in snaps]
+    rules = db.build_rules(conn)
+    records = [snapshot_record(s, teams_by_snapshot[s["id"]], rules.get(s["id"])) for s in snaps]
     records.sort(key=lambda r: (r["t"], r["id"]))
     return records
 
@@ -104,6 +116,7 @@ def creature_info(conn: sqlite3.Connection, keys: Iterable[str]) -> dict[str, di
     keys = sorted(set(keys))
     creatures = db.all_creatures(conn)
     pictures = standins.picture_index(keys)
+    notes = roster.identified_notes()
     aka: dict[str, set[str]] = defaultdict(set)
     for r in conn.execute("SELECT creature_key, display_name FROM source_creatures"):
         if r["display_name"]:
@@ -126,6 +139,8 @@ def creature_info(conn: sqlite3.Connection, keys: Iterable[str]) -> dict[str, di
             "credit": pic.get("credit"),
             "aka": sorted(aka.get(key, ())),
         }
+        if key in notes:
+            out[key]["note"] = notes[key]
     return out
 
 
@@ -364,6 +379,9 @@ class Archive:
         for key, info in self.creatures.items():
             if not key.startswith("unmatched-"):
                 continue
+            if resolver.unmatched_alias.get(key) in resolver.roster:
+                mapping[key] = resolver.unmatched_alias[key]
+                continue
             for name in [*info.get("aka", []), info.get("name") or ""]:
                 match = resolver.resolve("archive", "", name, info.get("rarity"))
                 if match.key and match.key != key:
@@ -388,7 +406,18 @@ class Archive:
         return mapping
 
     def missing_details(self) -> set[str]:
-        return {rid for rid in self.records if rid not in self.details}
+        """Archived snapshots without their teams, or tournaments without their build rules."""
+        return {rid for rid, rec in self.records.items()
+                if rid not in self.details or (rec["k"] == "tournament" and "br" not in rec)}
+
+    def add_rules(self, records: Iterable[dict[str, Any]]) -> int:
+        added = 0
+        for rec in records:
+            old = self.records.get(rec["id"])
+            if old is not None and "br" not in old and "br" in rec:
+                old["br"] = rec["br"]
+                added += 1
+        return added
 
     def add_details(self, details: dict[str, list[tuple]]) -> list[str]:
         """Teams of archived snapshots that have none yet (existing entries are never replaced)."""
@@ -454,7 +483,9 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
             "scheduled", force=True, conn=conn, now_fn=now_fn, sources=sources,
             skip_ids=skip, **(collect_kwargs or {}),
         )
-        added = archive.add_records(snapshot_records(conn))
+        fresh = snapshot_records(conn)
+        added = archive.add_records(fresh)
+        archive.add_rules(fresh)
         archive.add_details(team_details(conn))
         relabeled = archive.relabel(roster.resolver_for(conn))
         if relabeled:
