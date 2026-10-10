@@ -104,9 +104,22 @@ def store_roster(conn: sqlite3.Connection, roster: list[dict[str, Any]], source:
 
 
 def ensure_roster(conn: sqlite3.Connection, now: datetime) -> None:
-    """Make sure some roster exists (bundled seed on first run)."""
+    """Make sure a roster exists and knows every creature in the bundled copy (the first run,
+    or a program update that ships creatures newer than the last daily refresh)."""
+    seed = load_seed_roster()
     if db.creature_count(conn) == 0:
-        store_roster(conn, load_seed_roster(), ROSTER_SOURCE + " (bundled copy)", now)
+        store_roster(conn, seed, ROSTER_SOURCE + " (bundled copy)", now)
+        return
+    known = {r["key"] for r in conn.execute("SELECT key FROM creatures")}
+    missing = [c for c in seed if c["key"] not in known]
+    if missing:
+        with db.transaction(conn):
+            conn.executemany(
+                "INSERT OR IGNORE INTO creatures (key, name, rarity, class, hybrid_type, added_version, "
+                "roster_source, in_roster, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?)",
+                [(c["key"], c["name"], c.get("rarity"), c.get("class"), c.get("hybrid_type"), c.get("added_version"),
+                  ROSTER_SOURCE + " (bundled copy)", db.iso(now)) for c in missing],
+            )
 
 
 def refresh_roster_if_due(

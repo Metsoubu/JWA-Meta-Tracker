@@ -47,6 +47,16 @@ class GermanNameTests(TempDataDir):
         notes = roster.identified_notes()
         self.assertEqual(set(notes), set(IDENTIFIED.values()))  # every identification explains itself
 
+    def test_creatures_newer_than_the_last_refresh_are_added_from_the_bundled_list(self):
+        self.conn.execute("DELETE FROM creatures WHERE key = 'pelorosuchus'")  # an older daily refresh
+        with db.transaction(self.conn):
+            roster.register_source_creatures(self.conn, "jwa-dashboard-feed",
+                                             [("2b88a0f87fd5309418417842511ab488", "2b88a0f8", "Unknown")], T0)
+        roster.ensure_roster(self.conn, T0)
+        self.assertEqual(roster.reresolve_unmatched(self.conn, T0), 1)
+        key = self.conn.execute("SELECT creature_key FROM source_creatures WHERE source_creature_id LIKE '2b88a0f8%'").fetchone()[0]
+        self.assertEqual(key, "pelorosuchus")
+
     def test_other_nameless_creatures_are_not_guessed(self):
         resolver = roster.Resolver(roster.load_seed_roster())
         self.assertIsNone(resolver.resolve("jwa-dashboard-feed", "5dca40ec" + "0" * 24, "5dca40ec", "Unknown").key)
