@@ -153,7 +153,7 @@ def unresolved_key(source: str, source_id: str) -> str:
 @dataclass(frozen=True)
 class Match:
     key: str | None
-    method: str  # alias | exact | prefix | fuzzy | unmatched
+    method: str  # alias | exact | prefix | fuzzy | translated | unmatched
 
 
 class Resolver:
@@ -162,6 +162,11 @@ class Resolver:
         aliases = aliases if aliases is not None else load_aliases()
         self.alias_by_name = {normalize(k): v for k, v in aliases.get("by_name", {}).items()}
         self.alias_by_id = aliases.get("by_source_id", {})
+        self.translations = [
+            (re.compile(rf"\b{re.escape(german)}\b", re.IGNORECASE), english)
+            for german, english in aliases.get("translations", {}).items()
+            if not german.startswith("_")
+        ]
         self.by_norm: dict[str, list[str]] = {}
         for key, c in self.roster.items():
             for variant in {normalize(c["name"]), normalize(key)}:
@@ -184,6 +189,19 @@ class Resolver:
         by_id = self.alias_by_id.get(source, {}).get(source_id)
         if by_id and by_id in self.roster:
             return Match(by_id, "alias")
+        match = self._resolve_name(display_name, rarity)
+        if match.key:
+            return match
+        translated = display_name or ""
+        for pattern, english in self.translations:
+            translated = pattern.sub(english, translated)
+        if translated != display_name:
+            match = self._resolve_name(translated, rarity)
+            if match.key:
+                return Match(match.key, "translated")
+        return Match(None, "unmatched")
+
+    def _resolve_name(self, display_name: str, rarity: str | None) -> Match:
         norm = normalize(display_name)
         if not norm:
             return Match(None, "unmatched")

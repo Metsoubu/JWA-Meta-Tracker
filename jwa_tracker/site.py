@@ -4,7 +4,7 @@ The dashboard (web/app.js) is a static page: it loads data/site.json and does
 the pooling, tiers and comparisons in the browser. The same files therefore work
 as your local dashboard (the local server builds site.json from your database)
 and as a free public website on GitHub Pages, where a scheduled GitHub Action
-runs `tracker.py build-site` every 3 hours.
+runs `tracker.py build-site` every 6 hours.
 
 For each snapshot the file holds, per rank range, the number of valid teams and
 how many of them use each creature. Counting is done here, in tested Python; the
@@ -357,6 +357,36 @@ class Archive:
                 added.append(rec["id"])
         return added
 
+    def relabel(self, resolver: roster.Resolver) -> dict[str, str]:
+        """Give archived creatures that had no recognised name their proper key, once a name fix
+        or the creature list can identify them. Only labels change: team counts stay exactly the same."""
+        mapping: dict[str, str] = {}
+        for key, info in self.creatures.items():
+            if not key.startswith("unmatched-"):
+                continue
+            for name in [*info.get("aka", []), info.get("name") or ""]:
+                match = resolver.resolve("archive", "", name, info.get("rarity"))
+                if match.key and match.key != key:
+                    mapping[key] = match.key
+                    break
+        if not mapping:
+            return mapping
+        for rec in self.records.values():
+            for block in rec["u"].values():
+                counts: dict[str, int] = {}
+                for k, n in block["c"].items():
+                    k = mapping.get(k, k)
+                    counts[k] = counts.get(k, 0) + n
+                block["c"] = dict(sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])))
+        for rid, teams in self.details.items():
+            self.details[rid] = [(lo, hi, [(mapping.get(m[0], m[0]), *m[1:]) for m in members])
+                                 for lo, hi, members in teams]
+        for old, new in mapping.items():
+            target = self.creatures.setdefault(new, {})
+            target["aka"] = sorted(set(target.get("aka", [])) | set(self.creatures[old].get("aka", [])))
+            del self.creatures[old]
+        return mapping
+
     def missing_details(self) -> set[str]:
         return {rid for rid in self.records if rid not in self.details}
 
@@ -426,6 +456,9 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
         )
         added = archive.add_records(snapshot_records(conn))
         archive.add_details(team_details(conn))
+        relabeled = archive.relabel(roster.resolver_for(conn))
+        if relabeled:
+            log.info("Identified %d archived creature(s): %s", len(relabeled), ", ".join(sorted(set(relabeled.values()))))
         new_info = creature_info(conn, used_keys(archive.records.values()))
         for key, info in new_info.items():
             old_aka = set(archive.creatures.get(key, {}).get("aka", []))

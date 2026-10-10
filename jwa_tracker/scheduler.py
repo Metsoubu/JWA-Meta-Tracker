@@ -2,8 +2,8 @@
 
 The task runs `pythonw.exe tracker.py collect --trigger scheduled` every hour,
 plus a few minutes after you log in. The collector itself decides whether an
-update is due (see collector.is_due), so the effective cadence is every 3 hours
-(midnight, 03:00, 06:00, ...), with hourly retries after a failure and automatic catch-up
+update is due (see collector.is_due), so the effective cadence is every 6 hours
+(midnight, 6 am, noon and 6 pm), with hourly retries after a failure and automatic catch-up
 when the computer was off or asleep at the scheduled time ("StartWhenAvailable").
 Claude Code or the dashboard do not need to be open.
 """
@@ -51,7 +51,7 @@ def task_xml(command: Path, script: Path, workdir: Path, user: str) -> str:
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Author>{escape(config.APP_NAME)}</Author>
-    <Description>Checks for new Jurassic World Alive leaderboard data. Updates run every 3 hours; hourly checks retry failures and catch up after the PC was off. Created by {escape(config.APP_NAME)}.</Description>
+    <Description>Checks for new Jurassic World Alive leaderboard data. Updates run every 6 hours (midnight, 6 am, noon, 6 pm); hourly checks retry failures and catch up after the PC was off. Created by {escape(config.APP_NAME)}.</Description>
   </RegistrationInfo>
   <Triggers>
     <CalendarTrigger>

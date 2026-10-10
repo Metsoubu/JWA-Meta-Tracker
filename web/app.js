@@ -295,6 +295,7 @@
   }
 
   // ------------------------------------------------------------------ shared widgets
+  const isNameless = c => /^Unidentified creature/.test(c.name || "");
   function emblem(c, size) {
     const rarity = (c.rarity || "unknown").toLowerCase();
     const node = el("div", { class: `emb r-${rarity}${size ? " " + size : ""}`, "aria-hidden": "true" });
@@ -304,7 +305,7 @@
       const url = c.img.replace(/["\\]/g, "\\$&");
       node.appendChild(el("span", { class: "sil", style: { "--mask": `url("${url}")` } }));
     } else {
-      node.appendChild(el("span", { class: "mono", text: initials(c.name) }));
+      node.appendChild(el("span", { class: "mono", text: isNameless(c) ? "?" : initials(c.name) }));
     }
     return node;
   }
@@ -532,8 +533,12 @@
     if (d.sample.missing) box.appendChild(banner("info", `${d.sample.missing} snapshot(s) do not cover this rank range and are left out.`, ""));
     if (d.sample.invalid) box.appendChild(banner("info", `${d.sample.invalid} incomplete team record(s) excluded.`, "Teams without exactly eight identified creatures are not counted."));
     const unmatched = d.rows.filter(c => !c.listed);
-    if (unmatched.length) box.appendChild(banner("info", "Some creatures could not be identified.",
-      `${unmatched.map(c => c.name).join(", ")} — shown with their raw label until the creature list catches up.`));
+    const nameless = unmatched.filter(isNameless);
+    const unlisted = unmatched.filter(c => !isNameless(c));
+    if (nameless.length) box.appendChild(banner("info", `${nameless.length === 1 ? "1 creature has" : `${nameless.length} creatures have`} no name in the data source.`,
+      "The data source does not say which creature it is, so it is counted and shown as “Unidentified creature” (with a ? icon) instead of being guessed."));
+    if (unlisted.length) box.appendChild(banner("info", "Some creature names are not in the creature list yet.",
+      `${unlisted.map(c => c.name).join(", ")} — shown as the data source names them until the creature list catches up.`));
   }
 
   function filteredRows() {
@@ -933,7 +938,9 @@
       c.added ? `added in ${c.added}` : null].filter(Boolean).join(" · ");
     body.appendChild(el("div", { class: "d-head" }, emblem(c, "lg"),
       el("div", null, el("h2", { id: "drawerTitle", text: c.name }), el("div", { class: "d-meta", text: meta }),
-        c.listed === false ? el("div", { class: "badge-unmatched", text: "Name not found in the creature list — shown as the data source labels it." }) : null)));
+        c.listed === false ? el("div", { class: "badge-unmatched", text: isNameless(c)
+          ? "The data source gives no name for this creature, so it cannot be identified."
+          : "Name not found in the creature list — shown as the data source labels it." }) : null)));
     const ranges = availableRanges(state.kind);
     const brackets = ranges.map(r => {
       const p = pool(sel.snaps, r.key);
@@ -1292,7 +1299,7 @@
 
   function applyMode() {
     $("#exampleBanner").hidden = !SITE.demo;
-    $(".brand-sub").textContent = "Top 100 arena usage · checked every 3 hours";
+    $(".brand-sub").textContent = "Top 100 arena usage · updated every 6 hours";
     document.title = "JWA Meta Tracker";
   }
 

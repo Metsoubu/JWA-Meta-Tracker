@@ -71,10 +71,12 @@ PORT_SEARCH_RANGE = 10
 
 # --- Scheduling ----------------------------------------------------------------
 TASK_NAME = "JWA Meta Tracker - Auto Update"
-# Collection "slots" in local time, 3 hours apart. Windows Task Scheduler wakes
-# the collector every hour; it only does work when a slot has passed without a
-# successful check. This gives a 3-hour cadence plus hourly retry/catch-up.
-SCHEDULE_SLOTS_LOCAL = ("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00")
+# Collection "slots" in the computer's local time (the owner is on US Central Time),
+# 6 hours apart: midnight, 6 am, noon and 6 pm. Windows Task Scheduler wakes the
+# collector every hour; it only does work when a slot has passed without a successful
+# check. This gives a 6-hour cadence plus hourly retry/catch-up. The public website
+# uses the same times (see .github/workflows/update-website.yml).
+SCHEDULE_SLOTS_LOCAL = ("00:00", "06:00", "12:00", "18:00")
 STALE_AFTER_HOURS = 30
 VERY_STALE_AFTER_HOURS = 72
 ROSTER_REFRESH_HOURS = 24

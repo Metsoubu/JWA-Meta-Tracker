@@ -1,11 +1,22 @@
 {
-  "_about": "Hand-checked name fixes for creature names that data sources spell differently from the roster. Keys are matched after removing accents, spaces and punctuation (case-insensitive). Values are roster keys from roster_seed.json.",
+  "_about": "Hand-checked name fixes for creature names that data sources spell differently from the roster. Keys are matched after removing accents, spaces and punctuation (case-insensitive). Values are roster keys from roster_seed.json. The feed sometimes publishes German game text, so 'translations' turns German words into English before matching.",
   "by_name": {
     "Kluges Mädchen": "clever_girl",
     "Wollnashorn": "woolly_rhino",
     "Cryolopho2": "cryolophosaurus_mattel",
     "Blondie": "blonde",
-    "Brünette": "brunette"
+    "Brünette": "brunette",
+    "Tyrannosaurus-Weibchen": "tyrannosaur_doe",
+    "Tyrannosaurus-Männchen": "tyrannosaur_buck",
+    "Quetzalco3": "rebirth_quetzalcoatlus"
+  },
+  "_why": {
+    "Tyrannosaurus-Weibchen": "German for 'female Tyrannosaurus' = Tyrannosaur Doe (legendary); the feed's picture for it is Img_Tyrannodo. Rexy appears separately under its own name.",
+    "Tyrannosaurus-Männchen": "German for 'male Tyrannosaurus' = Tyrannosaur Buck, the Doe's counterpart.",
+    "Quetzalco3": "Internal name: the only legendary Quetzalcoatlus is Rebirth Quetzalcoatlus (plain is rare, Gen 2 epic); the feed numbers Rebirth Spinosaurus the same way (Spinosaur3)."
+  },
+  "translations": {
+    "Wiedergeburt": "Rebirth"
   },
   "by_source_id": {}
 }

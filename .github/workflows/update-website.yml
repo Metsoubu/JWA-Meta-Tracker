@@ -1,4 +1,5 @@
-# Updates the public website every 3 hours, for free, on GitHub's servers.
+# Updates the public website every 6 hours - midnight, 6 am, noon and 6 pm Tennessee
+# (US Central) time - for free, on GitHub's servers.
 # 1. Downloads any new leaderboard snapshots from the community feed.
 # 2. Saves them in archive/ (committed back to this repository, so history is never lost).
 # 3. Builds the website and publishes it on GitHub Pages.
@@ -6,9 +7,12 @@ name: Update website
 
 on:
   schedule:
-    - cron: "45 */3 * * *"    # every 3 hours (00:45, 03:45, ... UTC); the feed usually publishes ~11:30 and ~21:20 UTC
-  workflow_dispatch: {}        # adds a "Run workflow" button for an update right now
-  push:                        # republish when you upload changes (the bot's own data saves do not trigger this)
+    # GitHub's timer only knows UTC and ignores daylight saving, so both sets of UTC times
+    # are listed; the "when" job below lets through only the one that matches Central Time today.
+    - cron: "0 5,11,17,23 * * *"   # midnight, 6 am, noon, 6 pm Central Daylight Time (UTC-5, March-November)
+    - cron: "0 0,6,12,18 * * *"    # the same times in Central Standard Time (UTC-6, November-March)
+  workflow_dispatch: {}            # adds a "Run workflow" button for an update right now
+  push:                            # republish when you upload changes (the bot's own data saves do not trigger this)
     branches: [main]
     paths-ignore: ["archive/**"]
 
@@ -22,7 +26,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  when:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - id: check
+        name: Is this one of the Tennessee (Central Time) update times?
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          if [ "$EVENT" != "schedule" ]; then echo "run=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
+          offset=$(TZ=America/Chicago date +%z)   # -0500 in summer, -0600 in winter
+          if { [ "$offset" = "-0500" ] && [ "$CRON" = "0 5,11,17,23 * * *" ]; } ||
+             { [ "$offset" = "-0600" ] && [ "$CRON" = "0 0,6,12,18 * * *" ]; }; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=no" >> "$GITHUB_OUTPUT"
+            echo "Not an update time in Central Time today (offset $offset); nothing to do."
+          fi
+
   build:
+    needs: when
+    if: needs.when.outputs.run == 'yes'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

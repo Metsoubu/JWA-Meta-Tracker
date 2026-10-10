@@ -4,7 +4,8 @@ A Jurassic World Alive **meta tier list** built from the teams of the top 100 ar
 players. It shows which creatures top players put on their teams, sorts them into
 S / A / B / C / D tiers by how often they are used, and keeps a history so you can see
 what is rising or falling, plus each creature's best teammates and the builds top players
-use. It checks for new data automatically every 3 hours.
+use. It checks for new data automatically every 6 hours (midnight, 6 am, noon and 6 pm
+US Central time).
 
 You can use it in two ways (they share the same code):
 
@@ -32,7 +33,8 @@ You can use it in two ways (they share the same code):
 | `PUBLISH_WEBSITE.bat` | Uploads this folder to your GitHub repository (see *Put it online*). |
 
 Needs Windows 10/11 and Python 3.10 or newer; if Python is missing, `START.bat` offers
-to install it. The PC version checks for new data every 3 hours. The PC must be on and
+to install it. The PC version checks for new data every 6 hours (midnight, 6 am, noon
+and 6 pm, in the computer's own time). The PC must be on and
 signed in for that; if it was off, the check happens shortly after you turn it back on,
 and missed snapshots are still downloaded.
 
@@ -50,7 +52,7 @@ its own history in their own user folder - nothing of yours is included or share
 
 ## Put it online as a free website (GitHub Pages)
 
-Costs nothing: GitHub hosts the website and checks for new data every 3 hours on its
+Costs nothing: GitHub hosts the website and checks for new data every 6 hours on its
 own computers, so it keeps updating even when your PC is off.
 
 1. Create a free account at <https://github.com> (choose a username you are happy to
@@ -65,8 +67,9 @@ own computers, so it keeps updating even when your PC is off.
 
 Run `PUBLISH_WEBSITE.bat` again any time you change files; the website rebuilds itself.
 
-After that it checks for new data every 3 hours (00:45, 03:45, 06:45 ... UTC) and keeps a
-growing history in the `archive/` folder of the repository. If the data source is down, the
+After that it checks for new data at midnight, 6 am, noon and 6 pm US Central time
+(GitHub may start a few minutes late) and keeps a growing history in the `archive/`
+folder of the repository. If the data source is down, the
 site keeps showing the last good data and says that the update failed.
 
 ---
@@ -89,6 +92,10 @@ site keeps showing the last good data and says that the update failed.
   without player names or trophy counts, which is exact enough for every view here.
 * **Builds.** For every creature on every team the feed also gives its level,
   enhancement, stat boosts and omega training points. That is where the builds come from.
+* **Names.** The feed sometimes gives German game names (e.g. *Wiedergeburt-T-Rex* =
+  Rebirth T. Rex); these are translated and matched automatically. A few creatures come
+  with no name at all; they are counted and shown as *Unidentified creature* with a ?
+  icon, never guessed.
 * **No win rates.** No source publishes battle results, so the tracker cannot say which
   creature or build *wins* most. "Best build" means the build most top players use.
 * The feed's maintainer does not document how the data is collected, and the feed could

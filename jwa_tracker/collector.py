@@ -157,8 +157,15 @@ def run_collection(
             with db.transaction(conn):
                 versions.seed_known_versions(conn, now)
         sources = sources or default_sources()
-        # Every check (even one with no update due) fills in builds of older snapshots;
-        # it reads the copies saved on this computer, so it is quick and usually offline.
+        # Every check (even one with no update due) retries names that could not be
+        # identified (e.g. after a name fix) and fills in builds of older snapshots;
+        # both work offline from what is already saved, so they are quick.
+        try:
+            fixed = roster.reresolve_unmatched(conn, now)
+            if fixed:
+                log.info("Identified %d creature name(s) that were unmatched before.", fixed)
+        except Exception as exc:  # noqa: BLE001 - never block an update
+            log.warning("Re-checking unmatched names failed: %s", exc)
         try:
             filled = builds.backfill(conn, sources, now=now)
             if filled:
