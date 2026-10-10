@@ -1,4 +1,18 @@
 {
+ "93_classic_t_rex": {
+  "added": "v3.1",
+  "aka": [
+   "Klassischer 93er-t-rex"
+  ],
+  "class": "fierce",
+  "credit": "Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/93_classic_t_rex.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "'93 Classic T. Rex",
+  "rarity": "omega"
+ },
  "acrocanthosaurus": {
   "added": "v2.2",
   "aka": [
@@ -250,6 +264,21 @@
   "listed": true,
   "name": "Aquisaurus",
   "rarity": "legendary"
+ },
+ "arsinoitherium": {
+  "added": "v3.22",
+  "aka": [
+   "05865dc2"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Arsinoitherium silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/arsinoitherium.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Arsinoitherium",
+  "note": "The data source gives no name for this creature (code 05865dc2), seen once, at level 6 (the Rare starting level). A creature with no name at all is newer than the feed's name list (game version 3.21 or later), and Arsinoitherium (3.22) is the only Rare or Common added since then.",
+  "rarity": "rare"
  },
  "atrocomaxima": {
   "added": "v3.17",
@@ -1077,6 +1106,21 @@
   "name": "Indonemys",
   "rarity": "apex"
  },
+ "indoraptor_mattel": {
+  "added": "v3.22",
+  "aka": [
+   "433c1948"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Indoraptor Mattel",
+  "note": "The data source gives no name for this creature (code 433c1948). It is Indoraptor Mattel: its levels (26-32) are Apex levels, and in the Coin Tournament's alphabetical list of eligible Apex creatures it sits between Indochicyon and Kentrorex. Of the three Apex creatures in that spot, Indolycan and Indonemys appear in the feed under their own names, leaving Indoraptor Mattel (game version 3.22, newer than the feed's name list).",
+  "rarity": "apex"
+ },
  "junior": {
   "added": "v3.13",
   "aka": [
@@ -1524,6 +1568,21 @@
   "listed": true,
   "name": "Paralitrosaurus",
   "rarity": "unique"
+ },
+ "pelorosuchus": {
+  "added": "v3.23",
+  "aka": [
+   "2b88a0f8"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Peloroplites cedrimontanus silhouette by Matt Dempsey, CC BY 4.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/peloroplites.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pelorosuchus",
+  "note": "The data source gives no name for this creature (code 2b88a0f8). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer, and Pelorosuchus (3.23) is the only Legendary added since then.",
+  "rarity": "legendary"
  },
  "pierce": {
   "added": "v3.19",
@@ -1973,6 +2032,20 @@
   "name": "Skoonametrodon",
   "rarity": "apex"
  },
+ "skorpiodactylus": {
+  "added": "v3.8",
+  "aka": [
+   "Skorpiodactylus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Skorpiovenator bustingorryi silhouette by Marie Aimée ALLARD, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/skorpiovenator.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Skorpiodactylus",
+  "rarity": "legendary"
+ },
  "smilodon": {
   "added": "v1.7",
   "aka": [
@@ -2238,48 +2311,6 @@
   "listed": true,
   "name": "Tyrannotor",
   "rarity": "apex"
- },
- "unmatched-jwadashboard-05865dc28682e494": {
-  "added": null,
-  "aka": [
-   "05865dc2"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (05865dc2)",
-  "rarity": "unknown"
- },
- "unmatched-jwadashboard-2b88a0f87fd53094": {
-  "added": null,
-  "aka": [
-   "2b88a0f8"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (2b88a0f8)",
-  "rarity": "unknown"
- },
- "unmatched-jwadashboard-433c19487521c564": {
-  "added": null,
-  "aka": [
-   "433c1948"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (433c1948)",
-  "rarity": "unknown"
  },
  "woolly_rhino": {
   "added": "v1.11",
