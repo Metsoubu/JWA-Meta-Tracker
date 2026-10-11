@@ -700,6 +700,20 @@
   "name": "Concavenator",
   "rarity": "epic"
  },
+ "cryolophosaurus": {
+  "added": "v3.3",
+  "aka": [
+   "Cryolophosaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Cryolophosaurus ellioti silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/cryolophosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Cryolophosaurus",
+  "rarity": "omega"
+ },
  "cryolophosaurus_mattel": {
   "added": "v3.22",
   "aka": [
