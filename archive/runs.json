@@ -1,6 +1,15 @@
 [
  {
   "error": "",
+  "finished_at": "2026-10-11T01:23:05Z",
+  "message": "Imported 3 new snapshot(s). Game version 3.23.55. Roster refreshed: 520 creatures.",
+  "new_snapshots": 3,
+  "started_at": "2026-10-11T01:23:04Z",
+  "status": "success",
+  "trigger": "scheduled"
+ },
+ {
+  "error": "",
   "finished_at": "2026-10-10T17:02:34Z",
   "message": "No new snapshots yet; everything the source has published is already saved. Game version 3.23.55. Roster refreshed: 520 creatures.",
   "new_snapshots": 0,
