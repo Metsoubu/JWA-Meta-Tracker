@@ -33,6 +33,15 @@
   "status": "ok",
   "via": "velociraptor"
  },
+ "carbotoceratops": {
+  "checked_at": "2026-10-12T01:53:27+00:00",
+  "path": [
+   "carbotoceratops",
+   "carbonemys"
+  ],
+  "status": "ok",
+  "via": "meiolania"
+ },
  "centroceratops": {
   "checked_at": "2026-10-10T01:05:08+00:00",
   "path": [
@@ -42,6 +51,15 @@
   "status": "ok",
   "via": "centrosaurus"
  },
+ "dracoceratops": {
+  "checked_at": "2026-10-12T01:53:28+00:00",
+  "path": [
+   "dracoceratops",
+   "dracorex_gen_2"
+  ],
+  "status": "ok",
+  "via": "dracorex_gen_2"
+ },
  "entelomoth": {
   "checked_at": "2026-10-10T01:05:09+00:00",
   "path": [
@@ -50,6 +68,13 @@
   ],
   "status": "ok",
   "via": "woolly_mammoth"
+ },
+ "koolabourgiana": {
+  "checked_at": "2026-10-12T01:53:29+00:00",
+  "path": [
+   "koolabourgiana"
+  ],
+  "status": "none"
  },
  "megamimus": {
   "checked_at": "2026-10-10T01:05:10+00:00",
@@ -117,6 +142,15 @@
   "status": "ok",
   "via": "pyroraptor_gen_2"
  },
+ "pyrritator": {
+  "checked_at": "2026-10-12T01:53:31+00:00",
+  "path": [
+   "pyrritator",
+   "pyroraptor"
+  ],
+  "status": "ok",
+  "via": "pyroraptor"
+ },
  "rativates": {
   "checked_at": "2026-10-10T01:05:16+00:00",
   "path": [
@@ -165,6 +199,25 @@
   "status": "ok",
   "via": "spinosaurus_gen_2"
  },
+ "spinonyx": {
+  "checked_at": "2026-10-12T01:53:32+00:00",
+  "path": [
+   "spinonyx",
+   "spinosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "spinosaurus_gen_2"
+ },
+ "spinotasuchus": {
+  "checked_at": "2026-10-12T01:53:33+00:00",
+  "path": [
+   "spinotasuchus",
+   "spinotahraptor",
+   "spinosaurus"
+  ],
+  "status": "ok",
+  "via": "spinosaurus"
+ },
  "titanotor": {
   "checked_at": "2026-10-10T01:21:47+00:00",
   "path": [
@@ -173,5 +226,14 @@
   ],
   "status": "ok",
   "via": "titanosaurus"
+ },
+ "utasinoraptor": {
+  "checked_at": "2026-10-12T01:53:35+00:00",
+  "path": [
+   "utasinoraptor",
+   "utahraptor"
+  ],
+  "status": "ok",
+  "via": "utahraptor"
  }
 }

@@ -532,6 +532,20 @@
   "name": "Carbonemys",
   "rarity": "epic"
  },
+ "carbotoceratops": {
+  "added": "v1.9",
+  "aka": [
+   "Carbotoceratops"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Meiolania silhouette by T. Michael Keesey, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/meiolania.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Carbotoceratops",
+  "rarity": "legendary"
+ },
  "carcharodontosaurus": {
   "added": "v3.3",
   "aka": [
@@ -825,6 +839,20 @@
   "listed": true,
   "name": "Draco Lux",
   "rarity": "apex"
+ },
+ "dracoceratops": {
+  "added": "v1.5",
+  "aka": [
+   "Dracoceratops"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/dracorex_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dracoceratops",
+  "rarity": "legendary"
  },
  "einiosaurus": {
   "added": "v1.1",
@@ -1176,6 +1204,20 @@
   "listed": true,
   "name": "Kentrosaurus",
   "rarity": "epic"
+ },
+ "koolabourgiana": {
+  "added": "v1.7",
+  "aka": [
+   "Koolabourgiana"
+  ],
+  "class": "cunning_resilient",
+  "credit": null,
+  "hybrid": "hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Koolabourgiana",
+  "rarity": "legendary"
  },
  "koreanosaurus": {
   "added": "v3.1",
@@ -1752,6 +1794,20 @@
   "name": "Pyrosuchus",
   "rarity": "legendary"
  },
+ "pyrritator": {
+  "added": "v1.2",
+  "aka": [
+   "Pyrritator"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Pyroraptor olympius silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/pyroraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pyrritator",
+  "rarity": "legendary"
+ },
  "quetzalcoatlus_gen_2": {
   "added": "v2.18",
   "aka": [
@@ -2116,6 +2172,20 @@
   "name": "Spinoceratops",
   "rarity": "legendary"
  },
+ "spinonyx": {
+  "added": "v1.7",
+  "aka": [
+   "Spinonyx"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/spinosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Spinonyx",
+  "rarity": "legendary"
+ },
  "spinosaurus_aegyptiacus": {
   "added": "v3.6",
   "aka": [
@@ -2143,6 +2213,20 @@
   "listed": true,
   "name": "Spinosaurus Gen 2",
   "rarity": "epic"
+ },
+ "spinotasuchus": {
+  "added": "v1.2",
+  "aka": [
+   "Spinotasuchus"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/spinosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Spinotasuchus",
+  "rarity": "legendary"
  },
  "spinotops": {
   "added": "v3.12",
@@ -2339,6 +2423,34 @@
   "listed": true,
   "name": "Tyrannotor",
   "rarity": "apex"
+ },
+ "unmatched-jwadashboard-3a20d2321f98b144": {
+  "added": null,
+  "aka": [
+   "Tsintamut"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Tsintamut",
+  "rarity": "legendary"
+ },
+ "utasinoraptor": {
+  "added": "v1.1",
+  "aka": [
+   "Utasinoraptor"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Utahraptor ostrommaysi silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/utahraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Utasinoraptor",
+  "rarity": "legendary"
  },
  "woolly_rhino": {
   "added": "v1.11",
