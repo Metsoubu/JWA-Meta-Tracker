@@ -2144,6 +2144,20 @@
   "name": "Skoonametrodon",
   "rarity": "apex"
  },
+ "skoonasaurus": {
+  "added": "v2.2",
+  "aka": [
+   "Skoonasaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Brachiosaurus altithorax silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/brachiosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Skoonasaurus",
+  "rarity": "unique"
+ },
  "skorpiodactylus": {
   "added": "v3.8",
   "aka": [
