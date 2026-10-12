@@ -868,6 +868,20 @@
   "name": "Einiosaurus",
   "rarity": "common"
  },
+ "enteloceros": {
+  "added": "v2.11",
+  "aka": [
+   "Enteloceros"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Moschops silhouette by Chris Jennings (Risiatto), Public Domain Mark 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/moschops.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Enteloceros",
+  "rarity": "legendary"
+ },
  "entelomoth": {
   "added": "v1.12",
   "aka": [
@@ -1204,6 +1218,20 @@
   "listed": true,
   "name": "Kentrosaurus",
   "rarity": "epic"
+ },
+ "keratoporcus": {
+  "added": "v1.13",
+  "aka": [
+   "Keratoporcus"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Archaeotherium silhouette by Zimices, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/archaeotherium.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Keratoporcus",
+  "rarity": "legendary"
  },
  "koolabourgiana": {
   "added": "v1.7",
@@ -2241,6 +2269,20 @@
   "listed": true,
   "name": "Spinotops",
   "rarity": "apex"
+ },
+ "stegodeus": {
+  "added": "v1.2",
+  "aka": [
+   "Stegodeus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/stegosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Stegodeus",
+  "rarity": "legendary"
  },
  "stomatosuchus_mattel": {
   "added": "v3.22",

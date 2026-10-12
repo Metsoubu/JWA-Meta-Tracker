@@ -60,6 +60,16 @@
   "status": "ok",
   "via": "dracorex_gen_2"
  },
+ "enteloceros": {
+  "checked_at": "2026-10-12T12:31:45+00:00",
+  "path": [
+   "enteloceros",
+   "entelochops",
+   "moschops"
+  ],
+  "status": "ok",
+  "via": "moschops"
+ },
  "entelomoth": {
   "checked_at": "2026-10-10T01:05:09+00:00",
   "path": [
@@ -68,6 +78,15 @@
   ],
   "status": "ok",
   "via": "woolly_mammoth"
+ },
+ "keratoporcus": {
+  "checked_at": "2026-10-12T12:31:46+00:00",
+  "path": [
+   "keratoporcus",
+   "archaeotherium"
+  ],
+  "status": "ok",
+  "via": "archaeotherium"
  },
  "koolabourgiana": {
   "checked_at": "2026-10-12T01:53:29+00:00",
@@ -217,6 +236,15 @@
   ],
   "status": "ok",
   "via": "spinosaurus"
+ },
+ "stegodeus": {
+  "checked_at": "2026-10-12T12:31:48+00:00",
+  "path": [
+   "stegodeus",
+   "stegosaurus"
+  ],
+  "status": "ok",
+  "via": "stegosaurus"
  },
  "titanotor": {
   "checked_at": "2026-10-10T01:21:47+00:00",
