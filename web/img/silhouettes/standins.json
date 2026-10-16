@@ -1,10 +1,38 @@
 {
+ "amargocephalus": {
+  "checked_at": "2026-10-16T19:44:35+00:00",
+  "path": [
+   "amargocephalus",
+   "amargasaurus"
+  ],
+  "status": "ok",
+  "via": "amargasaurus"
+ },
  "angel": {
   "checked_at": "2026-10-10T01:05:03+00:00",
   "path": [
    "angel"
   ],
   "status": "none"
+ },
+ "ankylocodon": {
+  "checked_at": "2026-10-16T19:44:37+00:00",
+  "path": [
+   "ankylocodon",
+   "ankylosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "ankylosaurus_gen_2"
+ },
+ "ankylodicurus": {
+  "checked_at": "2026-10-16T19:44:38+00:00",
+  "path": [
+   "ankylodicurus",
+   "ankylocodon",
+   "ankylosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "ankylosaurus_gen_2"
  },
  "aquisaurus": {
   "checked_at": "2026-10-10T01:05:03+00:00",
@@ -14,6 +42,22 @@
   ],
   "status": "ok",
   "via": "aquilops"
+ },
+ "argenteryx": {
+  "checked_at": "2026-10-16T19:44:39+00:00",
+  "path": [
+   "argenteryx",
+   "argentavis"
+  ],
+  "status": "ok",
+  "via": "argentavis"
+ },
+ "argentinosaurus": {
+  "checked_at": "2026-10-16T19:44:40+00:00",
+  "path": [
+   "argentinosaurus"
+  ],
+  "status": "none"
  },
  "becklolyth": {
   "checked_at": "2026-10-10T01:05:05+00:00",
@@ -33,6 +77,15 @@
   "status": "ok",
   "via": "velociraptor"
  },
+ "brontolasmus": {
+  "checked_at": "2026-10-16T19:44:40+00:00",
+  "path": [
+   "brontolasmus",
+   "brontotherium"
+  ],
+  "status": "ok",
+  "via": "brontotherium"
+ },
  "carbotoceratops": {
   "checked_at": "2026-10-12T01:53:27+00:00",
   "path": [
@@ -51,6 +104,29 @@
   "status": "ok",
   "via": "centrosaurus"
  },
+ "charlie": {
+  "checked_at": "2026-10-16T19:44:42+00:00",
+  "path": [
+   "charlie"
+  ],
+  "status": "none"
+ },
+ "coelurosauravus": {
+  "checked_at": "2026-10-16T19:44:42+00:00",
+  "path": [
+   "coelurosauravus"
+  ],
+  "status": "none"
+ },
+ "dimodactylus": {
+  "checked_at": "2026-10-16T19:44:42+00:00",
+  "path": [
+   "dimodactylus",
+   "dimorphodon"
+  ],
+  "status": "ok",
+  "via": "dimorphodon"
+ },
  "dracoceratops": {
   "checked_at": "2026-10-12T01:53:28+00:00",
   "path": [
@@ -60,10 +136,42 @@
   "status": "ok",
   "via": "dracorex_gen_2"
  },
+ "dreadnoughtus": {
+  "checked_at": "2026-10-16T19:44:43+00:00",
+  "path": [
+   "dreadnoughtus"
+  ],
+  "status": "none"
+ },
+ "dsungaripterus": {
+  "checked_at": "2026-10-16T19:44:43+00:00",
+  "path": [
+   "dsungaripterus"
+  ],
+  "status": "none"
+ },
+ "einiasuchus": {
+  "checked_at": "2026-10-16T19:44:43+00:00",
+  "path": [
+   "einiasuchus",
+   "einiosaurus"
+  ],
+  "status": "ok",
+  "via": "einiosaurus"
+ },
  "enteloceros": {
   "checked_at": "2026-10-12T12:31:45+00:00",
   "path": [
    "enteloceros",
+   "entelochops",
+   "moschops"
+  ],
+  "status": "ok",
+  "via": "moschops"
+ },
+ "entelochops": {
+  "checked_at": "2026-10-16T19:44:44+00:00",
+  "path": [
    "entelochops",
    "moschops"
   ],
@@ -78,6 +186,15 @@
   ],
   "status": "ok",
   "via": "woolly_mammoth"
+ },
+ "indominus_rex_gen_2": {
+  "checked_at": "2026-10-16T19:44:45+00:00",
+  "path": [
+   "indominus_rex_gen_2",
+   "tyrannosaurus_rex_gen_2"
+  ],
+  "status": "ok",
+  "via": "tyrannosaurus_rex_gen_2"
  },
  "keratoporcus": {
   "checked_at": "2026-10-12T12:31:46+00:00",
@@ -94,6 +211,23 @@
    "koolabourgiana"
   ],
   "status": "none"
+ },
+ "lythronax": {
+  "checked_at": "2026-10-16T19:44:46+00:00",
+  "path": [
+   "lythronax"
+  ],
+  "status": "none"
+ },
+ "majundaboa": {
+  "checked_at": "2026-10-16T19:44:46+00:00",
+  "path": [
+   "majundaboa",
+   "majundasuchus",
+   "majungasaurus"
+  ],
+  "status": "ok",
+  "via": "majungasaurus"
  },
  "megamimus": {
   "checked_at": "2026-10-10T01:05:10+00:00",
