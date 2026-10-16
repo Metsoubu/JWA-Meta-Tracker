@@ -960,6 +960,10 @@
   "status": "ok",
   "taxon": "Gryposuchus"
  },
+ "guidraco": {
+  "checked_at": "2026-10-16T00:51:52+00:00",
+  "status": "none"
+ },
  "haast_eagle": {
   "checked_at": "2026-10-09T02:53:54+00:00",
   "status": "none"
