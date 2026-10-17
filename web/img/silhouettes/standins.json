@@ -318,6 +318,15 @@
   ],
   "status": "none"
  },
+ "postimetrodon": {
+  "checked_at": "2026-10-17T08:53:45+00:00",
+  "path": [
+   "postimetrodon",
+   "postosuchus"
+  ],
+  "status": "ok",
+  "via": "postosuchus"
+ },
  "preondactylus": {
   "checked_at": "2026-10-17T00:52:50+00:00",
   "path": [

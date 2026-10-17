@@ -2228,6 +2228,20 @@
   "name": "Plateorex",
   "rarity": "apex"
  },
+ "postimetrodon": {
+  "added": "v1.1",
+  "aka": [
+   "Postimetrodon"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Postosuchus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/postosuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Postimetrodon",
+  "rarity": "epic"
+ },
  "preondactylus": {
   "added": "v2.14",
   "aka": [
@@ -2577,6 +2591,20 @@
   "listed": true,
   "name": "Rexy",
   "rarity": "legendary"
+ },
+ "rodrigues_solitaire": {
+  "added": "v2.15",
+  "aka": [
+   "Rodrigues Solitaire"
+  ],
+  "class": "cunning",
+  "credit": "Pezophaps solitaria silhouette by Sara Citron, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/rodrigues_solitaire.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Rodrigues Solitaire",
+  "rarity": "rare"
  },
  "sah_panthera": {
   "added": "v3.4",
@@ -3193,6 +3221,20 @@
   "listed": false,
   "name": "Tsintamut",
   "rarity": "legendary"
+ },
+ "unmatched-jwadashboard-5c04b41873cac554": {
+  "added": null,
+  "aka": [
+   "Beutellöwe"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Beutellöwe",
+  "rarity": "rare"
  },
  "utasinoraptor": {
   "added": "v1.1",
