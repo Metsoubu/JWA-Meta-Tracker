@@ -1078,6 +1078,20 @@
   "name": "Dracorex",
   "rarity": "rare"
  },
+ "dracorex_gen_2": {
+  "added": "v1.2",
+  "aka": [
+   "Dracorex Gen 2"
+  ],
+  "class": "fierce",
+  "credit": "Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/dracorex_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Dracorex Gen 2",
+  "rarity": "common"
+ },
  "dreadnoughtus": {
   "added": "v2.16",
   "aka": [
@@ -1162,6 +1176,20 @@
   "name": "Entelochops",
   "rarity": "epic"
  },
+ "entelodon": {
+  "added": "v1.9",
+  "aka": [
+   "Entelodon"
+  ],
+  "class": "fierce",
+  "credit": null,
+  "hybrid": "non_hybrid",
+  "img": null,
+  "imgKind": null,
+  "listed": true,
+  "name": "Entelodon",
+  "rarity": "rare"
+ },
  "entelomoth": {
   "added": "v1.12",
   "aka": [
@@ -1203,6 +1231,20 @@
   "listed": true,
   "name": "Eremotherium",
   "rarity": "common"
+ },
+ "erlikogamma": {
+  "added": "v1.11",
+  "aka": [
+   "Erlikogamma"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Erlikosaurus andrewsi silhouette by Walter Vladimir, CC BY 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/erlikosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Erlikogamma",
+  "rarity": "epic"
  },
  "erlikosaurus": {
   "added": "v1.1",
@@ -1357,6 +1399,20 @@
   "listed": true,
   "name": "Glyptosavis",
   "rarity": "apex"
+ },
+ "gorgosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Gorgosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Albertosaurus silhouette by Craig Dylke, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/gorgosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Gorgosaurus",
+  "rarity": "rare"
  },
  "gryganyth": {
   "added": "v3.6",
@@ -1757,10 +1813,10 @@
    "Megalotops"
   ],
   "class": "wild_card",
-  "credit": null,
+  "credit": "Body-type icon: Megalonyx silhouette by ДиБгд, CC BY 4.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/megalonyx.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Megalotops",
   "rarity": "epic"
@@ -2192,10 +2248,10 @@
    "Procerathomimus"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon: Proceratosaurus bradleyi silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/proceratosaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Procerathomimus",
   "rarity": "epic"
@@ -2290,10 +2346,10 @@
    "Purrolyth"
   ],
   "class": "fierce_resilient",
-  "credit": null,
+  "credit": "Body-type icon: Purussaurus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/purussaurus_gen_2.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Purrolyth",
   "rarity": "rare"
@@ -2304,10 +2360,10 @@
    "Purutaurus"
   ],
   "class": "wild_card",
-  "credit": null,
+  "credit": "Body-type icon: Purussaurus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/purussaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Purutaurus",
   "rarity": "epic"
@@ -2542,10 +2598,10 @@
    "Sarcorixis"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon: Sarcosuchus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "super_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/sarcosuchus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Sarcorixis",
   "rarity": "epic"
@@ -2577,6 +2633,20 @@
   "listed": true,
   "name": "Scaphognathus",
   "rarity": "rare"
+ },
+ "scorpius_rex_gen_2": {
+  "added": "v2.8",
+  "aka": [
+   "Scorpios Rex Gen 2"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Monolophosaurus jiangi silhouette by Jordan Mallon (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/monolophosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Scorpios Rex Gen 2",
+  "rarity": "epic"
  },
  "secodontosaurus": {
   "added": "v1.1",
@@ -2836,10 +2906,10 @@
    "Stegoceratops"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon: Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/stegosaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Stegoceratops",
   "rarity": "epic"
@@ -2892,10 +2962,10 @@
    "Suchotator"
   ],
   "class": "wild_card",
-  "credit": null,
+  "credit": "Body-type icon: Cristatusaurus lapparenti silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/suchomimus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Suchotator",
   "rarity": "rare"
@@ -2928,16 +2998,30 @@
   "name": "Tenontosaurus",
   "rarity": "rare"
  },
+ "therizinosaurus": {
+  "added": "v2.16",
+  "aka": [
+   "Therizinosaurus"
+  ],
+  "class": "cunning",
+  "credit": "Therizinosaurus cheloniformis silhouette by Martin Kevil, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/therizinosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Therizinosaurus",
+  "rarity": "rare"
+ },
  "thylacotator": {
   "added": "v1.9",
   "aka": [
    "Thylacotator"
   ],
   "class": "wild_card",
-  "credit": null,
+  "credit": "Body-type icon: Thylacoleo silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
   "hybrid": "super_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/marsupial_lion.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Thylacotator",
   "rarity": "epic"
@@ -3123,6 +3207,20 @@
   "listed": true,
   "name": "Utasinoraptor",
   "rarity": "legendary"
+ },
+ "velociraptor": {
+  "added": "v1.1",
+  "aka": [
+   "Velociraptor"
+  ],
+  "class": "cunning",
+  "credit": "Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Velociraptor",
+  "rarity": "common"
  },
  "velosrhacos": {
   "added": "v2.2",

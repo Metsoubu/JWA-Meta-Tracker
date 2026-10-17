@@ -178,6 +178,13 @@
   "status": "ok",
   "via": "moschops"
  },
+ "entelodon": {
+  "checked_at": "2026-10-17T00:52:48+00:00",
+  "path": [
+   "entelodon"
+  ],
+  "status": "none"
+ },
  "entelomoth": {
   "checked_at": "2026-10-10T01:05:09+00:00",
   "path": [
@@ -186,6 +193,15 @@
   ],
   "status": "ok",
   "via": "woolly_mammoth"
+ },
+ "erlikogamma": {
+  "checked_at": "2026-10-17T00:52:48+00:00",
+  "path": [
+   "erlikogamma",
+   "erlikosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "erlikosaurus_gen_2"
  },
  "indominus_rex_gen_2": {
   "checked_at": "2026-10-16T19:44:45+00:00",
@@ -228,6 +244,15 @@
   ],
   "status": "ok",
   "via": "majungasaurus"
+ },
+ "megalotops": {
+  "checked_at": "2026-10-17T00:52:49+00:00",
+  "path": [
+   "megalotops",
+   "megalonyx"
+  ],
+  "status": "ok",
+  "via": "megalonyx"
  },
  "megamimus": {
   "checked_at": "2026-10-10T01:05:10+00:00",
@@ -272,6 +297,13 @@
   "status": "ok",
   "via": "nanotyrannus"
  },
+ "nodosaurus": {
+  "checked_at": "2026-10-17T00:52:50+00:00",
+  "path": [
+   "nodosaurus"
+  ],
+  "status": "none"
+ },
  "panthera_blytheae": {
   "checked_at": "2026-10-10T01:05:15+00:00",
   "path": [
@@ -285,6 +317,40 @@
    "pierce"
   ],
   "status": "none"
+ },
+ "preondactylus": {
+  "checked_at": "2026-10-17T00:52:50+00:00",
+  "path": [
+   "preondactylus"
+  ],
+  "status": "none"
+ },
+ "procerathomimus": {
+  "checked_at": "2026-10-17T00:52:50+00:00",
+  "path": [
+   "procerathomimus",
+   "proceratosaurus"
+  ],
+  "status": "ok",
+  "via": "proceratosaurus"
+ },
+ "purrolyth": {
+  "checked_at": "2026-10-17T00:52:51+00:00",
+  "path": [
+   "purrolyth",
+   "purussaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "purussaurus_gen_2"
+ },
+ "purutaurus": {
+  "checked_at": "2026-10-17T00:52:53+00:00",
+  "path": [
+   "purutaurus",
+   "purussaurus"
+  ],
+  "status": "ok",
+  "via": "purussaurus"
  },
  "pyrosuchus": {
   "checked_at": "2026-10-10T01:05:15+00:00",
@@ -324,6 +390,31 @@
    "rexy"
   ],
   "status": "none"
+ },
+ "sarcorixis": {
+  "checked_at": "2026-10-17T00:52:54+00:00",
+  "path": [
+   "sarcorixis",
+   "sarcosuchus"
+  ],
+  "status": "ok",
+  "via": "sarcosuchus"
+ },
+ "scaphognathus": {
+  "checked_at": "2026-10-17T00:52:55+00:00",
+  "path": [
+   "scaphognathus"
+  ],
+  "status": "none"
+ },
+ "scorpius_rex_gen_2": {
+  "checked_at": "2026-10-17T00:52:55+00:00",
+  "path": [
+   "scorpius_rex_gen_2",
+   "monolophosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "monolophosaurus_gen_2"
  },
  "shantunrax": {
   "checked_at": "2026-10-10T01:05:16+00:00",
@@ -380,6 +471,15 @@
   "status": "ok",
   "via": "spinosaurus"
  },
+ "stegoceratops": {
+  "checked_at": "2026-10-17T00:52:56+00:00",
+  "path": [
+   "stegoceratops",
+   "stegosaurus"
+  ],
+  "status": "ok",
+  "via": "stegosaurus"
+ },
  "stegodeus": {
   "checked_at": "2026-10-12T12:31:48+00:00",
   "path": [
@@ -388,6 +488,24 @@
   ],
   "status": "ok",
   "via": "stegosaurus"
+ },
+ "suchotator": {
+  "checked_at": "2026-10-17T00:52:57+00:00",
+  "path": [
+   "suchotator",
+   "suchomimus"
+  ],
+  "status": "ok",
+  "via": "suchomimus"
+ },
+ "thylacotator": {
+  "checked_at": "2026-10-17T00:52:58+00:00",
+  "path": [
+   "thylacotator",
+   "marsupial_lion"
+  ],
+  "status": "ok",
+  "via": "marsupial_lion"
  },
  "titanotor": {
   "checked_at": "2026-10-10T01:21:47+00:00",
