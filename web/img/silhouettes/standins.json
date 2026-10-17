@@ -53,7 +53,7 @@
   "via": "argentavis"
  },
  "argentinosaurus": {
-  "checked_at": "2026-10-16T19:44:40+00:00",
+  "checked_at": "2026-10-17T21:48:04+00:00",
   "path": [
    "argentinosaurus"
   ],
@@ -105,14 +105,14 @@
   "via": "centrosaurus"
  },
  "charlie": {
-  "checked_at": "2026-10-16T19:44:42+00:00",
+  "checked_at": "2026-10-17T21:48:05+00:00",
   "path": [
    "charlie"
   ],
   "status": "none"
  },
  "coelurosauravus": {
-  "checked_at": "2026-10-16T19:44:42+00:00",
+  "checked_at": "2026-10-17T21:48:06+00:00",
   "path": [
    "coelurosauravus"
   ],
@@ -137,14 +137,14 @@
   "via": "dracorex_gen_2"
  },
  "dreadnoughtus": {
-  "checked_at": "2026-10-16T19:44:43+00:00",
+  "checked_at": "2026-10-17T21:48:06+00:00",
   "path": [
    "dreadnoughtus"
   ],
   "status": "none"
  },
  "dsungaripterus": {
-  "checked_at": "2026-10-16T19:44:43+00:00",
+  "checked_at": "2026-10-17T21:48:07+00:00",
   "path": [
    "dsungaripterus"
   ],
@@ -179,7 +179,7 @@
   "via": "moschops"
  },
  "entelodon": {
-  "checked_at": "2026-10-17T00:52:48+00:00",
+  "checked_at": "2026-10-17T21:48:08+00:00",
   "path": [
    "entelodon"
   ],
@@ -222,14 +222,14 @@
   "via": "archaeotherium"
  },
  "koolabourgiana": {
-  "checked_at": "2026-10-12T01:53:29+00:00",
+  "checked_at": "2026-10-17T21:48:09+00:00",
   "path": [
    "koolabourgiana"
   ],
   "status": "none"
  },
  "lythronax": {
-  "checked_at": "2026-10-16T19:44:46+00:00",
+  "checked_at": "2026-10-17T21:48:09+00:00",
   "path": [
    "lythronax"
   ],
@@ -239,6 +239,15 @@
   "checked_at": "2026-10-16T19:44:46+00:00",
   "path": [
    "majundaboa",
+   "majundasuchus",
+   "majungasaurus"
+  ],
+  "status": "ok",
+  "via": "majungasaurus"
+ },
+ "majundasuchus": {
+  "checked_at": "2026-10-17T21:48:10+00:00",
+  "path": [
    "majundasuchus",
    "majungasaurus"
   ],
@@ -298,7 +307,7 @@
   "via": "nanotyrannus"
  },
  "nodosaurus": {
-  "checked_at": "2026-10-17T00:52:50+00:00",
+  "checked_at": "2026-10-17T21:48:11+00:00",
   "path": [
    "nodosaurus"
   ],
@@ -328,7 +337,7 @@
   "via": "postosuchus"
  },
  "preondactylus": {
-  "checked_at": "2026-10-17T00:52:50+00:00",
+  "checked_at": "2026-10-17T21:48:12+00:00",
   "path": [
    "preondactylus"
   ],
@@ -410,7 +419,7 @@
   "via": "sarcosuchus"
  },
  "scaphognathus": {
-  "checked_at": "2026-10-17T00:52:55+00:00",
+  "checked_at": "2026-10-17T21:48:13+00:00",
   "path": [
    "scaphognathus"
   ],
@@ -525,6 +534,15 @@
   "status": "ok",
   "via": "titanosaurus"
  },
+ "tsintamoth": {
+  "checked_at": "2026-10-17T21:48:14+00:00",
+  "path": [
+   "tsintamoth",
+   "tsintaosaurus"
+  ],
+  "status": "ok",
+  "via": "tsintaosaurus"
+ },
  "utasinoraptor": {
   "checked_at": "2026-10-12T01:53:35+00:00",
   "path": [
@@ -533,5 +551,14 @@
   ],
   "status": "ok",
   "via": "utahraptor"
+ },
+ "velosrhacos": {
+  "checked_at": "2026-10-17T21:48:13+00:00",
+  "path": [
+   "velosrhacos",
+   "phorusrhacos"
+  ],
+  "status": "ok",
+  "via": "phorusrhacos"
  }
 }

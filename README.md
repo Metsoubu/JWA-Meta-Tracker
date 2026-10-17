@@ -92,12 +92,20 @@ site keeps showing the last good data and says that the update failed.
   without player names or trophy counts, which is exact enough for every view here.
 * **Builds.** For every creature on every team the feed also gives its level,
   enhancement, stat boosts and omega training points. That is where the builds come from.
-* **Names.** The feed sometimes gives German game names (e.g. *Wiedergeburt-T-Rex* =
-  Rebirth T. Rex); these are translated and matched automatically. Creatures newer than
-  the feed's own name list can arrive with no name at all, only a code. Those were
-  identified from the feed's own evidence (rarity rules, levels, release version), and
-  each one's page explains how, e.g. Pelorosuchus. A code with no such evidence is
-  shown as *Unidentified creature* with a ? icon, never guessed.
+* **Names (automatic).** The feed sometimes gives German game names (e.g. *Beutellöwe* =
+  Marsupial Lion); the tracker also reads Paleo.gg's German creature list every day, so
+  these match by themselves. Creatures newer than the feed's own name list can arrive with
+  no name at all, only a code. The tracker then works it out from the feed's own evidence:
+  rarity (tournament rules, lowest level, omega training), which creatures are new enough
+  and not already named, and where the code sits in a tournament's alphabetical list. If
+  exactly one creature fits, it is shown under that name and its page says *Worked out
+  automatically* and why; if several fit, it stays *Unidentified creature* (with a ? icon)
+  and its page lists the possibilities. It waits 3 days after a code first appears, so a
+  brand-new creature that the creature list has not added yet is not mistaken for an older
+  one, and every update re-checks the evidence.
+* **Icons (automatic).** Real animals get a PhyloPic silhouette; hybrids the silhouette of
+  the animal they are made from; anything else the icon used by the creatures that share
+  its in-game skeleton (from Paleo.gg), e.g. Charlie gets the Velociraptor icon.
 * **Tournament rules.** Some tournaments set every creature to level 35 and switch
   stat boosts off; there is no build to choose there, and the dashboard says so instead
   of showing one.

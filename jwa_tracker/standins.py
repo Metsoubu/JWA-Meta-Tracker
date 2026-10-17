@@ -9,6 +9,12 @@ Baryonyx), falling back to any ancestor that has a silhouette. The result is a
 body-type icon (theropod, sauropod, snake, flyer, ...), credited to the
 original silhouette's author. Results are saved in standins.json so each
 creature's page is fetched only once.
+
+When that finds nothing (a film character, a real animal PhyloPic has no picture
+of, a hybrid whose ancestors have none either), the creature's in-game skeleton
+decides: Paleo.gg gives every creature an animation family (Rexy and T. rex share
+one, Charlie and Velociraptor another), so it gets the icon most used by the other
+creatures with the same skeleton. Families are saved in families.json.
 """
 from __future__ import annotations
 
@@ -25,6 +31,7 @@ from . import config, db, images, net, roster
 log = logging.getLogger(__name__)
 
 STANDIN_FILE = config.SILHOUETTE_DIR / "standins.json"
+FAMILY_FILE = config.SILHOUETTE_DIR / "families.json"
 BODY_TYPES_FILE = config.BUNDLED_DATA_DIR / "body_types.json"
 PALEO_DETAIL_URL = "https://www.paleo.gg/games/jurassic-world-alive/dinodex/{key}"
 _NEXT_DATA_RE = re.compile(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', re.S)
@@ -54,6 +61,18 @@ def load() -> dict[str, Any]:
 
 def save(data: dict[str, Any]) -> None:
     images.write_json(STANDIN_FILE, data)
+
+
+def load_families() -> dict[str, Any]:
+    try:
+        with open(FAMILY_FILE, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_families(data: dict[str, Any]) -> None:
+    images.write_json(FAMILY_FILE, data)
 
 
 def _variants(key: str):
@@ -99,17 +118,35 @@ def picture_index(keys) -> dict[str, dict[str, Any]]:
     """
     credits = images.load_credits()
     found_standins = load()
+    families = load_families()
     custom = images.custom_images()
-    out: dict[str, dict[str, Any]] = {}
-    for key in keys:
-        if key in custom:
-            out[key] = {"url": custom[key], "kind": "custom", "credit": "Your own picture"}
-            continue
+
+    def base(key: str) -> str | None:
         via = own_silhouette(key, credits)
         if not via:
             entry = found_standins.get(key, {})
             if entry.get("status") == "ok" and credits.get(entry.get("via"), {}).get("status") == "ok":
                 via = entry["via"]
+        return via
+
+    by_family: dict[str, dict[str, int]] = {}
+    for member, entry in families.items():
+        via = base(member) if entry.get("family") else None
+        if via:
+            votes = by_family.setdefault(entry["family"], {})
+            votes[via] = votes.get(via, 0) + 1
+
+    out: dict[str, dict[str, Any]] = {}
+    for key in keys:
+        if key in custom:
+            out[key] = {"url": custom[key], "kind": "custom", "credit": "Your own picture"}
+            continue
+        via, how = base(key), "Body-type icon"
+        if not via:
+            votes = by_family.get(families.get(key, {}).get("family") or "", {})
+            if votes:
+                via = sorted(votes.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+                how = "Body-type icon (same in-game skeleton)"
         if not via:
             continue
         c = credits[via]
@@ -117,7 +154,7 @@ def picture_index(keys) -> dict[str, dict[str, Any]]:
         out[key] = {
             "url": f"img/silhouettes/{c['file']}",
             "kind": "silhouette" if via == key else "body-type",
-            "credit": source if via == key else f"Body-type icon: {source}",
+            "credit": source if via == key else f"{how}: {source}",
         }
     return out
 
@@ -133,6 +170,15 @@ def parse_tree(html: str, key: str) -> dict[str, list[str]]:
     }
     tree.setdefault(key, [i for i in detail.get("ingredients") or [] if isinstance(i, str)])
     return tree
+
+
+def parse_family(html: str) -> str | None:
+    match = _NEXT_DATA_RE.search(html)
+    if not match:
+        raise ValueError("creature page layout changed (no embedded data)")
+    detail = json.loads(match.group(1))["props"]["pageProps"].get("detail") or {}
+    family = detail.get("animation_set")
+    return family if isinstance(family, str) and family.strip() else None
 
 
 def resolve(key: str, tree: dict[str, list[str]], credits: dict[str, Any]) -> tuple[str | None, list[str]]:
@@ -168,31 +214,35 @@ def update(
     """Find stand-ins for the given creatures that have no picture yet. Returns how many were added."""
     credits = images.load_credits()
     data = load()
+    families = load_families()
     creatures = db.all_creatures(conn)
     added = 0
     fetched = 0
     for key in keys:
-        if key in data or own_silhouette(key, credits) or not _KEY_RE.match(key):
+        if own_silhouette(key, credits) or not _KEY_RE.match(key) or data.get(key, {}).get("status") == "ok":
             continue
+        if key in data and key in families:
+            continue  # already looked at: ingredients and skeleton are known
         info = creatures.get(key)
         if not info or not info["in_roster"]:
             continue
+        if limit is not None and fetched >= limit:
+            break
         stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        tree: dict[str, list[str]] = {key: []}
-        if (info.get("hybrid_type") or "non_hybrid") != "non_hybrid":
-            if limit is not None and fetched >= limit:
-                break
-            try:
-                tree = parse_tree(fetch(PALEO_DETAIL_URL.format(key=key), attempts=2).decode("utf-8", "replace"), key)
-            except (net.FetchError, ValueError, KeyError, json.JSONDecodeError) as exc:
-                log.warning("Could not read fusion ingredients for %s: %s", key, exc)
-                if isinstance(exc, net.FetchError) and exc.transient:
-                    continue
-                data[key] = {"status": "none", "checked_at": stamp, "error": str(exc)}
+        try:
+            html = fetch(PALEO_DETAIL_URL.format(key=key), attempts=2).decode("utf-8", "replace")
+            tree = parse_tree(html, key) if (info.get("hybrid_type") or "non_hybrid") != "non_hybrid" else {key: []}
+            families[key] = {"family": parse_family(html), "checked_at": stamp}
+        except (net.FetchError, ValueError, KeyError, json.JSONDecodeError) as exc:
+            log.warning("Could not read the creature page of %s: %s", key, exc)
+            if isinstance(exc, net.FetchError) and exc.transient:
                 continue
-            finally:
-                fetched += 1
-                time.sleep(pause)
+            data[key] = {"status": "none", "checked_at": stamp, "error": str(exc)}
+            families.setdefault(key, {"family": None, "checked_at": stamp})
+            continue
+        finally:
+            fetched += 1
+            time.sleep(pause)
         via, path = resolve(key, tree, credits)
         if via:
             data[key] = {"status": "ok", "via": via, "path": path, "checked_at": stamp}
@@ -200,7 +250,41 @@ def update(
         else:
             data[key] = {"status": "none", "path": path, "checked_at": stamp}
     save(data)
+    save_families(families)
     return added
+
+
+def learn_families(keys, fetch: Callable[..., bytes] = net.fetch, limit: int | None = 60, pause: float = 1.0) -> int:
+    """Read the skeleton family of creatures that already have a picture, so creatures without
+    one can borrow the icon their skeleton-mates use. Each page is read once. Returns how many were added."""
+    families = load_families()
+    done = 0
+    for key in keys:
+        if key in families or not _KEY_RE.match(key):
+            continue
+        if limit is not None and done >= limit:
+            break
+        stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        try:
+            families[key] = {"family": parse_family(fetch(PALEO_DETAIL_URL.format(key=key), attempts=2)
+                                                    .decode("utf-8", "replace")), "checked_at": stamp}
+        except (net.FetchError, ValueError, KeyError, json.JSONDecodeError) as exc:
+            log.warning("Could not read the skeleton family of %s: %s", key, exc)
+            if not (isinstance(exc, net.FetchError) and exc.transient):
+                families[key] = {"family": None, "checked_at": stamp}
+        finally:
+            done += 1
+            time.sleep(pause)
+    save_families(families)
+    return done
+
+
+def pictured_keys(conn: sqlite3.Connection) -> list[str]:
+    """Roster creatures that have a picture of their own or a hand-checked/automatic stand-in."""
+    credits = images.load_credits()
+    data = load()
+    return [k for k, c in db.all_creatures(conn).items() if c["in_roster"]
+            and (own_silhouette(k, credits) or data.get(k, {}).get("status") == "ok")]
 
 
 def used_creature_keys(conn: sqlite3.Connection) -> list[str]:

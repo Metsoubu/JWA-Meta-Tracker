@@ -34,6 +34,15 @@ CREATE TABLE IF NOT EXISTS creatures (
     updated_at    TEXT NOT NULL
 );
 
+-- The creature's name in other game languages (from the same Dinodex), used to
+-- recognise feed labels such as BEUTELLÖWE (= Marsupial Lion).
+CREATE TABLE IF NOT EXISTS creature_names (
+    key  TEXT NOT NULL,
+    lang TEXT NOT NULL,
+    name TEXT NOT NULL,
+    PRIMARY KEY (key, lang)
+);
+
 CREATE TABLE IF NOT EXISTS source_creatures (
     source             TEXT NOT NULL,
     source_creature_id TEXT NOT NULL,
@@ -125,6 +134,17 @@ CREATE TABLE IF NOT EXISTS snapshot_builds (
 CREATE TABLE IF NOT EXISTS snapshot_rules (
     snapshot_id INTEGER PRIMARY KEY REFERENCES snapshots (id),
     rules       TEXT NOT NULL
+);
+
+-- What identify.py worked out for creatures the feed sends without a name.
+CREATE TABLE IF NOT EXISTS deductions (
+    source       TEXT NOT NULL,
+    source_id    TEXT NOT NULL,
+    creature_key TEXT,            -- NULL while it cannot be told apart from other possibilities
+    possible     TEXT NOT NULL,   -- JSON list of creature keys that fit the evidence
+    note         TEXT NOT NULL,
+    decided_at   TEXT NOT NULL,
+    PRIMARY KEY (source, source_id)
 );
 
 CREATE TABLE IF NOT EXISTS rejected_snapshots (

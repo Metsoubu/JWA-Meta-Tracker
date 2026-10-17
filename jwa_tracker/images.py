@@ -180,10 +180,14 @@ def fetch_missing_silhouettes(
     limit: int | None = 25,
     client: PhyloPic | None = None,
     pause: float = 0.3,
+    first=(),
 ) -> int:
-    """Look up silhouettes for roster creatures not yet checked. Returns how many were added."""
+    """Look up silhouettes for roster creatures not yet checked (`first` - e.g. the creatures
+    on teams - before the rest). Returns how many were added."""
     credits = load_credits()
     creatures = [c for c in db.all_creatures(conn).values() if c["in_roster"]]
+    order = {k: i for i, k in enumerate(first)}
+    creatures.sort(key=lambda c: order.get(c["key"], len(order)))
     todo = [c for c in creatures if c["key"] not in credits and taxon_queries(c)]
     if not todo:
         return 0

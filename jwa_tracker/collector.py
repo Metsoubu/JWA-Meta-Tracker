@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Callable
 
-from . import builds, config, db, images, ingest, net, roster, standins, versions
+from . import builds, config, db, identify, images, ingest, net, roster, standins, versions
 from .sources import default_sources
 from .sources.base import SourceFormatError
 
@@ -116,6 +116,10 @@ def is_due(conn: sqlite3.Connection, now: datetime) -> tuple[bool, str]:
 
 # --- the run -------------------------------------------------------------------------
 
+def _identify(conn: sqlite3.Connection, now: datetime) -> None:
+    for source_id, key in identify.run(conn, now).items():
+        log.info("Worked out nameless creature %s: %s.", source_id[:8], key)
+
 @dataclass
 class RunResult:
     status: str
@@ -164,6 +168,7 @@ def run_collection(
             fixed = roster.reresolve_unmatched(conn, now)
             if fixed:
                 log.info("Identified %d creature name(s) that were unmatched before.", fixed)
+            _identify(conn, now)
         except Exception as exc:  # noqa: BLE001 - never block an update
             log.warning("Re-checking unmatched names failed: %s", exc)
         try:
@@ -181,6 +186,11 @@ def run_collection(
         run_id = db.start_run(conn, trigger, now)
         log.info("Update started (trigger: %s).", trigger)
         result = _collect(conn, run_id, now_fn, sources, roster_fetch, version_fetch, fetch_images, skip_ids or {})
+        if result.new_snapshots:
+            try:
+                _identify(conn, now_fn())
+            except Exception as exc:  # noqa: BLE001
+                log.warning("Working out nameless creatures failed: %s", exc)
         db.finish_run(
             conn, run_id, result.status, new_snapshots=result.new_snapshots,
             failed_snapshots=result.failed_snapshots, message=result.message, error=result.error,
@@ -218,7 +228,7 @@ def _collect(conn, run_id, now_fn, sources, roster_fetch, version_fetch, fetch_i
 
     if fetch_images:
         try:
-            added = images.fetch_missing_silhouettes(conn, limit=25)
+            added = images.fetch_missing_silhouettes(conn, limit=25, first=standins.used_creature_keys(conn))
             if added:
                 notes.append(f"Added {added} new creature silhouette(s).")
         except Exception as exc:  # noqa: BLE001
@@ -271,6 +281,7 @@ def _collect(conn, run_id, now_fn, sources, roster_fetch, version_fetch, fetch_i
             added = standins.update(conn, standins.used_creature_keys(conn), limit=10)
             if added:
                 notes.append(f"Found body-type icons for {added} new creature(s).")
+            standins.learn_families(standins.pictured_keys(conn), limit=20)
         except Exception as exc:  # noqa: BLE001 - pictures are optional
             log.warning("Body-type icon update failed: %s", exc)
 

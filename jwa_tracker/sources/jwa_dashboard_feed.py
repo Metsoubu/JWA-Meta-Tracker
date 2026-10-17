@@ -91,12 +91,20 @@ def parse_build_rules(doc: dict[str, Any], event: dict[str, Any]) -> dict[str, A
     if not isinstance(shown, dict):
         return None
     level = shown.get("standardized_level", event.get("standardized_level"))
-    return {
+    rules = {
         "levels": shown.get("show_levels") is not False,
         "boosts": shown.get("show_stat_boosts") is not False and event.get("stat_boosts_enabled") is not False,
         "enhancements": shown.get("show_enhancements") is not False,
         "standardized_level": level if isinstance(level, int) and not isinstance(level, bool) else None,
     }
+    # Kept as evidence for identify.py: which rarities / creatures the tournament allowed.
+    for rule in event.get("tournament_rules") or []:
+        values = [str(v) for v in (rule.get("values") or []) if isinstance(v, str)] if isinstance(rule, dict) else []
+        if values and rule.get("kind") == "rarity":
+            rules["rarities"] = values
+        elif values and rule.get("kind") == "creatures":
+            rules["eligible"] = values
+    return rules
 
 
 def _kind(event: dict[str, Any], name: str) -> str:

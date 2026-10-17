@@ -40,6 +40,8 @@ git config user.name "JWA Meta Tracker"
 git config user.email "jwa-meta-tracker@users.noreply.github.com"
 git remote remove origin >nul 2>nul
 git remote add origin %REPO%
+rem The website's robot keeps these icon caches up to date; leave them to it so uploads never clash.
+git checkout -- web/img/silhouettes/credits.json web/img/silhouettes/standins.json web/img/silhouettes/families.json >nul 2>nul
 git add -A
 git commit -m "Publish JWA Meta Tracker" >nul 2>nul
 echo.

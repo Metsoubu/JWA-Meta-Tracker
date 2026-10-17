@@ -33,7 +33,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-from . import collector, config, db, roster, standins, stats, versions
+from . import collector, config, db, identify, images, roster, standins, stats, versions
 from .sources import jwa_dashboard_feed
 
 log = logging.getLogger(__name__)
@@ -116,7 +116,7 @@ def creature_info(conn: sqlite3.Connection, keys: Iterable[str]) -> dict[str, di
     keys = sorted(set(keys))
     creatures = db.all_creatures(conn)
     pictures = standins.picture_index(keys)
-    notes = roster.identified_notes()
+    notes = {**identify.notes(conn), **roster.identified_notes()}
     aka: dict[str, set[str]] = defaultdict(set)
     for r in conn.execute("SELECT creature_key, display_name FROM source_creatures"):
         if r["display_name"]:
@@ -474,6 +474,7 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
                     "VALUES (?, ?, ?, ?, ?)",
                     (v["version"], v["starts_at"], v["basis"], v.get("first_build"), db.iso(now)),
                 )
+        identify.load(conn, archive.meta.get("deductions", {}))  # earlier conclusions about nameless creatures
         # Archived snapshots saved before team details were kept are downloaded once more
         # (if the feed still has them) so their teams and builds can be added.
         missing = archive.missing_details()
@@ -487,9 +488,18 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
         added = archive.add_records(fresh)
         archive.add_rules(fresh)
         archive.add_details(team_details(conn))
+        archive.meta["deductions"] = identify.export(conn)
         relabeled = archive.relabel(roster.resolver_for(conn))
         if relabeled:
             log.info("Identified %d archived creature(s): %s", len(relabeled), ", ".join(sorted(set(relabeled.values()))))
+        if (collect_kwargs or {}).get("fetch_images", True):
+            shown = sorted(k for k in used_keys(archive.records.values()) if not k.startswith("unmatched-"))
+            try:
+                images.fetch_missing_silhouettes(conn, limit=40, first=shown)
+                standins.update(conn, shown, limit=40)
+                standins.learn_families(standins.pictured_keys(conn), limit=60)
+            except Exception as exc:  # noqa: BLE001 - pictures are optional
+                log.warning("Icon lookups failed: %s", exc)
         new_info = creature_info(conn, used_keys(archive.records.values()))
         for key, info in new_info.items():
             old_aka = set(archive.creatures.get(key, {}).get("aka", []))

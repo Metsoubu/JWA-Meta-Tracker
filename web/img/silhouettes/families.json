@@ -1,0 +1,1346 @@
+{
+ "93_classic_t_rex": {
+  "checked_at": "2026-10-17T21:48:15+00:00",
+  "family": "family_001"
+ },
+ "acrocanthosaurus": {
+  "checked_at": "2026-10-17T21:48:16+00:00",
+  "family": "family_001"
+ },
+ "aerotitan": {
+  "checked_at": "2026-10-17T21:48:17+00:00",
+  "family": "family_013"
+ },
+ "ailurarctos": {
+  "checked_at": "2026-10-17T21:48:18+00:00",
+  "family": "family_048"
+ },
+ "albertosaurus": {
+  "checked_at": "2026-10-17T21:48:18+00:00",
+  "family": "family_001"
+ },
+ "alioramus": {
+  "checked_at": "2026-10-17T21:48:19+00:00",
+  "family": "family_005"
+ },
+ "aliorasuchus": {
+  "checked_at": "2026-10-17T21:48:20+00:00",
+  "family": "family_005"
+ },
+ "allosaurus": {
+  "checked_at": "2026-10-17T21:48:21+00:00",
+  "family": "family_001"
+ },
+ "allosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:48:22+00:00",
+  "family": "family_001"
+ },
+ "amargasaurus": {
+  "checked_at": "2026-10-17T21:48:23+00:00",
+  "family": "family_010"
+ },
+ "amargocephalus": {
+  "checked_at": "2026-10-17T21:48:23+00:00",
+  "family": "family_009"
+ },
+ "ampelorex": {
+  "checked_at": "2026-10-17T21:48:24+00:00",
+  "family": "family_010"
+ },
+ "ampelosaurus": {
+  "checked_at": "2026-10-17T21:48:25+00:00",
+  "family": "family_010"
+ },
+ "amphicyon": {
+  "checked_at": "2026-10-17T21:48:26+00:00",
+  "family": "family_041"
+ },
+ "andrewsarchus": {
+  "checked_at": "2026-10-17T21:48:27+00:00",
+  "family": "family_041"
+ },
+ "angel": {
+  "checked_at": "2026-10-17T21:48:28+00:00",
+  "family": "family_003"
+ },
+ "animantarx": {
+  "checked_at": "2026-10-17T21:48:28+00:00",
+  "family": "family_009"
+ },
+ "ankylocodon": {
+  "checked_at": "2026-10-17T21:48:29+00:00",
+  "family": "family_015"
+ },
+ "ankylodicurus": {
+  "checked_at": "2026-10-17T21:48:30+00:00",
+  "family": "family_036"
+ },
+ "ankylosaurus": {
+  "checked_at": "2026-10-17T21:48:31+00:00",
+  "family": "family_009"
+ },
+ "ankylosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:48:32+00:00",
+  "family": "family_009"
+ },
+ "antarctopelta": {
+  "checked_at": "2026-10-17T21:48:33+00:00",
+  "family": "family_009"
+ },
+ "anurognathus": {
+  "checked_at": "2026-10-17T21:48:34+00:00",
+  "family": "family_049"
+ },
+ "apatoceratops": {
+  "checked_at": "2026-10-17T21:48:34+00:00",
+  "family": "family_011"
+ },
+ "apatosaurus": {
+  "checked_at": "2026-10-17T21:48:35+00:00",
+  "family": "family_010"
+ },
+ "aquignathus": {
+  "checked_at": "2026-10-17T21:48:36+00:00",
+  "family": "family_060"
+ },
+ "aquilops": {
+  "checked_at": "2026-10-17T21:48:37+00:00",
+  "family": "family_060"
+ },
+ "aquilotae": {
+  "checked_at": "2026-10-17T21:48:37+00:00",
+  "family": "family_012"
+ },
+ "aquiraptor": {
+  "checked_at": "2026-10-17T21:48:38+00:00",
+  "family": "family_060"
+ },
+ "aquisaurus": {
+  "checked_at": "2026-10-17T21:48:39+00:00",
+  "family": "family_060"
+ },
+ "archaeopteryx": {
+  "checked_at": "2026-10-17T21:48:40+00:00",
+  "family": "family_045"
+ },
+ "archaeotherium": {
+  "checked_at": "2026-10-17T21:48:41+00:00",
+  "family": "family_031"
+ },
+ "arctodus": {
+  "checked_at": "2026-10-17T21:48:41+00:00",
+  "family": "family_048"
+ },
+ "argentavis": {
+  "checked_at": "2026-10-17T21:48:42+00:00",
+  "family": "family_035"
+ },
+ "argenteryx": {
+  "checked_at": "2026-10-17T21:48:43+00:00",
+  "family": "family_045"
+ },
+ "argentinosaurus": {
+  "checked_at": "2026-10-17T21:48:04+00:00",
+  "family": "family_010"
+ },
+ "arsinoitherium": {
+  "checked_at": "2026-10-17T21:48:44+00:00",
+  "family": "family_026"
+ },
+ "atrocomaxima": {
+  "checked_at": "2026-10-17T21:48:45+00:00",
+  "family": "family_002"
+ },
+ "atromolistis": {
+  "checked_at": "2026-10-17T21:48:46+00:00",
+  "family": "family_002"
+ },
+ "baryonyx": {
+  "checked_at": "2026-10-17T21:48:46+00:00",
+  "family": "family_006"
+ },
+ "baryonyx_gen_2": {
+  "checked_at": "2026-10-17T21:48:47+00:00",
+  "family": "family_006"
+ },
+ "baryosaurus": {
+  "checked_at": "2026-10-17T21:48:48+00:00",
+  "family": "family_006"
+ },
+ "baryotor": {
+  "checked_at": "2026-10-17T21:48:49+00:00",
+  "family": "family_006"
+ },
+ "becklejara": {
+  "checked_at": "2026-10-17T21:48:50+00:00",
+  "family": "family_021"
+ },
+ "becklerizaurus": {
+  "checked_at": "2026-10-17T21:48:50+00:00",
+  "family": "family_021"
+ },
+ "becklolyth": {
+  "checked_at": "2026-10-17T21:48:51+00:00",
+  "family": "family_021"
+ },
+ "becklophosaurus": {
+  "checked_at": "2026-10-17T21:48:52+00:00",
+  "family": "family_021"
+ },
+ "beelzebufo": {
+  "checked_at": "2026-10-17T21:48:53+00:00",
+  "family": "family_054"
+ },
+ "big_eatie": {
+  "checked_at": "2026-10-17T21:48:54+00:00",
+  "family": "family_001"
+ },
+ "blonde": {
+  "checked_at": "2026-10-17T21:48:55+00:00",
+  "family": "family_021"
+ },
+ "blue": {
+  "checked_at": "2026-10-17T21:48:56+00:00",
+  "family": "family_002"
+ },
+ "borealopelta": {
+  "checked_at": "2026-10-17T21:48:56+00:00",
+  "family": "family_009"
+ },
+ "brachiosaurus": {
+  "checked_at": "2026-10-17T21:48:57+00:00",
+  "family": "family_011"
+ },
+ "brontolasmus": {
+  "checked_at": "2026-10-17T21:48:58+00:00",
+  "family": "family_026"
+ },
+ "brontotherium": {
+  "checked_at": "2026-10-17T21:48:59+00:00",
+  "family": "family_026"
+ },
+ "brunette": {
+  "checked_at": "2026-10-17T21:49:00+00:00",
+  "family": "family_021"
+ },
+ "bumpy": {
+  "checked_at": "2026-10-17T21:49:00+00:00",
+  "family": "family_009"
+ },
+ "carbonemys": {
+  "checked_at": "2026-10-17T21:49:01+00:00",
+  "family": "family_037"
+ },
+ "carbotoceratops": {
+  "checked_at": "2026-10-17T21:49:02+00:00",
+  "family": "family_037"
+ },
+ "carcharodontosaurus": {
+  "checked_at": "2026-10-17T21:49:03+00:00",
+  "family": "family_001"
+ },
+ "carnotaurus": {
+  "checked_at": "2026-10-17T21:49:05+00:00",
+  "family": "family_005"
+ },
+ "centroceratops": {
+  "checked_at": "2026-10-17T21:49:06+00:00",
+  "family": "family_003"
+ },
+ "centrolophus_lux": {
+  "checked_at": "2026-10-17T21:49:07+00:00",
+  "family": "family_003"
+ },
+ "centrosaurus": {
+  "checked_at": "2026-10-17T21:49:07+00:00",
+  "family": "family_003"
+ },
+ "ceranosaurus": {
+  "checked_at": "2026-10-17T21:49:08+00:00",
+  "family": "family_003"
+ },
+ "cerastegotops": {
+  "checked_at": "2026-10-17T21:49:09+00:00",
+  "family": "family_004"
+ },
+ "ceratosaurus": {
+  "checked_at": "2026-10-17T21:49:10+00:00",
+  "family": "family_001"
+ },
+ "ceratosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:49:11+00:00",
+  "family": "family_001"
+ },
+ "cervalces": {
+  "checked_at": "2026-10-17T21:49:11+00:00",
+  "family": "family_034"
+ },
+ "charlie": {
+  "checked_at": "2026-10-17T21:48:05+00:00",
+  "family": "family_002"
+ },
+ "clever_girl": {
+  "checked_at": "2026-10-17T21:49:12+00:00",
+  "family": "family_002"
+ },
+ "coelocephalus": {
+  "checked_at": "2026-10-17T21:49:13+00:00",
+  "family": "family_043"
+ },
+ "coelophysis": {
+  "checked_at": "2026-10-17T21:49:14+00:00",
+  "family": "family_043"
+ },
+ "coelurosauravus": {
+  "checked_at": "2026-10-17T21:48:06+00:00",
+  "family": "family_044"
+ },
+ "compsognathus": {
+  "checked_at": "2026-10-17T21:49:14+00:00",
+  "family": "family_043"
+ },
+ "compsognathus_gen_2": {
+  "checked_at": "2026-10-17T21:49:15+00:00",
+  "family": "family_043"
+ },
+ "compsovenator": {
+  "checked_at": "2026-10-17T21:49:16+00:00",
+  "family": "family_043"
+ },
+ "concatoloch": {
+  "checked_at": "2026-10-17T21:49:17+00:00",
+  "family": "family_005"
+ },
+ "concatosaurus": {
+  "checked_at": "2026-10-17T21:49:17+00:00",
+  "family": "family_005"
+ },
+ "concavenator": {
+  "checked_at": "2026-10-17T21:49:18+00:00",
+  "family": "family_005"
+ },
+ "constrictoraptor": {
+  "checked_at": "2026-10-17T21:49:19+00:00",
+  "family": "family_002"
+ },
+ "cryolophosaurus": {
+  "checked_at": "2026-10-17T21:49:20+00:00",
+  "family": "family_007"
+ },
+ "cryolophosaurus_mattel": {
+  "checked_at": "2026-10-17T21:49:21+00:00",
+  "family": "family_005"
+ },
+ "dakotaraptor": {
+  "checked_at": "2026-10-17T21:49:22+00:00",
+  "family": "family_002"
+ },
+ "darwinopterus": {
+  "checked_at": "2026-10-17T21:49:22+00:00",
+  "family": "family_017"
+ },
+ "deinocheirus": {
+  "checked_at": "2026-10-17T21:49:23+00:00",
+  "family": "family_020"
+ },
+ "deinonychus": {
+  "checked_at": "2026-10-17T21:49:24+00:00",
+  "family": "family_002"
+ },
+ "deinosuchus": {
+  "checked_at": "2026-10-17T21:49:25+00:00",
+  "family": "family_019"
+ },
+ "deinotherium": {
+  "checked_at": "2026-10-17T21:49:26+00:00",
+  "family": "family_028"
+ },
+ "dilophosaurus": {
+  "checked_at": "2026-10-17T21:49:27+00:00",
+  "family": "family_007"
+ },
+ "dilophosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:49:28+00:00",
+  "family": "family_007"
+ },
+ "dilozorion": {
+  "checked_at": "2026-10-17T21:49:28+00:00",
+  "family": "family_020"
+ },
+ "dimetrodon": {
+  "checked_at": "2026-10-17T21:49:29+00:00",
+  "family": "family_015"
+ },
+ "dimetrodon_gen_2": {
+  "checked_at": "2026-10-17T21:49:30+00:00",
+  "family": "family_015"
+ },
+ "dimodactylus": {
+  "checked_at": "2026-10-17T21:49:31+00:00",
+  "family": "family_024"
+ },
+ "dimorphodon": {
+  "checked_at": "2026-10-17T21:49:32+00:00",
+  "family": "family_017"
+ },
+ "diplocaulus": {
+  "checked_at": "2026-10-17T21:49:33+00:00",
+  "family": "family_014"
+ },
+ "diplocaulus_gen_2": {
+  "checked_at": "2026-10-17T21:49:33+00:00",
+  "family": "family_014"
+ },
+ "diplodocus": {
+  "checked_at": "2026-10-17T21:49:34+00:00",
+  "family": "family_010"
+ },
+ "dire_wolf": {
+  "checked_at": "2026-10-17T21:49:35+00:00",
+  "family": "family_041"
+ },
+ "distortus_rex": {
+  "checked_at": "2026-10-17T21:49:36+00:00",
+  "family": "family_061"
+ },
+ "dodo": {
+  "checked_at": "2026-10-17T21:49:37+00:00",
+  "family": "family_046"
+ },
+ "doedicurus": {
+  "checked_at": "2026-10-17T21:49:38+00:00",
+  "family": "family_036"
+ },
+ "draco_intrepidus": {
+  "checked_at": "2026-10-17T21:49:38+00:00",
+  "family": "family_016"
+ },
+ "draco_lux": {
+  "checked_at": "2026-10-17T21:49:39+00:00",
+  "family": "family_003"
+ },
+ "dracoceratops": {
+  "checked_at": "2026-10-17T21:49:40+00:00",
+  "family": "family_016"
+ },
+ "dracorex": {
+  "checked_at": "2026-10-17T21:49:41+00:00",
+  "family": "family_016"
+ },
+ "dracorex_gen_2": {
+  "checked_at": "2026-10-17T21:49:42+00:00",
+  "family": "family_016"
+ },
+ "dreadnoughtus": {
+  "checked_at": "2026-10-17T21:48:06+00:00",
+  "family": "family_010"
+ },
+ "dsungaripterus": {
+  "checked_at": "2026-10-17T21:48:07+00:00",
+  "family": "family_024"
+ },
+ "edaphosaurus": {
+  "checked_at": "2026-10-17T21:49:43+00:00",
+  "family": "family_015"
+ },
+ "edmontosaurus": {
+  "checked_at": "2026-10-17T21:49:44+00:00",
+  "family": "family_018"
+ },
+ "einiasuchus": {
+  "checked_at": "2026-10-17T21:49:44+00:00",
+  "family": "family_003"
+ },
+ "einiosaurus": {
+  "checked_at": "2026-10-17T21:49:45+00:00",
+  "family": "family_003"
+ },
+ "elasmotherium": {
+  "checked_at": "2026-10-17T21:49:46+00:00",
+  "family": "family_026"
+ },
+ "enteloceros": {
+  "checked_at": "2026-10-17T21:49:47+00:00",
+  "family": "family_030"
+ },
+ "entelochops": {
+  "checked_at": "2026-10-17T21:49:48+00:00",
+  "family": "family_030"
+ },
+ "entelodon": {
+  "checked_at": "2026-10-17T21:48:08+00:00",
+  "family": "family_031"
+ },
+ "entelomoth": {
+  "checked_at": "2026-10-17T21:49:49+00:00",
+  "family": "family_031"
+ },
+ "eremocanis": {
+  "checked_at": "2026-10-17T21:49:50+00:00",
+  "family": "family_039"
+ },
+ "eremotherium": {
+  "checked_at": "2026-10-17T21:49:50+00:00",
+  "family": "family_039"
+ },
+ "erlikogamma": {
+  "checked_at": "2026-10-17T21:49:51+00:00",
+  "family": "family_020"
+ },
+ "erlikosaurus": {
+  "checked_at": "2026-10-17T21:49:52+00:00",
+  "family": "family_020"
+ },
+ "erlikosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:49:53+00:00",
+  "family": "family_020"
+ },
+ "erythrosuchus": {
+  "checked_at": "2026-10-17T21:49:54+00:00",
+  "family": "family_032"
+ },
+ "estemmenosuchus": {
+  "checked_at": "2026-10-17T21:49:55+00:00",
+  "family": "family_030"
+ },
+ "eucladoceros": {
+  "checked_at": "2026-10-17T21:49:55+00:00",
+  "family": "family_034"
+ },
+ "euoplocephalus": {
+  "checked_at": "2026-10-17T21:49:56+00:00",
+  "family": "family_009"
+ },
+ "fukuitops": {
+  "checked_at": "2026-10-17T21:49:57+00:00",
+  "family": "family_018"
+ },
+ "geminideus": {
+  "checked_at": "2026-10-17T21:49:58+00:00",
+  "family": "family_010"
+ },
+ "geosternbergia": {
+  "checked_at": "2026-10-17T21:49:59+00:00",
+  "family": "family_024"
+ },
+ "ghost": {
+  "checked_at": "2026-10-17T21:49:59+00:00",
+  "family": "family_002"
+ },
+ "giganotosaurus": {
+  "checked_at": "2026-10-17T21:50:00+00:00",
+  "family": "family_001"
+ },
+ "gigantspinosaurus": {
+  "checked_at": "2026-10-17T21:50:01+00:00",
+  "family": "family_004"
+ },
+ "giraffatitan": {
+  "checked_at": "2026-10-17T21:50:02+00:00",
+  "family": "family_011"
+ },
+ "glyptodon": {
+  "checked_at": "2026-10-17T21:50:03+00:00",
+  "family": "family_036"
+ },
+ "glyptosavis": {
+  "checked_at": "2026-10-17T21:50:04+00:00",
+  "family": "family_023"
+ },
+ "gorgonops": {
+  "checked_at": "2026-10-17T21:50:04+00:00",
+  "family": "family_032"
+ },
+ "gorgosaurus": {
+  "checked_at": "2026-10-17T21:50:05+00:00",
+  "family": "family_001"
+ },
+ "gryganyth": {
+  "checked_at": "2026-10-17T21:50:06+00:00",
+  "family": "family_006"
+ },
+ "gryposuchus": {
+  "checked_at": "2026-10-17T21:50:07+00:00",
+  "family": "family_019"
+ },
+ "herranotor": {
+  "checked_at": "2026-10-17T21:50:08+00:00",
+  "family": "family_007"
+ },
+ "herrerasaurus": {
+  "checked_at": "2026-10-17T21:50:09+00:00",
+  "family": "family_007"
+ },
+ "homalocephale": {
+  "checked_at": "2026-10-17T21:50:10+00:00",
+  "family": "family_016"
+ },
+ "ichthyovenator": {
+  "checked_at": "2026-10-17T21:50:11+00:00",
+  "family": "family_021"
+ },
+ "iguanodon": {
+  "checked_at": "2026-10-17T21:50:12+00:00",
+  "family": "family_018"
+ },
+ "indochicyon": {
+  "checked_at": "2026-10-17T21:50:13+00:00",
+  "family": "family_022"
+ },
+ "indolycan": {
+  "checked_at": "2026-10-17T21:50:13+00:00",
+  "family": "family_041"
+ },
+ "indominus_rex_gen_2": {
+  "checked_at": "2026-10-17T21:50:14+00:00",
+  "family": "family_021"
+ },
+ "indonemys": {
+  "checked_at": "2026-10-17T21:50:15+00:00",
+  "family": "family_021"
+ },
+ "indoraptor": {
+  "checked_at": "2026-10-17T21:50:16+00:00",
+  "family": "family_022"
+ },
+ "indoraptor_gen_2": {
+  "checked_at": "2026-10-17T21:50:17+00:00",
+  "family": "family_022"
+ },
+ "indoraptor_mattel": {
+  "checked_at": "2026-10-17T21:50:18+00:00",
+  "family": "family_022"
+ },
+ "inostrancevia": {
+  "checked_at": "2026-10-17T21:50:19+00:00",
+  "family": "family_032"
+ },
+ "irritator": {
+  "checked_at": "2026-10-17T21:50:19+00:00",
+  "family": "family_006"
+ },
+ "irritator_gen_2": {
+  "checked_at": "2026-10-17T21:50:20+00:00",
+  "family": "family_006"
+ },
+ "junior": {
+  "checked_at": "2026-10-17T21:50:21+00:00",
+  "family": "family_005"
+ },
+ "kelenken": {
+  "checked_at": "2026-10-17T21:50:22+00:00",
+  "family": "family_027"
+ },
+ "kentrorex": {
+  "checked_at": "2026-10-17T21:50:23+00:00",
+  "family": "family_004"
+ },
+ "kentrosaurus": {
+  "checked_at": "2026-10-17T21:50:24+00:00",
+  "family": "family_004"
+ },
+ "keratoporcus": {
+  "checked_at": "2026-10-17T21:50:24+00:00",
+  "family": "family_031"
+ },
+ "koolabourgiana": {
+  "checked_at": "2026-10-17T21:48:09+00:00",
+  "family": "family_013"
+ },
+ "koreanosaurus": {
+  "checked_at": "2026-10-17T21:50:25+00:00",
+  "family": "family_018"
+ },
+ "lambeosaurus": {
+  "checked_at": "2026-10-17T21:50:26+00:00",
+  "family": "family_018"
+ },
+ "leaellynasaura": {
+  "checked_at": "2026-10-17T21:50:27+00:00",
+  "family": "family_043"
+ },
+ "leucistic_baryonyx": {
+  "checked_at": "2026-10-17T21:50:28+00:00",
+  "family": "family_006"
+ },
+ "lystrosaurus": {
+  "checked_at": "2026-10-17T21:50:29+00:00",
+  "family": "family_050"
+ },
+ "lythronax": {
+  "checked_at": "2026-10-17T21:48:09+00:00",
+  "family": "family_005"
+ },
+ "magnaraptor": {
+  "checked_at": "2026-10-17T21:50:30+00:00",
+  "family": "family_002"
+ },
+ "maiasaura": {
+  "checked_at": "2026-10-17T21:50:31+00:00",
+  "family": "family_018"
+ },
+ "majundaboa": {
+  "checked_at": "2026-10-17T21:50:32+00:00",
+  "family": "family_029"
+ },
+ "majundasuchus": {
+  "checked_at": "2026-10-17T21:48:10+00:00",
+  "family": "family_005"
+ },
+ "majungasaurus": {
+  "checked_at": "2026-10-17T21:50:32+00:00",
+  "family": "family_005"
+ },
+ "marsupial_lion": {
+  "checked_at": "2026-10-17T21:50:33+00:00",
+  "family": "family_025"
+ },
+ "masiakasaurus": {
+  "checked_at": "2026-10-17T21:50:34+00:00",
+  "family": "family_002"
+ },
+ "mastodonsaurus": {
+  "checked_at": "2026-10-17T21:50:35+00:00",
+  "family": "family_019"
+ },
+ "megalania": {
+  "checked_at": "2026-10-17T21:50:35+00:00",
+  "family": "family_055"
+ },
+ "megaloceros": {
+  "checked_at": "2026-10-17T21:50:36+00:00",
+  "family": "family_034"
+ },
+ "megalocevia": {
+  "checked_at": "2026-10-17T21:50:37+00:00",
+  "family": "family_008"
+ },
+ "megalonyx": {
+  "checked_at": "2026-10-17T21:50:38+00:00",
+  "family": "family_039"
+ },
+ "megalosaurus": {
+  "checked_at": "2026-10-17T21:50:38+00:00",
+  "family": "family_005"
+ },
+ "megalotops": {
+  "checked_at": "2026-10-17T21:50:39+00:00",
+  "family": "family_039"
+ },
+ "megamimus": {
+  "checked_at": "2026-10-17T21:50:40+00:00",
+  "family": "family_005"
+ },
+ "megaraptor": {
+  "checked_at": "2026-10-17T21:50:41+00:00",
+  "family": "family_005"
+ },
+ "megatyrannus": {
+  "checked_at": "2026-10-17T21:50:42+00:00",
+  "family": "family_005"
+ },
+ "megistotherium": {
+  "checked_at": "2026-10-17T21:50:43+00:00",
+  "family": "family_041"
+ },
+ "meiolania": {
+  "checked_at": "2026-10-17T21:50:44+00:00",
+  "family": "family_037"
+ },
+ "microraptor": {
+  "checked_at": "2026-10-17T21:50:44+00:00",
+  "family": "family_045"
+ },
+ "miragaia": {
+  "checked_at": "2026-10-17T21:50:45+00:00",
+  "family": "family_004"
+ },
+ "monkeydactyl": {
+  "checked_at": "2026-10-17T21:50:46+00:00",
+  "family": "family_049"
+ },
+ "monkeyondactylus": {
+  "checked_at": "2026-10-17T21:50:47+00:00",
+  "family": "family_049"
+ },
+ "monolomoth": {
+  "checked_at": "2026-10-17T21:50:48+00:00",
+  "family": "family_026"
+ },
+ "monolophosaurus": {
+  "checked_at": "2026-10-17T21:50:49+00:00",
+  "family": "family_007"
+ },
+ "monolophosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:50:50+00:00",
+  "family": "family_007"
+ },
+ "monomimus": {
+  "checked_at": "2026-10-17T21:50:50+00:00",
+  "family": "family_012"
+ },
+ "monostegotops": {
+  "checked_at": "2026-10-17T21:50:51+00:00",
+  "family": "family_003"
+ },
+ "moros_intrepidus": {
+  "checked_at": "2026-10-17T21:50:52+00:00",
+  "family": "family_051"
+ },
+ "moschops": {
+  "checked_at": "2026-10-17T21:50:53+00:00",
+  "family": "family_030"
+ },
+ "mutadon": {
+  "checked_at": "2026-10-17T21:50:54+00:00",
+  "family": "family_062"
+ },
+ "nanophosaurus": {
+  "checked_at": "2026-10-17T21:50:55+00:00",
+  "family": "family_005"
+ },
+ "nanotyrannus": {
+  "checked_at": "2026-10-17T21:50:55+00:00",
+  "family": "family_005"
+ },
+ "nasutoceratops": {
+  "checked_at": "2026-10-17T21:50:56+00:00",
+  "family": "family_003"
+ },
+ "nodosaurus": {
+  "checked_at": "2026-10-17T21:48:11+00:00",
+  "family": "family_009"
+ },
+ "nominrex": {
+  "checked_at": "2026-10-17T21:50:57+00:00",
+  "family": "family_027"
+ },
+ "nyctopteryx": {
+  "checked_at": "2026-10-17T21:50:58+00:00",
+  "family": "family_024"
+ },
+ "nyctosaurus": {
+  "checked_at": "2026-10-17T21:50:59+00:00",
+  "family": "family_024"
+ },
+ "olorotitan": {
+  "checked_at": "2026-10-17T21:51:00+00:00",
+  "family": "family_018"
+ },
+ "ophiacodon": {
+  "checked_at": "2026-10-17T21:51:01+00:00",
+  "family": "family_015"
+ },
+ "ornithomimus": {
+  "checked_at": "2026-10-17T21:51:02+00:00",
+  "family": "family_012"
+ },
+ "ouranosaurus": {
+  "checked_at": "2026-10-17T21:51:02+00:00",
+  "family": "family_018"
+ },
+ "ovinnolophosaurus": {
+  "checked_at": "2026-10-17T21:51:03+00:00",
+  "family": "family_042"
+ },
+ "oviraptor_gen_2": {
+  "checked_at": "2026-10-17T21:51:04+00:00",
+  "family": "family_042"
+ },
+ "pachycephalosaurus": {
+  "checked_at": "2026-10-17T21:51:05+00:00",
+  "family": "family_023"
+ },
+ "panthera": {
+  "checked_at": "2026-10-17T21:51:06+00:00",
+  "family": "family_002"
+ },
+ "panthera_blytheae": {
+  "checked_at": "2026-10-17T21:51:07+00:00",
+  "family": "family_025"
+ },
+ "paralidactylus": {
+  "checked_at": "2026-10-17T21:51:07+00:00",
+  "family": "family_059"
+ },
+ "paralititan": {
+  "checked_at": "2026-10-17T21:51:08+00:00",
+  "family": "family_059"
+ },
+ "paralitrosaurus": {
+  "checked_at": "2026-10-17T21:51:09+00:00",
+  "family": "family_059"
+ },
+ "parasaurolophus": {
+  "checked_at": "2026-10-17T21:51:10+00:00",
+  "family": "family_018"
+ },
+ "parasaurolophus_lux": {
+  "checked_at": "2026-10-17T21:51:11+00:00",
+  "family": "family_018"
+ },
+ "peloroplites": {
+  "checked_at": "2026-10-17T21:51:12+00:00",
+  "family": "family_009"
+ },
+ "pelorosuchus": {
+  "checked_at": "2026-10-17T21:51:12+00:00",
+  "family": "family_009"
+ },
+ "phorusrhacos": {
+  "checked_at": "2026-10-17T21:51:13+00:00",
+  "family": "family_027"
+ },
+ "pierce": {
+  "checked_at": "2026-10-17T21:51:14+00:00",
+  "family": "family_004"
+ },
+ "plateorex": {
+  "checked_at": "2026-10-17T21:51:15+00:00",
+  "family": "family_056"
+ },
+ "plateosaurus": {
+  "checked_at": "2026-10-17T21:51:15+00:00",
+  "family": "family_056"
+ },
+ "postimetrodon": {
+  "checked_at": "2026-10-17T21:51:16+00:00",
+  "family": "family_008"
+ },
+ "postosuchus": {
+  "checked_at": "2026-10-17T21:51:17+00:00",
+  "family": "family_008"
+ },
+ "preondactylus": {
+  "checked_at": "2026-10-17T21:48:12+00:00",
+  "family": "family_049"
+ },
+ "procerathomimus": {
+  "checked_at": "2026-10-17T21:51:18+00:00",
+  "family": "family_012"
+ },
+ "proceratosaurus": {
+  "checked_at": "2026-10-17T21:51:19+00:00",
+  "family": "family_007"
+ },
+ "proto_lux": {
+  "checked_at": "2026-10-17T21:51:20+00:00",
+  "family": "family_058"
+ },
+ "protoceratops": {
+  "checked_at": "2026-10-17T21:51:20+00:00",
+  "family": "family_058"
+ },
+ "protonodon": {
+  "checked_at": "2026-10-17T21:51:21+00:00",
+  "family": "family_058"
+ },
+ "pteranodon": {
+  "checked_at": "2026-10-17T21:51:22+00:00",
+  "family": "family_024"
+ },
+ "pterovexus": {
+  "checked_at": "2026-10-17T21:51:23+00:00",
+  "family": "family_017"
+ },
+ "pulmonoscorpius": {
+  "checked_at": "2026-10-17T21:51:23+00:00",
+  "family": "family_052"
+ },
+ "purrolyth": {
+  "checked_at": "2026-10-17T21:51:24+00:00",
+  "family": "family_022"
+ },
+ "purussaurus": {
+  "checked_at": "2026-10-17T21:51:25+00:00",
+  "family": "family_019"
+ },
+ "purussaurus_gen_2": {
+  "checked_at": "2026-10-17T21:51:26+00:00",
+  "family": "family_019"
+ },
+ "purutaurus": {
+  "checked_at": "2026-10-17T21:51:27+00:00",
+  "family": "family_022"
+ },
+ "pyroraptor": {
+  "checked_at": "2026-10-17T21:51:28+00:00",
+  "family": "family_002"
+ },
+ "pyroraptor_gen_2": {
+  "checked_at": "2026-10-17T21:51:28+00:00",
+  "family": "family_002"
+ },
+ "pyrosuchus": {
+  "checked_at": "2026-10-17T21:51:29+00:00",
+  "family": "family_002"
+ },
+ "pyrritator": {
+  "checked_at": "2026-10-17T21:51:30+00:00",
+  "family": "family_002"
+ },
+ "quetzalcoatlus": {
+  "checked_at": "2026-10-17T21:51:31+00:00",
+  "family": "family_013"
+ },
+ "quetzalcoatlus_gen_2": {
+  "checked_at": "2026-10-17T21:51:32+00:00",
+  "family": "family_013"
+ },
+ "rajadorixis": {
+  "checked_at": "2026-10-17T21:51:33+00:00",
+  "family": "family_005"
+ },
+ "rajasaurus": {
+  "checked_at": "2026-10-17T21:51:34+00:00",
+  "family": "family_005"
+ },
+ "rativates": {
+  "checked_at": "2026-10-17T21:51:35+00:00",
+  "family": "family_012"
+ },
+ "rebel": {
+  "checked_at": "2026-10-17T21:51:35+00:00",
+  "family": "family_003"
+ },
+ "rebirth_quetzalcoatlus": {
+  "checked_at": "2026-10-17T21:51:36+00:00",
+  "family": "family_064"
+ },
+ "rebirth_raptor": {
+  "checked_at": "2026-10-17T21:51:37+00:00",
+  "family": "family_002"
+ },
+ "rebirth_spinosaurus": {
+  "checked_at": "2026-10-17T21:51:38+00:00",
+  "family": "family_063"
+ },
+ "rebirth_spinosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:51:39+00:00",
+  "family": "family_063"
+ },
+ "rebirth_t_rex": {
+  "checked_at": "2026-10-17T21:51:39+00:00",
+  "family": "family_001"
+ },
+ "red": {
+  "checked_at": "2026-10-17T21:51:40+00:00",
+  "family": "family_002"
+ },
+ "rexy": {
+  "checked_at": "2026-10-17T21:51:41+00:00",
+  "family": "family_001"
+ },
+ "rodrigues_solitaire": {
+  "checked_at": "2026-10-17T21:51:42+00:00",
+  "family": "family_046"
+ },
+ "sah_panthera": {
+  "checked_at": "2026-10-17T21:51:43+00:00",
+  "family": "family_025"
+ },
+ "sarcorixis": {
+  "checked_at": "2026-10-17T21:51:43+00:00",
+  "family": "family_019"
+ },
+ "sarcosaurus": {
+  "checked_at": "2026-10-17T21:51:44+00:00",
+  "family": "family_007"
+ },
+ "sarcosuchus": {
+  "checked_at": "2026-10-17T21:51:45+00:00",
+  "family": "family_019"
+ },
+ "saurophaganax": {
+  "checked_at": "2026-10-17T21:51:46+00:00",
+  "family": "family_001"
+ },
+ "saurornitholestes": {
+  "checked_at": "2026-10-17T21:51:47+00:00",
+  "family": "family_002"
+ },
+ "scaphognathus": {
+  "checked_at": "2026-10-17T21:48:13+00:00",
+  "family": "family_017"
+ },
+ "scelidosaurus": {
+  "checked_at": "2026-10-17T21:51:48+00:00",
+  "family": "family_009"
+ },
+ "scorpius_rex_gen_2": {
+  "checked_at": "2026-10-17T21:51:49+00:00",
+  "family": "family_047"
+ },
+ "scutosaurus": {
+  "checked_at": "2026-10-17T21:51:49+00:00",
+  "family": "family_030"
+ },
+ "secodontosaurus": {
+  "checked_at": "2026-10-17T21:51:50+00:00",
+  "family": "family_015"
+ },
+ "segnosaurus": {
+  "checked_at": "2026-10-17T21:51:51+00:00",
+  "family": "family_020"
+ },
+ "segnotherisaurus": {
+  "checked_at": "2026-10-17T21:51:52+00:00",
+  "family": "family_020"
+ },
+ "shantrospinos": {
+  "checked_at": "2026-10-17T21:51:53+00:00",
+  "family": "family_018"
+ },
+ "shantunrax": {
+  "checked_at": "2026-10-17T21:51:54+00:00",
+  "family": "family_018"
+ },
+ "sinoceratops": {
+  "checked_at": "2026-10-17T21:51:55+00:00",
+  "family": "family_003"
+ },
+ "sinraptor": {
+  "checked_at": "2026-10-17T21:51:55+00:00",
+  "family": "family_001"
+ },
+ "skoonametrodon": {
+  "checked_at": "2026-10-17T21:51:56+00:00",
+  "family": "family_001"
+ },
+ "skoonasaurus": {
+  "checked_at": "2026-10-17T21:51:57+00:00",
+  "family": "family_011"
+ },
+ "skorpiodactylus": {
+  "checked_at": "2026-10-17T21:51:58+00:00",
+  "family": "family_005"
+ },
+ "skorpiovenator": {
+  "checked_at": "2026-10-17T21:51:59+00:00",
+  "family": "family_005"
+ },
+ "smilodon": {
+  "checked_at": "2026-10-17T21:51:59+00:00",
+  "family": "family_025"
+ },
+ "sonorasaurus": {
+  "checked_at": "2026-10-17T21:52:00+00:00",
+  "family": "family_011"
+ },
+ "spinoceratops": {
+  "checked_at": "2026-10-17T21:52:01+00:00",
+  "family": "family_003"
+ },
+ "spinonyx": {
+  "checked_at": "2026-10-17T21:52:02+00:00",
+  "family": "family_021"
+ },
+ "spinosaurus": {
+  "checked_at": "2026-10-17T21:52:03+00:00",
+  "family": "family_021"
+ },
+ "spinosaurus_aegyptiacus": {
+  "checked_at": "2026-10-17T21:52:04+00:00",
+  "family": "family_057"
+ },
+ "spinosaurus_gen_2": {
+  "checked_at": "2026-10-17T21:52:04+00:00",
+  "family": "family_021"
+ },
+ "spinotasuchus": {
+  "checked_at": "2026-10-17T21:52:05+00:00",
+  "family": "family_021"
+ },
+ "spinotops": {
+  "checked_at": "2026-10-17T21:52:06+00:00",
+  "family": "family_003"
+ },
+ "stegoceras": {
+  "checked_at": "2026-10-17T21:52:07+00:00",
+  "family": "family_016"
+ },
+ "stegoceratops": {
+  "checked_at": "2026-10-17T21:52:08+00:00",
+  "family": "family_003"
+ },
+ "stegodeus": {
+  "checked_at": "2026-10-17T21:52:09+00:00",
+  "family": "family_004"
+ },
+ "stegosaurus": {
+  "checked_at": "2026-10-17T21:52:09+00:00",
+  "family": "family_004"
+ },
+ "stegosaurus_ungulatus": {
+  "checked_at": "2026-10-17T21:52:10+00:00",
+  "family": "family_004"
+ },
+ "stegouros": {
+  "checked_at": "2026-10-17T21:52:11+00:00",
+  "family": "family_009"
+ },
+ "stomatosuchus_mattel": {
+  "checked_at": "2026-10-17T21:52:12+00:00",
+  "family": "family_019"
+ },
+ "stygimoloch": {
+  "checked_at": "2026-10-17T21:52:13+00:00",
+  "family": "family_016"
+ },
+ "stygimoloch_gen_2": {
+  "checked_at": "2026-10-17T21:52:14+00:00",
+  "family": "family_016"
+ },
+ "styracosaurus_lux": {
+  "checked_at": "2026-10-17T21:52:14+00:00",
+  "family": "family_003"
+ },
+ "suchomimus": {
+  "checked_at": "2026-10-17T21:52:15+00:00",
+  "family": "family_021"
+ },
+ "suchotator": {
+  "checked_at": "2026-10-17T21:52:16+00:00",
+  "family": "family_021"
+ },
+ "tanycolagreus": {
+  "checked_at": "2026-10-17T21:52:17+00:00",
+  "family": "family_007"
+ },
+ "tarbosaurus": {
+  "checked_at": "2026-10-17T21:52:18+00:00",
+  "family": "family_001"
+ },
+ "tenontosaurus": {
+  "checked_at": "2026-10-17T21:52:19+00:00",
+  "family": "family_018"
+ },
+ "therizinosaurus": {
+  "checked_at": "2026-10-17T21:52:19+00:00",
+  "family": "family_020"
+ },
+ "thylacotator": {
+  "checked_at": "2026-10-17T21:52:20+00:00",
+  "family": "family_025"
+ },
+ "tiger": {
+  "checked_at": "2026-10-17T21:52:21+00:00",
+  "family": "family_002"
+ },
+ "titanoboa": {
+  "checked_at": "2026-10-17T21:52:22+00:00",
+  "family": "family_029"
+ },
+ "titanoboa_gen_2": {
+  "checked_at": "2026-10-17T21:52:23+00:00",
+  "family": "family_029"
+ },
+ "titanosaurus": {
+  "checked_at": "2026-10-17T21:52:24+00:00",
+  "family": "family_059"
+ },
+ "titanotarkus": {
+  "checked_at": "2026-10-17T21:52:25+00:00",
+  "family": "family_059"
+ },
+ "titanotholus": {
+  "checked_at": "2026-10-17T21:52:25+00:00",
+  "family": "family_059"
+ },
+ "titanotor": {
+  "checked_at": "2026-10-17T21:52:26+00:00",
+  "family": "family_059"
+ },
+ "triceratops": {
+  "checked_at": "2026-10-17T21:52:27+00:00",
+  "family": "family_003"
+ },
+ "triceratops_gen_2": {
+  "checked_at": "2026-10-17T21:52:28+00:00",
+  "family": "family_003"
+ },
+ "troodon": {
+  "checked_at": "2026-10-17T21:52:29+00:00",
+  "family": "family_002"
+ },
+ "trykovenator": {
+  "checked_at": "2026-10-17T21:52:30+00:00",
+  "family": "family_001"
+ },
+ "tsintamoth": {
+  "checked_at": "2026-10-17T21:48:14+00:00",
+  "family": "family_028"
+ },
+ "tsintaosaurus": {
+  "checked_at": "2026-10-17T21:52:31+00:00",
+  "family": "family_018"
+ },
+ "tuojiangosaurus": {
+  "checked_at": "2026-10-17T21:52:31+00:00",
+  "family": "family_004"
+ },
+ "tupandactylus": {
+  "checked_at": "2026-10-17T21:52:32+00:00",
+  "family": "family_024"
+ },
+ "tyrannodactylus": {
+  "checked_at": "2026-10-17T21:52:33+00:00",
+  "family": "family_001"
+ },
+ "tyrannosaur_buck": {
+  "checked_at": "2026-10-17T21:52:34+00:00",
+  "family": "family_001"
+ },
+ "tyrannosaur_doe": {
+  "checked_at": "2026-10-17T21:52:35+00:00",
+  "family": "family_001"
+ },
+ "tyrannosaurus_rex": {
+  "checked_at": "2026-10-17T21:52:35+00:00",
+  "family": "family_001"
+ },
+ "tyrannosaurus_rex_gen_2": {
+  "checked_at": "2026-10-17T21:52:36+00:00",
+  "family": "family_001"
+ },
+ "tyrannotor": {
+  "checked_at": "2026-10-17T21:52:37+00:00",
+  "family": "family_001"
+ },
+ "utahraptor": {
+  "checked_at": "2026-10-17T21:52:38+00:00",
+  "family": "family_002"
+ },
+ "utasinoraptor": {
+  "checked_at": "2026-10-17T21:52:39+00:00",
+  "family": "family_002"
+ },
+ "velociraptor": {
+  "checked_at": "2026-10-17T21:52:39+00:00",
+  "family": "family_002"
+ },
+ "velosrhacos": {
+  "checked_at": "2026-10-17T21:48:13+00:00",
+  "family": "family_027"
+ },
+ "woolly_mammoth": {
+  "checked_at": "2026-10-17T21:52:40+00:00",
+  "family": "family_028"
+ },
+ "woolly_rhino": {
+  "checked_at": "2026-10-17T21:52:41+00:00",
+  "family": "family_026"
+ },
+ "wuerhosaurus": {
+  "checked_at": "2026-10-17T21:52:42+00:00",
+  "family": "family_004"
+ },
+ "yutyrannus": {
+  "checked_at": "2026-10-17T21:52:42+00:00",
+  "family": "family_001"
+ },
+ "yuxisaurus": {
+  "checked_at": "2026-10-17T21:52:43+00:00",
+  "family": "family_009"
+ }
+}

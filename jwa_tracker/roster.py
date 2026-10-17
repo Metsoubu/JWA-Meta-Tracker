@@ -8,9 +8,10 @@ last good copy (or the copy bundled with this project) is used instead.
 Source feeds sometimes use odd names: truncated internal ids ("Tyrannoto"),
 another language ("WOLLNASHORN"), or broken accents ("BR�NETTE"). The
 resolver maps them to roster creatures using, in order: hand-checked aliases,
-exact normalised names, unambiguous prefixes, and very close fuzzy matches. Every
-match records how it was made; anything unmatched is kept and clearly labelled
-instead of being guessed.
+exact normalised names, the official names in other game languages (the Dinodex
+in German, fetched with the roster), unambiguous prefixes, and very close fuzzy
+matches. Every match records how it was made; anything still unmatched is kept and
+clearly labelled (identify.py may later work out a nameless creature from evidence).
 """
 from __future__ import annotations
 
@@ -29,6 +30,9 @@ from . import config, db, net
 log = logging.getLogger(__name__)
 
 PALEO_DINODEX_URL = "https://www.paleo.gg/games/jurassic-world-alive/dinodex"
+PALEO_DINODEX_LANG_URL = "https://www.paleo.gg/{lang}/games/jurassic-world-alive/dinodex"
+# Game languages whose creature names the feed has been seen to use.
+NAME_LANGUAGES = ("de",)
 ROSTER_SOURCE = "paleo.gg dinodex"
 SEED_FILE = config.BUNDLED_DATA_DIR / "roster_seed.json"
 ALIAS_FILE = config.BUNDLED_DATA_DIR / "aliases.json"
@@ -100,7 +104,27 @@ def store_roster(conn: sqlite3.Connection, roster: list[dict[str, Any]], source:
         db.set_meta(conn, "roster_source", source)
         db.set_meta(conn, "roster_count", str(len(roster)))
         db.set_meta(conn, "roster_updated_at", stamp)
+        for c in roster:
+            for lang, name in (c.get("names") or {}).items():
+                _store_name(conn, c["key"], lang, name)
     return len(roster)
+
+
+def _store_name(conn: sqlite3.Connection, key: str, lang: str, name: str, replace: bool = True) -> None:
+    verb = "INSERT OR REPLACE" if replace else "INSERT OR IGNORE"
+    conn.execute(f"{verb} INTO creature_names (key, lang, name) VALUES (?, ?, ?)", (key, lang, name.strip()))
+
+
+def fetch_localized_names(lang: str, fetch: Callable[..., bytes] = net.fetch) -> dict[str, str]:
+    """Creature key -> its name in another game language, from the Dinodex in that language."""
+    html = fetch(PALEO_DINODEX_LANG_URL.format(lang=lang)).decode("utf-8", errors="replace")
+    return {c["key"]: c["name"] for c in parse_paleo_dinodex(html)}
+
+
+def store_localized_names(conn: sqlite3.Connection, lang: str, names: dict[str, str]) -> None:
+    with db.transaction(conn):
+        for key, name in names.items():
+            _store_name(conn, key, lang, name)
 
 
 def ensure_roster(conn: sqlite3.Connection, now: datetime) -> None:
@@ -112,7 +136,10 @@ def ensure_roster(conn: sqlite3.Connection, now: datetime) -> None:
         return
     known = {r["key"] for r in conn.execute("SELECT key FROM creatures")}
     missing = [c for c in seed if c["key"] not in known]
-    if missing:
+    named = {(r["key"], r["lang"]) for r in conn.execute("SELECT key, lang FROM creature_names")}
+    unnamed = [(c["key"], lang, name) for c in seed for lang, name in (c.get("names") or {}).items()
+               if (c["key"], lang) not in named]
+    if missing or unnamed:
         with db.transaction(conn):
             conn.executemany(
                 "INSERT OR IGNORE INTO creatures (key, name, rarity, class, hybrid_type, added_version, "
@@ -120,6 +147,8 @@ def ensure_roster(conn: sqlite3.Connection, now: datetime) -> None:
                 [(c["key"], c["name"], c.get("rarity"), c.get("class"), c.get("hybrid_type"), c.get("added_version"),
                   ROSTER_SOURCE + " (bundled copy)", db.iso(now)) for c in missing],
             )
+            for key, lang, name in unnamed:
+                _store_name(conn, key, lang, name, replace=False)
 
 
 def refresh_roster_if_due(
@@ -135,6 +164,11 @@ def refresh_roster_if_due(
     roster = fetch_paleo_roster(fetch)
     count = store_roster(conn, roster, ROSTER_SOURCE, now)
     db.set_meta(conn, "roster_fetched_at", db.iso(now))
+    for lang in NAME_LANGUAGES:
+        try:
+            store_localized_names(conn, lang, fetch_localized_names(lang, fetch))
+        except (net.FetchError, RosterError) as exc:  # the English roster is what matters; names help
+            log.warning("Could not refresh %s creature names: %s", lang, exc)
     fixed = reresolve_unmatched(conn, now)
     msg = f"Roster refreshed: {count} creatures."
     if fixed:
@@ -166,28 +200,35 @@ def unresolved_key(source: str, source_id: str) -> str:
 @dataclass(frozen=True)
 class Match:
     key: str | None
-    method: str  # alias | exact | prefix | fuzzy | translated | unmatched
+    method: str  # alias | exact | localized | prefix | fuzzy | translated | deduced | unmatched
 
 
 class Resolver:
-    def __init__(self, roster: Iterable[dict[str, Any]], aliases: dict[str, Any] | None = None):
+    def __init__(self, roster: Iterable[dict[str, Any]], aliases: dict[str, Any] | None = None,
+                 deduced: dict[str, dict[str, str]] | None = None):
         self.roster = {c["key"]: c for c in roster}
         aliases = aliases if aliases is not None else load_aliases()
         self.alias_by_name = {normalize(k): v for k, v in aliases.get("by_name", {}).items()}
         self.alias_by_id = aliases.get("by_source_id", {})
+        self.deduced_by_id = deduced or {}  # identify.py's conclusions: source -> {source id: key}
         # The same id aliases, keyed the way unidentified creatures were stored (for old history).
         self.unmatched_alias = {unresolved_key(src, sid): key
-                                for src, ids in self.alias_by_id.items() for sid, key in ids.items()}
+                                for ids_by_source in (self.deduced_by_id, self.alias_by_id)
+                                for src, ids in ids_by_source.items() for sid, key in ids.items()}
         self.translations = [
             (re.compile(rf"\b{re.escape(german)}\b", re.IGNORECASE), english)
             for german, english in aliases.get("translations", {}).items()
             if not german.startswith("_")
         ]
         self.by_norm: dict[str, list[str]] = {}
+        self.by_local_name: dict[str, list[str]] = {}
         for key, c in self.roster.items():
             for variant in {normalize(c["name"]), normalize(key)}:
                 if variant:
                     self.by_norm.setdefault(variant, []).append(key)
+            for name in (c.get("names") or {}).values():
+                if normalize(name):
+                    self.by_local_name.setdefault(normalize(name), []).append(key)
 
     def _pick(self, keys: list[str], rarity: str | None) -> str | None:
         keys = sorted(set(keys))
@@ -205,6 +246,9 @@ class Resolver:
         by_id = self.alias_by_id.get(source, {}).get(source_id)
         if by_id and by_id in self.roster:
             return Match(by_id, "alias")
+        deduced = self.deduced_by_id.get(source, {}).get(source_id)
+        if deduced and deduced in self.roster:
+            return Match(deduced, "deduced")
         match = self._resolve_name(display_name, rarity)
         if match.key:
             return match
@@ -228,6 +272,10 @@ class Resolver:
             key = self._pick(self.by_norm[norm], rarity)
             if key:
                 return Match(key, "exact")
+        if norm in self.by_local_name:
+            key = self._pick(self.by_local_name[norm], rarity)
+            if key:
+                return Match(key, "localized")
         if len(norm) >= 6:
             starts = [k for n, ks in self.by_norm.items() if n.startswith(norm) for k in ks]
             key = self._pick(starts, rarity) if starts else None
@@ -257,8 +305,16 @@ def identified_notes() -> dict[str, str]:
 
 
 def resolver_for(conn: sqlite3.Connection) -> Resolver:
-    roster = [c for c in db.all_creatures(conn).values() if c["in_roster"]]
-    return Resolver(roster)
+    roster = [dict(c) for c in db.all_creatures(conn).values() if c["in_roster"]]
+    names: dict[str, dict[str, str]] = {}
+    for r in conn.execute("SELECT key, lang, name FROM creature_names"):
+        names.setdefault(r["key"], {})[r["lang"]] = r["name"]
+    for c in roster:
+        c["names"] = names.get(c["key"], {})
+    deduced: dict[str, dict[str, str]] = {}
+    for d in conn.execute("SELECT source, source_id, creature_key FROM deductions WHERE creature_key IS NOT NULL"):
+        deduced.setdefault(d["source"], {})[d["source_id"]] = d["creature_key"]
+    return Resolver(roster, deduced=deduced)
 
 
 def register_source_creatures(

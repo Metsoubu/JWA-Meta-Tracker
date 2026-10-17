@@ -64,7 +64,7 @@ class NewCreatureTests(TempDataDir):
                               "baryotor": {"ingredients": ["megamimus", "baryosaurus"]}}}}}})
         html = f'<script id="__NEXT_DATA__" type="application/json">{page}</script>'.encode()
         tmp = Path(tempfile.mkdtemp()) / "standins.json"
-        with mock.patch.object(standins, "STANDIN_FILE", tmp):
+        with mock.patch.object(standins, "STANDIN_FILE", tmp),                 mock.patch.object(standins, "FAMILY_FILE", tmp.with_name("families.json")):
             added = standins.update(self.conn, ["newdinoraptor"], fetch=lambda url, **k: html, pause=0)
             self.assertEqual(added, 1)
             pic = standins.picture_index(["newdinoraptor"])["newdinoraptor"]

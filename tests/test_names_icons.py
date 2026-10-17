@@ -38,7 +38,9 @@ class GermanNameTests(TempDataDir):
         for name, key in FEED_NAMES.items():
             with self.subTest(name=name):
                 self.assertEqual(resolver.resolve("jwa-dashboard-feed", "x", name, "Legendary").key, key)
-        self.assertEqual(resolver.resolve("f", "x", "WIEDERGEBURT-T-REX", "Legendary").method, "translated")
+        self.assertEqual(resolver.resolve("f", "x", "WIEDERGEBURT-T-REX", "Legendary").method, "localized")  # official German name
+        no_german = roster.Resolver([{k: v for k, v in c.items() if k != "names"} for c in roster.load_seed_roster()])
+        self.assertEqual(no_german.resolve("f", "x", "WIEDERGEBURT-T-REX", "Legendary").key, "rebirth_t_rex")  # word fallback
 
     def test_nameless_creatures_identified_from_the_evidence(self):
         resolver = roster.Resolver(roster.load_seed_roster())
@@ -71,7 +73,8 @@ class GermanNameTests(TempDataDir):
 
         t = full_team(1)
         t.members[0] = SourceCreature("id-rebirth", "WIEDERGEBURT-T-REX", "Legendary")
-        no_translation = roster.Resolver(roster.load_seed_roster(), aliases={})
+        no_translation = roster.Resolver([{k: v for k, v in c.items() if k != "names"} for c in roster.load_seed_roster()],
+                                         aliases={})
         with db.transaction(self.conn):  # how an older version stored it: not identified
             roster.register_source_creatures(self.conn, "test-source", [("id-rebirth", "WIEDERGEBURT-T-REX", "Legendary")],
                                              T0, no_translation)
