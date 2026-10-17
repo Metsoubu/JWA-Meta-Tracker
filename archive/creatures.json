@@ -952,6 +952,20 @@
   "name": "Dilozorion",
   "rarity": "apex"
  },
+ "dimetrodon": {
+  "added": "v1.1",
+  "aka": [
+   "Dimetrodon"
+  ],
+  "class": "fierce",
+  "credit": "Dimetrodon silhouette by Dmitry Bogdanov, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/dimetrodon.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Dimetrodon",
+  "rarity": "rare"
+ },
  "dimetrodon_gen_2": {
   "added": "v1.1",
   "aka": [
@@ -3193,6 +3207,20 @@
   "listed": true,
   "name": "Tyrannosaurus Rex",
   "rarity": "epic"
+ },
+ "tyrannosaurus_rex_gen_2": {
+  "added": "v1.1",
+  "aka": [
+   "Tyrannosaurus Gen 2"
+  ],
+  "class": "fierce",
+  "credit": "Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Tyrannosaurus Rex Gen 2",
+  "rarity": "rare"
  },
  "tyrannotor": {
   "added": "v3.21",
