@@ -369,10 +369,10 @@
    "Argentinosaurus"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Argentinosaurus",
   "rarity": "rare"
@@ -389,7 +389,7 @@
   "imgKind": "silhouette",
   "listed": true,
   "name": "Arsinoitherium",
-  "note": "The data source gives no name for this creature (code 05865dc2), seen once, at level 6 (the Rare starting level). A creature with no name at all is newer than the feed's name list (game version 3.21 or later), and Arsinoitherium (3.22) is the only Rare or Common added since then.",
+  "note": "The data source gives no name for this creature (code 05865dc2), seen once, at level 6 (the Rare starting level), so it is a Common or Rare. The feed names creatures up to game version 3.20 (Paralititan, Shantrospinos, Paralitrosaurus and Coelocephalus are all named), so a creature with no name at all is from 3.21 or later, and Arsinoitherium (3.22) is the only Rare or Common added since then.",
   "rarity": "rare"
  },
  "atrocomaxima": {
@@ -748,10 +748,10 @@
    "Charlie"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Charlie",
   "rarity": "rare"
@@ -790,10 +790,10 @@
    "Coelurosauravus"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon: Varanus silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/megalania.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Coelurosauravus",
   "rarity": "common"
@@ -1112,10 +1112,10 @@
    "Dreadnoughtus"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Dreadnoughtus",
   "rarity": "rare"
@@ -1126,10 +1126,10 @@
    "Dsungaripterus"
   ],
   "class": "fierce",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Dsungaripterus",
   "rarity": "rare"
@@ -1196,10 +1196,10 @@
    "Entelodon"
   ],
   "class": "fierce",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Archaeotherium silhouette by Zimices, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/archaeotherium.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Entelodon",
   "rarity": "rare"
@@ -1659,10 +1659,10 @@
    "Koolabourgiana"
   ],
   "class": "cunning_resilient",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Koolabourgiana",
   "rarity": "legendary"
@@ -1715,10 +1715,10 @@
    "Lythronax"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Lythronax",
   "rarity": "common"
@@ -1757,12 +1757,26 @@
    "Majundasuchus"
   ],
   "class": "fierce_resilient",
-  "credit": null,
+  "credit": "Body-type icon: Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Majundasuchus",
+  "rarity": "rare"
+ },
+ "marsupial_lion": {
+  "added": "v1.7",
+  "aka": [
+   "Beutellöwe"
+  ],
+  "class": "fierce",
+  "credit": "Thylacoleo silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/marsupial_lion.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Marsupial Lion",
   "rarity": "rare"
  },
  "masiakasaurus": {
@@ -2037,10 +2051,10 @@
    "Nodosaurus"
   ],
   "class": "resilient",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Nodosaurus",
   "rarity": "rare"
@@ -2211,7 +2225,7 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Pelorosuchus",
-  "note": "The data source gives no name for this creature (code 2b88a0f8). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer, and Pelorosuchus (3.23) is the only Legendary added since then.",
+  "note": "The data source gives no name for this creature (code 2b88a0f8, first seen 9 October 2026). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer. When it appeared, Pelorosuchus (released 29 September in 3.23) was the only such Legendary in the game's creature list. Erlidraco, another 3.23 Legendary, was only added to the list after 10 October and is fused from Guidraco, which the feed had not seen even a week later.",
   "rarity": "legendary"
  },
  "pierce": {
@@ -2262,10 +2276,10 @@
    "Preondactylus"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Preondactylus",
   "rarity": "rare"
@@ -2668,10 +2682,10 @@
    "Scaphognathus"
   ],
   "class": "fierce",
-  "credit": null,
+  "credit": "Body-type icon (same in-game skeleton): Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Scaphognathus",
   "rarity": "rare"
@@ -3166,6 +3180,20 @@
   "name": "Trykovenator",
   "rarity": "apex"
  },
+ "tsintamoth": {
+  "added": "v2.8",
+  "aka": [
+   "Tsintamut"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tsintaosaurus spinorhinus silhouette by Nobu Tamura (vectorized by T. Michael Keesey), CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/tsintaosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tsintamoth",
+  "rarity": "legendary"
+ },
  "tyrannodactylus": {
   "added": "v3.10",
   "aka": [
@@ -3236,34 +3264,6 @@
   "name": "Tyrannotor",
   "rarity": "apex"
  },
- "unmatched-jwadashboard-3a20d2321f98b144": {
-  "added": null,
-  "aka": [
-   "Tsintamut"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Tsintamut",
-  "rarity": "legendary"
- },
- "unmatched-jwadashboard-5c04b41873cac554": {
-  "added": null,
-  "aka": [
-   "Beutellöwe"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Beutellöwe",
-  "rarity": "rare"
- },
  "utasinoraptor": {
   "added": "v1.1",
   "aka": [
@@ -3298,10 +3298,10 @@
    "Velosrhacos"
   ],
   "class": "cunning",
-  "credit": null,
+  "credit": "Body-type icon: Phorusrhacos silhouette by Thomas W. LaBarge, CC BY 4.0 (PhyloPic)",
   "hybrid": "hybrid",
-  "img": null,
-  "imgKind": null,
+  "img": "img/silhouettes/phorusrhacos.svg",
+  "imgKind": "body-type",
   "listed": true,
   "name": "Velosrhacos",
   "rarity": "epic"
