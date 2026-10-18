@@ -1022,6 +1022,20 @@
   "name": "Dimodactylus",
   "rarity": "epic"
  },
+ "dimorphodon": {
+  "added": "v1.5",
+  "aka": [
+   "Dimorphodon"
+  ],
+  "class": "fierce",
+  "credit": "Dimorphodon silhouette by John Conway, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/dimorphodon.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Dimorphodon",
+  "rarity": "common"
+ },
  "diplocaulus": {
   "added": "v1.1",
   "aka": [
