@@ -125,6 +125,20 @@
   "name": "Allosaurus Gen2",
   "rarity": "epic"
  },
+ "amargasaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Amargasaurus"
+  ],
+  "class": "resilient",
+  "credit": "Amargasaurus cazaui silhouette by Scott Hartman, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/amargasaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Amargasaurus",
+  "rarity": "rare"
+ },
  "amargocephalus": {
   "added": "v1.1",
   "aka": [
@@ -419,6 +433,20 @@
   "listed": true,
   "name": "Atromolistis",
   "rarity": "apex"
+ },
+ "bajadasaurus": {
+  "added": "v1.11",
+  "aka": [
+   "Bajadasaurus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon (same in-game skeleton): Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Bajadasaurus",
+  "rarity": "rare"
  },
  "baryonyx": {
   "added": "v1.2",
