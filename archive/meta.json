@@ -2,7 +2,7 @@
  "app_store_build": "3.23.55",
  "deductions": {
   "jwa-dashboard-feed:6080615abfbc40444afe86a400e656e5": {
-   "decided_at": "2026-10-22T09:43:07Z",
+   "decided_at": "2026-10-22T20:20:35Z",
    "key": null,
    "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-22). So far it fits Coelophysis, Coelotator, Paralititan or Raptoceras (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
    "possible": [
