@@ -3306,6 +3306,21 @@
   "name": "Tyrannotor",
   "rarity": "apex"
  },
+ "unmatched-jwadashboard-6080615abfbc4044": {
+  "added": null,
+  "aka": [
+   "6080615a"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (6080615a)",
+  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-22). So far it fits Coelophysis, Coelotator, Paralititan or Raptoceras (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
  "utasinoraptor": {
   "added": "v1.1",
   "aka": [
