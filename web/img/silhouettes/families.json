@@ -7,6 +7,10 @@
   "checked_at": "2026-10-17T21:48:16+00:00",
   "family": "family_001"
  },
+ "aerospinosaurus": {
+  "checked_at": "2026-10-23T20:08:19+00:00",
+  "family": "family_063"
+ },
  "aerotitan": {
   "checked_at": "2026-10-17T21:48:17+00:00",
   "family": "family_013"
@@ -14,6 +18,14 @@
  "ailurarctos": {
   "checked_at": "2026-10-17T21:48:18+00:00",
   "family": "family_048"
+ },
+ "alacranix": {
+  "checked_at": "2026-10-23T20:08:20+00:00",
+  "family": "family_052"
+ },
+ "alankydactylus": {
+  "checked_at": "2026-10-23T20:08:21+00:00",
+  "family": "family_049"
  },
  "albertosaurus": {
   "checked_at": "2026-10-17T21:48:18+00:00",
@@ -347,6 +359,10 @@
   "checked_at": "2026-10-17T21:49:23+00:00",
   "family": "family_020"
  },
+ "deinomimus": {
+  "checked_at": "2026-10-23T20:08:23+00:00",
+  "family": "family_019"
+ },
  "deinonychus": {
   "checked_at": "2026-10-17T21:49:24+00:00",
   "family": "family_002"
@@ -579,6 +595,10 @@
   "checked_at": "2026-10-17T21:50:10+00:00",
   "family": "family_016"
  },
+ "hydra_boa": {
+  "checked_at": "2026-10-23T20:08:24+00:00",
+  "family": "family_029"
+ },
  "ichthyovenator": {
   "checked_at": "2026-10-17T21:50:11+00:00",
   "family": "family_021"
@@ -674,6 +694,10 @@
  "lythronax": {
   "checked_at": "2026-10-17T21:48:09+00:00",
   "family": "family_005"
+ },
+ "magnapyritor": {
+  "checked_at": "2026-10-23T20:08:25+00:00",
+  "family": "family_015"
  },
  "magnaraptor": {
   "checked_at": "2026-10-17T21:50:30+00:00",
@@ -1186,6 +1210,10 @@
  "stomatosuchus_mattel": {
   "checked_at": "2026-10-17T21:52:12+00:00",
   "family": "family_019"
+ },
+ "stygidaryx": {
+  "checked_at": "2026-10-23T20:08:26+00:00",
+  "family": "family_013"
  },
  "stygimoloch": {
   "checked_at": "2026-10-17T21:52:13+00:00",

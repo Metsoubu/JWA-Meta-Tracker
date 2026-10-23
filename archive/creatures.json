@@ -27,6 +27,20 @@
   "name": "Acrocanthosaurus",
   "rarity": "epic"
  },
+ "aerospinosaurus": {
+  "added": "v3.17",
+  "aka": [
+   "Aerospinosaurus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aerospinosaurus",
+  "rarity": "unique"
+ },
  "aerotitan": {
   "added": "v3.16",
   "aka": [
@@ -54,6 +68,34 @@
   "listed": true,
   "name": "Ailurarctos",
   "rarity": "epic"
+ },
+ "alacranix": {
+  "added": "v2.19",
+  "aka": [
+   "Alacranix"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon (same in-game skeleton): Pulmonoscorpius silhouette by Junnn11, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pulmonoscorpius.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Alacranix",
+  "rarity": "apex"
+ },
+ "alankydactylus": {
+  "added": "v3.9",
+  "aka": [
+   "Alankydactylus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/ankylosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Alankydactylus",
+  "rarity": "apex"
  },
  "albertosaurus": {
   "added": "v2.8",
@@ -910,6 +952,20 @@
   "name": "Concavenator",
   "rarity": "epic"
  },
+ "constrictoraptor": {
+  "added": "v3.0",
+  "aka": [
+   "Boa-raptor"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Constrictoraptor",
+  "rarity": "unique"
+ },
  "cryolophosaurus": {
   "added": "v3.3",
   "aka": [
@@ -965,6 +1021,20 @@
   "listed": true,
   "name": "Darwinopterus",
   "rarity": "epic"
+ },
+ "deinomimus": {
+  "added": "v3.14",
+  "aka": [
+   "Deinomimus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Deinosuchus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/deinosuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Deinomimus",
+  "rarity": "unique"
  },
  "dilozorion": {
   "added": "v3.10",
@@ -1526,6 +1596,20 @@
   "name": "Homalocephale",
   "rarity": "omega"
  },
+ "hydra_boa": {
+  "added": "v2.8",
+  "aka": [
+   "Hydra-boa"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon (same in-game skeleton): Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Hydra Boa",
+  "rarity": "apex"
+ },
  "ichthyovenator": {
   "added": "v3.1",
   "aka": [
@@ -1764,6 +1848,20 @@
   "listed": true,
   "name": "Lythronax",
   "rarity": "common"
+ },
+ "magnapyritor": {
+  "added": "v1.2",
+  "aka": [
+   "Magnapyritor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Dimetrodon silhouette by Dmitry Bogdanov, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dimetrodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Magnapyritor",
+  "rarity": "unique"
  },
  "magnaraptor": {
   "added": "v3.5",
@@ -3040,6 +3138,20 @@
   "name": "Stomatosuchus Mattel",
   "rarity": "unique"
  },
+ "stygidaryx": {
+  "added": "v1.6",
+  "aka": [
+   "Stygidaryx"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/stygimoloch_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Stygidaryx",
+  "rarity": "unique"
+ },
  "stygimoloch": {
   "added": "v1.2",
   "aka": [
@@ -3306,6 +3418,21 @@
   "name": "Tyrannotor",
   "rarity": "apex"
  },
+ "unmatched-jwadashboard-5dca40ec4ada02c4": {
+  "added": null,
+  "aka": [
+   "5dca40ec"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (5dca40ec)",
+  "note": "The data source gives no name for this creature (code 5dca40ec, first seen 2026-10-23). So far it fits Quetzaldraco. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
  "unmatched-jwadashboard-6080615abfbc4044": {
   "added": null,
   "aka": [
@@ -3318,7 +3445,22 @@
   "imgKind": null,
   "listed": false,
   "name": "Unidentified creature (6080615a)",
-  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-23). So far it fits Coelophysis, Coelotator, Paralititan or Raptoceras (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-23). So far it fits Quetzaldraco or Quetzalvexus. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-b4b0192f5fbaa844": {
+  "added": null,
+  "aka": [
+   "b4b0192f"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (b4b0192f)",
+  "note": "The data source gives no name for this creature (code b4b0192f, first seen 2026-10-23). So far it fits Koolatrax or Koolatrodon. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "utasinoraptor": {

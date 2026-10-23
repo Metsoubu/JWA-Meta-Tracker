@@ -1,4 +1,31 @@
 {
+ "aerospinosaurus": {
+  "checked_at": "2026-10-23T20:08:19+00:00",
+  "path": [
+   "aerospinosaurus",
+   "aerotitan"
+  ],
+  "status": "ok",
+  "via": "pteranodon"
+ },
+ "alacranix": {
+  "checked_at": "2026-10-23T20:08:20+00:00",
+  "path": [
+   "alacranix"
+  ],
+  "status": "none"
+ },
+ "alankydactylus": {
+  "checked_at": "2026-10-23T20:08:21+00:00",
+  "path": [
+   "alankydactylus",
+   "alankyloceratops",
+   "alankylosaurus",
+   "ankylosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "ankylosaurus_gen_2"
+ },
  "amargocephalus": {
   "checked_at": "2026-10-16T19:44:35+00:00",
   "path": [
@@ -125,6 +152,16 @@
   ],
   "status": "none"
  },
+ "deinomimus": {
+  "checked_at": "2026-10-23T20:08:23+00:00",
+  "path": [
+   "deinomimus",
+   "deinotops",
+   "deinosuchus"
+  ],
+  "status": "ok",
+  "via": "deinosuchus"
+ },
  "dimodactylus": {
   "checked_at": "2026-10-16T19:44:42+00:00",
   "path": [
@@ -210,6 +247,13 @@
   "status": "ok",
   "via": "erlikosaurus_gen_2"
  },
+ "hydra_boa": {
+  "checked_at": "2026-10-23T20:08:24+00:00",
+  "path": [
+   "hydra_boa"
+  ],
+  "status": "none"
+ },
  "indominus_rex_gen_2": {
   "checked_at": "2026-10-16T19:44:45+00:00",
   "path": [
@@ -241,6 +285,15 @@
    "lythronax"
   ],
   "status": "none"
+ },
+ "magnapyritor": {
+  "checked_at": "2026-10-23T20:08:25+00:00",
+  "path": [
+   "magnapyritor",
+   "dimetrodon"
+  ],
+  "status": "ok",
+  "via": "dimetrodon"
  },
  "majundaboa": {
   "checked_at": "2026-10-16T19:44:46+00:00",
@@ -513,6 +566,15 @@
   ],
   "status": "ok",
   "via": "stegosaurus"
+ },
+ "stygidaryx": {
+  "checked_at": "2026-10-23T20:08:26+00:00",
+  "path": [
+   "stygidaryx",
+   "stygimoloch_gen_2"
+  ],
+  "status": "ok",
+  "via": "stygimoloch_gen_2"
  },
  "suchotator": {
   "checked_at": "2026-10-17T00:52:57+00:00",
