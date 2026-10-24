@@ -2592,6 +2592,20 @@
   "name": "Pyroraptor",
   "rarity": "epic"
  },
+ "pyrorixis": {
+  "added": "v2.20",
+  "aka": [
+   "Pyrorixis"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Pyroraptor olympius silhouette by Mette Aumala, CC BY 3.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/pyroraptor_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pyrorixis",
+  "rarity": "unique"
+ },
  "pyrosuchus": {
   "added": "v2.19",
   "aka": [
