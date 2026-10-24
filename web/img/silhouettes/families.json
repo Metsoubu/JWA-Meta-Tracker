@@ -27,6 +27,10 @@
   "checked_at": "2026-10-23T20:08:21+00:00",
   "family": "family_049"
  },
+ "alankyloceratops": {
+  "checked_at": "2026-10-24T01:13:27+00:00",
+  "family": "family_013"
+ },
  "albertosaurus": {
   "checked_at": "2026-10-17T21:48:18+00:00",
   "family": "family_001"
@@ -458,6 +462,10 @@
  "dsungaripterus": {
   "checked_at": "2026-10-17T21:48:07+00:00",
   "family": "family_024"
+ },
+ "dsungascorpios": {
+  "checked_at": "2026-10-24T01:13:28+00:00",
+  "family": "family_052"
  },
  "edaphosaurus": {
   "checked_at": "2026-10-17T21:49:43+00:00",

@@ -75,9 +75,9 @@
    "Alacranix"
   ],
   "class": "fierce",
-  "credit": "Body-type icon (same in-game skeleton): Pulmonoscorpius silhouette by Junnn11, CC BY-SA 3.0 (PhyloPic)",
+  "credit": "Body-type icon (same in-game skeleton): Dacentrurus silhouette by Jaime Headden, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": "img/silhouettes/pulmonoscorpius.svg",
+  "img": "img/silhouettes/miragaia.svg",
   "imgKind": "body-type",
   "listed": true,
   "name": "Alacranix",
@@ -96,6 +96,20 @@
   "listed": true,
   "name": "Alankydactylus",
   "rarity": "apex"
+ },
+ "alankyloceratops": {
+  "added": "v2.19",
+  "aka": [
+   "Alankyloceratops"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/ankylosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Alankyloceratops",
+  "rarity": "unique"
  },
  "albertosaurus": {
   "added": "v2.8",
@@ -1245,6 +1259,20 @@
   "listed": true,
   "name": "Dsungaripterus",
   "rarity": "rare"
+ },
+ "dsungascorpios": {
+  "added": "v2.19",
+  "aka": [
+   "Dsungascorpios"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Dacentrurus silhouette by Jaime Headden, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/miragaia.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dsungascorpios",
+  "rarity": "unique"
  },
  "einiasuchus": {
   "added": "v1.1",
@@ -3430,7 +3458,7 @@
   "imgKind": null,
   "listed": false,
   "name": "Unidentified creature (5dca40ec)",
-  "note": "The data source gives no name for this creature (code 5dca40ec, first seen 2026-10-23). So far it fits Quetzaldraco. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "note": "The data source gives no name for this creature (code 5dca40ec, first seen 2026-10-24). So far it fits Quetzaldraco. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "unmatched-jwadashboard-6080615abfbc4044": {
@@ -3445,7 +3473,7 @@
   "imgKind": null,
   "listed": false,
   "name": "Unidentified creature (6080615a)",
-  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-23). So far it fits Quetzaldraco or Quetzalvexus. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-24). So far it fits Quetzaldraco or Quetzalvexus. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "unmatched-jwadashboard-b4b0192f5fbaa844": {
@@ -3460,7 +3488,7 @@
   "imgKind": null,
   "listed": false,
   "name": "Unidentified creature (b4b0192f)",
-  "note": "The data source gives no name for this creature (code b4b0192f, first seen 2026-10-23). So far it fits Koolatrax or Koolatrodon. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "note": "The data source gives no name for this creature (code b4b0192f, first seen 2026-10-24). So far it fits Koolatrax or Koolatrodon. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "utasinoraptor": {

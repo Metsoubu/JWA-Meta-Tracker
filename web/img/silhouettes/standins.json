@@ -26,6 +26,16 @@
   "status": "ok",
   "via": "ankylosaurus_gen_2"
  },
+ "alankyloceratops": {
+  "checked_at": "2026-10-24T01:13:27+00:00",
+  "path": [
+   "alankyloceratops",
+   "alankylosaurus",
+   "ankylosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "ankylosaurus_gen_2"
+ },
  "amargocephalus": {
   "checked_at": "2026-10-16T19:44:35+00:00",
   "path": [
@@ -193,6 +203,16 @@
    "dsungaripterus"
   ],
   "status": "none"
+ },
+ "dsungascorpios": {
+  "checked_at": "2026-10-24T01:13:28+00:00",
+  "path": [
+   "dsungascorpios",
+   "dsungaia",
+   "miragaia"
+  ],
+  "status": "ok",
+  "via": "miragaia"
  },
  "einiasuchus": {
   "checked_at": "2026-10-16T19:44:43+00:00",
