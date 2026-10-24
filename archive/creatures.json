@@ -142,7 +142,8 @@
  "aliorasuchus": {
   "added": "v3.22",
   "aka": [
-   "Aliorasuc"
+   "Aliorasuc",
+   "Aliorasuchus"
   ],
   "class": "cunning",
   "credit": "Body-type icon: Alioramus silhouette by Will Toosey, CC BY 4.0 (PhyloPic)",
@@ -997,7 +998,8 @@
  "cryolophosaurus_mattel": {
   "added": "v3.22",
   "aka": [
-   "Cryolopho2"
+   "Cryolopho2",
+   "Cryolophosaurus Mattel"
   ],
   "class": "fierce_resilient",
   "credit": "Cryolophosaurus ellioti silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
@@ -1725,7 +1727,8 @@
  "indoraptor_mattel": {
   "added": "v3.22",
   "aka": [
-   "433c1948"
+   "433c1948",
+   "Indoraptor Mattel"
   ],
   "class": "cunning_fierce",
   "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
@@ -1820,6 +1823,20 @@
   "listed": true,
   "name": "Koolabourgiana",
   "rarity": "legendary"
+ },
+ "koolatrax": {
+  "added": "v3.22",
+  "aka": [
+   "Koolatrax"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Dimetrodon silhouette by Dmitry Bogdanov, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dimetrodon_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Koolatrax",
+  "rarity": "unique"
  },
  "koreanosaurus": {
   "added": "v3.1",
@@ -2648,6 +2665,34 @@
   "name": "Quetzalcoatlus Gen 2",
   "rarity": "epic"
  },
+ "quetzaldraco": {
+  "added": "v3.23",
+  "aka": [
+   "Quetzaldraco"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Quetzaldraco",
+  "rarity": "unique"
+ },
+ "quetzalvexus": {
+  "added": "v3.23",
+  "aka": [
+   "Quetzalvexus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "giga_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Quetzalvexus",
+  "rarity": "apex"
+ },
  "rajadorixis": {
   "added": "v3.7",
   "aka": [
@@ -3169,7 +3214,8 @@
  "stomatosuchus_mattel": {
   "added": "v3.22",
   "aka": [
-   "Stomatosu"
+   "Stomatosu",
+   "Stomatosuchus Mattel"
   ],
   "class": "fierce_resilient",
   "credit": "Body-type icon: Sarcosuchus silhouette by Smokeybjb, CC BY-SA 3.0 (PhyloPic)",
@@ -3449,7 +3495,8 @@
  "tyrannotor": {
   "added": "v3.21",
   "aka": [
-   "Tyrannoto"
+   "Tyrannoto",
+   "Tyrannotor"
   ],
   "class": "cunning_fierce",
   "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",

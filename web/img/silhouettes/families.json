@@ -679,6 +679,10 @@
   "checked_at": "2026-10-17T21:48:09+00:00",
   "family": "family_013"
  },
+ "koolatrax": {
+  "checked_at": "2026-10-24T14:09:24+00:00",
+  "family": "family_014"
+ },
  "koreanosaurus": {
   "checked_at": "2026-10-17T21:50:25+00:00",
   "family": "family_018"
@@ -1026,6 +1030,14 @@
  "quetzalcoatlus_gen_2": {
   "checked_at": "2026-10-17T21:51:32+00:00",
   "family": "family_013"
+ },
+ "quetzaldraco": {
+  "checked_at": "2026-10-24T14:09:25+00:00",
+  "family": "family_064"
+ },
+ "quetzalvexus": {
+  "checked_at": "2026-10-24T14:09:26+00:00",
+  "family": "family_064"
  },
  "rajadorixis": {
   "checked_at": "2026-10-17T21:51:33+00:00",

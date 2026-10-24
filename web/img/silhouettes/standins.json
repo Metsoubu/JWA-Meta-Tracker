@@ -299,6 +299,16 @@
   ],
   "status": "none"
  },
+ "koolatrax": {
+  "checked_at": "2026-10-24T14:09:24+00:00",
+  "path": [
+   "koolatrax",
+   "koolatrodon",
+   "dimetrodon_gen_2"
+  ],
+  "status": "ok",
+  "via": "dimetrodon_gen_2"
+ },
  "lythronax": {
   "checked_at": "2026-10-17T21:48:09+00:00",
   "path": [
@@ -477,6 +487,25 @@
   ],
   "status": "ok",
   "via": "pyroraptor"
+ },
+ "quetzaldraco": {
+  "checked_at": "2026-10-24T14:09:25+00:00",
+  "path": [
+   "quetzaldraco",
+   "rebirth_quetzalcoatlus"
+  ],
+  "status": "ok",
+  "via": "pteranodon"
+ },
+ "quetzalvexus": {
+  "checked_at": "2026-10-24T14:09:26+00:00",
+  "path": [
+   "quetzalvexus",
+   "quetzaldraco",
+   "rebirth_quetzalcoatlus"
+  ],
+  "status": "ok",
+  "via": "pteranodon"
  },
  "rativates": {
   "checked_at": "2026-10-10T01:05:16+00:00",
