@@ -35,6 +35,10 @@
   "checked_at": "2026-10-17T21:48:18+00:00",
   "family": "family_001"
  },
+ "albertospinos": {
+  "checked_at": "2026-10-26T17:02:59+00:00",
+  "family": "family_021"
+ },
  "alioramus": {
   "checked_at": "2026-10-17T21:48:19+00:00",
   "family": "family_005"
@@ -102,6 +106,10 @@
  "antarctopelta": {
   "checked_at": "2026-10-17T21:48:33+00:00",
   "family": "family_009"
+ },
+ "antarctovenator": {
+  "checked_at": "2026-10-26T17:03:00+00:00",
+  "family": "family_014"
  },
  "anurognathus": {
   "checked_at": "2026-10-17T21:48:34+00:00",
@@ -511,6 +519,10 @@
   "checked_at": "2026-10-17T21:49:50+00:00",
   "family": "family_039"
  },
+ "erlidraco": {
+  "checked_at": "2026-10-26T17:03:01+00:00",
+  "family": "family_020"
+ },
  "erlikogamma": {
   "checked_at": "2026-10-17T21:49:51+00:00",
   "family": "family_020"
@@ -521,6 +533,10 @@
  },
  "erlikosaurus_gen_2": {
   "checked_at": "2026-10-17T21:49:53+00:00",
+  "family": "family_020"
+ },
+ "erlikospyx": {
+  "checked_at": "2026-10-26T17:03:03+00:00",
   "family": "family_020"
  },
  "erythrosuchus": {
@@ -563,6 +579,10 @@
   "checked_at": "2026-10-17T21:50:01+00:00",
   "family": "family_004"
  },
+ "giganyx": {
+  "checked_at": "2026-10-26T17:03:04+00:00",
+  "family": "family_006"
+ },
  "giraffatitan": {
   "checked_at": "2026-10-17T21:50:02+00:00",
   "family": "family_011"
@@ -590,6 +610,10 @@
  "gryposuchus": {
   "checked_at": "2026-10-17T21:50:07+00:00",
   "family": "family_019"
+ },
+ "guidraco": {
+  "checked_at": "2026-10-26T17:03:05+00:00",
+  "family": "family_024"
  },
  "herranotor": {
   "checked_at": "2026-10-17T21:50:08+00:00",
@@ -1055,6 +1079,10 @@
   "checked_at": "2026-10-17T21:51:34+00:00",
   "family": "family_005"
  },
+ "raptoceras": {
+  "checked_at": "2026-10-26T17:03:06+00:00",
+  "family": "family_002"
+ },
  "rativates": {
   "checked_at": "2026-10-17T21:51:35+00:00",
   "family": "family_012"
@@ -1323,6 +1351,10 @@
   "checked_at": "2026-10-17T21:52:28+00:00",
   "family": "family_003"
  },
+ "troodoboa": {
+  "checked_at": "2026-10-26T17:03:08+00:00",
+  "family": "family_029"
+ },
  "troodon": {
   "checked_at": "2026-10-17T21:52:29+00:00",
   "family": "family_002"
@@ -1378,6 +1410,10 @@
  "utasinoraptor": {
   "checked_at": "2026-10-17T21:52:39+00:00",
   "family": "family_002"
+ },
+ "vectispinus": {
+  "checked_at": "2026-10-26T17:03:09+00:00",
+  "family": "family_006"
  },
  "velociraptor": {
   "checked_at": "2026-10-17T21:52:39+00:00",

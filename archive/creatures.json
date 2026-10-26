@@ -125,6 +125,20 @@
   "name": "Albertosaurus",
   "rarity": "rare"
  },
+ "albertospinos": {
+  "added": "v2.13",
+  "aka": [
+   "Albertospinos"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Albertosaurus silhouette by Craig Dylke, CC0 1.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/albertosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Albertospinos",
+  "rarity": "unique"
+ },
  "alioramus": {
   "added": "v3.21",
   "aka": [
@@ -335,6 +349,20 @@
   "listed": true,
   "name": "Antarctopelta",
   "rarity": "epic"
+ },
+ "antarctovenator": {
+  "added": "v2.3",
+  "aka": [
+   "Antarctovenator"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Antarctovenator",
+  "rarity": "unique"
  },
  "anurognathus": {
   "added": "v2.14",
@@ -1388,6 +1416,20 @@
   "name": "Eremotherium",
   "rarity": "common"
  },
+ "erlidraco": {
+  "added": "v3.23",
+  "aka": [
+   "Erlidraco"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Erlikosaurus andrewsi silhouette by Walter Vladimir, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/erlikosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Erlidraco",
+  "rarity": "legendary"
+ },
  "erlikogamma": {
   "added": "v1.11",
   "aka": [
@@ -1415,6 +1457,20 @@
   "listed": true,
   "name": "Erlikosaurus",
   "rarity": "epic"
+ },
+ "erlikospyx": {
+  "added": "v1.7",
+  "aka": [
+   "Erlikospyx"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Erlikosaurus andrewsi silhouette by Walter Vladimir, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/erlikosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Erlikospyx",
+  "rarity": "unique"
  },
  "erythrosuchus": {
   "added": "v3.9",
@@ -1528,6 +1584,20 @@
   "name": "Gigantspinosaurus",
   "rarity": "epic"
  },
+ "giganyx": {
+  "added": "v2.16",
+  "aka": [
+   "Giganyx"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Giganotosaurus carolinii silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/giganotosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Giganyx",
+  "rarity": "unique"
+ },
  "giraffatitan": {
   "added": "v1.3",
   "aka": [
@@ -1596,6 +1666,20 @@
   "imgKind": "silhouette",
   "listed": true,
   "name": "Gryposuchus",
+  "rarity": "epic"
+ },
+ "guidraco": {
+  "added": "v3.23",
+  "aka": [
+   "Guidraco"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon (same in-game skeleton): Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Guidraco",
   "rarity": "epic"
  },
  "herranotor": {
@@ -2749,6 +2833,20 @@
   "name": "Rajasaurus",
   "rarity": "epic"
  },
+ "raptoceras": {
+  "added": "v3.20",
+  "aka": [
+   "Raptoceras"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Raptoceras",
+  "rarity": "unique"
+ },
  "rativates": {
   "added": "v3.2",
   "aka": [
@@ -3436,6 +3534,20 @@
   "name": "Titanotor",
   "rarity": "legendary"
  },
+ "troodoboa": {
+  "added": "v2.13",
+  "aka": [
+   "Troodoboa"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Troodon silhouette by FunkMonk, CC0 1.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/troodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Troodoboa",
+  "rarity": "unique"
+ },
  "trykovenator": {
   "added": "v3.8",
   "aka": [
@@ -3593,6 +3705,20 @@
   "listed": true,
   "name": "Utasinoraptor",
   "rarity": "legendary"
+ },
+ "vectispinus": {
+  "added": "v3.3",
+  "aka": [
+   "Vectispinus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon (same in-game skeleton): Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Vectispinus",
+  "rarity": "omega"
  },
  "velociraptor": {
   "added": "v1.1",

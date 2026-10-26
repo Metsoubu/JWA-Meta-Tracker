@@ -36,6 +36,15 @@
   "status": "ok",
   "via": "ankylosaurus_gen_2"
  },
+ "albertospinos": {
+  "checked_at": "2026-10-26T17:02:59+00:00",
+  "path": [
+   "albertospinos",
+   "albertosaurus"
+  ],
+  "status": "ok",
+  "via": "albertosaurus"
+ },
  "amargocephalus": {
   "checked_at": "2026-10-16T19:44:35+00:00",
   "path": [
@@ -70,6 +79,15 @@
   ],
   "status": "ok",
   "via": "ankylosaurus_gen_2"
+ },
+ "antarctovenator": {
+  "checked_at": "2026-10-26T17:03:00+00:00",
+  "path": [
+   "antarctovenator",
+   "antarctopelta"
+  ],
+  "status": "ok",
+  "via": "ankylosaurus"
  },
  "aquisaurus": {
   "checked_at": "2026-10-10T01:05:03+00:00",
@@ -258,6 +276,16 @@
   "status": "ok",
   "via": "woolly_mammoth"
  },
+ "erlidraco": {
+  "checked_at": "2026-10-26T17:03:01+00:00",
+  "path": [
+   "erlidraco",
+   "erlikogamma",
+   "erlikosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "erlikosaurus_gen_2"
+ },
  "erlikogamma": {
   "checked_at": "2026-10-17T00:52:48+00:00",
   "path": [
@@ -266,6 +294,31 @@
   ],
   "status": "ok",
   "via": "erlikosaurus_gen_2"
+ },
+ "erlikospyx": {
+  "checked_at": "2026-10-26T17:03:03+00:00",
+  "path": [
+   "erlikospyx",
+   "erlikosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "erlikosaurus_gen_2"
+ },
+ "giganyx": {
+  "checked_at": "2026-10-26T17:03:04+00:00",
+  "path": [
+   "giganyx",
+   "giganotosaurus"
+  ],
+  "status": "ok",
+  "via": "giganotosaurus"
+ },
+ "guidraco": {
+  "checked_at": "2026-10-26T17:03:05+00:00",
+  "path": [
+   "guidraco"
+  ],
+  "status": "none"
  },
  "hydra_boa": {
   "checked_at": "2026-10-23T20:08:24+00:00",
@@ -523,6 +576,15 @@
   "status": "ok",
   "via": "tanycolagreus"
  },
+ "raptoceras": {
+  "checked_at": "2026-10-26T17:03:06+00:00",
+  "path": [
+   "raptoceras",
+   "rebirth_raptor"
+  ],
+  "status": "ok",
+  "via": "velociraptor"
+ },
  "rativates": {
   "checked_at": "2026-10-10T01:05:16+00:00",
   "path": [
@@ -678,6 +740,15 @@
   "status": "ok",
   "via": "titanosaurus"
  },
+ "troodoboa": {
+  "checked_at": "2026-10-26T17:03:08+00:00",
+  "path": [
+   "troodoboa",
+   "troodon"
+  ],
+  "status": "ok",
+  "via": "troodon"
+ },
  "tsintamoth": {
   "checked_at": "2026-10-17T21:48:14+00:00",
   "path": [
@@ -695,6 +766,13 @@
   ],
   "status": "ok",
   "via": "utahraptor"
+ },
+ "vectispinus": {
+  "checked_at": "2026-10-26T17:03:09+00:00",
+  "path": [
+   "vectispinus"
+  ],
+  "status": "none"
  },
  "velosrhacos": {
   "checked_at": "2026-10-17T21:48:13+00:00",
