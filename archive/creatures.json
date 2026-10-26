@@ -2539,6 +2539,20 @@
   "name": "Pteranodon",
   "rarity": "epic"
  },
+ "pteranokyrie": {
+  "added": "v2.17",
+  "aka": [
+   "Pteranokyrie"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon (same in-game skeleton): Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Pteranokyrie",
+  "rarity": "apex"
+ },
  "pterovexus": {
   "added": "v1.6",
   "aka": [
@@ -2692,6 +2706,20 @@
   "listed": true,
   "name": "Quetzalvexus",
   "rarity": "apex"
+ },
+ "quetzorion": {
+  "added": "v1.8",
+  "aka": [
+   "Quetzorion"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Tanycolagreus topwilsoni silhouette by Tasman Dixon, CC BY 4.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/tanycolagreus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Quetzorion",
+  "rarity": "unique"
  },
  "rajadorixis": {
   "added": "v3.7",

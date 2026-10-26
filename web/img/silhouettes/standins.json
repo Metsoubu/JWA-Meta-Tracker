@@ -442,6 +442,13 @@
   "status": "ok",
   "via": "proceratosaurus"
  },
+ "pteranokyrie": {
+  "checked_at": "2026-10-26T10:36:50+00:00",
+  "path": [
+   "pteranokyrie"
+  ],
+  "status": "none"
+ },
  "purrolyth": {
   "checked_at": "2026-10-17T00:52:51+00:00",
   "path": [
@@ -506,6 +513,15 @@
   ],
   "status": "ok",
   "via": "pteranodon"
+ },
+ "quetzorion": {
+  "checked_at": "2026-10-26T10:36:51+00:00",
+  "path": [
+   "quetzorion",
+   "tanycolagreus"
+  ],
+  "status": "ok",
+  "via": "tanycolagreus"
  },
  "rativates": {
   "checked_at": "2026-10-10T01:05:16+00:00",
