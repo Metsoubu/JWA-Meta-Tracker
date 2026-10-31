@@ -114,6 +114,13 @@
   ],
   "status": "none"
  },
+ "australotitan": {
+  "checked_at": "2026-10-31T01:55:06+00:00",
+  "path": [
+   "australotitan"
+  ],
+  "status": "none"
+ },
  "bajadasaurus": {
   "checked_at": "2026-10-18T14:11:32+00:00",
   "path": [
@@ -189,6 +196,13 @@
   ],
   "status": "ok",
   "via": "deinosuchus"
+ },
+ "diabloceratops": {
+  "checked_at": "2026-10-31T01:55:07+00:00",
+  "path": [
+   "diabloceratops"
+  ],
+  "status": "none"
  },
  "dimodactylus": {
   "checked_at": "2026-10-16T19:44:42+00:00",
@@ -304,6 +318,13 @@
   "status": "ok",
   "via": "erlikosaurus_gen_2"
  },
+ "fukuiraptor": {
+  "checked_at": "2026-10-31T01:55:09+00:00",
+  "path": [
+   "fukuiraptor"
+  ],
+  "status": "none"
+ },
  "giganyx": {
   "checked_at": "2026-10-26T17:03:04+00:00",
   "path": [
@@ -361,6 +382,13 @@
   ],
   "status": "ok",
   "via": "dimetrodon_gen_2"
+ },
+ "little_eatie": {
+  "checked_at": "2026-10-31T01:55:10+00:00",
+  "path": [
+   "little_eatie"
+  ],
+  "status": "none"
  },
  "lythronax": {
   "checked_at": "2026-10-17T21:48:09+00:00",
@@ -739,6 +767,13 @@
   ],
   "status": "ok",
   "via": "titanosaurus"
+ },
+ "toro": {
+  "checked_at": "2026-10-31T01:55:11+00:00",
+  "path": [
+   "toro"
+  ],
+  "status": "none"
  },
  "troodoboa": {
   "checked_at": "2026-10-26T17:03:08+00:00",

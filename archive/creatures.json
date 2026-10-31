@@ -519,6 +519,20 @@
   "name": "Atromolistis",
   "rarity": "apex"
  },
+ "australotitan": {
+  "added": "v3.1",
+  "aka": [
+   "Australotitan"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon (same in-game skeleton): Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Australotitan",
+  "rarity": "omega"
+ },
  "bajadasaurus": {
   "added": "v1.11",
   "aka": [
@@ -855,6 +869,20 @@
   "name": "Cerastegotops",
   "rarity": "apex"
  },
+ "ceratosaurus_gen_2": {
+  "added": "v3.5",
+  "aka": [
+   "Ceratosaurus Gen 2"
+  ],
+  "class": "fierce",
+  "credit": "Ceratosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ceratosaurus_gen_2.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Ceratosaurus Gen 2",
+  "rarity": "omega"
+ },
  "charlie": {
   "added": "v1.2",
   "aka": [
@@ -1079,6 +1107,20 @@
   "listed": true,
   "name": "Deinomimus",
   "rarity": "unique"
+ },
+ "diabloceratops": {
+  "added": "v3.0",
+  "aka": [
+   "Diabloceratops"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon (same in-game skeleton): Centrosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/centrosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Diabloceratops",
+  "rarity": "omega"
  },
  "dilozorion": {
   "added": "v3.10",
@@ -1499,6 +1541,20 @@
   "listed": true,
   "name": "Eucladoceros",
   "rarity": "epic"
+ },
+ "fukuiraptor": {
+  "added": "v3.0",
+  "aka": [
+   "Fukuiraptor"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon (same in-game skeleton): Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Fukuiraptor",
+  "rarity": "omega"
  },
  "fukuitops": {
   "added": "v3.16",
@@ -1964,6 +2020,20 @@
   "name": "Leaellynasaura",
   "rarity": "omega"
  },
+ "little_eatie": {
+  "added": "v3.18",
+  "aka": [
+   "Little Eatie"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon (same in-game skeleton): Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Little Eatie",
+  "rarity": "omega"
+ },
  "lythronax": {
   "added": "v1.1",
   "aka": [
@@ -2369,6 +2439,20 @@
   "listed": true,
   "name": "Nyctosaurus",
   "rarity": "legendary"
+ },
+ "olorotitan": {
+  "added": "v3.2",
+  "aka": [
+   "Olorotitan"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Olorotitan arharensis silhouette by ДиБгд (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/olorotitan.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Olorotitan",
+  "rarity": "omega"
  },
  "ophiacodon": {
   "added": "v1.1",
@@ -3337,6 +3421,34 @@
   "name": "Stegodeus",
   "rarity": "legendary"
  },
+ "stegosaurus_ungulatus": {
+  "added": "v3.3",
+  "aka": [
+   "Stegosaurus Ungulatus"
+  ],
+  "class": "resilient",
+  "credit": "Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/stegosaurus_ungulatus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Stegosaurus Ungulatus",
+  "rarity": "omega"
+ },
+ "stegouros": {
+  "added": "v3.0",
+  "aka": [
+   "Stegouros"
+  ],
+  "class": "wild_card",
+  "credit": "Stegouros elengassen silhouette by Alexander Vargas, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/stegouros.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Stegouros",
+  "rarity": "omega"
+ },
  "stomatosuchus_mattel": {
   "added": "v3.22",
   "aka": [
@@ -3533,6 +3645,20 @@
   "listed": true,
   "name": "Titanotor",
   "rarity": "legendary"
+ },
+ "toro": {
+  "added": "v3.0",
+  "aka": [
+   "Toro"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon (same in-game skeleton): Majungasaurus crenatissimus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/majungasaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Toro",
+  "rarity": "omega"
  },
  "troodoboa": {
   "added": "v2.13",

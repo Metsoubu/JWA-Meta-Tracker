@@ -179,6 +179,10 @@
   "checked_at": "2026-10-17T21:48:46+00:00",
   "family": "family_002"
  },
+ "australotitan": {
+  "checked_at": "2026-10-31T01:55:06+00:00",
+  "family": "family_010"
+ },
  "bajadasaurus": {
   "checked_at": "2026-10-18T14:11:32+00:00",
   "family": "family_010"
@@ -387,6 +391,10 @@
   "checked_at": "2026-10-17T21:49:26+00:00",
   "family": "family_028"
  },
+ "diabloceratops": {
+  "checked_at": "2026-10-31T01:55:07+00:00",
+  "family": "family_003"
+ },
  "dilophosaurus": {
   "checked_at": "2026-10-17T21:49:27+00:00",
   "family": "family_007"
@@ -555,6 +563,10 @@
   "checked_at": "2026-10-17T21:49:56+00:00",
   "family": "family_009"
  },
+ "fukuiraptor": {
+  "checked_at": "2026-10-31T01:55:09+00:00",
+  "family": "family_002"
+ },
  "fukuitops": {
   "checked_at": "2026-10-17T21:49:57+00:00",
   "family": "family_018"
@@ -722,6 +734,10 @@
  "leucistic_baryonyx": {
   "checked_at": "2026-10-17T21:50:28+00:00",
   "family": "family_006"
+ },
+ "little_eatie": {
+  "checked_at": "2026-10-31T01:55:10+00:00",
+  "family": "family_001"
  },
  "lystrosaurus": {
   "checked_at": "2026-10-17T21:50:29+00:00",
@@ -1342,6 +1358,10 @@
  "titanotor": {
   "checked_at": "2026-10-17T21:52:26+00:00",
   "family": "family_059"
+ },
+ "toro": {
+  "checked_at": "2026-10-31T01:55:11+00:00",
+  "family": "family_005"
  },
  "triceratops": {
   "checked_at": "2026-10-17T21:52:27+00:00",
