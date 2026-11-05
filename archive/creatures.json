@@ -448,6 +448,20 @@
   "name": "Aquisaurus",
   "rarity": "legendary"
  },
+ "ardentismaxima": {
+  "added": "v1.8",
+  "aka": [
+   "Ardentismaxima"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Secodontosaurus silhouette by Nobu Tamura (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/secodontosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ardentismaxima",
+  "rarity": "unique"
+ },
  "argenteryx": {
   "added": "v2.10",
   "aka": [
@@ -839,6 +853,20 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Centrolophus Lux",
+  "rarity": "apex"
+ },
+ "ceramagnus": {
+  "added": "v2.2",
+  "aka": [
+   "Ceramagnus"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon (same in-game skeleton): Centrosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/centrosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ceramagnus",
   "rarity": "apex"
  },
  "ceranosaurus": {
@@ -1584,6 +1612,20 @@
   "name": "Geminideus",
   "rarity": "apex"
  },
+ "geminititan": {
+  "added": "v1.7",
+  "aka": [
+   "Geminititan"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Diplodocus silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/diplodocus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Geminititan",
+  "rarity": "unique"
+ },
  "geosternbergia": {
   "added": "v3.2",
   "aka": [
@@ -1737,6 +1779,20 @@
   "listed": true,
   "name": "Guidraco",
   "rarity": "epic"
+ },
+ "hadros_lux": {
+  "added": "v2.1",
+  "aka": [
+   "Hadros Lux"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon (same in-game skeleton): Edmontosaurus silhouette by Pete Buchholz, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/edmontosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Hadros Lux",
+  "rarity": "apex"
  },
  "herranotor": {
   "added": "v3.19",
@@ -2104,6 +2160,20 @@
   "name": "Majundasuchus",
   "rarity": "rare"
  },
+ "mammolania": {
+  "added": "v1.13",
+  "aka": [
+   "Mammolania"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Elasmotherium silhouette by Zimices, CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/elasmotherium.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Mammolania",
+  "rarity": "unique"
+ },
  "marsupial_lion": {
   "added": "v1.7",
   "aka": [
@@ -2313,6 +2383,20 @@
   "listed": true,
   "name": "Monolomoth",
   "rarity": "apex"
+ },
+ "monolorhino": {
+  "added": "v1.11",
+  "aka": [
+   "Monolorhino"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Monolophosaurus jiangi silhouette by Jordan Mallon (vectorized by T. Michael Keesey), CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/monolophosaurus_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Monolorhino",
+  "rarity": "unique"
  },
  "monomimus": {
   "added": "v1.3",

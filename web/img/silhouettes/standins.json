@@ -98,6 +98,16 @@
   "status": "ok",
   "via": "aquilops"
  },
+ "ardentismaxima": {
+  "checked_at": "2026-11-05T13:36:50+00:00",
+  "path": [
+   "ardentismaxima",
+   "ardontosaurus",
+   "secodontosaurus"
+  ],
+  "status": "ok",
+  "via": "secodontosaurus"
+ },
  "argenteryx": {
   "checked_at": "2026-10-16T19:44:39+00:00",
   "path": [
@@ -172,6 +182,13 @@
   ],
   "status": "ok",
   "via": "centrosaurus"
+ },
+ "ceramagnus": {
+  "checked_at": "2026-11-05T13:36:52+00:00",
+  "path": [
+   "ceramagnus"
+  ],
+  "status": "none"
  },
  "charlie": {
   "checked_at": "2026-10-17T21:48:05+00:00",
@@ -325,6 +342,15 @@
   ],
   "status": "none"
  },
+ "geminititan": {
+  "checked_at": "2026-11-05T13:36:53+00:00",
+  "path": [
+   "geminititan",
+   "diplodocus"
+  ],
+  "status": "ok",
+  "via": "diplodocus"
+ },
  "giganyx": {
   "checked_at": "2026-10-26T17:03:04+00:00",
   "path": [
@@ -338,6 +364,13 @@
   "checked_at": "2026-10-26T17:03:05+00:00",
   "path": [
    "guidraco"
+  ],
+  "status": "none"
+ },
+ "hadros_lux": {
+  "checked_at": "2026-11-05T13:36:54+00:00",
+  "path": [
+   "hadros_lux"
   ],
   "status": "none"
  },
@@ -425,6 +458,16 @@
   "status": "ok",
   "via": "majungasaurus"
  },
+ "mammolania": {
+  "checked_at": "2026-11-05T13:36:55+00:00",
+  "path": [
+   "mammolania",
+   "mammotherium",
+   "elasmotherium"
+  ],
+  "status": "ok",
+  "via": "elasmotherium"
+ },
  "megalotops": {
   "checked_at": "2026-10-17T00:52:49+00:00",
   "path": [
@@ -449,6 +492,16 @@
    "monkeydactyl"
   ],
   "status": "none"
+ },
+ "monolorhino": {
+  "checked_at": "2026-11-05T13:36:57+00:00",
+  "path": [
+   "monolorhino",
+   "monolometrodon",
+   "monolophosaurus_gen_2"
+  ],
+  "status": "ok",
+  "via": "monolophosaurus_gen_2"
  },
  "monomimus": {
   "checked_at": "2026-10-10T11:02:18+00:00",

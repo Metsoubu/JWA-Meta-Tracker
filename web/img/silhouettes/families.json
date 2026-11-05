@@ -155,6 +155,10 @@
   "checked_at": "2026-10-17T21:48:41+00:00",
   "family": "family_048"
  },
+ "ardentismaxima": {
+  "checked_at": "2026-11-05T13:36:50+00:00",
+  "family": "family_011"
+ },
  "argentavis": {
   "checked_at": "2026-10-17T21:48:42+00:00",
   "family": "family_035"
@@ -285,6 +289,10 @@
  },
  "centrosaurus": {
   "checked_at": "2026-10-17T21:49:07+00:00",
+  "family": "family_003"
+ },
+ "ceramagnus": {
+  "checked_at": "2026-11-05T13:36:52+00:00",
   "family": "family_003"
  },
  "ceranosaurus": {
@@ -575,6 +583,10 @@
   "checked_at": "2026-10-17T21:49:58+00:00",
   "family": "family_010"
  },
+ "geminititan": {
+  "checked_at": "2026-11-05T13:36:53+00:00",
+  "family": "family_010"
+ },
  "geosternbergia": {
   "checked_at": "2026-10-17T21:49:59+00:00",
   "family": "family_024"
@@ -626,6 +638,10 @@
  "guidraco": {
   "checked_at": "2026-10-26T17:03:05+00:00",
   "family": "family_024"
+ },
+ "hadros_lux": {
+  "checked_at": "2026-11-05T13:36:54+00:00",
+  "family": "family_018"
  },
  "herranotor": {
   "checked_at": "2026-10-17T21:50:08+00:00",
@@ -771,6 +787,10 @@
   "checked_at": "2026-10-17T21:50:32+00:00",
   "family": "family_005"
  },
+ "mammolania": {
+  "checked_at": "2026-11-05T13:36:55+00:00",
+  "family": "family_026"
+ },
  "marsupial_lion": {
   "checked_at": "2026-10-17T21:50:33+00:00",
   "family": "family_025"
@@ -854,6 +874,10 @@
  "monolophosaurus_gen_2": {
   "checked_at": "2026-10-17T21:50:50+00:00",
   "family": "family_007"
+ },
+ "monolorhino": {
+  "checked_at": "2026-11-05T13:36:57+00:00",
+  "family": "family_026"
  },
  "monomimus": {
   "checked_at": "2026-10-17T21:50:50+00:00",
