@@ -165,8 +165,10 @@ def run_collection(
     version_fetch: Callable[[], tuple[str, datetime]] | None = None,
     fetch_images: bool = True,
     skip_ids: dict[str, set[str]] | None = None,
+    identify_codes: bool = True,
 ) -> RunResult:
-    """Run one update. `skip_ids` (source -> snapshot ids) are treated as already saved elsewhere."""
+    """Run one update. `skip_ids` (source -> snapshot ids) are treated as already saved elsewhere.
+    `identify_codes=False` leaves nameless creatures to the caller (the website build)."""
     lock = CollectorLock()
     if not lock.acquire():
         log.info("Another update is already running; nothing to do.")
@@ -187,7 +189,8 @@ def run_collection(
             fixed = roster.reresolve_unmatched(conn, now)
             if fixed:
                 log.info("Identified %d creature name(s) that were unmatched before.", fixed)
-            _identify(conn, now)
+            if identify_codes:
+                _identify(conn, now)
         except Exception as exc:  # noqa: BLE001 - never block an update
             log.warning("Re-checking unmatched names failed: %s", exc)
         try:
@@ -208,7 +211,7 @@ def run_collection(
         run_id = db.start_run(conn, trigger, now)
         log.info("Update started (trigger: %s).", trigger)
         result = _collect(conn, run_id, now_fn, sources, roster_fetch, version_fetch, fetch_images, skip_ids or {})
-        if result.new_snapshots:
+        if result.new_snapshots and identify_codes:
             try:
                 _identify(conn, now_fn())
             except Exception as exc:  # noqa: BLE001

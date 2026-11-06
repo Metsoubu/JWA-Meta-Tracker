@@ -193,6 +193,11 @@ def clean_display_name(raw: str) -> str:
     return text
 
 
+def is_code_label(label: str | None) -> bool:
+    """The feed sends a creature it has no name for as the first 8 characters of its id."""
+    return bool(re.fullmatch(r"[0-9a-f]{8}", (label or "").strip().lower()))
+
+
 def unresolved_key(source: str, source_id: str) -> str:
     return f"unmatched-{normalize(source)[:12]}-{normalize(source_id)[:16]}"
 
@@ -247,7 +252,7 @@ class Resolver:
         if by_id and by_id in self.roster:
             return Match(by_id, "alias")
         deduced = self.deduced_by_id.get(source, {}).get(source_id)
-        if deduced and deduced in self.roster:
+        if deduced and deduced in self.roster and is_code_label(display_name):
             return Match(deduced, "deduced")
         match = self._resolve_name(display_name, rarity)
         if match.key:
@@ -297,6 +302,13 @@ def load_aliases() -> dict[str, Any]:
             return json.load(fh)
     except FileNotFoundError:
         return {}
+
+
+def resolved_placeholders(conn: sqlite3.Connection) -> dict[str, str]:
+    """The placeholder key each now-identified source creature would have had -> its creature key."""
+    return {unresolved_key(r["source"], r["source_creature_id"]): r["creature_key"]
+            for r in conn.execute("SELECT source, source_creature_id, creature_key FROM source_creatures "
+                                  "WHERE match_method != 'unmatched'")}
 
 
 def identified_notes() -> dict[str, str]:

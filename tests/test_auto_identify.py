@@ -10,7 +10,8 @@ from unittest import mock
 
 from jwa_tracker import db, identify, images, ingest, roster, site, standins
 from jwa_tracker.sources import jwa_dashboard_feed
-from tests.helpers import T0, TempDataDir
+from tests.helpers import T0, FakeSource, TempDataDir
+from tests.test_site import fake_version
 
 CODE = "2b88a0f87fd5309418417842511ab488"
 NAMED = ["PIERCE", "BECKLOLYTH", "NYCTOSAURUS", "SHANTUNRAX", "MASIAKASAURUS", "SINRAPTOR", "PARALITITAN", "REXY"]
@@ -40,6 +41,41 @@ def tournament(snap_id, captured, eligible=None, code_level=16.0):
                                  "creatures": [code] + [c for j, c in enumerate(creatures) if j != i % len(NAMED)]}
                                 for i in range(10)]}
     return jwa_dashboard_feed.parse_snapshot(json.dumps(doc).encode(), snap_id)
+
+
+def bands_tournament(snap_id, eligible=None, code_name=None, code_rarity="Unknown"):
+    """Top 50 teams in rank bands; every team uses the nameless creature (or, later, its real name)."""
+    code = {"creature_id": CODE, "display_name": code_name or CODE[:8], "rarity": code_rarity, "level": 16.0,
+            "enhancement_level": 0, "stat_boosts": {}, "omega_training_points": {}}
+    others = [{"creature_id": f"id-{n.lower()}", "display_name": n, "rarity": "Legendary", "level": 16.0,
+               "enhancement_level": 0, "stat_boosts": {}, "omega_training_points": {}} for n in NAMED[:7]]
+    rules = [{"kind": "rarity", "label": "Allowed rarities", "values": ["Legendary", "Omega", "Apex"]}]
+    if eligible:
+        rules.append({"kind": "creatures", "label": "Eligible creatures", "values": eligible})
+    teams = []
+    for lo in range(1, 50, 10):
+        for i in range(10):
+            team = [dict(code)] + [dict(c, level=16.0 + lo + i) for c in others]  # different teams, one per player
+            teams.append({"leaderboard_rank_band": f"{lo}-{lo + 9}", "creatures": team})
+    doc = {"schema_version": "jwa-dashboard.public.v2", "captured_at": "2026-10-09T20:50:00+00:00",
+           "captured_team_count": len(teams), "leaderboard_id": "1",
+           "display_rules": {"show_levels": False, "show_stat_boosts": False, "show_enhancements": False,
+                             "standardized_level": 35},
+           "event": {"name": "[Tournament] 2026-10-W1 - Cash Tournament", "is_arena": False, "standardized_level": 35,
+                     "stat_boosts_enabled": False, "tournament_rules": rules},
+           "anonymized_teams": teams}
+    return jwa_dashboard_feed.parse_snapshot(json.dumps(doc).encode(), snap_id)
+
+
+class FeedSource(FakeSource):
+    name = jwa_dashboard_feed.SOURCE_NAME
+
+
+def seed_dinodex(url, **_kwargs):
+    """The creature list page (English or German), offline."""
+    items = [{**c, "version": c.get("added_version")} for c in roster.load_seed_roster()]
+    data = {"props": {"pageProps": {"dex": {"items": items}}}}
+    return f'<script id="__NEXT_DATA__" type="application/json">{json.dumps(data)}</script>'.encode()
 
 
 class GermanNameTests(TempDataDir):
@@ -153,3 +189,97 @@ class SkeletonIconTests(TempDataDir):
         page = '<script id="__NEXT_DATA__" type="application/json">{"props": {"pageProps": {"detail": ' \
                '{"animation_set": "family_002", "ingredients": []}}}}</script>'
         self.assertEqual(standins.parse_family(page), "family_002")
+
+
+class WebsiteHistoryTests(TempDataDir):
+    """The website starts every build with an empty database: what it learned must carry over."""
+    FIRST = "2026-10-09_20-50-04"
+    SEEN = T0 + timedelta(days=8, hours=9)  # just after that snapshot was captured
+
+    def build(self, source, tmp, when):
+        return site.build_website(
+            tmp / "site", tmp / "archive", now_fn=lambda: when, sources=[source],
+            collect_kwargs={"roster_fetch": seed_dinodex, "version_fetch": fake_version, "fetch_images": False},
+        )
+
+    def fresh_db(self):
+        self.conn.close()
+        TempDataDir.tearDown(self)
+        TempDataDir.setUp(self)
+
+    def site_data(self, tmp):
+        return json.loads((tmp / "site" / "data" / "site.json").read_text(encoding="utf-8"))
+
+    def test_the_wait_ends_even_though_the_code_is_not_in_any_new_snapshot(self):
+        tmp = Path(tempfile.mkdtemp())
+        with without_hand_checked_codes():
+            snap = bands_tournament(self.FIRST, eligible=["PARALITITAN", CODE[:8], "PIERCE"])
+            self.build(FeedSource([snap]), tmp, self.SEEN)
+            placeholder = roster.unresolved_key("jwa-dashboard-feed", CODE)
+            self.assertIn(placeholder, self.site_data(tmp)["creatures"])  # waiting: not named yet
+            self.assertIn("named only once", self.site_data(tmp)["creatures"][placeholder]["note"])
+
+            self.fresh_db()
+            source = FeedSource([])  # the feed has dropped that old file: only the kept evidence is left
+            self.build(source, tmp, self.SEEN + timedelta(days=4))
+            self.assertEqual(source.fetched, [])
+            data = self.site_data(tmp)
+            self.assertNotIn(placeholder, data["creatures"])
+            self.assertEqual(data["snapshots"][0]["u"]["top50"]["c"]["pelorosuchus"], 50)  # counts unchanged, proper name
+            self.assertIn("Worked out automatically", data["creatures"]["pelorosuchus"]["note"])
+            self.assertEqual(data["unmatched"], [])
+
+            self.fresh_db()
+            self.build(FeedSource([]), tmp, self.SEEN + timedelta(days=5))  # and it stays that way
+            self.assertIn("pelorosuchus", self.site_data(tmp)["creatures"])
+
+    def test_history_is_corrected_when_the_feed_names_the_code_later(self):
+        tmp = Path(tempfile.mkdtemp())
+        with without_hand_checked_codes():
+            self.build(FeedSource([bands_tournament(self.FIRST)]), tmp, self.SEEN)
+            placeholder = roster.unresolved_key("jwa-dashboard-feed", CODE)
+            self.assertIn(placeholder, self.site_data(tmp)["creatures"])
+
+            self.fresh_db()
+            # The feed republishes the same snapshot, now with the creature's real name.
+            source = FeedSource([bands_tournament(self.FIRST, code_name="Quetzalvexus", code_rarity="Apex")])
+            self.build(source, tmp, self.SEEN + timedelta(hours=6))
+            self.assertEqual(source.fetched, [self.FIRST])  # read again because it showed an unidentified creature
+            data = self.site_data(tmp)
+            self.assertNotIn(placeholder, data["creatures"])
+            self.assertEqual(data["snapshots"][0]["u"]["top50"]["c"]["quetzalvexus"], 50)
+            self.assertEqual(data["unmatched"], [])
+            self.assertNotIn("note", data["creatures"]["quetzalvexus"])  # named by the feed: nothing to explain
+
+            self.fresh_db()
+            source = FeedSource([bands_tournament(self.FIRST, code_name="Quetzalvexus", code_rarity="Apex")])
+            self.build(source, tmp, self.SEEN + timedelta(hours=12))
+            self.assertEqual(source.fetched, [])  # settled: never downloaded again
+
+    def test_creatures_named_earlier_in_history_are_ruled_out(self):
+        with without_hand_checked_codes():
+            ingest.store(self.conn, ingest.prepare(tournament(self.FIRST, "2026-10-09T20:50:00+00:00")), now=T0)
+            with db.transaction(self.conn):
+                db.set_meta(self.conn, "roster_fetched_at", db.iso(T0 + timedelta(days=30)))
+            identify.run(self.conn, T0)
+            before = self.conn.execute("SELECT creature_key, possible FROM deductions").fetchone()
+            self.assertIsNone(before["creature_key"])
+            self.assertEqual(set(json.loads(before["possible"])), {"pelorosuchus", "erlidraco", "rebirth_quetzalcoatlus"})
+            history = {"erlidraco": {"aka": ["Erlidraco"], "rarity": "legendary"},
+                       "rebirth_quetzalcoatlus": {"aka": ["Quetzalco3"], "rarity": "legendary"}}
+            self.assertEqual(identify.run(self.conn, T0, archive_creatures=history), {CODE: "pelorosuchus"})
+
+    def test_a_real_name_replaces_the_conclusion_on_the_pc_too(self):
+        with without_hand_checked_codes():
+            ingest.store(self.conn, ingest.prepare(tournament(self.FIRST, "2026-10-09T20:50:00+00:00",
+                                                              eligible=["PARALITITAN", CODE[:8], "PIERCE"])), now=T0)
+            with db.transaction(self.conn):
+                db.set_meta(self.conn, "roster_fetched_at", db.iso(T0 + timedelta(days=30)))
+            identify.run(self.conn, T0)
+            with db.transaction(self.conn):
+                roster.register_source_creatures(self.conn, "jwa-dashboard-feed", [(CODE, "PELOROSUCHUS", "Legendary")], T0)
+            self.assertEqual(identify.run(self.conn, T0), {})
+            row = self.conn.execute("SELECT creature_key, match_method FROM source_creatures WHERE source_creature_id = ?",
+                                    (CODE,)).fetchone()
+            self.assertEqual(tuple(row), ("pelorosuchus", "exact"))
+            self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM deductions").fetchone()[0], 0)

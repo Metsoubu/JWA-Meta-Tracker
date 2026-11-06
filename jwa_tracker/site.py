@@ -374,12 +374,17 @@ class Archive:
                 added.append(rec["id"])
         return added
 
-    def relabel(self, resolver: roster.Resolver) -> dict[str, str]:
-        """Give archived creatures that had no recognised name their proper key, once a name fix
-        or the creature list can identify them. Only labels change: team counts stay exactly the same."""
+    def relabel(self, resolver: roster.Resolver, known: dict[str, str] | None = None) -> dict[str, str]:
+        """Give archived creatures that had no recognised name their proper key, once a name fix, the
+        creature list, or the feed itself (`known`: it often names a code later, in its old files too)
+        can identify them. Only labels change: team counts stay exactly the same."""
+        known = known or {}
         mapping: dict[str, str] = {}
         for key, info in self.creatures.items():
             if not key.startswith("unmatched-"):
+                continue
+            if known.get(key) in resolver.roster:
+                mapping[key] = known[key]
                 continue
             if resolver.unmatched_alias.get(key) in resolver.roster:
                 mapping[key] = resolver.unmatched_alias[key]
@@ -411,6 +416,26 @@ class Archive:
         """Archived snapshots without their teams, or tournaments without their build rules."""
         return {rid for rid, rec in self.records.items()
                 if rid not in self.details or (rec["k"] == "tournament" and "br" not in rec)}
+
+    def needs_evidence(self) -> set[str]:
+        """Snapshots showing an unidentified creature to download again, if the feed still has them:
+        any not read yet, so their evidence is kept, and the newest one, because the feed often
+        names a code later, in its old files too. Nothing is fetched once the creature is identified."""
+        read: dict[str, set[str]] = {}
+        for ident, d in (self.meta.get("deductions") or {}).items():
+            source, source_id = ident.split(":", 1)
+            read[roster.unresolved_key(source, source_id)] = set((d.get("evidence") or {}).get("snapshots", {}))
+        out: set[str] = set()
+        newest: dict[str, str] = {}
+        for rid, teams in self.details.items():
+            if rid not in self.records:
+                continue
+            for key in {m[0] for t in teams for m in t[2] if m[0].startswith("unmatched-")}:
+                if rid.split(":", 1)[1] not in read.get(key, ()):
+                    out.add(rid)
+                if key not in newest or self.records[rid]["t"] > self.records[newest[key]]["t"]:
+                    newest[key] = rid
+        return out | set(newest.values())
 
     def add_rules(self, records: Iterable[dict[str, Any]]) -> int:
         added = 0
@@ -533,19 +558,21 @@ def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=No
         identify.load(conn, archive.meta.get("deductions", {}))  # earlier conclusions about nameless creatures
         # Archived snapshots saved before team details were kept are downloaded once more
         # (if the feed still has them) so their teams and builds can be added.
-        missing = archive.missing_details()
+        missing = archive.missing_details() | archive.needs_evidence()
         skip = {src: {sid for sid in ids if f"{src}:{sid}" not in missing}
                 for src, ids in archive.ids_by_source().items()}
         result = collector.run_collection(
             "scheduled", force=True, conn=conn, now_fn=now_fn, sources=sources,
-            skip_ids=skip, **(collect_kwargs or {}),
+            skip_ids=skip, identify_codes=False, **(collect_kwargs or {}),
         )
+        for source_id, key in identify.run(conn, now_fn(), archive_creatures=archive.creatures).items():
+            log.info("Nameless creature %s is %s.", source_id[:8], key)
         fresh = snapshot_records(conn)
         added = archive.add_records(fresh)
         archive.add_rules(fresh)
         archive.add_details(team_details(conn))
         archive.meta["deductions"] = identify.export(conn)
-        relabeled = archive.relabel(roster.resolver_for(conn))
+        relabeled = archive.relabel(roster.resolver_for(conn), roster.resolved_placeholders(conn))
         if relabeled:
             log.info("Identified %d archived creature(s): %s", len(relabeled), ", ".join(sorted(set(relabeled.values()))))
         if (collect_kwargs or {}).get("fetch_images", True):

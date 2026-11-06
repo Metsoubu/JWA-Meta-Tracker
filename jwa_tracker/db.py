@@ -144,6 +144,7 @@ CREATE TABLE IF NOT EXISTS deductions (
     possible     TEXT NOT NULL,   -- JSON list of creature keys that fit the evidence
     note         TEXT NOT NULL,
     decided_at   TEXT NOT NULL,
+    evidence     TEXT,            -- JSON: what each snapshot showed about the code
     PRIMARY KEY (source, source_id)
 );
 
@@ -217,6 +218,8 @@ def connect(path: Path | str | None = None, initialize: bool = True) -> sqlite3.
 
 def init(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA)
+    if "evidence" not in {r[1] for r in conn.execute("PRAGMA table_info(deductions)")}:
+        conn.execute("ALTER TABLE deductions ADD COLUMN evidence TEXT")
     current = conn.execute("PRAGMA user_version").fetchone()[0]
     if current < SCHEMA_VERSION:
         conn.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
