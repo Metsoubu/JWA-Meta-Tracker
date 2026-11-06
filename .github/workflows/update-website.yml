@@ -36,6 +36,8 @@ jobs:
       run: ${{ steps.check.outputs.run }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # the latest copy: a run that waited for another one must see what that one saved
 
       - id: check
         name: Is a 6-hour update due, or is there a new tournament snapshot?
@@ -55,6 +57,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # the latest copy: a run that waited for another one must see what that one saved
 
       - uses: actions/setup-python@v5
         with:
@@ -72,6 +76,7 @@ jobs:
             echo "Nothing new to save."
           else
             git commit -m "Data update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main   # in case changes were uploaded during this build
             git push
           fi
 
