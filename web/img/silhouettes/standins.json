@@ -204,6 +204,16 @@
   ],
   "status": "none"
  },
+ "dakotacurus": {
+  "checked_at": "2026-11-06T13:20:11+00:00",
+  "path": [
+   "dakotacurus",
+   "dakotanops",
+   "dakotaraptor"
+  ],
+  "status": "ok",
+  "via": "deinonychus"
+ },
  "deinomimus": {
   "checked_at": "2026-10-23T20:08:23+00:00",
   "path": [

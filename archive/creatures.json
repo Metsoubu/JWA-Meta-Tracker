@@ -1094,6 +1094,20 @@
   "name": "Cryolophosaurus Mattel",
   "rarity": "unique"
  },
+ "dakotacurus": {
+  "added": "v3.14",
+  "aka": [
+   "Dakotacurus"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Deinonychus antirrhopus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/deinonychus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dakotacurus",
+  "rarity": "unique"
+ },
  "dakotaraptor": {
   "added": "v2.4",
   "aka": [
