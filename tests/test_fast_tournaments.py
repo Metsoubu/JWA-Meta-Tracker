@@ -2,12 +2,13 @@
 import argparse
 import json
 import os
+import subprocess
 import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest import mock
 
-from jwa_tracker import cli, collector, db, ingest, net, site
+from jwa_tracker import cli, collector, db, ingest, net, site, website_trigger
 from tests.helpers import T0, FakeSource, TempDataDir, full_team, hours, snapshot
 from tests.test_site import fake_version, no_roster
 from jwa_tracker.sources.base import SnapshotRef
@@ -156,3 +157,63 @@ class PcTournamentTests(TempDataDir):
     def test_feed_down_is_not_an_update(self):
         source = FakeSource(list_error=net.FetchError("down", transient=True))
         self.assertEqual(self.collect(source, self.checked_just_now()).status, "skipped")
+
+
+class AskGithubTests(TempDataDir):
+    """The PC starts a website update for each new tournament snapshot, because GitHub's timers run late."""
+
+    def ask(self, source, returncode=0, gh="gh.exe", git=True):
+        answer = subprocess.CompletedProcess([], returncode, stdout="", stderr="HTTP 403")
+        project = Path(tempfile.mkdtemp())
+        if git:
+            (project / ".git").mkdir()
+        with mock.patch.object(website_trigger.shutil, "which", return_value=gh), \
+                mock.patch.object(website_trigger.config, "PROJECT_DIR", project), \
+                mock.patch.object(website_trigger.subprocess, "run", return_value=answer) as run:
+            started = website_trigger.ask_github(self.conn, [source])
+        return started, run
+
+    def test_asks_once_for_each_new_tournament_snapshot(self):
+        source = ListedSource(tournament_ref("first", utc(2026, 11, 6, 22, 3)))
+        started, run = self.ask(source)
+        self.assertTrue(started)
+        self.assertEqual(run.call_args.args[0], ["gh.exe", "workflow", "run", "update-website.yml", "--ref", "main"])
+        self.assertEqual(self.ask(source)[0], False)  # already asked
+        source.refs.append(tournament_ref("second", utc(2026, 11, 7, 3)))
+        self.assertTrue(self.ask(source)[0])
+
+    def test_arena_snapshots_do_not_ask(self):
+        started, run = self.ask(ListedSource(arena_ref("a", utc(2026, 11, 6, 22, 3))))
+        self.assertFalse(started)
+        run.assert_not_called()
+
+    def test_a_failed_request_is_tried_again_on_the_next_check(self):
+        source = ListedSource(tournament_ref("first", utc(2026, 11, 6, 22, 3)))
+        self.assertFalse(self.ask(source, returncode=1)[0])
+        self.assertTrue(self.ask(source)[0])
+
+    def test_does_nothing_on_other_computers(self):
+        source = ListedSource(tournament_ref("first", utc(2026, 11, 6, 22, 3)))
+        for kwargs in ({"gh": None}, {"git": False}):
+            started, run = self.ask(source, **kwargs)
+            self.assertFalse(started)
+            run.assert_not_called()
+
+    def test_problems_never_reach_the_pc_update(self):
+        down = ListedSource(error=net.FetchError("down", transient=True))
+        self.assertFalse(self.ask(down)[0])
+        source = ListedSource(tournament_ref("first", utc(2026, 11, 6, 22, 3)))
+        with mock.patch.object(website_trigger.shutil, "which", return_value="gh.exe"), \
+                mock.patch.object(website_trigger.config, "PROJECT_DIR", Path(tempfile.mkdtemp())):
+            (website_trigger.config.PROJECT_DIR / ".git").mkdir()
+            with mock.patch.object(website_trigger.subprocess, "run", side_effect=subprocess.TimeoutExpired("gh", 60)):
+                self.assertFalse(website_trigger.ask_github(self.conn, [source]))
+
+    def test_only_the_scheduled_check_asks(self):
+        done = collector.RunResult(status="skipped", message="nothing")
+        with mock.patch.object(collector, "run_collection", return_value=done), \
+                mock.patch.object(website_trigger, "ask_github") as asked:
+            cli.cmd_collect(argparse.Namespace(force=False, trigger="manual"))
+            asked.assert_not_called()
+            cli.cmd_collect(argparse.Namespace(force=False, trigger="scheduled"))
+            asked.assert_called_once()

@@ -34,9 +34,11 @@ You can use it in two ways (they share the same code):
 
 Needs Windows 10/11 and Python 3.10 or newer; if Python is missing, `START.bat` offers
 to install it. The PC version updates every 6 hours (midnight, 6 am, noon and 6 pm, in
-the computer's own time), and checks every hour for new tournament snapshots. The PC must be on and
+the computer's own time), and checks every 15 minutes for new tournament snapshots. The PC must be on and
 signed in for that; if it was off, the check happens shortly after you turn it back on,
-and missed snapshots are still downloaded.
+and missed snapshots are still downloaded. On the website owner's PC (with the GitHub CLI
+signed in), a new tournament snapshot also starts a website update right away, because
+GitHub's own timers often run hours late.
 
 ---
 

@@ -169,6 +169,82 @@ class NamelessCodeTests(TempDataDir):
             self.assertEqual(resolver.unmatched_alias[roster.unresolved_key("jwa-dashboard-feed", CODE)], "pelorosuchus")
 
 
+def rare_epic_tournament(snap_id, codes, eligible=None):
+    """Like the real Cash Tournament of 6 November 2026: rarities only, several nameless codes at Epic levels."""
+    named = ["GIGANTSPINOSAURUS", "COELOTATOR", "PANTHERA", "KENTROSAURUS", "DEINOTOPS", "BARYOTHUS", "Guidraco"]
+    others = [{"creature_id": f"id-{n.lower()}", "display_name": n, "rarity": "Epic", "level": 20.0,
+               "enhancement_level": 0, "stat_boosts": {}, "omega_training_points": {}} for n in named]
+    rules = [{"kind": "rarity", "label": "Allowed rarities", "values": ["Rare", "Epic"]}]
+    if eligible:
+        rules.append({"kind": "creatures", "label": "Eligible creatures", "values": eligible})
+    teams = [{"leaderboard_rank_band": "1-10",
+              "creatures": [{"creature_id": codes[i % len(codes)], "display_name": codes[i % len(codes)][:8],
+                             "rarity": "Unknown", "level": 11.0, "enhancement_level": 0, "stat_boosts": {},
+                             "omega_training_points": {}}] + others} for i in range(10)]
+    doc = {"schema_version": "jwa-dashboard.public.v2", "captured_at": "2026-11-06T22:03:32+00:00",
+           "captured_team_count": len(teams), "leaderboard_id": "738",
+           "display_rules": {"show_levels": False, "show_stat_boosts": False, "show_enhancements": False,
+                             "standardized_level": 35},
+           "event": {"name": "[Tournament] 2026-11-W1 - Cash Tournament", "is_arena": False, "standardized_level": 35,
+                     "stat_boosts_enabled": False, "tournament_rules": rules},
+           "anonymized_teams": teams}
+    return jwa_dashboard_feed.parse_snapshot(json.dumps(doc).encode(), snap_id)
+
+
+class SeveralCodesTests(TempDataDir):
+    """Two nameless codes cannot be the same creature (real creatures and codes, synthetic teams)."""
+    SNAP = "2026-11-06_22-03-26"
+    CODES = ["788dcb3260710214ca81ea153c41f9c3", "45f4a51647b11ca4db3b34b728f1d045", "44ec1b9095916674795d34bcafc444e3"]
+    # named by the feed by now, so they are not candidates (Arsinoitherium through a hand-checked code)
+    HISTORY = {"alioramus": {"aka": ["Alioramu"], "rarity": "epic"}, "arsinoitherium": {"aka": ["05865dc2"], "rarity": "rare"}}
+
+    def store(self, *args, **kwargs):
+        ingest.store(self.conn, ingest.prepare(rare_epic_tournament(self.SNAP, *args, **kwargs)), now=T0)
+        with db.transaction(self.conn):
+            db.set_meta(self.conn, "roster_fetched_at", db.iso(T0 + timedelta(days=60)))
+
+    def deductions(self):
+        return {d["source_id"]: d for d in self.conn.execute("SELECT * FROM deductions")}
+
+    def test_newer_creatures_named_out_of_order_do_not_rule_out_older_ones(self):
+        self.store(self.CODES[:1])
+        identify.run(self.conn, T0, archive_creatures=self.HISTORY)
+        possible = set(json.loads(self.deductions()[self.CODES[0]]["possible"]))
+        self.assertEqual(possible, {"arsionosaurus", "koolatrodon", "peloroplites"})  # not only the 3.23 one
+        self.assertIn("official name list goes up to game version 3.20", self.deductions()[self.CODES[0]]["note"])
+
+    def test_three_codes_and_three_creatures_stay_possibilities(self):
+        self.store(self.CODES)
+        self.assertEqual(identify.run(self.conn, T0, archive_creatures=self.HISTORY), {})
+        for d in self.deductions().values():
+            self.assertIsNone(d["creature_key"])
+            self.assertIn("It is probably", d["note"])
+            self.assertEqual(set(json.loads(d["possible"])), {"arsionosaurus", "koolatrodon", "peloroplites"})
+
+    def test_more_codes_than_creatures_names_none_of_them(self):
+        ruled_out = {**self.HISTORY, "arsionosaurus": {"aka": ["Arsinosau"], "rarity": "epic"},
+                     "koolatrodon": {"aka": ["Koolatrod"], "rarity": "epic"}}
+        self.store(self.CODES)
+        for _ in range(2):  # the same answer every time, rather than flipping back and forth
+            self.assertEqual(identify.run(self.conn, T0, archive_creatures=ruled_out), {})
+            for d in self.deductions().values():
+                self.assertIsNone(d["creature_key"])
+                self.assertEqual(json.loads(d["possible"]), ["peloroplites"])
+                self.assertIn("3 different unnamed creatures fit only Peloroplites", d["note"])
+                self.assertIn("at least 2 of them must be a creature the creature list does not have yet", d["note"])
+        rows = self.conn.execute("SELECT DISTINCT match_method FROM source_creatures WHERE source_creature_id IN (?, ?, ?)",
+                                 self.CODES).fetchall()
+        self.assertEqual([r[0] for r in rows], ["unmatched"])
+
+    def test_a_code_that_is_sure_settles_the_others(self):
+        first, second = self.CODES[:2]
+        history = {**self.HISTORY, "arsionosaurus": {"aka": ["Arsinosau"], "rarity": "epic"}}
+        # Alphabetical place pins the first code to Koolatrodon; only Peloroplites is then left for the second.
+        self.store([first, second], eligible=["KENTROSAURUS", first[:8], "PANTHERA", second[:8]])
+        for _ in range(2):  # and the same answer on the next check
+            self.assertEqual(identify.run(self.conn, T0, archive_creatures=history), {first: "koolatrodon", second: "peloroplites"})
+
+
 class SkeletonIconTests(TempDataDir):
     def test_creature_without_picture_borrows_its_skeleton_mates_icon(self):
         tmp = Path(tempfile.mkdtemp())

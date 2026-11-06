@@ -1,10 +1,11 @@
 """Windows Task Scheduler integration (no administrator rights needed).
 
-The task runs `pythonw.exe tracker.py collect --trigger scheduled` every hour,
+The task runs `pythonw.exe tracker.py collect --trigger scheduled` every 15 minutes,
 plus a few minutes after you log in. The collector itself decides whether an
 update is due (see collector.is_due), so the effective cadence is every 6 hours
-(midnight, 6 am, noon and 6 pm) and straight away for new tournament snapshots, with hourly retries after a failure and automatic catch-up
-when the computer was off or asleep at the scheduled time ("StartWhenAvailable").
+(midnight, 6 am, noon and 6 pm) and straight away for new tournament snapshots, with
+retries after a failure and automatic catch-up when the computer was off or asleep
+at the scheduled time ("StartWhenAvailable").
 Claude Code or the dashboard do not need to be open.
 """
 from __future__ import annotations
@@ -44,6 +45,10 @@ def current_user() -> str:
     return f"{domain}\\{user}" if domain else user
 
 
+def check_interval() -> str:
+    return f"PT{config.TASK_CHECK_MINUTES}M"
+
+
 def task_xml(command: Path, script: Path, workdir: Path, user: str) -> str:
     start = datetime.now().replace(minute=5, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%S")
     args = f'"{script}" collect --trigger scheduled'
@@ -51,7 +56,7 @@ def task_xml(command: Path, script: Path, workdir: Path, user: str) -> str:
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Author>{escape(config.APP_NAME)}</Author>
-    <Description>Checks for new Jurassic World Alive leaderboard data. Updates run every 6 hours (midnight, 6 am, noon, 6 pm), and within the hour for new tournament snapshots; hourly checks retry failures and catch up after the PC was off. Created by {escape(config.APP_NAME)}.</Description>
+    <Description>Checks for new Jurassic World Alive leaderboard data. Updates run every 6 hours (midnight, 6 am, noon, 6 pm), and within {config.TASK_CHECK_MINUTES} minutes for new tournament snapshots; the same checks retry failures and catch up after the PC was off. Created by {escape(config.APP_NAME)}.</Description>
   </RegistrationInfo>
   <Triggers>
     <CalendarTrigger>
@@ -59,7 +64,7 @@ def task_xml(command: Path, script: Path, workdir: Path, user: str) -> str:
       <Enabled>true</Enabled>
       <ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay>
       <Repetition>
-        <Interval>PT1H</Interval>
+        <Interval>{check_interval()}</Interval>
         <Duration>P1D</Duration>
         <StopAtDurationEnd>false</StopAtDurationEnd>
       </Repetition>
@@ -151,6 +156,7 @@ try {
   [pscustomobject]@{
     installed = $true; state = [string]$t.State
     command = [string]$a.Execute; arguments = [string]$a.Arguments; workdir = [string]$a.WorkingDirectory
+    interval = [string]($t.Triggers | Where-Object { $_.Repetition.Interval } | Select-Object -First 1).Repetition.Interval
     last_run = if ($i.LastRunTime -and $i.LastRunTime.Year -gt 2000) { $i.LastRunTime.ToUniversalTime().ToString('o') } else { $null }
     next_run = if ($i.NextRunTime) { $i.NextRunTime.ToUniversalTime().ToString('o') } else { $null }
     last_result = $i.LastTaskResult
@@ -180,6 +186,7 @@ def status(max_age: float = 60.0) -> dict[str, Any]:
         info["up_to_date"] = (
             (info.get("command") or "").strip('"').lower() == expected_cmd
             and str(config.ENTRY_SCRIPT).lower() in (info.get("arguments") or "").lower()
+            and info.get("interval") == check_interval()
         )
     _status_cache.update(value=info, at=time.monotonic())
     return info

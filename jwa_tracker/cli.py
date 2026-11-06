@@ -95,6 +95,14 @@ def cmd_collect(args: argparse.Namespace) -> int:
     _say(f"Result: {result.status}. {result.message}")
     if result.error:
         _say("Problems:\n  " + result.error.replace("\n", "\n  "))
+    if args.trigger == "scheduled":
+        from . import website_trigger
+
+        conn = db.connect()
+        try:
+            website_trigger.ask_github(conn)
+        finally:
+            conn.close()
     return result.exit_code
 
 
