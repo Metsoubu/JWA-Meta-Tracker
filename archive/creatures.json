@@ -406,6 +406,20 @@
   "name": "Aquignathus",
   "rarity": "apex"
  },
+ "aquilops": {
+  "added": "v3.16",
+  "aka": [
+   "Aquilops"
+  ],
+  "class": "resilient",
+  "credit": "Aquilops americanus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/aquilops.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Aquilops",
+  "rarity": "rare"
+ },
  "aquilotae": {
   "added": "v3.13",
   "aka": [
@@ -588,6 +602,20 @@
   "listed": true,
   "name": "Baryosaurus",
   "rarity": "unique"
+ },
+ "baryothus": {
+  "added": "v3.15",
+  "aka": [
+   "Baryothus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Baryothus",
+  "rarity": "epic"
  },
  "baryotor": {
   "added": "v3.18",
@@ -953,6 +981,20 @@
   "name": "Coelocephalus",
   "rarity": "apex"
  },
+ "coelotator": {
+  "added": "v3.20",
+  "aka": [
+   "Coelotator"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Coelophysis silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/coelophysis.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Coelotator",
+  "rarity": "epic"
+ },
  "coelurosauravus": {
   "added": "v2.9",
   "aka": [
@@ -1149,6 +1191,20 @@
   "listed": true,
   "name": "Deinomimus",
   "rarity": "unique"
+ },
+ "deinotops": {
+  "added": "v3.12",
+  "aka": [
+   "Deinotops"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Deinosuchus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/deinosuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Deinotops",
+  "rarity": "epic"
  },
  "diabloceratops": {
   "added": "v3.0",
@@ -3200,6 +3256,20 @@
   "name": "Sarcorixis",
   "rarity": "epic"
  },
+ "saurolyth": {
+  "added": "v3.13",
+  "aka": [
+   "Saurolyth"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Saurornitholestes silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/saurornitholestes.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Saurolyth",
+  "rarity": "epic"
+ },
  "saurophaganax": {
   "added": "v3.9",
   "aka": [
@@ -3874,6 +3944,36 @@
   "name": "Tyrannotor",
   "rarity": "apex"
  },
+ "unmatched-jwadashboard-44ec1b9095916674": {
+  "added": null,
+  "aka": [
+   "44ec1b90"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (44ec1b90)",
+  "note": "The data source gives no name for this creature (code 44ec1b90, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-45f4a51647b11ca4": {
+  "added": null,
+  "aka": [
+   "45f4a516"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (45f4a516)",
+  "note": "The data source gives no name for this creature (code 45f4a516, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
  "unmatched-jwadashboard-702e43132be82904": {
   "added": null,
   "aka": [
@@ -3887,6 +3987,21 @@
   "listed": false,
   "name": "Unidentified creature (702e4313)",
   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). There is not enough evidence yet to tell which creature it is.",
+  "rarity": "unknown"
+ },
+ "unmatched-jwadashboard-788dcb3260710214": {
+  "added": null,
+  "aka": [
+   "788dcb32"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (788dcb32)",
+  "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "utasinoraptor": {

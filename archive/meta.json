@@ -1,6 +1,58 @@
 {
  "app_store_build": "3.23.55",
  "deductions": {
+  "jwa-dashboard-feed:44ec1b9095916674795d34bcafc444e3": {
+   "decided_at": "2026-11-06T22:19:34Z",
+   "evidence": {
+    "label": "44ec1b90",
+    "rarity": "Unknown",
+    "snapshots": {
+     "2026-11-06_22-03-26": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-06T22:03:32Z",
+      "copies": 2,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 15.0,
+      "neighbours": null,
+      "omega": false
+     }
+    }
+   },
+   "key": null,
+   "note": "The data source gives no name for this creature (code 44ec1b90, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+   "possible": [
+    "peloroplites"
+   ]
+  },
+  "jwa-dashboard-feed:45f4a51647b11ca4db3b34b728f1d045": {
+   "decided_at": "2026-11-06T22:19:34Z",
+   "evidence": {
+    "label": "45f4a516",
+    "rarity": "Unknown",
+    "snapshots": {
+     "2026-11-06_22-03-26": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-06T22:03:32Z",
+      "copies": 3,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
+     }
+    }
+   },
+   "key": null,
+   "note": "The data source gives no name for this creature (code 45f4a516, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+   "possible": [
+    "peloroplites"
+   ]
+  },
   "jwa-dashboard-feed:702e43132be82904187520200da8cd01": {
    "decided_at": "2026-11-01T01:35:54Z",
    "evidence": {
@@ -56,6 +108,32 @@
    "key": null,
    "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). There is not enough evidence yet to tell which creature it is.",
    "possible": []
+  },
+  "jwa-dashboard-feed:788dcb3260710214ca81ea153c41f9c3": {
+   "decided_at": "2026-11-06T22:19:34Z",
+   "evidence": {
+    "label": "788dcb32",
+    "rarity": "Unknown",
+    "snapshots": {
+     "2026-11-06_22-03-26": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-06T22:03:32Z",
+      "copies": 16,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
+     }
+    }
+   },
+   "key": null,
+   "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). So far it fits Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+   "possible": [
+    "peloroplites"
+   ]
   }
  }
 }

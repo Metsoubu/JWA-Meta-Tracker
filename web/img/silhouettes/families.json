@@ -203,6 +203,10 @@
   "checked_at": "2026-10-17T21:48:48+00:00",
   "family": "family_006"
  },
+ "baryothus": {
+  "checked_at": "2026-11-06T22:19:29+00:00",
+  "family": "family_006"
+ },
  "baryotor": {
   "checked_at": "2026-10-17T21:48:49+00:00",
   "family": "family_006"
@@ -331,6 +335,10 @@
   "checked_at": "2026-10-17T21:49:14+00:00",
   "family": "family_043"
  },
+ "coelotator": {
+  "checked_at": "2026-11-06T22:19:30+00:00",
+  "family": "family_043"
+ },
  "coelurosauravus": {
   "checked_at": "2026-10-17T21:48:06+00:00",
   "family": "family_044"
@@ -402,6 +410,10 @@
  "deinotherium": {
   "checked_at": "2026-10-17T21:49:26+00:00",
   "family": "family_028"
+ },
+ "deinotops": {
+  "checked_at": "2026-11-06T22:19:32+00:00",
+  "family": "family_019"
  },
  "diabloceratops": {
   "checked_at": "2026-10-31T01:55:07+00:00",
@@ -1182,6 +1194,10 @@
  "sarcosuchus": {
   "checked_at": "2026-10-17T21:51:45+00:00",
   "family": "family_019"
+ },
+ "saurolyth": {
+  "checked_at": "2026-11-06T22:19:33+00:00",
+  "family": "family_022"
  },
  "saurophaganax": {
   "checked_at": "2026-10-17T21:51:46+00:00",

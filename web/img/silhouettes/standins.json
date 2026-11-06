@@ -138,6 +138,15 @@
   ],
   "status": "none"
  },
+ "baryothus": {
+  "checked_at": "2026-11-06T22:19:29+00:00",
+  "path": [
+   "baryothus",
+   "leucistic_baryonyx"
+  ],
+  "status": "ok",
+  "via": "baryonyx"
+ },
  "becklolyth": {
   "checked_at": "2026-10-10T01:05:05+00:00",
   "path": [
@@ -197,6 +206,15 @@
   ],
   "status": "none"
  },
+ "coelotator": {
+  "checked_at": "2026-11-06T22:19:30+00:00",
+  "path": [
+   "coelotator",
+   "coelophysis"
+  ],
+  "status": "ok",
+  "via": "coelophysis"
+ },
  "coelurosauravus": {
   "checked_at": "2026-10-17T21:48:06+00:00",
   "path": [
@@ -218,6 +236,15 @@
   "checked_at": "2026-10-23T20:08:23+00:00",
   "path": [
    "deinomimus",
+   "deinotops",
+   "deinosuchus"
+  ],
+  "status": "ok",
+  "via": "deinosuchus"
+ },
+ "deinotops": {
+  "checked_at": "2026-11-06T22:19:32+00:00",
+  "path": [
    "deinotops",
    "deinosuchus"
   ],
@@ -705,6 +732,15 @@
   ],
   "status": "ok",
   "via": "sarcosuchus"
+ },
+ "saurolyth": {
+  "checked_at": "2026-11-06T22:19:33+00:00",
+  "path": [
+   "saurolyth",
+   "saurornitholestes"
+  ],
+  "status": "ok",
+  "via": "saurornitholestes"
  },
  "scaphognathus": {
   "checked_at": "2026-10-17T21:48:13+00:00",
