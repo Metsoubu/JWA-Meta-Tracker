@@ -1947,7 +1947,7 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Indoraptor Mattel",
-  "note": "The data source gives no name for this creature (code 433c1948). It is Indoraptor Mattel: its levels (26-32) are Apex levels, and in the Coin Tournament's alphabetical list of eligible Apex creatures it sits between Indochicyon and Kentrorex. Of the three Apex creatures in that spot, Indolycan and Indonemys appear in the feed under their own names, leaving Indoraptor Mattel (game version 3.22, newer than the feed's name list).",
+  "note": "The data source first gave no name for this creature (code 433c1948). It was worked out as Indoraptor Mattel from its Apex levels (26-32) and its place between Indochicyon and Kentrorex in the Coin Tournament's alphabetical list of eligible Apex creatures. The data source has since confirmed the name.",
   "rarity": "apex"
  },
  "irritator_gen_2": {
@@ -2037,7 +2037,8 @@
  "koolatrax": {
   "added": "v3.22",
   "aka": [
-   "Koolatrax"
+   "Koolatrax",
+   "b4b0192f"
   ],
   "class": "cunning_fierce",
   "credit": "Body-type icon: Dimetrodon silhouette by Dmitry Bogdanov, CC BY-SA 3.0 (PhyloPic)",
@@ -2676,7 +2677,7 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Pelorosuchus",
-  "note": "The data source gives no name for this creature (code 2b88a0f8, first seen 9 October 2026). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer. When it appeared, Pelorosuchus (released 29 September in 3.23) was the only such Legendary in the game's creature list. Erlidraco, another 3.23 Legendary, was only added to the list after 10 October and is fused from Guidraco, which the feed had not seen even a week later.",
+  "note": "The data source gives no name for this creature (code 2b88a0f8, first seen 9 October 2026). It is Pelorosuchus: it was used in the Cash Tournament, which allowed only Legendary and Omega creatures, and none of its 74 copies has omega training, so it is a Legendary (its lowest level, 16, is the Legendary starting level). The feed has names for every creature up to game version 3.20 and internal names for 3.21-3.22, so a creature with no name at all is newer. Pelorosuchus (released 29 September in 3.23) and Erlidraco are the only such Legendaries, and Erlidraco has since appeared in the feed under its own, different code.",
   "rarity": "legendary"
  },
  "pierce": {
@@ -2948,6 +2949,7 @@
  "quetzaldraco": {
   "added": "v3.23",
   "aka": [
+   "5dca40ec",
    "Quetzaldraco"
   ],
   "class": "cunning_fierce",
@@ -2962,6 +2964,7 @@
  "quetzalvexus": {
   "added": "v3.23",
   "aka": [
+   "6080615a",
    "Quetzalvexus"
   ],
   "class": "wild_card",
@@ -3871,36 +3874,6 @@
   "name": "Tyrannotor",
   "rarity": "apex"
  },
- "unmatched-jwadashboard-5dca40ec4ada02c4": {
-  "added": null,
-  "aka": [
-   "5dca40ec"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (5dca40ec)",
-  "note": "The data source gives no name for this creature (code 5dca40ec, first seen 2026-10-24). So far it fits Quetzaldraco. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
-  "rarity": "unknown"
- },
- "unmatched-jwadashboard-6080615abfbc4044": {
-  "added": null,
-  "aka": [
-   "6080615a"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (6080615a)",
-  "note": "The data source gives no name for this creature (code 6080615a, first seen 2026-10-24). So far it fits Quetzaldraco or Quetzalvexus. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
-  "rarity": "unknown"
- },
  "unmatched-jwadashboard-702e43132be82904": {
   "added": null,
   "aka": [
@@ -3914,21 +3887,6 @@
   "listed": false,
   "name": "Unidentified creature (702e4313)",
   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). There is not enough evidence yet to tell which creature it is.",
-  "rarity": "unknown"
- },
- "unmatched-jwadashboard-b4b0192f5fbaa844": {
-  "added": null,
-  "aka": [
-   "b4b0192f"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (b4b0192f)",
-  "note": "The data source gives no name for this creature (code b4b0192f, first seen 2026-10-24). So far it fits Koolatrax or Koolatrodon. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "utasinoraptor": {
