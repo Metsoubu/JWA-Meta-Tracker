@@ -15,7 +15,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Callable
 
 from . import builds, config, db, identify, images, ingest, net, roster, standins, versions
-from .sources import default_sources
+from .sources import default_sources, jwa_dashboard_feed
 from .sources.base import SourceFormatError
 
 log = logging.getLogger(__name__)
@@ -114,6 +114,25 @@ def is_due(conn: sqlite3.Connection, now: datetime) -> tuple[bool, str]:
     return False, f"already checked at {last_time.astimezone():%Y-%m-%d %H:%M}"
 
 
+def new_tournament_snapshot(conn: sqlite3.Connection, sources) -> str | None:
+    """A tournament snapshot the source has published that is not saved yet, if any.
+
+    Tournaments last three days and change quickly, so they do not wait for the next
+    scheduled update. This only reads the source's short list of snapshots.
+    """
+    for source in sources:
+        try:
+            refs = source.list_snapshots()
+        except (net.FetchError, SourceFormatError) as exc:
+            log.info("Could not check %s for new tournament snapshots: %s", source.label, exc)
+            continue
+        known = db.known_snapshot_ids(conn, source.name) | db.rejected_snapshot_ids(conn, source.name)
+        for ref in refs:
+            if jwa_dashboard_feed.is_tournament_ref(ref) and ref.id not in known:
+                return ref.id
+    return None
+
+
 # --- the run -------------------------------------------------------------------------
 
 def _identify(conn: sqlite3.Connection, now: datetime) -> None:
@@ -180,8 +199,11 @@ def run_collection(
         if not force:
             due, reason = is_due(conn, now)
             if not due:
-                log.info("No update needed: %s.", reason)
-                return RunResult(status="skipped", message=f"No update needed ({reason}).")
+                fresh = new_tournament_snapshot(conn, sources)
+                if not fresh:
+                    log.info("No update needed: %s.", reason)
+                    return RunResult(status="skipped", message=f"No update needed ({reason}).")
+                log.info("New tournament snapshot %s: updating now.", fresh)
         db.mark_interrupted_runs(conn, now)
         run_id = db.start_run(conn, trigger, now)
         log.info("Update started (trigger: %s).", trigger)

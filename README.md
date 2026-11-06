@@ -4,8 +4,8 @@ A Jurassic World Alive **meta tier list** built from the teams of the top 100 ar
 players. It shows which creatures top players put on their teams, sorts them into
 S / A / B / C / D tiers by how often they are used, and keeps a history so you can see
 what is rising or falling, plus each creature's best teammates and the builds top players
-use. It checks for new data automatically every 6 hours (midnight, 6 am, noon and 6 pm
-US Central time).
+use. It updates automatically every 6 hours (midnight, 6 am, noon and 6 pm US Central
+time), and tournaments as soon as the data source publishes a new snapshot.
 
 You can use it in two ways (they share the same code):
 
@@ -33,8 +33,8 @@ You can use it in two ways (they share the same code):
 | `PUBLISH_WEBSITE.bat` | Uploads this folder to your GitHub repository (see *Put it online*). |
 
 Needs Windows 10/11 and Python 3.10 or newer; if Python is missing, `START.bat` offers
-to install it. The PC version checks for new data every 6 hours (midnight, 6 am, noon
-and 6 pm, in the computer's own time). The PC must be on and
+to install it. The PC version updates every 6 hours (midnight, 6 am, noon and 6 pm, in
+the computer's own time), and checks every hour for new tournament snapshots. The PC must be on and
 signed in for that; if it was off, the check happens shortly after you turn it back on,
 and missed snapshots are still downloaded.
 
@@ -67,9 +67,11 @@ own computers, so it keeps updating even when your PC is off.
 
 Run `PUBLISH_WEBSITE.bat` again any time you change files; the website rebuilds itself.
 
-After that it checks for new data at midnight, 6 am, noon and 6 pm US Central time
-(GitHub may start a few minutes late) and keeps a growing history in the `archive/`
-folder of the repository. If the data source is down, the
+After that it updates at midnight, 6 am, noon and 6 pm US Central time and keeps a growing
+history in the `archive/` folder of the repository. During tournaments (Friday to Monday)
+it also checks every 15 minutes and publishes a new tournament snapshot straight away.
+GitHub can start these checks late, and the *Actions* tab shows many short runs: nearly
+all of them just find nothing to do, which costs nothing on a public repository. If the data source is down, the
 site keeps showing the last good data and says that the update failed.
 
 ---
@@ -80,8 +82,9 @@ site keeps showing the last good data and says that the update failed.
   [jwa-dashboard](https://github.com/Lullatsch/jwa-dashboard) project on GitHub, an
   unofficial community project that publishes snapshots of the Jurassic World Alive
   leaderboards (the monthly arena "Seasonal League" and weekly tournaments), usually
-  twice a day (around 11:30 and 21:20 UTC). A new weekly tournament only appears once the
-  feed has published its first snapshot. This tracker reads those public files. It never logs into the game,
+  twice a day (around 11:30 and 21:20 UTC), and during tournaments about every 5 hours
+  (sometimes 10 overnight). The tracker cannot be fresher than that: a new weekly tournament
+  appears once the feed has published its first snapshot, usually 1 to 6 hours after it starts. This tracker reads those public files. It never logs into the game,
   reads game traffic, or automates an account.
 * Checked against Paleo.gg's independently published top-50 usage for the same day:
   every top creature matched to within about 1-2 percentage points.

@@ -4,7 +4,8 @@ The dashboard (web/app.js) is a static page: it loads data/site.json and does
 the pooling, tiers and comparisons in the browser. The same files therefore work
 as your local dashboard (the local server builds site.json from your database)
 and as a free public website on GitHub Pages, where a scheduled GitHub Action
-runs `tracker.py build-site` every 6 hours.
+runs `tracker.py build-site` every 6 hours, and as soon as the feed publishes a new
+tournament snapshot (`tracker.py website-due` checks for that every 15 minutes).
 
 For each snapshot the file holds, per rank range, the number of valid teams and
 how many of them use each creature. Counting is done here, in tested Python; the
@@ -29,12 +30,13 @@ import sqlite3
 import stat
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-from . import collector, config, db, identify, images, roster, standins, stats, versions
-from .sources import jwa_dashboard_feed
+from . import collector, config, db, identify, images, net, roster, standins, stats, versions
+from .sources import default_sources, jwa_dashboard_feed
+from .sources.base import SourceFormatError
 
 log = logging.getLogger(__name__)
 
@@ -455,6 +457,60 @@ class Archive:
         self._write("runs.json", self.runs[:RUN_HISTORY])
         self._write("versions.json", self.versions)
         self._write("meta.json", self.meta)
+
+
+# A snapshot captured shortly before a build may not have been published yet when it ran.
+_PUBLISH_MARGIN = timedelta(minutes=30)
+
+
+def central_utc_offset(moment: datetime) -> timedelta:
+    """US Central Time at a UTC moment; daylight time runs from the 2nd Sunday of March to the 1st of November."""
+    def sunday(year: int, month: int, nth: int) -> datetime:
+        first = datetime(year, month, 1, tzinfo=timezone.utc)
+        return first + timedelta(days=(6 - first.weekday()) % 7 + 7 * (nth - 1))
+
+    start = sunday(moment.year, 3, 2) + timedelta(hours=8)   # 2 am standard time
+    end = sunday(moment.year, 11, 1) + timedelta(hours=7)    # 2 am daylight time
+    return timedelta(hours=-5 if start <= moment < end else -6)
+
+
+def last_central_slot(now: datetime) -> datetime:
+    """The latest of midnight, 6 am, noon and 6 pm Central Time at or before `now`, in UTC."""
+    offset = central_utc_offset(now)
+    local = now + offset
+    hour = local.hour - local.hour % config.WEBSITE_SLOT_HOURS
+    return local.replace(hour=hour, minute=0, second=0, microsecond=0) - offset
+
+
+def website_due(archive_dir: Path, now: datetime | None = None, sources=None) -> tuple[bool, str]:
+    """Should the website be rebuilt now? A quick check (no database) that runs every few minutes.
+
+    Yes when a 6-hour slot has passed since the last build, which also catches up on
+    slots GitHub started late or skipped, or when the feed has published a tournament
+    snapshot the website does not have. A snapshot that cannot be imported only causes a
+    few attempts: once builds have moved past it, it waits for the next 6-hour slot.
+    """
+    now = now or db.utcnow()
+    folder = Path(archive_dir)
+    runs_file = folder / "runs.json"
+    runs = json.loads(runs_file.read_text(encoding="utf-8")) if runs_file.exists() else []
+    last = db.parse_iso(runs[0]["started_at"]) if runs else None
+    slot = last_central_slot(now)
+    if last is None or last < slot:
+        return True, f"the update for {db.iso(slot)} has not run yet"
+    archived: set[str] = set()
+    for path in (folder / "snapshots").glob("*.json"):
+        archived.update(rec["id"] for rec in json.loads(path.read_text(encoding="utf-8")))
+    for source in sources if sources is not None else default_sources():
+        try:
+            refs = source.list_snapshots()
+        except (net.FetchError, SourceFormatError) as exc:
+            return False, f"could not check {source.label}: {sanitize(str(exc))}"
+        for ref in refs:
+            if (jwa_dashboard_feed.is_tournament_ref(ref) and f"{source.name}:{ref.id}" not in archived
+                    and ref.captured_at > last - _PUBLISH_MARGIN):
+                return True, f"new tournament snapshot {ref.id}"
+    return False, "nothing new since the last update"
 
 
 def build_website(out_dir: Path, archive_dir: Path, now_fn=db.utcnow, sources=None,

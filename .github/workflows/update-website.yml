@@ -1,16 +1,18 @@
-# Updates the public website every 6 hours - midnight, 6 am, noon and 6 pm Tennessee
-# (US Central) time - for free, on GitHub's servers.
-# 1. Downloads any new leaderboard snapshots from the community feed.
+# Keeps the public website up to date, for free, on GitHub's servers:
+# - every 6 hours: midnight, 6 am, noon and 6 pm Tennessee (US Central) time;
+# - as soon as the community feed publishes a new tournament snapshot.
+# 1. Downloads any new leaderboard snapshots from the feed.
 # 2. Saves them in archive/ (committed back to this repository, so history is never lost).
 # 3. Builds the website and publishes it on GitHub Pages.
 name: Update website
 
 on:
   schedule:
-    # GitHub's timer only knows UTC and ignores daylight saving, so both sets of UTC times
-    # are listed; the "when" job below lets through only the one that matches Central Time today.
-    - cron: "0 5,11,17,23 * * *"   # midnight, 6 am, noon, 6 pm Central Daylight Time (UTC-5, March-November)
-    - cron: "0 0,6,12,18 * * *"    # the same times in Central Standard Time (UTC-6, November-March)
+    # Only checks: the "when" job decides in seconds whether anything needs doing. GitHub often
+    # starts timers late or skips them, worst at the top of the hour, so these are frequent and
+    # at quieter minutes. Times are UTC; tournaments run Friday 15:00 to Monday 15:00 UTC.
+    - cron: "7,22,37,52 * * * 5,6,0,1"   # Friday to Monday: every 15 minutes
+    - cron: "7,37 * * * 2,3,4"           # Tuesday to Thursday: every 30 minutes
   workflow_dispatch: {}            # adds a "Run workflow" button for an update right now
   push:                            # republish when you upload changes (the bot's own data saves do not trigger this)
     branches: [main]
@@ -31,20 +33,17 @@ jobs:
     outputs:
       run: ${{ steps.check.outputs.run }}
     steps:
+      - uses: actions/checkout@v4
+
       - id: check
-        name: Is this one of the Tennessee (Central Time) update times?
+        name: Is a 6-hour update due, or is there a new tournament snapshot?
         env:
           EVENT: ${{ github.event_name }}
-          CRON: ${{ github.event.schedule }}
         run: |
-          if [ "$EVENT" != "schedule" ]; then echo "run=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
-          offset=$(TZ=America/Chicago date +%z)   # -0500 in summer, -0600 in winter
-          if { [ "$offset" = "-0500" ] && [ "$CRON" = "0 5,11,17,23 * * *" ]; } ||
-             { [ "$offset" = "-0600" ] && [ "$CRON" = "0 0,6,12,18 * * *" ]; }; then
-            echo "run=yes" >> "$GITHUB_OUTPUT"
+          if [ "$EVENT" = "schedule" ]; then
+            python3 tracker.py website-due --archive archive
           else
-            echo "run=no" >> "$GITHUB_OUTPUT"
-            echo "Not an update time in Central Time today (offset $offset); nothing to do."
+            echo "run=yes" >> "$GITHUB_OUTPUT"
           fi
 
   build:

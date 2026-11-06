@@ -30,6 +30,7 @@ RAW_BASE = f"https://raw.githubusercontent.com/{REPOSITORY}/main/data"
 TESTED_SCHEMAS = ("jwa-dashboard.public.v2",)
 SCHEMA_FAMILY = "jwa-dashboard.public."
 
+TOURNAMENT_PREFIX = "[Tournament]"
 _FOLDER_RE = re.compile(r"^\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}$")
 _BAND_RE = re.compile(r"^\s*(\d+)\s*[-–]\s*(\d+)\s*$")
 
@@ -110,7 +111,7 @@ def parse_build_rules(doc: dict[str, Any], event: dict[str, Any]) -> dict[str, A
 def _kind(event: dict[str, Any], name: str) -> str:
     if event.get("is_arena") is True:
         return "arena"
-    if name.startswith("[Tournament]"):
+    if name.startswith(TOURNAMENT_PREFIX):
         return "tournament"
     return "other"
 
@@ -181,6 +182,10 @@ def parse_snapshot(raw: bytes, snapshot_id: str) -> SourceSnapshot:
         notes=notes,
         build_rules=parse_build_rules(doc, event),
     )
+
+
+def is_tournament_ref(ref: SnapshotRef) -> bool:
+    return ref.label.startswith(TOURNAMENT_PREFIX)
 
 
 def parse_run_index(doc: Any) -> list[SnapshotRef]:

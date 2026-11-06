@@ -1346,7 +1346,7 @@
 
   function applyMode() {
     $("#exampleBanner").hidden = !SITE.demo;
-    $(".brand-sub").textContent = "Top 100 arena usage · updated every 6 hours";
+    $(".brand-sub").textContent = "Top 100 usage · updated every 6 hours, tournaments sooner";
     document.title = "JWA Meta Tracker";
   }
 

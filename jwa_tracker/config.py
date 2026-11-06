@@ -74,9 +74,11 @@ TASK_NAME = "JWA Meta Tracker - Auto Update"
 # Collection "slots" in the computer's local time (the owner is on US Central Time),
 # 6 hours apart: midnight, 6 am, noon and 6 pm. Windows Task Scheduler wakes the
 # collector every hour; it only does work when a slot has passed without a successful
-# check. This gives a 6-hour cadence plus hourly retry/catch-up. The public website
-# uses the same times (see .github/workflows/update-website.yml).
+# check. This gives a 6-hour cadence plus hourly retry/catch-up; the hourly check also
+# updates straight away when the feed has a new tournament snapshot. The public website
+# does the same in Central Time (site.website_due, .github/workflows/update-website.yml).
 SCHEDULE_SLOTS_LOCAL = ("00:00", "06:00", "12:00", "18:00")
+WEBSITE_SLOT_HOURS = 6  # the website rebuilds at midnight, 6 am, noon and 6 pm US Central Time
 STALE_AFTER_HOURS = 30
 VERY_STALE_AFTER_HOURS = 72
 ROSTER_REFRESH_HOURS = 24

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 import webbrowser
 from datetime import datetime, timezone
@@ -173,6 +174,19 @@ def cmd_build_site(args: argparse.Namespace) -> int:
     return 0 if result["total"] else 1
 
 
+def cmd_website_due(args: argparse.Namespace) -> int:
+    """Tell GitHub Actions whether to rebuild the website (see update-website.yml)."""
+    from . import site
+
+    due, reason = site.website_due(Path(args.archive))
+    _say(f"{'Rebuild' if due else 'Nothing to do'}: {reason}.")
+    output = os.environ.get("GITHUB_OUTPUT")
+    if output:
+        with open(output, "a", encoding="utf-8") as fh:
+            fh.write(f"run={'yes' if due else 'no'}\n")
+    return 0
+
+
 def cmd_fetch_images(args: argparse.Namespace) -> int:
     from . import images
 
@@ -228,12 +242,15 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--archive", default="archive", help="folder holding the website's snapshot history")
     p.set_defaults(func=cmd_build_site)
 
+    p = sub.add_parser("website-due", help="check whether the public website needs rebuilding (used by GitHub Actions)")
+    p.add_argument("--archive", default="archive", help="folder holding the website's snapshot history")
+    p.set_defaults(func=cmd_website_due)
+
     args = parser.parse_args(argv)
-    import os
 
     if args.data_dir:
         os.environ["JWA_TRACKER_DATA_DIR"] = args.data_dir
-    elif args.command == "build-site":
+    elif args.command in ("build-site", "website-due"):
         import tempfile
 
         # Website builds use a throw-away database, never your personal one.
