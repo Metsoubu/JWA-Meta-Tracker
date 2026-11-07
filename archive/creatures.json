@@ -1878,6 +1878,20 @@
   "name": "Herranotor",
   "rarity": "unique"
  },
+ "herrerasaurus": {
+  "added": "v3.19",
+  "aka": [
+   "Herrerasaurus"
+  ],
+  "class": "cunning",
+  "credit": "Herrerasaurus ischigualastensis silhouette by Scott Hartman, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/herrerasaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Herrerasaurus",
+  "rarity": "rare"
+ },
  "homalocephale": {
   "added": "v3.2",
   "aka": [

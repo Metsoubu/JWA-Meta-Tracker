@@ -18,6 +18,18 @@
       "lowest": 15.0,
       "neighbours": null,
       "omega": false
+     },
+     "2026-11-07_02-44-25": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-07T02:44:32Z",
+      "copies": 2,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
      }
     }
    },
@@ -41,6 +53,18 @@
        "Epic"
       ],
       "captured_at": "2026-11-06T22:03:32Z",
+      "copies": 3,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
+     },
+     "2026-11-07_02-44-25": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-07T02:44:32Z",
       "copies": 3,
       "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
       "lowest": 11.0,
@@ -126,6 +150,18 @@
       ],
       "captured_at": "2026-11-06T22:03:32Z",
       "copies": 16,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
+     },
+     "2026-11-07_02-44-25": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-07T02:44:32Z",
+      "copies": 21,
       "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
       "lowest": 11.0,
       "neighbours": null,
