@@ -54,6 +54,15 @@
   "status": "ok",
   "via": "amargasaurus"
  },
+ "andrewtodon": {
+  "checked_at": "2026-11-08T21:20:27+00:00",
+  "path": [
+   "andrewtodon",
+   "andrewsarchus"
+  ],
+  "status": "ok",
+  "via": "andrewsarchus"
+ },
  "angel": {
   "checked_at": "2026-10-10T01:05:03+00:00",
   "path": [
@@ -838,6 +847,13 @@
   "status": "ok",
   "via": "stegosaurus"
  },
+ "struthiomimus": {
+  "checked_at": "2026-11-08T21:20:28+00:00",
+  "path": [
+   "struthiomimus"
+  ],
+  "status": "none"
+ },
  "stygidaryx": {
   "checked_at": "2026-10-23T20:08:26+00:00",
   "path": [
@@ -855,6 +871,13 @@
   ],
   "status": "ok",
   "via": "suchomimus"
+ },
+ "tapejara": {
+  "checked_at": "2026-11-08T21:20:29+00:00",
+  "path": [
+   "tapejara"
+  ],
+  "status": "none"
  },
  "thylacotator": {
   "checked_at": "2026-10-17T00:52:58+00:00",

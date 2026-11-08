@@ -262,6 +262,18 @@
       "lowest": 11.0,
       "neighbours": null,
       "omega": false
+     },
+     "2026-11-08_21-05-40": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-08T21:05:47Z",
+      "copies": 16,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
      }
     }
    },

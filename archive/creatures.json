@@ -266,6 +266,20 @@
   "name": "Andrewsarchus",
   "rarity": "rare"
  },
+ "andrewtodon": {
+  "added": "v2.6",
+  "aka": [
+   "Andrewtodon"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Body-type icon: Andrewsarchus mongoliensis silhouette by Steven Traver, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/andrewsarchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Andrewtodon",
+  "rarity": "epic"
+ },
  "angel": {
   "added": "v3.7",
   "aka": [
@@ -1191,6 +1205,20 @@
   "listed": true,
   "name": "Deinomimus",
   "rarity": "unique"
+ },
+ "deinosuchus": {
+  "added": "v3.12",
+  "aka": [
+   "Deinosuchus"
+  ],
+  "class": "fierce",
+  "credit": "Deinosuchus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/deinosuchus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Deinosuchus",
+  "rarity": "rare"
  },
  "deinotops": {
   "added": "v3.12",
@@ -2174,6 +2202,20 @@
   "listed": true,
   "name": "Leaellynasaura",
   "rarity": "omega"
+ },
+ "leucistic_baryonyx": {
+  "added": "v3.15",
+  "aka": [
+   "Leuzistischer Baryonyx"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Baryonyx walkeri silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/baryonyx.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Leucistic Baryonyx",
+  "rarity": "rare"
  },
  "little_eatie": {
   "added": "v3.18",
@@ -3663,6 +3705,20 @@
   "name": "Stomatosuchus Mattel",
   "rarity": "unique"
  },
+ "struthiomimus": {
+  "added": "v2.6",
+  "aka": [
+   "Struthiomimus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon (same in-game skeleton): Ornithomimus silhouette by Christiana Garros, CC BY 4.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ornithomimus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Struthiomimus",
+  "rarity": "epic"
+ },
  "stygidaryx": {
   "added": "v1.6",
   "aka": [
@@ -3703,6 +3759,20 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Suchotator",
+  "rarity": "rare"
+ },
+ "tapejara": {
+  "added": "v3.6",
+  "aka": [
+   "Tapejara"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon (same in-game skeleton): Nyctosaurus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/nyctosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tapejara",
   "rarity": "rare"
  },
  "tarbosaurus": {
