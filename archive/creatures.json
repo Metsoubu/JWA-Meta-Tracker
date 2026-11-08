@@ -2104,6 +2104,20 @@
   "name": "Koolabourgiana",
   "rarity": "legendary"
  },
+ "koolasuchus": {
+  "added": "v1.1",
+  "aka": [
+   "Koolasuchus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon (same in-game skeleton): Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ankylosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Koolasuchus",
+  "rarity": "epic"
+ },
  "koolatrax": {
   "added": "v3.22",
   "aka": [
