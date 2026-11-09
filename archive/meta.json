@@ -130,6 +130,18 @@
       "lowest": 20.0,
       "neighbours": null,
       "omega": false
+     },
+     "2026-11-09_13-49-22": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-09T13:49:28Z",
+      "copies": 2,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 20.0,
+      "neighbours": null,
+      "omega": false
      }
     }
    },
@@ -142,7 +154,7 @@
    ]
   },
   "jwa-dashboard-feed:702e43132be82904187520200da8cd01": {
-   "decided_at": "2026-11-01T01:35:54Z",
+   "decided_at": "2026-11-09T17:25:57Z",
    "evidence": {
     "label": "702e4313",
     "rarity": "Unknown",
@@ -193,9 +205,11 @@
      }
     }
    },
-   "key": null,
-   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). There is not enough evidence yet to tell which creature it is.",
-   "possible": []
+   "key": "one_arm_baryonyx",
+   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). Worked out automatically as One Arm Baryonyx (Omega, game version 3.23): [Tournament] 2026-10-W4 - DNA Tournament allowed only Omega creatures; its lowest level is 11; it has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later. One Arm Baryonyx is the only creature that fits and is not already named by the data source.",
+   "possible": [
+    "one_arm_baryonyx"
+   ]
   },
   "jwa-dashboard-feed:788dcb3260710214ca81ea153c41f9c3": {
    "decided_at": "2026-11-06T22:30:02Z",
@@ -294,6 +308,18 @@
       ],
       "captured_at": "2026-11-09T02:36:51Z",
       "copies": 17,
+      "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
+      "lowest": 11.0,
+      "neighbours": null,
+      "omega": false
+     },
+     "2026-11-09_13-49-22": {
+      "allowed": [
+       "Rare",
+       "Epic"
+      ],
+      "captured_at": "2026-11-09T13:49:28Z",
+      "copies": 13,
       "leaderboard": "[Tournament] 2026-11-W1 - Cash Tournament",
       "lowest": 11.0,
       "neighbours": null,

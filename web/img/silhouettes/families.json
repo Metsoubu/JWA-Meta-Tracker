@@ -939,6 +939,10 @@
   "checked_at": "2026-10-17T21:50:56+00:00",
   "family": "family_003"
  },
+ "nodopatotitan": {
+  "checked_at": "2026-11-09T17:25:56+00:00",
+  "family": "family_011"
+ },
  "nodosaurus": {
   "checked_at": "2026-10-17T21:48:11+00:00",
   "family": "family_009"
@@ -958,6 +962,10 @@
  "olorotitan": {
   "checked_at": "2026-10-17T21:51:00+00:00",
   "family": "family_018"
+ },
+ "one_arm_baryonyx": {
+  "checked_at": "2026-11-09T17:25:57+00:00",
+  "family": "family_021"
  },
  "ophiacodon": {
   "checked_at": "2026-10-17T21:51:01+00:00",

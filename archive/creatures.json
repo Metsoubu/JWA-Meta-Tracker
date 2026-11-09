@@ -2651,6 +2651,20 @@
   "name": "Nanophosaurus",
   "rarity": "legendary"
  },
+ "nodopatotitan": {
+  "added": "v1.4",
+  "aka": [
+   "Nodopatotitan"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Apatosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/apatosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Nodopatotitan",
+  "rarity": "legendary"
+ },
  "nodosaurus": {
   "added": "v1.1",
   "aka": [
@@ -2719,6 +2733,21 @@
   "imgKind": "silhouette",
   "listed": true,
   "name": "Olorotitan",
+  "rarity": "omega"
+ },
+ "one_arm_baryonyx": {
+  "added": "v3.23",
+  "aka": [
+   "702e4313"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon (same in-game skeleton): Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/spinosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "One Arm Baryonyx",
+  "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). Worked out automatically as One Arm Baryonyx (Omega, game version 3.23): [Tournament] 2026-10-W4 - DNA Tournament allowed only Omega creatures; its lowest level is 11; it has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later. One Arm Baryonyx is the only creature that fits and is not already named by the data source.",
   "rarity": "omega"
  },
  "ophiacodon": {
@@ -4182,21 +4211,6 @@
   "listed": false,
   "name": "Unidentified creature (45f4a516)",
   "note": "The data source gives no name for this creature (code 45f4a516, first seen 2026-11-06). So far it fits Arsionosaurus, Koolatrodon or Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
-  "rarity": "unknown"
- },
- "unmatched-jwadashboard-702e43132be82904": {
-  "added": null,
-  "aka": [
-   "702e4313"
-  ],
-  "class": null,
-  "credit": null,
-  "hybrid": null,
-  "img": null,
-  "imgKind": null,
-  "listed": false,
-  "name": "Unidentified creature (702e4313)",
-  "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). There is not enough evidence yet to tell which creature it is.",
   "rarity": "unknown"
  },
  "unmatched-jwadashboard-788dcb3260710214": {
