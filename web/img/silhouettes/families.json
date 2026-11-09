@@ -731,6 +731,10 @@
   "checked_at": "2026-10-17T21:50:21+00:00",
   "family": "family_005"
  },
+ "kaprosuchus": {
+  "checked_at": "2026-11-09T02:50:28+00:00",
+  "family": "family_008"
+ },
  "kelenken": {
   "checked_at": "2026-10-17T21:50:22+00:00",
   "family": "family_027"
@@ -1219,6 +1223,10 @@
   "checked_at": "2026-10-17T21:48:13+00:00",
   "family": "family_017"
  },
+ "scaphotator": {
+  "checked_at": "2026-11-09T02:50:29+00:00",
+  "family": "family_014"
+ },
  "scelidosaurus": {
   "checked_at": "2026-10-17T21:51:48+00:00",
   "family": "family_009"
@@ -1283,6 +1291,10 @@
   "checked_at": "2026-10-17T21:52:00+00:00",
   "family": "family_011"
  },
+ "sphaerotholus": {
+  "checked_at": "2026-11-09T02:50:30+00:00",
+  "family": "family_023"
+ },
  "spinoceratops": {
   "checked_at": "2026-10-17T21:52:01+00:00",
   "family": "family_003"
@@ -1301,6 +1313,10 @@
  },
  "spinosaurus_gen_2": {
   "checked_at": "2026-10-17T21:52:04+00:00",
+  "family": "family_021"
+ },
+ "spinotahraptor": {
+  "checked_at": "2026-11-09T02:50:31+00:00",
   "family": "family_021"
  },
  "spinotasuchus": {

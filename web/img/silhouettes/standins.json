@@ -436,6 +436,13 @@
   "status": "ok",
   "via": "tyrannosaurus_rex_gen_2"
  },
+ "kaprosuchus": {
+  "checked_at": "2026-11-09T02:50:28+00:00",
+  "path": [
+   "kaprosuchus"
+  ],
+  "status": "none"
+ },
  "keratoporcus": {
   "checked_at": "2026-10-12T12:31:46+00:00",
   "path": [
@@ -765,6 +772,16 @@
   ],
   "status": "none"
  },
+ "scaphotator": {
+  "checked_at": "2026-11-09T02:50:29+00:00",
+  "path": [
+   "scaphotator",
+   "diplotator",
+   "diplocaulus"
+  ],
+  "status": "ok",
+  "via": "diplocaulus"
+ },
  "scorpius_rex_gen_2": {
   "checked_at": "2026-10-17T00:52:55+00:00",
   "path": [
@@ -801,6 +818,13 @@
   "status": "ok",
   "via": "skorpiovenator"
  },
+ "sphaerotholus": {
+  "checked_at": "2026-11-09T02:50:30+00:00",
+  "path": [
+   "sphaerotholus"
+  ],
+  "status": "none"
+ },
  "spinoceratops": {
   "checked_at": "2026-10-10T01:21:46+00:00",
   "path": [
@@ -818,6 +842,15 @@
   ],
   "status": "ok",
   "via": "spinosaurus_gen_2"
+ },
+ "spinotahraptor": {
+  "checked_at": "2026-11-09T02:50:31+00:00",
+  "path": [
+   "spinotahraptor",
+   "spinosaurus"
+  ],
+  "status": "ok",
+  "via": "spinosaurus"
  },
  "spinotasuchus": {
   "checked_at": "2026-10-12T01:53:33+00:00",

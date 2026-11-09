@@ -1472,6 +1472,20 @@
   "name": "Dsungascorpios",
   "rarity": "unique"
  },
+ "edaphosaurus": {
+  "added": "v2.0",
+  "aka": [
+   "Edaphosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Edaphosaurus silhouette by Nobu Tamura, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/edaphosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Edaphosaurus",
+  "rarity": "epic"
+ },
  "einiasuchus": {
   "added": "v1.1",
   "aka": [
@@ -2048,6 +2062,20 @@
   "note": "The data source first gave no name for this creature (code 433c1948). It was worked out as Indoraptor Mattel from its Apex levels (26-32) and its place between Indochicyon and Kentrorex in the Coin Tournament's alphabetical list of eligible Apex creatures. The data source has since confirmed the name.",
   "rarity": "apex"
  },
+ "irritator": {
+  "added": "v1.2",
+  "aka": [
+   "Irritator"
+  ],
+  "class": "fierce",
+  "credit": "Irritator challengeri silhouette by Connor Ashbridge, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/irritator.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Irritator",
+  "rarity": "rare"
+ },
  "irritator_gen_2": {
   "added": "v1.2",
   "aka": [
@@ -2075,6 +2103,20 @@
   "listed": true,
   "name": "Junior",
   "rarity": "unique"
+ },
+ "kaprosuchus": {
+  "added": "v1.1",
+  "aka": [
+   "Kaprosuchus"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon (same in-game skeleton): Postosuchus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/postosuchus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Kaprosuchus",
+  "rarity": "rare"
  },
  "kentrorex": {
   "added": "v3.19",
@@ -2138,9 +2180,9 @@
    "Koolasuchus"
   ],
   "class": "cunning",
-  "credit": "Body-type icon (same in-game skeleton): Ankylosaurus magniventris silhouette by Itai Fein, CC0 1.0 (PhyloPic)",
+  "credit": "Body-type icon (same in-game skeleton): Diplocaulus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": "img/silhouettes/ankylosaurus.svg",
+  "img": "img/silhouettes/diplocaulus.svg",
   "imgKind": "body-type",
   "listed": true,
   "name": "Koolasuchus",
@@ -2719,6 +2761,20 @@
   "imgKind": "body-type",
   "listed": true,
   "name": "Oviraptor Gen 2",
+  "rarity": "epic"
+ },
+ "pachycephalosaurus": {
+  "added": "v1.6",
+  "aka": [
+   "Pachycephalosaurus"
+  ],
+  "class": "resilient",
+  "credit": "Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pachycephalosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Pachycephalosaurus",
   "rarity": "epic"
  },
  "panthera": {
@@ -3368,6 +3424,20 @@
   "name": "Scaphognathus",
   "rarity": "rare"
  },
+ "scaphotator": {
+  "added": "v1.11",
+  "aka": [
+   "Scaphotator"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Diplocaulus silhouette by Gareth Monger, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/diplocaulus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Scaphotator",
+  "rarity": "epic"
+ },
  "scorpius_rex_gen_2": {
   "added": "v2.8",
   "aka": [
@@ -3550,6 +3620,20 @@
   "name": "Sonorasaurus",
   "rarity": "epic"
  },
+ "sphaerotholus": {
+  "added": "v3.7",
+  "aka": [
+   "Sphaerotholus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon (same in-game skeleton): Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/pachycephalosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Sphaerotholus",
+  "rarity": "rare"
+ },
  "spinoceratops": {
   "added": "v2.20",
   "aka": [
@@ -3578,6 +3662,20 @@
   "name": "Spinonyx",
   "rarity": "legendary"
  },
+ "spinosaurus": {
+  "added": "v1.1",
+  "aka": [
+   "Spinosaurus"
+  ],
+  "class": "fierce",
+  "credit": "Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/spinosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Spinosaurus",
+  "rarity": "rare"
+ },
  "spinosaurus_aegyptiacus": {
   "added": "v3.6",
   "aka": [
@@ -3604,6 +3702,20 @@
   "imgKind": "silhouette",
   "listed": true,
   "name": "Spinosaurus Gen 2",
+  "rarity": "epic"
+ },
+ "spinotahraptor": {
+  "added": "v1.1",
+  "aka": [
+   "Spinotahraptor"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Spinosaurus silhouette by Tasman Dixon, CC0 1.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/spinosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Spinotahraptor",
   "rarity": "epic"
  },
  "spinotasuchus": {
@@ -4101,6 +4213,20 @@
   "name": "Unidentified creature (788dcb32)",
   "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). So far it fits Arsionosaurus, Koolatrodon or Peloroplites. It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
+ },
+ "utahraptor": {
+  "added": "v1.1",
+  "aka": [
+   "Utahraptor"
+  ],
+  "class": "cunning",
+  "credit": "Utahraptor ostrommaysi silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/utahraptor.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Utahraptor",
+  "rarity": "rare"
  },
  "utasinoraptor": {
   "added": "v1.1",

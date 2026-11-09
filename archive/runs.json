@@ -1,6 +1,15 @@
 [
  {
   "error": "",
+  "finished_at": "2026-11-09T02:50:33Z",
+  "message": "Imported 5 new snapshot(s). Game version 3.23.55. Roster refreshed: 524 creatures. Found body-type icons for 2 new creature(s).",
+  "new_snapshots": 5,
+  "started_at": "2026-11-09T02:50:25Z",
+  "status": "success",
+  "trigger": "scheduled"
+ },
+ {
+  "error": "",
   "finished_at": "2026-11-09T00:09:32Z",
   "message": "Imported 5 new snapshot(s). Game version 3.23.55. Roster refreshed: 524 creatures.",
   "new_snapshots": 5,
@@ -528,15 +537,6 @@
   "new_snapshots": 2,
   "started_at": "2026-10-25T14:38:21Z",
   "status": "success",
-  "trigger": "scheduled"
- },
- {
-  "error": "",
-  "finished_at": "2026-10-25T09:28:52Z",
-  "message": "No new snapshots yet; everything the source has published is already saved. Game version 3.23.55. Roster refreshed: 524 creatures.",
-  "new_snapshots": 0,
-  "started_at": "2026-10-25T09:28:51Z",
-  "status": "no_new_data",
   "trigger": "scheduled"
  }
 ]
