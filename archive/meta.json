@@ -334,6 +334,32 @@
     "koolatrodon",
     "peloroplites"
    ]
+  },
+  "jwa-dashboard-feed:fa568d545202ff3478242671585b0fe2": {
+   "decided_at": "2026-11-12T07:02:27Z",
+   "evidence": {
+    "label": "fa568d54",
+    "rarity": "Unknown",
+    "snapshots": {
+     "2026-11-11_23-43-49": {
+      "allowed": [],
+      "captured_at": "2026-11-11T23:43:55Z",
+      "copies": 1,
+      "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
+      "lowest": 35.0,
+      "neighbours": null,
+      "omega": false
+     }
+    }
+   },
+   "key": null,
+   "note": "The data source gives no name for this creature (code fa568d54, first seen 2026-11-11). So far it fits Coelophysis, Tsintamoloch, Arsionosaurus or Koolatrodon (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+   "possible": [
+    "coelophysis",
+    "tsintamoloch",
+    "arsionosaurus",
+    "koolatrodon"
+   ]
   }
  }
 }

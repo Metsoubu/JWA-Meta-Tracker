@@ -4228,6 +4228,21 @@
   "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon or Peloroplites, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 161 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
   "rarity": "unknown"
  },
+ "unmatched-jwadashboard-fa568d545202ff34": {
+  "added": null,
+  "aka": [
+   "fa568d54"
+  ],
+  "class": null,
+  "credit": null,
+  "hybrid": null,
+  "img": null,
+  "imgKind": null,
+  "listed": false,
+  "name": "Unidentified creature (fa568d54)",
+  "note": "The data source gives no name for this creature (code fa568d54, first seen 2026-11-11). So far it fits Coelophysis, Tsintamoloch, Arsionosaurus or Koolatrodon (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "rarity": "unknown"
+ },
  "utahraptor": {
   "added": "v1.1",
   "aka": [
