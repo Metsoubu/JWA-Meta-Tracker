@@ -7,6 +7,10 @@
   "checked_at": "2026-10-17T21:48:16+00:00",
   "family": "family_001"
  },
+ "aenocyonyx": {
+  "checked_at": "2026-11-13T23:34:09+00:00",
+  "family": "family_041"
+ },
  "aerospinosaurus": {
   "checked_at": "2026-10-23T20:08:19+00:00",
   "family": "family_063"
@@ -30,6 +34,10 @@
  "alankyloceratops": {
   "checked_at": "2026-10-24T01:13:27+00:00",
   "family": "family_013"
+ },
+ "albertocevia": {
+  "checked_at": "2026-11-13T23:34:10+00:00",
+  "family": "family_032"
  },
  "albertosaurus": {
   "checked_at": "2026-10-17T21:48:18+00:00",
@@ -155,6 +163,10 @@
   "checked_at": "2026-10-17T21:48:41+00:00",
   "family": "family_031"
  },
+ "arctocanis": {
+  "checked_at": "2026-11-13T23:34:11+00:00",
+  "family": "family_048"
+ },
  "arctodus": {
   "checked_at": "2026-10-17T21:48:41+00:00",
   "family": "family_048"
@@ -178,6 +190,10 @@
  "arsinoitherium": {
   "checked_at": "2026-10-17T21:48:44+00:00",
   "family": "family_026"
+ },
+ "atrocodistis": {
+  "checked_at": "2026-11-13T23:34:13+00:00",
+  "family": "family_002"
  },
  "atrocomaxima": {
   "checked_at": "2026-10-17T21:48:45+00:00",
@@ -355,6 +371,10 @@
   "checked_at": "2026-10-17T21:49:15+00:00",
   "family": "family_043"
  },
+ "compsoraptor": {
+  "checked_at": "2026-11-13T23:34:14+00:00",
+  "family": "family_043"
+ },
  "compsovenator": {
   "checked_at": "2026-10-17T21:49:16+00:00",
   "family": "family_043"
@@ -498,6 +518,10 @@
  "dracorex_gen_2": {
   "checked_at": "2026-10-17T21:49:42+00:00",
   "family": "family_016"
+ },
+ "dracovenator": {
+  "checked_at": "2026-11-13T23:34:15+00:00",
+  "family": "family_007"
  },
  "dreadnoughtus": {
   "checked_at": "2026-10-17T21:48:06+00:00",
@@ -947,6 +971,10 @@
   "checked_at": "2026-10-17T21:48:11+00:00",
   "family": "family_009"
  },
+ "nomingia": {
+  "checked_at": "2026-11-13T23:34:16+00:00",
+  "family": "family_042"
+ },
  "nominrex": {
   "checked_at": "2026-10-17T21:50:57+00:00",
   "family": "family_027"
@@ -999,6 +1027,10 @@
   "checked_at": "2026-10-17T21:51:07+00:00",
   "family": "family_025"
  },
+ "pantherator": {
+  "checked_at": "2026-11-13T23:34:17+00:00",
+  "family": "family_025"
+ },
  "paralidactylus": {
   "checked_at": "2026-10-17T21:51:07+00:00",
   "family": "family_059"
@@ -1018,6 +1050,10 @@
  "parasaurolophus_lux": {
   "checked_at": "2026-10-17T21:51:11+00:00",
   "family": "family_018"
+ },
+ "parasauthops": {
+  "checked_at": "2026-11-13T23:34:18+00:00",
+  "family": "family_032"
  },
  "peloroplites": {
   "checked_at": "2026-10-17T21:51:12+00:00",
@@ -1287,6 +1323,10 @@
   "checked_at": "2026-10-17T21:51:58+00:00",
   "family": "family_005"
  },
+ "skorpiostegotops": {
+  "checked_at": "2026-11-13T23:34:20+00:00",
+  "family": "family_004"
+ },
  "skorpiovenator": {
   "checked_at": "2026-10-17T21:51:59+00:00",
   "family": "family_005"
@@ -1306,6 +1346,10 @@
  "spinoceratops": {
   "checked_at": "2026-10-17T21:52:01+00:00",
   "family": "family_003"
+ },
+ "spinoconstrictor": {
+  "checked_at": "2026-11-13T23:34:21+00:00",
+  "family": "family_029"
  },
  "spinonyx": {
   "checked_at": "2026-10-17T21:52:02+00:00",
@@ -1415,6 +1459,10 @@
   "checked_at": "2026-10-17T21:52:20+00:00",
   "family": "family_025"
  },
+ "thylos_intrepidus": {
+  "checked_at": "2026-11-13T23:34:22+00:00",
+  "family": "family_051"
+ },
  "tiger": {
   "checked_at": "2026-10-17T21:52:21+00:00",
   "family": "family_002"
@@ -1463,6 +1511,10 @@
   "checked_at": "2026-10-17T21:52:29+00:00",
   "family": "family_002"
  },
+ "trykosaurus": {
+  "checked_at": "2026-11-13T23:34:23+00:00",
+  "family": "family_001"
+ },
  "trykovenator": {
   "checked_at": "2026-10-17T21:52:30+00:00",
   "family": "family_001"
@@ -1485,6 +1537,10 @@
  },
  "tyrannodactylus": {
   "checked_at": "2026-10-17T21:52:33+00:00",
+  "family": "family_001"
+ },
+ "tyrannometrodon": {
+  "checked_at": "2026-11-13T23:34:24+00:00",
   "family": "family_001"
  },
  "tyrannosaur_buck": {

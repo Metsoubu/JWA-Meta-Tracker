@@ -1,4 +1,13 @@
 {
+ "aenocyonyx": {
+  "checked_at": "2026-11-13T23:34:09+00:00",
+  "path": [
+   "aenocyonyx",
+   "dire_wolf"
+  ],
+  "status": "ok",
+  "via": "dire_wolf"
+ },
  "aerospinosaurus": {
   "checked_at": "2026-10-23T20:08:19+00:00",
   "path": [
@@ -35,6 +44,15 @@
   ],
   "status": "ok",
   "via": "ankylosaurus_gen_2"
+ },
+ "albertocevia": {
+  "checked_at": "2026-11-13T23:34:10+00:00",
+  "path": [
+   "albertocevia",
+   "albertosaurus"
+  ],
+  "status": "ok",
+  "via": "albertosaurus"
  },
  "albertospinos": {
   "checked_at": "2026-10-26T17:02:59+00:00",
@@ -107,6 +125,15 @@
   "status": "ok",
   "via": "aquilops"
  },
+ "arctocanis": {
+  "checked_at": "2026-11-13T23:34:11+00:00",
+  "path": [
+   "arctocanis",
+   "ailurarctos"
+  ],
+  "status": "ok",
+  "via": "arctodus"
+ },
  "ardentismaxima": {
   "checked_at": "2026-11-05T13:36:50+00:00",
   "path": [
@@ -132,6 +159,15 @@
    "argentinosaurus"
   ],
   "status": "none"
+ },
+ "atrocodistis": {
+  "checked_at": "2026-11-13T23:34:13+00:00",
+  "path": [
+   "atrocodistis",
+   "red"
+  ],
+  "status": "ok",
+  "via": "red"
  },
  "australotitan": {
   "checked_at": "2026-10-31T01:55:06+00:00",
@@ -231,6 +267,16 @@
   ],
   "status": "none"
  },
+ "compsoraptor": {
+  "checked_at": "2026-11-13T23:34:14+00:00",
+  "path": [
+   "compsoraptor",
+   "tarbognathus",
+   "tarbosaurus"
+  ],
+  "status": "ok",
+  "via": "tarbosaurus"
+ },
  "dakotacurus": {
   "checked_at": "2026-11-06T13:20:11+00:00",
   "path": [
@@ -284,6 +330,13 @@
   ],
   "status": "ok",
   "via": "dracorex_gen_2"
+ },
+ "dracovenator": {
+  "checked_at": "2026-11-13T23:34:15+00:00",
+  "path": [
+   "dracovenator"
+  ],
+  "status": "none"
  },
  "dreadnoughtus": {
   "checked_at": "2026-10-17T21:48:06+00:00",
@@ -607,6 +660,13 @@
   ],
   "status": "none"
  },
+ "nomingia": {
+  "checked_at": "2026-11-13T23:34:16+00:00",
+  "path": [
+   "nomingia"
+  ],
+  "status": "none"
+ },
  "one_arm_baryonyx": {
   "checked_at": "2026-11-09T17:25:57+00:00",
   "path": [
@@ -620,6 +680,24 @@
    "panthera_blytheae"
   ],
   "status": "none"
+ },
+ "pantherator": {
+  "checked_at": "2026-11-13T23:34:17+00:00",
+  "path": [
+   "pantherator",
+   "panthera_blytheae"
+  ],
+  "status": "ok",
+  "via": "panthera"
+ },
+ "parasauthops": {
+  "checked_at": "2026-11-13T23:34:18+00:00",
+  "path": [
+   "parasauthops",
+   "parasaurolophus_lux"
+  ],
+  "status": "ok",
+  "via": "parasaurolophus_lux"
  },
  "pierce": {
   "checked_at": "2026-10-10T01:05:15+00:00",
@@ -835,6 +913,16 @@
   "status": "ok",
   "via": "skorpiovenator"
  },
+ "skorpiostegotops": {
+  "checked_at": "2026-11-13T23:34:20+00:00",
+  "path": [
+   "skorpiostegotops",
+   "skorpiodactylus",
+   "skorpiovenator"
+  ],
+  "status": "ok",
+  "via": "skorpiovenator"
+ },
  "sphaerotholus": {
   "checked_at": "2026-11-09T02:50:30+00:00",
   "path": [
@@ -850,6 +938,15 @@
   ],
   "status": "ok",
   "via": "spinosaurus_gen_2"
+ },
+ "spinoconstrictor": {
+  "checked_at": "2026-11-13T23:34:21+00:00",
+  "path": [
+   "spinoconstrictor",
+   "spinosaurus"
+  ],
+  "status": "ok",
+  "via": "spinosaurus"
  },
  "spinonyx": {
   "checked_at": "2026-10-12T01:53:32+00:00",
@@ -938,6 +1035,16 @@
   "status": "ok",
   "via": "marsupial_lion"
  },
+ "thylos_intrepidus": {
+  "checked_at": "2026-11-13T23:34:22+00:00",
+  "path": [
+   "thylos_intrepidus",
+   "thylacotator",
+   "marsupial_lion"
+  ],
+  "status": "ok",
+  "via": "marsupial_lion"
+ },
  "titanotor": {
   "checked_at": "2026-10-10T01:21:47+00:00",
   "path": [
@@ -963,6 +1070,15 @@
   "status": "ok",
   "via": "troodon"
  },
+ "trykosaurus": {
+  "checked_at": "2026-11-13T23:34:23+00:00",
+  "path": [
+   "trykosaurus",
+   "tyrannosaurus_rex"
+  ],
+  "status": "ok",
+  "via": "tyrannosaurus_rex"
+ },
  "tsintamoth": {
   "checked_at": "2026-10-17T21:48:14+00:00",
   "path": [
@@ -971,6 +1087,15 @@
   ],
   "status": "ok",
   "via": "tsintaosaurus"
+ },
+ "tyrannometrodon": {
+  "checked_at": "2026-11-13T23:34:24+00:00",
+  "path": [
+   "tyrannometrodon",
+   "rexy"
+  ],
+  "status": "ok",
+  "via": "tyrannosaurus_rex"
  },
  "utasinoraptor": {
   "checked_at": "2026-10-12T01:53:35+00:00",
