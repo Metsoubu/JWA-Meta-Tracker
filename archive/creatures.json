@@ -1472,6 +1472,20 @@
   "name": "Dracoceratops",
   "rarity": "legendary"
  },
+ "dracoceratosaurus": {
+  "added": "v2.0",
+  "aka": [
+   "Dracoceratosaurus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dracorex_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Dracoceratosaurus",
+  "rarity": "unique"
+ },
  "dracorex": {
   "added": "v1.2",
   "aka": [
@@ -2159,6 +2173,20 @@
   "name": "Indoraptor Mattel",
   "note": "The data source first gave no name for this creature (code 433c1948). It was worked out as Indoraptor Mattel from its Apex levels (26-32) and its place between Indochicyon and Kentrorex in the Coin Tournament's alphabetical list of eligible Apex creatures. The data source has since confirmed the name.",
   "rarity": "apex"
+ },
+ "indotaurus": {
+  "added": "v2.10",
+  "aka": [
+   "Indotaurus"
+  ],
+  "class": "fierce",
+  "credit": "Body-type icon: Tyrannosaurus rex silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/tyrannosaurus_rex_gen_2.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Indotaurus",
+  "rarity": "unique"
  },
  "irritator": {
   "added": "v1.2",
@@ -4111,6 +4139,20 @@
   "listed": true,
   "name": "Tarbosaurus",
   "rarity": "common"
+ },
+ "tenontorex": {
+  "added": "v1.5",
+  "aka": [
+   "Tenontorex"
+  ],
+  "class": "wild_card",
+  "credit": "Body-type icon: Tenontosaurus silhouette by Pete Buchholz, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/tenontosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tenontorex",
+  "rarity": "unique"
  },
  "tenontosaurus": {
   "added": "v1.1",

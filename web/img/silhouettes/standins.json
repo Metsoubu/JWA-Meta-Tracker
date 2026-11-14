@@ -331,6 +331,16 @@
   "status": "ok",
   "via": "dracorex_gen_2"
  },
+ "dracoceratosaurus": {
+  "checked_at": "2026-11-14T08:10:11+00:00",
+  "path": [
+   "dracoceratosaurus",
+   "dracoceratops",
+   "dracorex_gen_2"
+  ],
+  "status": "ok",
+  "via": "dracorex_gen_2"
+ },
  "dracovenator": {
   "checked_at": "2026-11-13T23:34:15+00:00",
   "path": [
@@ -483,6 +493,16 @@
  "indominus_rex_gen_2": {
   "checked_at": "2026-10-16T19:44:45+00:00",
   "path": [
+   "indominus_rex_gen_2",
+   "tyrannosaurus_rex_gen_2"
+  ],
+  "status": "ok",
+  "via": "tyrannosaurus_rex_gen_2"
+ },
+ "indotaurus": {
+  "checked_at": "2026-11-14T08:10:12+00:00",
+  "path": [
+   "indotaurus",
    "indominus_rex_gen_2",
    "tyrannosaurus_rex_gen_2"
   ],
@@ -1025,6 +1045,15 @@
    "tapejara"
   ],
   "status": "none"
+ },
+ "tenontorex": {
+  "checked_at": "2026-11-14T08:10:14+00:00",
+  "path": [
+   "tenontorex",
+   "tenontosaurus"
+  ],
+  "status": "ok",
+  "via": "tenontosaurus"
  },
  "thylacotator": {
   "checked_at": "2026-10-17T00:52:58+00:00",

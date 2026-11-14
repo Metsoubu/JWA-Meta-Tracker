@@ -511,6 +511,10 @@
   "checked_at": "2026-10-17T21:49:40+00:00",
   "family": "family_016"
  },
+ "dracoceratosaurus": {
+  "checked_at": "2026-11-14T08:10:11+00:00",
+  "family": "family_023"
+ },
  "dracorex": {
   "checked_at": "2026-10-17T21:49:41+00:00",
   "family": "family_016"
@@ -737,6 +741,10 @@
  },
  "indoraptor_mattel": {
   "checked_at": "2026-10-17T21:50:18+00:00",
+  "family": "family_022"
+ },
+ "indotaurus": {
+  "checked_at": "2026-11-14T08:10:12+00:00",
   "family": "family_022"
  },
  "inostrancevia": {
@@ -1446,6 +1454,10 @@
  "tarbosaurus": {
   "checked_at": "2026-10-17T21:52:18+00:00",
   "family": "family_001"
+ },
+ "tenontorex": {
+  "checked_at": "2026-11-14T08:10:14+00:00",
+  "family": "family_018"
  },
  "tenontosaurus": {
   "checked_at": "2026-10-17T21:52:19+00:00",
