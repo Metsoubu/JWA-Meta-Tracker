@@ -451,6 +451,10 @@
   "checked_at": "2026-10-17T21:49:28+00:00",
   "family": "family_007"
  },
+ "diloracheirus": {
+  "checked_at": "2026-11-14T13:28:14+00:00",
+  "family": "family_020"
+ },
  "dilozorion": {
   "checked_at": "2026-10-17T21:49:28+00:00",
   "family": "family_020"
@@ -1021,6 +1025,10 @@
  },
  "oviraptor_gen_2": {
   "checked_at": "2026-10-17T21:51:04+00:00",
+  "family": "family_042"
+ },
+ "ovylenken": {
+  "checked_at": "2026-11-14T13:28:15+00:00",
   "family": "family_042"
  },
  "pachycephalosaurus": {

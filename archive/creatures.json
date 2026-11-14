@@ -995,6 +995,20 @@
   "name": "Cerastegotops",
   "rarity": "apex"
  },
+ "ceratosaurus": {
+  "added": "v2.23",
+  "aka": [
+   "Ceratosaurus"
+  ],
+  "class": "fierce_resilient",
+  "credit": "Ceratosaurus silhouette by Scott Hartman, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/ceratosaurus.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Ceratosaurus",
+  "rarity": "unique"
+ },
  "ceratosaurus_gen_2": {
   "added": "v3.5",
   "aka": [
@@ -1317,6 +1331,20 @@
   "listed": true,
   "name": "Diabloceratops",
   "rarity": "omega"
+ },
+ "diloracheirus": {
+  "added": "v1.4",
+  "aka": [
+   "Diloracheirus"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Diloracheirus",
+  "rarity": "unique"
  },
  "dilozorion": {
   "added": "v3.10",
@@ -2811,9 +2839,9 @@
    "Nomingia"
   ],
   "class": "cunning",
-  "credit": "Body-type icon (same in-game skeleton): Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "credit": "Body-type icon (same in-game skeleton): Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
   "hybrid": "non_hybrid",
-  "img": "img/silhouettes/dilophosaurus.svg",
+  "img": "img/silhouettes/velociraptor.svg",
   "imgKind": "body-type",
   "listed": true,
   "name": "Nomingia",
@@ -2931,6 +2959,20 @@
   "listed": true,
   "name": "Oviraptor Gen 2",
   "rarity": "epic"
+ },
+ "ovylenken": {
+  "added": "v3.7",
+  "aka": [
+   "Ovylenken"
+  ],
+  "class": "cunning",
+  "credit": "Body-type icon: Velociraptor mongoliensis silhouette by Christian A. Masnaghetti, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/velociraptor.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Ovylenken",
+  "rarity": "unique"
  },
  "pachycephalosaurus": {
   "added": "v1.6",

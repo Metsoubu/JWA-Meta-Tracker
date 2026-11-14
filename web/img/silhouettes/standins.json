@@ -313,6 +313,16 @@
   ],
   "status": "none"
  },
+ "diloracheirus": {
+  "checked_at": "2026-11-14T13:28:14+00:00",
+  "path": [
+   "diloracheirus",
+   "diloranosaurus",
+   "dilophosaurus"
+  ],
+  "status": "ok",
+  "via": "dilophosaurus"
+ },
  "dimodactylus": {
   "checked_at": "2026-10-16T19:44:42+00:00",
   "path": [
@@ -693,6 +703,15 @@
    "one_arm_baryonyx"
   ],
   "status": "none"
+ },
+ "ovylenken": {
+  "checked_at": "2026-11-14T13:28:15+00:00",
+  "path": [
+   "ovylenken",
+   "oviraptor_gen_2"
+  ],
+  "status": "ok",
+  "via": "velociraptor"
  },
  "panthera_blytheae": {
   "checked_at": "2026-10-10T01:05:15+00:00",
