@@ -3143,6 +3143,20 @@
   "name": "Postimetrodon",
   "rarity": "epic"
  },
+ "poukandactylus": {
+  "added": "v2.3",
+  "aka": [
+   "Poukandactylus"
+  ],
+  "class": "cunning_fierce",
+  "credit": "Body-type icon: Deinonychus antirrhopus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/deinonychus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Poukandactylus",
+  "rarity": "unique"
+ },
  "preondactylus": {
   "added": "v2.14",
   "aka": [

@@ -754,6 +754,16 @@
   "status": "ok",
   "via": "postosuchus"
  },
+ "poukandactylus": {
+  "checked_at": "2026-11-15T19:09:29+00:00",
+  "path": [
+   "poukandactylus",
+   "poukaidei",
+   "deinonychus"
+  ],
+  "status": "ok",
+  "via": "deinonychus"
+ },
  "preondactylus": {
   "checked_at": "2026-10-17T21:48:12+00:00",
   "path": [
