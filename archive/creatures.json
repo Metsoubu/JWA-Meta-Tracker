@@ -3072,6 +3072,20 @@
   "name": "Paralitrosaurus",
   "rarity": "unique"
  },
+ "parasaurolophus_lux": {
+  "added": "v2.3",
+  "aka": [
+   "Parasaurolophus Lux"
+  ],
+  "class": "resilient",
+  "credit": "Parasaurolophus silhouette by Matt Martyniuk, CC BY-NC-SA 3.0 (PhyloPic)",
+  "hybrid": "non_hybrid",
+  "img": "img/silhouettes/parasaurolophus_lux.svg",
+  "imgKind": "silhouette",
+  "listed": true,
+  "name": "Parasaurolophus Lux",
+  "rarity": "legendary"
+ },
  "parasauthops": {
   "added": "v2.11",
   "aka": [
