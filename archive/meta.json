@@ -1,5 +1,5 @@
 {
- "app_store_build": "3.23.55",
+ "app_store_build": "3.24.38",
  "deductions": {
   "jwa-dashboard-feed:44ec1b9095916674795d34bcafc444e3": {
    "decided_at": "2026-11-06T22:30:02Z",
@@ -434,6 +434,15 @@
      "2026-11-17_01-05-30": {
       "allowed": [],
       "captured_at": "2026-11-17T01:05:36Z",
+      "copies": 1,
+      "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
+      "lowest": 35.0,
+      "neighbours": null,
+      "omega": false
+     },
+     "2026-11-17_14-54-37": {
+      "allowed": [],
+      "captured_at": "2026-11-17T14:54:44Z",
       "copies": 1,
       "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
       "lowest": 35.0,
