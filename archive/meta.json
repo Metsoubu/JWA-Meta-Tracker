@@ -466,6 +466,15 @@
       "lowest": 35.0,
       "neighbours": null,
       "omega": false
+     },
+     "2026-11-18_23-35-51": {
+      "allowed": [],
+      "captured_at": "2026-11-18T23:35:57Z",
+      "copies": 1,
+      "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
+      "lowest": 35.0,
+      "neighbours": null,
+      "omega": false
      }
     }
    },
