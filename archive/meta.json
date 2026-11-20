@@ -335,6 +335,32 @@
     "peloroplites"
    ]
   },
+  "jwa-dashboard-feed:8eb33f2be857f9d48b96ffc23bfdb8fb": {
+   "decided_at": "2026-11-20T16:06:11Z",
+   "evidence": {
+    "label": "8eb33f2b",
+    "rarity": "Unknown",
+    "snapshots": {
+     "2026-11-20_14-23-02": {
+      "allowed": [],
+      "captured_at": "2026-11-20T14:23:09Z",
+      "copies": 1,
+      "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
+      "lowest": 35.0,
+      "neighbours": null,
+      "omega": false
+     }
+    }
+   },
+   "key": null,
+   "note": "The data source gives no name for this creature (code 8eb33f2b, first seen 2026-11-20). So far it fits Coelophysis, Tsintamoloch, Arsionosaurus or Koolatrodon (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+   "possible": [
+    "coelophysis",
+    "tsintamoloch",
+    "arsionosaurus",
+    "koolatrodon"
+   ]
+  },
   "jwa-dashboard-feed:fa568d545202ff3478242671585b0fe2": {
    "decided_at": "2026-11-15T02:50:27Z",
    "evidence": {
@@ -488,6 +514,15 @@
      "2026-11-19_23-51-55": {
       "allowed": [],
       "captured_at": "2026-11-19T23:52:01Z",
+      "copies": 1,
+      "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
+      "lowest": 35.0,
+      "neighbours": null,
+      "omega": false
+     },
+     "2026-11-20_14-23-02": {
+      "allowed": [],
+      "captured_at": "2026-11-20T14:23:09Z",
       "copies": 1,
       "leaderboard": "[Seasonal] 2026-11 - Unique Mutadon Seasonal League",
       "lowest": 35.0,
