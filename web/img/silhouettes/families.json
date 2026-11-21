@@ -143,6 +143,10 @@
   "checked_at": "2026-10-17T21:48:37+00:00",
   "family": "family_060"
  },
+ "aquilosaurus": {
+  "checked_at": "2026-11-21T11:47:14+00:00",
+  "family": "family_012"
+ },
  "aquilotae": {
   "checked_at": "2026-10-17T21:48:37+00:00",
   "family": "family_012"
@@ -650,6 +654,10 @@
  "giganotosaurus": {
   "checked_at": "2026-10-17T21:50:00+00:00",
   "family": "family_001"
+ },
+ "giganspinoceratops": {
+  "checked_at": "2026-11-21T11:47:15+00:00",
+  "family": "family_004"
  },
  "gigantspinosaurus": {
   "checked_at": "2026-10-17T21:50:01+00:00",

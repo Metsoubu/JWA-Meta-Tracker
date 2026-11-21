@@ -116,6 +116,15 @@
   "status": "ok",
   "via": "ankylosaurus"
  },
+ "aquilosaurus": {
+  "checked_at": "2026-11-21T11:47:14+00:00",
+  "path": [
+   "aquilosaurus",
+   "pachycephalosaurus"
+  ],
+  "status": "ok",
+  "via": "pachycephalosaurus"
+ },
  "aquisaurus": {
   "checked_at": "2026-10-10T01:05:03+00:00",
   "path": [
@@ -469,6 +478,15 @@
   ],
   "status": "ok",
   "via": "diplodocus"
+ },
+ "giganspinoceratops": {
+  "checked_at": "2026-11-21T11:47:15+00:00",
+  "path": [
+   "giganspinoceratops",
+   "gigantspinosaurus"
+  ],
+  "status": "ok",
+  "via": "stegosaurus"
  },
  "giganyx": {
   "checked_at": "2026-10-26T17:03:04+00:00",

@@ -462,6 +462,20 @@
   "name": "Aquilops",
   "rarity": "rare"
  },
+ "aquilosaurus": {
+  "added": "v3.12",
+  "aka": [
+   "Aquilosaurus"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pachycephalosaurus silhouette by Emily Willoughby, CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "mega_hybrid",
+  "img": "img/silhouettes/pachycephalosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Aquilosaurus",
+  "rarity": "unique"
+ },
  "aquilotae": {
   "added": "v3.13",
   "aka": [
@@ -1919,6 +1933,20 @@
   "listed": true,
   "name": "Giganotosaurus",
   "rarity": "epic"
+ },
+ "giganspinoceratops": {
+  "added": "v3.4",
+  "aka": [
+   "Gigantspinoceratops"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Stegosaurus silhouette by Andrew A. Farke, CC BY 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/stegosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Giganspinoceratops",
+  "rarity": "unique"
  },
  "gigantspinosaurus": {
   "added": "v3.4",
