@@ -3410,6 +3410,20 @@
   "name": "Quetzaldraco",
   "rarity": "unique"
  },
+ "quetzaljara": {
+  "added": "v3.6",
+  "aka": [
+   "Quetzaljara"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Pteranodon silhouette by Scott Hartman, CC0 1.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/pteranodon.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Quetzaljara",
+  "rarity": "unique"
+ },
  "quetzalvexus": {
   "added": "v3.23",
   "aka": [
@@ -3634,6 +3648,20 @@
   "listed": true,
   "name": "Sah Panthera",
   "rarity": "apex"
+ },
+ "sarcomantarx": {
+  "added": "v3.10",
+  "aka": [
+   "Sarcomantarx"
+  ],
+  "class": "cunning_resilient",
+  "credit": "Body-type icon: Dilophosaurus wetherilli silhouette by Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey., CC BY-SA 3.0 (PhyloPic)",
+  "hybrid": "hybrid",
+  "img": "img/silhouettes/dilophosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Sarcomantarx",
+  "rarity": "unique"
  },
  "sarcorixis": {
   "added": "v1.3",
@@ -4420,6 +4448,20 @@
   "name": "Trykovenator",
   "rarity": "apex"
  },
+ "tsintamoloch": {
+  "added": "v3.21",
+  "aka": [
+   "Tsintamol"
+  ],
+  "class": "resilient",
+  "credit": "Body-type icon: Tsintaosaurus spinorhinus silhouette by Nobu Tamura (vectorized by T. Michael Keesey), CC BY-NC 3.0 (PhyloPic)",
+  "hybrid": "super_hybrid",
+  "img": "img/silhouettes/tsintaosaurus.svg",
+  "imgKind": "body-type",
+  "listed": true,
+  "name": "Tsintamoloch",
+  "rarity": "unique"
+ },
  "tsintamoth": {
   "added": "v2.8",
   "aka": [
@@ -4576,7 +4618,7 @@
   "imgKind": null,
   "listed": false,
   "name": "Unidentified creature (8eb33f2b)",
-  "note": "The data source gives no name for this creature (code 8eb33f2b, first seen 2026-11-20). So far it fits Coelophysis, Tsintamoloch, Arsionosaurus or Koolatrodon (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
+  "note": "The data source gives no name for this creature (code 8eb33f2b, first seen 2026-11-20). So far it fits Coelophysis, Arsionosaurus, Koolatrodon or Ovinnonyx (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
   "rarity": "unknown"
  },
  "unmatched-jwadashboard-fa568d545202ff34": {

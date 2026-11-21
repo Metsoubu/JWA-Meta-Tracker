@@ -842,6 +842,16 @@
   "status": "ok",
   "via": "pteranodon"
  },
+ "quetzaljara": {
+  "checked_at": "2026-11-21T03:34:59+00:00",
+  "path": [
+   "quetzaljara",
+   "pteraquetzal",
+   "pteranodon"
+  ],
+  "status": "ok",
+  "via": "pteranodon"
+ },
  "quetzalvexus": {
   "checked_at": "2026-10-24T14:09:26+00:00",
   "path": [
@@ -890,6 +900,15 @@
    "rexy"
   ],
   "status": "none"
+ },
+ "sarcomantarx": {
+  "checked_at": "2026-11-21T03:35:00+00:00",
+  "path": [
+   "sarcomantarx",
+   "sarcosaurus"
+  ],
+  "status": "ok",
+  "via": "dilophosaurus"
  },
  "sarcorixis": {
   "checked_at": "2026-10-17T00:52:54+00:00",
@@ -1136,6 +1155,15 @@
   ],
   "status": "ok",
   "via": "tyrannosaurus_rex"
+ },
+ "tsintamoloch": {
+  "checked_at": "2026-11-21T03:35:01+00:00",
+  "path": [
+   "tsintamoloch",
+   "tsintaosaurus"
+  ],
+  "status": "ok",
+  "via": "tsintaosaurus"
  },
  "tsintamoth": {
   "checked_at": "2026-10-17T21:48:14+00:00",
