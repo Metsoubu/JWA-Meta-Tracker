@@ -336,7 +336,7 @@
    ]
   },
   "jwa-dashboard-feed:8eb33f2be857f9d48b96ffc23bfdb8fb": {
-   "decided_at": "2026-11-21T03:35:02Z",
+   "decided_at": "2026-11-23T20:23:55Z",
    "evidence": {
     "label": "8eb33f2b",
     "rarity": "Unknown",
@@ -362,13 +362,8 @@
     }
    },
    "key": null,
-   "note": "The data source gives no name for this creature (code 8eb33f2b, first seen 2026-11-20). So far it fits Coelophysis, Arsionosaurus, Koolatrodon or Ovinnonyx (or another creature). It is named only once the creature list has had 3 days to add brand-new creatures, so it is not mistaken for an older one.",
-   "possible": [
-    "coelophysis",
-    "arsionosaurus",
-    "koolatrodon",
-    "ovinnonyx"
-   ]
+   "note": "The data source gives no name for this creature (code 8eb33f2b, first seen 2026-11-20). There is not enough evidence yet to tell which creature it is.",
+   "possible": []
   },
   "jwa-dashboard-feed:fa568d545202ff3478242671585b0fe2": {
    "decided_at": "2026-11-15T02:50:27Z",
