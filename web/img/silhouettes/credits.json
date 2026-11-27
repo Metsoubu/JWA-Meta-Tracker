@@ -689,6 +689,10 @@
   "status": "ok",
   "taxon": "Doedicurus"
  },
+ "dolores_toy": {
+  "checked_at": "2026-11-27T08:16:37+00:00",
+  "status": "none"
+ },
  "dracorex": {
   "attribution": "Emily Willoughby",
   "checked_at": "2026-10-09T02:50:04+00:00",
@@ -1378,6 +1382,17 @@
  "nomingia": {
   "checked_at": "2026-10-09T02:54:00+00:00",
   "status": "none"
+ },
+ "nothronychus": {
+  "attribution": "Scott Hartman",
+  "checked_at": "2026-11-27T08:16:38+00:00",
+  "file": "nothronychus.svg",
+  "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+  "license_name": "CC BY-NC-SA 3.0",
+  "page": "https://www.phylopic.org/images/2735d212-8b58-4d4e-990f-3342acd25595",
+  "query": "nothronychus",
+  "status": "ok",
+  "taxon": "Nothronychus"
  },
  "nundasuchus": {
   "checked_at": "2026-10-09T02:54:01+00:00",

@@ -2,7 +2,7 @@
  "app_store_build": "3.24.38",
  "deductions": {
   "jwa-dashboard-feed:44ec1b9095916674795d34bcafc444e3": {
-   "decided_at": "2026-11-06T22:30:02Z",
+   "decided_at": "2026-11-27T08:16:41Z",
    "evidence": {
     "label": "44ec1b90",
     "rarity": "Unknown",
@@ -46,15 +46,16 @@
     }
    },
    "key": null,
-   "note": "The data source gives no name for this creature (code 44ec1b90, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon or Peloroplites, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 5 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
+   "note": "The data source gives no name for this creature (code 44ec1b90, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon, Peloroplites or Nothrocheirus, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 5 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
    "possible": [
     "arsionosaurus",
     "koolatrodon",
-    "peloroplites"
+    "peloroplites",
+    "nothrocheirus"
    ]
   },
   "jwa-dashboard-feed:45f4a51647b11ca4db3b34b728f1d045": {
-   "decided_at": "2026-11-06T22:30:02Z",
+   "decided_at": "2026-11-27T08:16:41Z",
    "evidence": {
     "label": "45f4a516",
     "rarity": "Unknown",
@@ -146,15 +147,16 @@
     }
    },
    "key": null,
-   "note": "The data source gives no name for this creature (code 45f4a516, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon or Peloroplites, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 15 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
+   "note": "The data source gives no name for this creature (code 45f4a516, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon, Peloroplites or Nothrocheirus, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 15 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
    "possible": [
     "arsionosaurus",
     "koolatrodon",
-    "peloroplites"
+    "peloroplites",
+    "nothrocheirus"
    ]
   },
   "jwa-dashboard-feed:702e43132be82904187520200da8cd01": {
-   "decided_at": "2026-11-09T17:25:57Z",
+   "decided_at": "2026-11-27T08:16:41Z",
    "evidence": {
     "label": "702e4313",
     "rarity": "Unknown",
@@ -205,14 +207,15 @@
      }
     }
    },
-   "key": "one_arm_baryonyx",
-   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). Worked out automatically as One Arm Baryonyx (Omega, game version 3.23): [Tournament] 2026-10-W4 - DNA Tournament allowed only Omega creatures; its lowest level is 11; it has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later. One Arm Baryonyx is the only creature that fits and is not already named by the data source.",
+   "key": null,
+   "note": "The data source gives no name for this creature (code 702e4313, first seen 2026-10-31). It is probably One Arm Baryonyx or Dolores Toy, but the evidence so far cannot tell which: [Tournament] 2026-10-W4 - DNA Tournament allowed only Omega creatures; its lowest level is 11; it has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
    "possible": [
-    "one_arm_baryonyx"
+    "one_arm_baryonyx",
+    "dolores_toy"
    ]
   },
   "jwa-dashboard-feed:788dcb3260710214ca81ea153c41f9c3": {
-   "decided_at": "2026-11-06T22:30:02Z",
+   "decided_at": "2026-11-27T08:16:41Z",
    "evidence": {
     "label": "788dcb32",
     "rarity": "Unknown",
@@ -328,11 +331,12 @@
     }
    },
    "key": null,
-   "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon or Peloroplites, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 161 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
+   "note": "The data source gives no name for this creature (code 788dcb32, first seen 2026-11-06). It is probably Arsionosaurus, Koolatrodon, Peloroplites or Nothrocheirus, but the evidence so far cannot tell which: [Tournament] 2026-11-W1 - Cash Tournament allowed only Rare and Epic creatures; its lowest level is 11; none of its 161 team appearances has omega training; the data source's official name list goes up to game version 3.20, so a creature without any name is from that version or later.",
    "possible": [
     "arsionosaurus",
     "koolatrodon",
-    "peloroplites"
+    "peloroplites",
+    "nothrocheirus"
    ]
   },
   "jwa-dashboard-feed:8eb33f2be857f9d48b96ffc23bfdb8fb": {
